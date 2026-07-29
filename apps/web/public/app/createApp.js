@@ -42,6 +42,7 @@ import {
   previewBatchReviewManualFormalWriteExecutionPacket,
   previewBatchReviewManualFormalWritePostExecutionAcceptance,
   previewBatchReviewManualFormalWriteReadiness,
+  previewFormalWriteFollowUpPlan,
   previewPiEngineExecutionPositionAudit,
   previewUiOptimizationReadiness,
   previewRealCaseBatchFillWorksheet,
@@ -895,6 +896,8 @@ function buildDashboardRenderPayload(state, result) {
       state.latestManualFormalWritePostExecutionAcceptance,
     piEngineExecutionPositionAudit:
       state.latestPiEngineExecutionPositionAudit,
+    formalWriteFollowUpPlan:
+      state.latestFormalWriteFollowUpPlan,
   };
 }
 
@@ -917,6 +920,7 @@ function renderWritebackGateStatusFromState(dom, state) {
     state.latestManualFormalWriteExecutionPacket,
     state.latestManualFormalWritePostExecutionAcceptance,
     state.latestPiEngineExecutionPositionAudit,
+    state.latestFormalWriteFollowUpPlan,
   );
 }
 
@@ -957,6 +961,7 @@ async function refreshFormalWriteGateEvidence(state) {
     formalWriteExecutionPacket,
     formalWritePostExecutionAcceptance,
     piEngineExecutionPositionAudit,
+    formalWriteFollowUpPlan,
   ] = await Promise.all([
     previewBatchReviewManualFormalWriteReadiness(),
     previewBatchReviewManualConfirmationDraftValidation().catch(() => null),
@@ -972,6 +977,7 @@ async function refreshFormalWriteGateEvidence(state) {
     previewBatchReviewManualFormalWriteExecutionPacket().catch(() => null),
     previewBatchReviewManualFormalWritePostExecutionAcceptance().catch(() => null),
     previewPiEngineExecutionPositionAudit().catch(() => null),
+    previewFormalWriteFollowUpPlan().catch(() => null),
   ]);
 
   state.latestFormalWriteReadiness = readiness;
@@ -988,6 +994,7 @@ async function refreshFormalWriteGateEvidence(state) {
   state.latestManualFormalWriteExecutionPacket = formalWriteExecutionPacket;
   state.latestManualFormalWritePostExecutionAcceptance = formalWritePostExecutionAcceptance;
   state.latestPiEngineExecutionPositionAudit = piEngineExecutionPositionAudit;
+  state.latestFormalWriteFollowUpPlan = formalWriteFollowUpPlan;
   return readiness;
 }
 

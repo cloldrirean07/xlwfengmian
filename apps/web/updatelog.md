@@ -1,5 +1,39 @@
 # 更新日志
 
+## 2026-07-29 16:47
+
+- 新增文件：[src/domain/review/buildFormalWriteFollowUpPlan.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/review/buildFormalWriteFollowUpPlan.js)
+  - 新增正式写回后承接计划领域对象与 Markdown 输出。
+  - 将规则修订任务单、关键样例复跑计划、复跑报告和推荐命令链合并为第一版承接计划。
+- 新增文件：[src/application/runFormalWriteFollowUpPlanStatus.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/application/runFormalWriteFollowUpPlanStatus.js)
+  - 读取正式写回元数据、写回后验收、PI Engine 审计、规则修订任务单和关键样例复跑报告。
+  - 生成承接计划 JSON 与 Markdown。
+- 新增文件：[scripts/generate-formal-write-follow-up-plan.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/scripts/generate-formal-write-follow-up-plan.js)
+  - 新增本地生成脚本。
+- 更新文件：[package.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/package.json)
+  - 新增 `generate:formal-write-follow-up-plan` 脚本。
+- 更新文件：[src/server/server.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/server/server.js)
+  - 新增只读接口 `/api/formal-write-follow-up-plan`。
+- 更新文件：[public/app/api.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/api.js)
+  - 新增承接计划接口函数。
+- 更新文件：[public/app/state.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/state.js)
+  - 新增最新承接计划状态。
+- 更新文件：[public/app/createApp.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/createApp.js)
+  - 刷新写回门禁证据时同步读取承接计划。
+  - 批次复盘看板渲染载荷携带承接计划。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 写回门禁总览与写回后承接任务区域新增“正式写回后承接计划”面板。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 新增承接计划面板、双列任务和命令链样式。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 增加承接计划领域对象、Markdown、接口接线和页面渲染断言。
+- 新增文件：[outputs/batch-review-manual-formal-write/formal-write-follow-up-plan/formal-write-follow-up-plan.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/formal-write-follow-up-plan/formal-write-follow-up-plan.md)
+  - 生成正式写回后承接计划 Markdown。
+- 新增文件：[outputs/batch-review-manual-formal-write/formal-write-follow-up-plan/formal-write-follow-up-plan.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/formal-write-follow-up-plan/formal-write-follow-up-plan.json)
+  - 生成正式写回后承接计划 JSON。
+- 新增文件：[docs/operations/2026-07-29_正式写回后承接计划第一版接入记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-29_正式写回后承接计划第一版接入记录.md)
+  - 记录第一版承接计划接入范围、输出和安全边界。
+
 ## 2026-07-29 14:53
 
 - 更新文件：[/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md](/Users/xlw/Library/Mobile%20Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md)

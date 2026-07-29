@@ -1,0 +1,105 @@
+{
+  "ok": true,
+  "status": "formal-write-follow-up-plan-ready",
+  "summary": "正式写回后承接计划已生成，规则修订任务单与关键样例复跑计划进入人工复核。",
+  "source": {
+    "exportId": "BRF-2026-07-29T06-53-32-869Z",
+    "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+    "acceptanceStatus": "formal-write-post-execution-acceptance-passed",
+    "piEngineStatus": "post-formal-write-follow-up",
+    "goalCompletion": "8 / 8"
+  },
+  "sections": {
+    "ruleRevision": {
+      "status": "ready-for-manual-review",
+      "label": "规则修订任务单已生成",
+      "taskId": "rule-revision-task-sheet",
+      "taskType": "规则修订",
+      "summary": "基于 real-002_to_real-003 的正式写回结论，整理可进入规则引擎下一轮调整的重复摩擦点。",
+      "evidence": [
+        "本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。",
+        "这批案例最卡的环节 / 哪个按钮或模块最该前置 / 当前更像功能问题，还是界面问题 / 这批试跑最关键的结论 / 下一批还要不要继续同样赛道 / UI 优化是否已经到时机",
+        "本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。",
+        "这批案例最卡的环节 / 哪个按钮或模块最该前置 / 当前更像功能问题，还是界面问题 / 这批试跑最关键的结论 / 下一批还要不要继续同样赛道 / UI 优化是否已经到时机"
+      ],
+      "existingReport": {
+        "taskCount": 1,
+        "sourceSampleCount": 1,
+        "p1Count": 0,
+        "p2Count": 0,
+        "p3Count": 1,
+        "topTask": {
+          "taskId": "REV-001",
+          "taskTitle": "补强 neg-content-distance 相关关键词：不贴内容",
+          "priority": "P3",
+          "caseIds": [
+            "sample-001"
+          ]
+        }
+      },
+      "nextStep": {
+        "label": "整理规则修订任务单",
+        "command": "npm run report:rule-revision-task-sheet",
+        "summary": "把本次写回暴露的输入准备摩擦点合并进规则修订任务单，保持人工复核边界。"
+      }
+    },
+    "keyCaseRerun": {
+      "status": "ready-for-rerun-plan",
+      "label": "关键样例复跑计划已生成",
+      "taskId": "key-case-rerun-plan",
+      "taskType": "关键样例复跑",
+      "summary": "将 real-002_to_real-003 纳入规则调整后的关键样例复跑候选，验证写回判断对主链路的影响。",
+      "evidence": [
+        "本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。"
+      ],
+      "plan": {
+        "planId": "key-case-rerun-default",
+        "caseIds": [
+          "sample-001",
+          "real-001"
+        ],
+        "downstreamRefreshTargets": [
+          "reviewed-misclassified",
+          "rule-revision-task-sheet"
+        ]
+      },
+      "latestRun": {
+        "status": "available",
+        "completedCaseCount": 0,
+        "changedCaseCount": 0,
+        "planId": "key-case-rerun-default"
+      },
+      "diff": {
+        "changedCaseCount": 0,
+        "summary": {
+          "comparedCaseCount": 2,
+          "changedCaseCount": 0,
+          "unchangedCaseCount": 2,
+          "downstreamChangedCount": 0
+        }
+      },
+      "nextStep": {
+        "label": "生成关键样例复跑计划",
+        "command": "npm run generate:key-case-rerun-plan",
+        "summary": "将正式写回批次纳入关键样例复跑候选，验证写回结论对主链路的影响。"
+      }
+    }
+  },
+  "commandChain": [
+    "npm run report:rule-revision-task-sheet",
+    "npm run generate:key-case-rerun-plan",
+    "npm run rerun:key-cases",
+    "npm run export:obsidian-key-case-rerun",
+    "npm run export:obsidian-key-case-rerun-diff"
+  ],
+  "nextAction": {
+    "actionId": "review-formal-write-follow-up-plan",
+    "label": "复核承接计划",
+    "summary": "先确认规则修订任务单，再执行关键样例复跑计划。"
+  },
+  "outputPaths": {
+    "json": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/formal-write-follow-up-plan/formal-write-follow-up-plan.json",
+    "markdown": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/formal-write-follow-up-plan/formal-write-follow-up-plan.md"
+  },
+  "safetyBoundary": "仅生成正式写回后承接计划，不自动修改规则，不自动执行复跑，不写入 Obsidian。"
+}

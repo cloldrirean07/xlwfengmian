@@ -35,6 +35,7 @@ import { runManualFormalWriteExecutionPrecheckStatus } from "../application/runM
 import { runManualFormalWriteExecutionPacketStatus } from "../application/runManualFormalWriteExecutionPacketStatus.js";
 import { runManualFormalWritePostExecutionAcceptanceStatus } from "../application/runManualFormalWritePostExecutionAcceptanceStatus.js";
 import { runPiEngineExecutionPositionAuditStatus } from "../application/runPiEngineExecutionPositionAuditStatus.js";
+import { runFormalWriteFollowUpPlanStatus } from "../application/runFormalWriteFollowUpPlanStatus.js";
 import { exportRealCaseBatchFillWorksheetToObsidian } from "../application/exportRealCaseBatchFillWorksheetToObsidian.js";
 import { exportRealCaseBatchRunRecordToObsidian } from "../application/exportRealCaseBatchRunRecordToObsidian.js";
 import { exportRealCaseFillSheetToObsidian } from "../application/exportRealCaseFillSheetToObsidian.js";
@@ -292,6 +293,10 @@ const server = http.createServer(async (req, res) => {
 
     if (req.method === "GET" && requestUrl.pathname === "/api/pi-engine-execution-position-audit") {
       return sendJson(res, 200, await runPiEngineExecutionPositionAuditStatus());
+    }
+
+    if (req.method === "GET" && requestUrl.pathname === "/api/formal-write-follow-up-plan") {
+      return sendJson(res, 200, await runFormalWriteFollowUpPlanStatus());
     }
 
     if (req.method === "POST" && requestUrl.pathname === "/api/batch-review-manual-formal-write-export") {

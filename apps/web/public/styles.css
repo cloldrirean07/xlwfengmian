@@ -3185,6 +3185,98 @@ button:disabled:hover {
   overflow-wrap: anywhere;
 }
 
+.formal-write-follow-up-plan-panel {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(47, 95, 138, 0.16);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(248, 251, 253, 0.92), rgba(255, 255, 255, 0.84)),
+    rgba(255, 255, 255, 0.84);
+}
+
+.formal-write-follow-up-plan-panel p,
+.formal-write-follow-up-plan-panel > small {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.formal-write-follow-up-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.formal-write-follow-up-plan-grid article {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(47, 95, 138, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.formal-write-follow-up-plan-grid article > span,
+.formal-write-follow-up-command-chain > strong {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.formal-write-follow-up-plan-grid article > strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.formal-write-follow-up-plan-grid dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+
+.formal-write-follow-up-plan-grid dl div {
+  min-width: 0;
+}
+
+.formal-write-follow-up-plan-grid dt {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.formal-write-follow-up-plan-grid dd {
+  margin: 2px 0 0;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.formal-write-follow-up-command-chain {
+  display: grid;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(47, 95, 138, 0.12);
+}
+
+.formal-write-follow-up-command-chain ol {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.formal-write-follow-up-command-chain code {
+  color: var(--ink);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 .manual-formal-write-precheck-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -45,6 +45,7 @@ export function createState() {
     latestManualFormalWriteExecutionPacket: null,
     latestManualFormalWritePostExecutionAcceptance: null,
     latestPiEngineExecutionPositionAudit: null,
+    latestFormalWriteFollowUpPlan: null,
     latestFormalWriteExport: null,
     followUpActionStatus: {},
     latestRealCaseMaintenancePreview: null,

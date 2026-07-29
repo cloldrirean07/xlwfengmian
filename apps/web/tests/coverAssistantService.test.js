@@ -227,6 +227,10 @@ import {
   buildPiEngineExecutionPositionAudit,
   buildPiEngineExecutionPositionAuditMarkdown,
 } from "../src/domain/review/buildPiEngineExecutionPositionAudit.js";
+import {
+  buildFormalWriteFollowUpPlan,
+  buildFormalWriteFollowUpPlanMarkdown,
+} from "../src/domain/review/buildFormalWriteFollowUpPlan.js";
 import { parseBatchReviewManualTaskCardNote } from "../src/domain/review/parseBatchReviewManualTaskCardNote.js";
 import { buildObsidianBatchReviewDashboardRecord } from "../src/domain/review/buildObsidianBatchReviewDashboardRecord.js";
 import { buildBatchReviewDashboardReport } from "../src/domain/review/buildBatchReviewDashboardReport.js";
@@ -1882,12 +1886,20 @@ test("case review bridge links expand their target workspace groups", async () =
   assert.ok(serverSource.includes("/api/batch-review-manual-formal-write-post-execution-acceptance"));
   assert.ok(serverSource.includes("runPiEngineExecutionPositionAuditStatus"));
   assert.ok(serverSource.includes("/api/pi-engine-execution-position-audit"));
+  assert.ok(apiSource.includes("previewFormalWriteFollowUpPlan"));
+  assert.ok(apiSource.includes("/api/formal-write-follow-up-plan"));
+  assert.ok(serverSource.includes("runFormalWriteFollowUpPlanStatus"));
+  assert.ok(serverSource.includes("/api/formal-write-follow-up-plan"));
+  assert.ok(createAppSource.includes("previewFormalWriteFollowUpPlan"));
+  assert.ok(createAppSource.includes("state.latestFormalWriteFollowUpPlan"));
   assert.ok(createAppSource.includes('dom.batchReviewDashboardResult.addEventListener("click", handleReviewFollowupAction)'));
   assert.ok(createAppSource.includes('?.addEventListener("click", handleReviewFollowupAction)'));
   assert.ok(styleSource.includes(".manual-formal-write-precheck-panel"));
   assert.ok(styleSource.includes(".manual-formal-write-packet-panel"));
   assert.ok(styleSource.includes(".manual-formal-write-acceptance-panel"));
   assert.ok(styleSource.includes(".manual-formal-write-acceptance-list"));
+  assert.ok(styleSource.includes(".formal-write-follow-up-plan-panel"));
+  assert.ok(styleSource.includes(".formal-write-follow-up-plan-grid"));
   assert.ok(styleSource.includes(".pi-engine-audit-panel"));
   assert.ok(styleSource.includes(".pi-engine-audit-columns"));
   assert.ok(styleSource.includes(".pi-engine-completion-list"));
@@ -6888,6 +6900,92 @@ test("buildPiEngineExecutionPositionAudit completes after formal write acceptanc
   assert.ok(markdown.includes("完成写回后验收：[completed]"));
 });
 
+test("buildFormalWriteFollowUpPlan combines rule revision and key rerun first version", () => {
+  const plan = buildFormalWriteFollowUpPlan({
+    formalWriteExport: {
+      exportId: "BRF-test",
+      targetPath: "/tmp/real-002.md",
+      manualReviewConclusion: "输入准备阶段存在重复摩擦点。",
+      confirmedLines: "这批案例最卡的环节 / 当前更像功能问题，还是界面问题",
+      followUpTasks: [
+        {
+          taskId: "rule-revision-task-sheet",
+          taskType: "rule-revision",
+          label: "规则修订任务单",
+          summary: "整理可进入规则引擎下一轮调整的重复摩擦点。",
+          evidence: ["输入准备阶段存在重复摩擦点。"],
+        },
+        {
+          taskId: "key-case-rerun-plan",
+          taskType: "key-case-rerun",
+          label: "关键样例复跑",
+          summary: "验证写回判断对主链路的影响。",
+          evidence: ["输入准备阶段存在重复摩擦点。"],
+        },
+      ],
+    },
+    postExecutionAcceptance: {
+      status: "formal-write-post-execution-acceptance-passed",
+    },
+    piEngineExecutionPositionAudit: {
+      status: "post-formal-write-follow-up",
+      goalCompletion: {
+        status: "complete",
+        completedCount: 8,
+        totalCount: 8,
+      },
+    },
+    ruleRevisionReport: {
+      summary: {
+        taskCount: 1,
+        sourceSampleCount: 1,
+        p1Count: 0,
+        p2Count: 0,
+        p3Count: 1,
+      },
+      tasks: [
+        {
+          taskId: "REV-001",
+          taskTitle: "补强输入准备提示",
+          priority: "P3",
+          caseIds: ["sample-001"],
+        },
+      ],
+    },
+    keyCaseRerunPlan: {
+      planId: "key-case-rerun-generated",
+      caseIds: ["sample-001"],
+      downstreamRefreshTargets: ["reviewed-misclassified", "rule-revision-task-sheet"],
+    },
+    keyCaseRerunReport: {
+      plan: {
+        planId: "key-case-rerun-generated",
+      },
+      summary: {
+        caseCount: 1,
+      },
+    },
+    keyCaseRerunDiff: {
+      summary: {
+        changedCaseCount: 0,
+      },
+    },
+  });
+  const markdown = buildFormalWriteFollowUpPlanMarkdown(plan);
+
+  assert.equal(plan.ok, true);
+  assert.equal(plan.status, "formal-write-follow-up-plan-ready");
+  assert.equal(plan.sections.ruleRevision.label, "规则修订任务单已生成");
+  assert.equal(plan.sections.keyCaseRerun.label, "关键样例复跑计划已生成");
+  assert.equal(plan.sections.ruleRevision.existingReport.taskCount, 1);
+  assert.equal(plan.sections.keyCaseRerun.plan.caseIds.length, 1);
+  assert.equal(plan.commandChain.length, 5);
+  assert.ok(markdown.includes("# 正式写回后承接计划"));
+  assert.ok(markdown.includes("## 1. 规则修订任务单"));
+  assert.ok(markdown.includes("## 2. 关键样例复跑计划"));
+  assert.ok(markdown.includes("npm run generate:key-case-rerun-plan"));
+});
+
 test("buildManualConfirmationSafePreviewWriteProjection forecasts formal write readiness", () => {
   const projection = buildManualConfirmationSafePreviewWriteProjection({
     writePrecheck: {
@@ -8132,6 +8230,47 @@ test("renderBatchReviewDashboardResult shows formal write follow-up tasks", () =
         },
       ],
     },
+    formalWriteFollowUpPlan: {
+      ok: true,
+      status: "formal-write-follow-up-plan-ready",
+      summary: "正式写回后承接计划已生成。",
+      safetyBoundary: "仅生成正式写回后承接计划。",
+      sections: {
+        ruleRevision: {
+          label: "规则修订任务单已生成",
+          summary: "整理重复摩擦点。",
+          existingReport: {
+            taskCount: 1,
+            sourceSampleCount: 1,
+            topTask: {
+              taskTitle: "补强输入准备提示",
+            },
+          },
+          nextStep: {
+            label: "整理规则修订任务单",
+          },
+        },
+        keyCaseRerun: {
+          label: "关键样例复跑计划已生成",
+          summary: "验证规则调整前后差异。",
+          plan: {
+            planId: "key-case-rerun-generated",
+            caseIds: ["sample-001"],
+          },
+          latestRun: {
+            planId: "key-case-rerun-generated",
+            completedCaseCount: 1,
+          },
+          nextStep: {
+            summary: "等待复跑计划确认。",
+          },
+        },
+      },
+      commandChain: [
+        "npm run report:rule-revision-task-sheet",
+        "npm run generate:key-case-rerun-plan",
+      ],
+    },
   });
 
   assert.ok(container.innerHTML.includes("写回后承接任务"));
@@ -8147,6 +8286,10 @@ test("renderBatchReviewDashboardResult shows formal write follow-up tasks", () =
   assert.ok(container.innerHTML.includes("下一步：整理规则修订任务单"));
   assert.ok(container.innerHTML.includes("下一步：选择关键样例"));
   assert.ok(container.innerHTML.includes("结果区前置后"));
+  assert.ok(container.innerHTML.includes("正式写回后承接计划"));
+  assert.ok(container.innerHTML.includes("规则修订任务单已生成"));
+  assert.ok(container.innerHTML.includes("关键样例复跑计划已生成"));
+  assert.ok(container.innerHTML.includes("npm run generate:key-case-rerun-plan"));
 });
 
 test("renderBatchReviewDashboardResult shows rule handoff when evidence is ready", () => {

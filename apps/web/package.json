@@ -65,6 +65,7 @@
     "generate:manual-formal-write-execution-precheck": "node scripts/generate-manual-formal-write-execution-precheck.js",
     "generate:manual-formal-write-execution-packet": "node scripts/generate-manual-formal-write-execution-packet.js",
     "generate:manual-formal-write-post-execution-acceptance": "node scripts/generate-manual-formal-write-post-execution-acceptance.js",
-    "generate:pi-engine-execution-position-audit": "node scripts/generate-pi-engine-execution-position-audit.js"
+    "generate:pi-engine-execution-position-audit": "node scripts/generate-pi-engine-execution-position-audit.js",
+    "generate:formal-write-follow-up-plan": "node scripts/generate-formal-write-follow-up-plan.js"
   }
 }

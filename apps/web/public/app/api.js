@@ -279,6 +279,10 @@ export function previewPiEngineExecutionPositionAudit() {
   return requestJson("/api/pi-engine-execution-position-audit");
 }
 
+export function previewFormalWriteFollowUpPlan() {
+  return requestJson("/api/formal-write-follow-up-plan");
+}
+
 export function exportBatchReviewSuite(payload = {}) {
   return requestJson("/api/batch-review-suite-export", {
     method: "POST",

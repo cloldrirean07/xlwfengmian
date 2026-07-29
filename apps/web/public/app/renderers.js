@@ -1017,6 +1017,71 @@ function renderManualFormalWritePostExecutionAcceptance(acceptance) {
   `;
 }
 
+function renderFormalWriteFollowUpPlan(plan) {
+  if (!plan) {
+    return "";
+  }
+
+  const ruleRevision = plan.sections?.ruleRevision || {};
+  const keyCaseRerun = plan.sections?.keyCaseRerun || {};
+  const commands = Array.isArray(plan.commandChain) ? plan.commandChain : [];
+  const ruleReport = ruleRevision.existingReport || null;
+  const rerunPlan = keyCaseRerun.plan || null;
+  const latestRun = keyCaseRerun.latestRun || null;
+
+  return `
+    <div class="formal-write-follow-up-plan-panel" aria-label="正式写回后承接计划">
+      <div class="manual-formal-write-precheck-head">
+        <div>
+          <span class="section-kicker">Follow-up Plan</span>
+          <strong>正式写回后承接计划</strong>
+        </div>
+        <span>${escapeHtml(plan.ok ? "已就绪" : "待补证据")}</span>
+      </div>
+      <p>${escapeHtml(plan.summary || "待生成正式写回后承接计划。")}</p>
+      <small>${escapeHtml(plan.safetyBoundary || "仅展示项目内承接计划。")}</small>
+      <div class="formal-write-follow-up-plan-grid">
+        <article>
+          <span>规则修订任务单</span>
+          <strong>${escapeHtml(ruleRevision.label || "待生成")}</strong>
+          <p>${escapeHtml(ruleRevision.summary || "等待规则修订任务。")}</p>
+          <dl>
+            <div><dt>已有任务数</dt><dd>${escapeHtml(ruleReport?.taskCount ?? 0)}</dd></div>
+            <div><dt>来源样本数</dt><dd>${escapeHtml(ruleReport?.sourceSampleCount ?? 0)}</dd></div>
+            <div><dt>下一步</dt><dd>${escapeHtml(ruleRevision.nextStep?.label || "待确认")}</dd></div>
+          </dl>
+          ${
+            ruleReport?.topTask
+              ? `<small>${escapeHtml(ruleReport.topTask.taskTitle || "暂无优先任务")}</small>`
+              : ""
+          }
+        </article>
+        <article>
+          <span>关键样例复跑计划</span>
+          <strong>${escapeHtml(keyCaseRerun.label || "待生成")}</strong>
+          <p>${escapeHtml(keyCaseRerun.summary || "等待关键样例复跑任务。")}</p>
+          <dl>
+            <div><dt>计划 ID</dt><dd>${escapeHtml(rerunPlan?.planId || latestRun?.planId || "暂无")}</dd></div>
+            <div><dt>候选案例</dt><dd>${escapeHtml((rerunPlan?.caseIds || []).length)}</dd></div>
+            <div><dt>已复跑</dt><dd>${escapeHtml(latestRun?.completedCaseCount ?? 0)}</dd></div>
+          </dl>
+          <small>${escapeHtml(keyCaseRerun.nextStep?.summary || "等待复跑计划确认。")}</small>
+        </article>
+      </div>
+      <div class="formal-write-follow-up-command-chain" aria-label="承接计划推荐命令链">
+        <strong>推荐命令链</strong>
+        <ol>
+          ${
+            commands.length
+              ? commands.map((command) => `<li><code>${escapeHtml(command)}</code></li>`).join("")
+              : "<li><code>暂无推荐命令</code></li>"
+          }
+        </ol>
+      </div>
+    </div>
+  `;
+}
+
 function renderPiEngineExecutionPositionAudit(audit) {
   if (!audit) {
     return "";
@@ -1566,6 +1631,7 @@ export function renderWritebackGateOverviewStatus(
   manualFormalWriteExecutionPacket = null,
   manualFormalWritePostExecutionAcceptance = null,
   piEngineExecutionPositionAudit = null,
+  formalWriteFollowUpPlan = null,
 ) {
   if (!readiness) {
     container.innerHTML = `
@@ -1584,6 +1650,7 @@ export function renderWritebackGateOverviewStatus(
       ${renderManualFormalWriteExecutionPrecheck(manualFormalWriteExecutionPrecheck)}
       ${renderManualFormalWriteExecutionPacket(manualFormalWriteExecutionPacket)}
       ${renderManualFormalWritePostExecutionAcceptance(manualFormalWritePostExecutionAcceptance)}
+      ${renderFormalWriteFollowUpPlan(formalWriteFollowUpPlan)}
       ${hasWritebackActionProgress(followUpProgress) ? renderWritebackActionProgress(followUpProgress) : ""}
     `;
     return;
@@ -1640,6 +1707,7 @@ export function renderWritebackGateOverviewStatus(
       ${renderManualFormalWriteExecutionPrecheck(manualFormalWriteExecutionPrecheck)}
       ${renderManualFormalWriteExecutionPacket(manualFormalWriteExecutionPacket)}
       ${renderManualFormalWritePostExecutionAcceptance(manualFormalWritePostExecutionAcceptance)}
+      ${renderFormalWriteFollowUpPlan(formalWriteFollowUpPlan)}
       ${renderWritebackActionProgress(followUpProgress)}
       <p class="micro-copy">${escapeHtml(readiness.summary || "待补")}</p>
       ${renderFormalWriteControlledAction(canProceed)}
@@ -3399,6 +3467,7 @@ export function renderBatchReviewDashboardResult(container, result) {
     result.manualFormalWritePostExecutionAcceptance || null;
   const piEngineExecutionPositionAudit =
     result.piEngineExecutionPositionAudit || null;
+  const formalWriteFollowUpPlan = result.formalWriteFollowUpPlan || null;
   const progressSummary = buildFollowUpProgressSummary(followUpChecklist, followUpProgress);
   const nextFollowUp = progressSummary.nextEntry;
   const backfillStatus = result.manualTaskPreview?.backfillPreview?.status || "";
@@ -3829,6 +3898,7 @@ export function renderBatchReviewDashboardResult(container, result) {
         ${renderManualFormalWriteExecutionPrecheck(manualFormalWriteExecutionPrecheck)}
         ${renderManualFormalWriteExecutionPacket(manualFormalWriteExecutionPacket)}
         ${renderManualFormalWritePostExecutionAcceptance(manualFormalWritePostExecutionAcceptance)}
+        ${renderFormalWriteFollowUpPlan(formalWriteFollowUpPlan)}
         <p class="micro-copy">${escapeHtml(formalWriteReadiness.summary || "待补")}</p>
         <div class="button-row">
           <a class="link-button ghost-button" href="#writeback-gate-overview">查看写回门禁总览</a>
@@ -3865,6 +3935,7 @@ export function renderBatchReviewDashboardResult(container, result) {
               : "<li>当前还没有生成写回后承接任务。</li>"
           }
         </ul>
+        ${renderFormalWriteFollowUpPlan(formalWriteFollowUpPlan)}
       </div>
     `
           : ""
