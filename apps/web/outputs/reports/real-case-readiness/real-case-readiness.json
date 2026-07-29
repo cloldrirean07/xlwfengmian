@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "totalRealCases": 1,
+    "readyCount": 0,
+    "partialCount": 0,
+    "pendingCount": 1
+  },
+  "rows": [
+    {
+      "caseId": "real-001",
+      "title": "P-01 待补真实案例",
+      "platformCaseId": "P-01",
+      "status": "待回填",
+      "totalChecks": 9,
+      "completedChecks": 0,
+      "missingFields": [
+        "内容主题",
+        "内容目标",
+        "素材描述",
+        "封面偏好",
+        "素材备注",
+        "证据说明",
+        "保留项反馈",
+        "第二轮反馈",
+        "来源链接或截图路径"
+      ],
+      "checks": [
+        {
+          "label": "内容主题",
+          "complete": false
+        },
+        {
+          "label": "内容目标",
+          "complete": false
+        },
+        {
+          "label": "素材描述",
+          "complete": false
+        },
+        {
+          "label": "封面偏好",
+          "complete": false
+        },
+        {
+          "label": "素材备注",
+          "complete": false
+        },
+        {
+          "label": "证据说明",
+          "complete": false
+        },
+        {
+          "label": "保留项反馈",
+          "complete": false
+        },
+        {
+          "label": "第二轮反馈",
+          "complete": false
+        },
+        {
+          "label": "来源链接或截图路径",
+          "complete": false
+        }
+      ]
+    }
+  ]
+}

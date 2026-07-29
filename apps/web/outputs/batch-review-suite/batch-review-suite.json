@@ -1,0 +1,685 @@
+{
+  "frictionSummaryExport": {
+    "ok": true,
+    "exportId": "BRFS-2026-06-28T13-17-14-521Z",
+    "exportedAt": "2026-06-28T13:17:14.524Z",
+    "targetPath": "/private/tmp/ai-cover-review-suite-obsidian-9/05_验证与实验/批次试跑记录/跨批次摩擦点汇总/跨批次摩擦点汇总_2026-06-28.md",
+    "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-friction-summary/batch-run-friction-summary.md",
+    "sourceJsonPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-friction-summary/batch-run-friction-summary.json",
+    "obsidianDraft": {
+      "generatedDate": "2026-06-28",
+      "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-friction-summary/batch-run-friction-summary.md",
+      "targetDir": "/private/tmp/ai-cover-review-suite-obsidian-9/05_验证与实验/批次试跑记录/跨批次摩擦点汇总",
+      "targetPath": "/private/tmp/ai-cover-review-suite-obsidian-9/05_验证与实验/批次试跑记录/跨批次摩擦点汇总/跨批次摩擦点汇总_2026-06-28.md",
+      "markdown": "# 跨批次摩擦点汇总_2026-06-28\n\n> 生成方式：代码侧跨批次摩擦点汇总自动生成草稿\n> 生成日期：2026-06-28\n> 对应代码底稿：/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-friction-summary/batch-run-friction-summary.md\n> 文档状态：可继续编辑\n\n## 0. 使用说明\n- 这份汇总用于横向比较多批次真实试跑里重复出现的摩擦点。\n- 它的作用不是直接给 UI 方案，而是帮助判断哪些问题已经重复出现到值得单独讨论。\n- 你后续应继续补：哪些类别更像规则问题，哪些更像 UI 问题。\n\n## 1. 代码侧汇总底稿\n\n# 跨批次摩擦点汇总\n\n## 1. 当前判断\n- 当前状态：接近可以讨论 UI 优化\n- signal_status：emerging-signal\n- 判断原因：已经开始出现跨批次重复摩擦点，但证据还不算非常稳。\n\n## 2. 汇总\n- 批次数：2\n- 案例总数：3\n- 重复摩擦点类别数：5\n- 缺少工作单导出记录的批次数：1\n- 已填写人工结论的批次数：0\n- 完全未写人工结论的批次数：2\n- 关键人工字段已完整覆盖批次数：0\n- 关键人工字段仍未补齐批次数：0\n\n## 3. 最常重复的摩擦点类别\n- 输入准备与案例结构：出现在 2 批 / 平均优先分 95\n  - 为什么重要：如果一开始输入就不稳定，后面的工作单、结果判断和 UI 讨论都会被噪音带偏。\n  - 最近优先原因：当前这批还有 9 个缺失字段，先判断是不是输入结构本身太重或太散。\n- 补写建议与优先顺序：出现在 2 批 / 平均优先分 90\n  - 为什么重要：如果系统给的“先补什么”不清楚，用户会觉得产品只是把问题重新抛回给他。\n  - 最近优先原因：当前已有 4 条批量推荐动作，需要验证这些动作是否真的帮助用户少想一步。\n- 是否进入 UI 优化讨论：出现在 2 批 / 平均优先分 75\n  - 为什么重要：不是所有不顺手都是 UI 问题，先分清是规则问题、输入问题，还是展示问题，能避免过早改版。\n  - 最近优先原因：这类记录的目标不是立即给 UI 方案，而是把“该不该开始做 UI”这件事说清楚。\n- 结果阅读与选择判断：出现在 2 批 / 平均优先分 68\n  - 为什么重要：如果用户看完结果还是不知道该先做什么，问题常常不在规则本身，而在结果组织方式。\n  - 最近优先原因：当前这批共有 1 条案例，需要确认逐条结果是否容易扫描、容易选下一步。\n- 导出沉淀与后续接力：出现在 2 批 / 平均优先分 71.5\n  - 为什么重要：如果导出后不能直接继续补写或复盘，整条链路就会断在最后一步。\n  - 最近优先原因：当前还没有稳定导出记录，这会影响真实试跑闭环的可信度。\n\n## 4. 最常重复的推荐动作\n- 来源链接或截图路径：出现 2 次 / 最高优先分 100\n  - 最近原因：没有原始链接或截图，后续所有分析都缺少可回看的证据基础。\n- 内容主题：出现 2 次 / 最高优先分 95\n  - 最近原因：主题不明确，方向判断和案例归类都会失真。\n- 素材描述：出现 2 次 / 最高优先分 90\n  - 最近原因：不知道封面里具体有什么，就无法判断该保留还是该补图。\n- 内容目标：出现 2 次 / 最高优先分 80\n  - 最近原因：点开后要传达什么不清楚，会影响结果感和点击价值判断。\n\n## 5. 各批次对照\n- real-002_to_real-003：2 条案例 / 工作单导出已确认\n  - 摩擦点前 3：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n  - 推荐动作前 3：来源链接或截图路径 / 内容主题 / 素材描述\n- real-904：1 条案例 / 工作单导出缺失\n  - 摩擦点前 3：输入准备与案例结构 / 补写建议与优先顺序 / 导出沉淀与后续接力\n  - 推荐动作前 3：来源链接或截图路径 / 内容主题 / 素材描述\n\n## 6. 人工试跑结论回看\n- 当前还没有已填写的人工试跑结论。\n\n## 7. 人工补充优先级\n- 关键判断字段覆盖度：当前还没有可统计的人工字段。\n- 建议优先补的批次：\n  - real-002_to_real-003：整批还没写人工结论\n  - real-904：整批还没写人工结论\n\n## 2. 人工补充\n- 当前最稳定重复的摩擦点：\n- 更像规则问题的类别：\n- 更像 UI 问题的类别：\n- 是否正式进入 UI 优化讨论：\n"
+    },
+    "readback": {
+      "ok": true,
+      "matchedExpectedContent": true
+    },
+    "report": {
+      "summary": {
+        "totalBatches": 2,
+        "totalCases": 3,
+        "worksheetMissingCount": 1,
+        "repeatedCategories": 5,
+        "reviewedBatchCount": 0,
+        "missingManualReviewCount": 2,
+        "fullyCoveredBatchCount": 0,
+        "partiallyCoveredBatchCount": 0
+      },
+      "uiDiscussionSignal": {
+        "status": "emerging-signal",
+        "label": "接近可以讨论 UI 优化",
+        "reason": "已经开始出现跨批次重复摩擦点，但证据还不算非常稳。"
+      },
+      "manualReview": {
+        "reviewedBatchCount": 0,
+        "missingManualReviewCount": 2,
+        "fullyCoveredBatchCount": 0,
+        "partiallyCoveredBatchCount": 0,
+        "issueTypeCounts": {},
+        "uiTimingCounts": {},
+        "prioritizedModuleCounts": {},
+        "keyFieldCoverage": {},
+        "pendingBatchRows": [
+          {
+            "batchLabel": "real-002_to_real-003",
+            "hasManualConclusion": false,
+            "missingKeyFields": [
+              {
+                "key": "bottleneckStep",
+                "label": "最卡环节"
+              },
+              {
+                "key": "issueType",
+                "label": "问题类型判断"
+              },
+              {
+                "key": "prioritizedModule",
+                "label": "最该前置模块"
+              },
+              {
+                "key": "uiOptimizationTiming",
+                "label": "UI 时机判断"
+              }
+            ]
+          },
+          {
+            "batchLabel": "real-904",
+            "hasManualConclusion": false,
+            "missingKeyFields": [
+              {
+                "key": "bottleneckStep",
+                "label": "最卡环节"
+              },
+              {
+                "key": "issueType",
+                "label": "问题类型判断"
+              },
+              {
+                "key": "prioritizedModule",
+                "label": "最该前置模块"
+              },
+              {
+                "key": "uiOptimizationTiming",
+                "label": "UI 时机判断"
+              }
+            ]
+          }
+        ],
+        "latestManualConclusions": []
+      },
+      "topCategories": [
+        {
+          "rank": 1,
+          "categoryId": "input-structure",
+          "label": "输入准备与案例结构",
+          "batchCount": 2,
+          "averagePriorityScore": 95,
+          "whyItMatters": "如果一开始输入就不稳定，后面的工作单、结果判断和 UI 讨论都会被噪音带偏。",
+          "latestPriorityReason": "当前这批还有 9 个缺失字段，先判断是不是输入结构本身太重或太散。"
+        },
+        {
+          "rank": 2,
+          "categoryId": "guidance-and-prioritization",
+          "label": "补写建议与优先顺序",
+          "batchCount": 2,
+          "averagePriorityScore": 90,
+          "whyItMatters": "如果系统给的“先补什么”不清楚，用户会觉得产品只是把问题重新抛回给他。",
+          "latestPriorityReason": "当前已有 4 条批量推荐动作，需要验证这些动作是否真的帮助用户少想一步。"
+        },
+        {
+          "rank": 3,
+          "categoryId": "ui-decision-readiness",
+          "label": "是否进入 UI 优化讨论",
+          "batchCount": 2,
+          "averagePriorityScore": 75,
+          "whyItMatters": "不是所有不顺手都是 UI 问题，先分清是规则问题、输入问题，还是展示问题，能避免过早改版。",
+          "latestPriorityReason": "这类记录的目标不是立即给 UI 方案，而是把“该不该开始做 UI”这件事说清楚。"
+        },
+        {
+          "rank": 4,
+          "categoryId": "result-reading",
+          "label": "结果阅读与选择判断",
+          "batchCount": 2,
+          "averagePriorityScore": 68,
+          "whyItMatters": "如果用户看完结果还是不知道该先做什么，问题常常不在规则本身，而在结果组织方式。",
+          "latestPriorityReason": "当前这批共有 1 条案例，需要确认逐条结果是否容易扫描、容易选下一步。"
+        },
+        {
+          "rank": 5,
+          "categoryId": "export-and-handoff",
+          "label": "导出沉淀与后续接力",
+          "batchCount": 2,
+          "averagePriorityScore": 71.5,
+          "whyItMatters": "如果导出后不能直接继续补写或复盘，整条链路就会断在最后一步。",
+          "latestPriorityReason": "当前还没有稳定导出记录，这会影响真实试跑闭环的可信度。"
+        }
+      ],
+      "topRecommendedActions": [
+        {
+          "rank": 1,
+          "label": "来源链接或截图路径",
+          "count": 2,
+          "maxPriorityScore": 100,
+          "latestPriorityReason": "没有原始链接或截图，后续所有分析都缺少可回看的证据基础。"
+        },
+        {
+          "rank": 2,
+          "label": "内容主题",
+          "count": 2,
+          "maxPriorityScore": 95,
+          "latestPriorityReason": "主题不明确，方向判断和案例归类都会失真。"
+        },
+        {
+          "rank": 3,
+          "label": "素材描述",
+          "count": 2,
+          "maxPriorityScore": 90,
+          "latestPriorityReason": "不知道封面里具体有什么，就无法判断该保留还是该补图。"
+        },
+        {
+          "rank": 4,
+          "label": "内容目标",
+          "count": 2,
+          "maxPriorityScore": 80,
+          "latestPriorityReason": "点开后要传达什么不清楚，会影响结果感和点击价值判断。"
+        }
+      ],
+      "batchRows": [
+        {
+          "batchLabel": "real-002_to_real-003",
+          "createdCount": 2,
+          "topCategoryLabels": [
+            "输入准备与案例结构",
+            "补写建议与优先顺序",
+            "是否进入 UI 优化讨论"
+          ],
+          "topActionLabels": [
+            "来源链接或截图路径",
+            "内容主题",
+            "素材描述"
+          ],
+          "hasWorksheetExport": true,
+          "worksheetReadbackOk": true,
+          "hasManualConclusion": false,
+          "manualReviewFilledFields": []
+        },
+        {
+          "batchLabel": "real-904",
+          "createdCount": 1,
+          "topCategoryLabels": [
+            "输入准备与案例结构",
+            "补写建议与优先顺序",
+            "导出沉淀与后续接力"
+          ],
+          "topActionLabels": [
+            "来源链接或截图路径",
+            "内容主题",
+            "素材描述"
+          ],
+          "hasWorksheetExport": false,
+          "worksheetReadbackOk": false,
+          "hasManualConclusion": false,
+          "manualReviewFilledFields": []
+        }
+      ]
+    },
+    "summaryMarkdown": "# 跨批次摩擦点汇总\n\n## 1. 当前判断\n- 当前状态：接近可以讨论 UI 优化\n- signal_status：emerging-signal\n- 判断原因：已经开始出现跨批次重复摩擦点，但证据还不算非常稳。\n\n## 2. 汇总\n- 批次数：2\n- 案例总数：3\n- 重复摩擦点类别数：5\n- 缺少工作单导出记录的批次数：1\n- 已填写人工结论的批次数：0\n- 完全未写人工结论的批次数：2\n- 关键人工字段已完整覆盖批次数：0\n- 关键人工字段仍未补齐批次数：0\n\n## 3. 最常重复的摩擦点类别\n- 输入准备与案例结构：出现在 2 批 / 平均优先分 95\n  - 为什么重要：如果一开始输入就不稳定，后面的工作单、结果判断和 UI 讨论都会被噪音带偏。\n  - 最近优先原因：当前这批还有 9 个缺失字段，先判断是不是输入结构本身太重或太散。\n- 补写建议与优先顺序：出现在 2 批 / 平均优先分 90\n  - 为什么重要：如果系统给的“先补什么”不清楚，用户会觉得产品只是把问题重新抛回给他。\n  - 最近优先原因：当前已有 4 条批量推荐动作，需要验证这些动作是否真的帮助用户少想一步。\n- 是否进入 UI 优化讨论：出现在 2 批 / 平均优先分 75\n  - 为什么重要：不是所有不顺手都是 UI 问题，先分清是规则问题、输入问题，还是展示问题，能避免过早改版。\n  - 最近优先原因：这类记录的目标不是立即给 UI 方案，而是把“该不该开始做 UI”这件事说清楚。\n- 结果阅读与选择判断：出现在 2 批 / 平均优先分 68\n  - 为什么重要：如果用户看完结果还是不知道该先做什么，问题常常不在规则本身，而在结果组织方式。\n  - 最近优先原因：当前这批共有 1 条案例，需要确认逐条结果是否容易扫描、容易选下一步。\n- 导出沉淀与后续接力：出现在 2 批 / 平均优先分 71.5\n  - 为什么重要：如果导出后不能直接继续补写或复盘，整条链路就会断在最后一步。\n  - 最近优先原因：当前还没有稳定导出记录，这会影响真实试跑闭环的可信度。\n\n## 4. 最常重复的推荐动作\n- 来源链接或截图路径：出现 2 次 / 最高优先分 100\n  - 最近原因：没有原始链接或截图，后续所有分析都缺少可回看的证据基础。\n- 内容主题：出现 2 次 / 最高优先分 95\n  - 最近原因：主题不明确，方向判断和案例归类都会失真。\n- 素材描述：出现 2 次 / 最高优先分 90\n  - 最近原因：不知道封面里具体有什么，就无法判断该保留还是该补图。\n- 内容目标：出现 2 次 / 最高优先分 80\n  - 最近原因：点开后要传达什么不清楚，会影响结果感和点击价值判断。\n\n## 5. 各批次对照\n- real-002_to_real-003：2 条案例 / 工作单导出已确认\n  - 摩擦点前 3：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n  - 推荐动作前 3：来源链接或截图路径 / 内容主题 / 素材描述\n- real-904：1 条案例 / 工作单导出缺失\n  - 摩擦点前 3：输入准备与案例结构 / 补写建议与优先顺序 / 导出沉淀与后续接力\n  - 推荐动作前 3：来源链接或截图路径 / 内容主题 / 素材描述\n\n## 6. 人工试跑结论回看\n- 当前还没有已填写的人工试跑结论。\n\n## 7. 人工补充优先级\n- 关键判断字段覆盖度：当前还没有可统计的人工字段。\n- 建议优先补的批次：\n  - real-002_to_real-003：整批还没写人工结论\n  - real-904：整批还没写人工结论\n"
+  },
+  "uiReadinessExport": {
+    "ok": true,
+    "exportId": "UIR-2026-06-28T13-17-14-539Z",
+    "exportedAt": "2026-06-28T13:17:14.540Z",
+    "targetPath": "/private/tmp/ai-cover-review-suite-obsidian-9/06_PRD与版本记录/UI优化进入条件报告/已生成记录/UI优化进入条件报告_2026-06-28.md",
+    "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/ui-readiness/ui-readiness-report.md",
+    "sourceJsonPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/ui-readiness/ui-readiness-report.json",
+    "obsidianDraft": {
+      "generatedDate": "2026-06-28",
+      "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/ui-readiness/ui-readiness-report.md",
+      "targetDir": "/private/tmp/ai-cover-review-suite-obsidian-9/06_PRD与版本记录/UI优化进入条件报告/已生成记录",
+      "targetPath": "/private/tmp/ai-cover-review-suite-obsidian-9/06_PRD与版本记录/UI优化进入条件报告/已生成记录/UI优化进入条件报告_2026-06-28.md",
+      "markdown": "# UI优化进入条件报告_2026-06-28\n\n> 生成方式：代码侧 UI readiness report 自动生成草稿\n> 生成日期：2026-06-28\n> 对应代码底稿：/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/ui-readiness/ui-readiness-report.md\n> 文档状态：可继续编辑\n\n## 0. 使用说明\n- 这份报告用于判断当前是否已经适合正式进入 UI 优化讨论。\n- 它会汇总真实批次工作单、试跑记录和读回确认状态。\n- 你后续应继续补：真实摩擦点、模块优先级和改版目标。\n\n## 1. 代码侧判断底稿\n\n# UI优化进入条件报告\n\n## 1. 当前判断\n- 当前状态：接近可以进入 UI 讨论\n- readiness_level：near-ready\n\n## 2. 汇总\n- 批量工作单批次数：3\n- 批量工作单读回确认数：3\n- 批次试跑记录批次数：2\n- 批次试跑记录读回确认数：2\n- 已写人工结论批次数：0\n- 人工关键字段完整覆盖批次数：0\n- 人工关键字段未补齐批次数：0\n- 跨批次信号：接近可以讨论 UI 优化\n- 重复摩擦点类别数：5\n\n## 3. 检查项\n- [x] 至少 2 批批量工作单导出\n- [x] 至少 2 批批量工作单读回确认\n- [x] 至少 2 批真实批次试跑记录\n- [x] 至少 1 批试跑记录读回确认\n- [ ] 至少 1 批关键人工判断字段补完整\n- [x] 跨批次重复摩擦点信号至少达到 emerging-signal\n\n## 4. 当前风险\n- 虽然已有试跑记录，但还没有人工复盘结论，UI 讨论缺少主观最卡点证据。\n- 人工关键判断字段还没有至少一批补完整，当前更像零散观察，UI 讨论容易判断失真。\n\n## 5. 下一步动作\n- 至少再补 1 批真实案例试跑记录。\n- 确认每批至少有一份可读回的批量工作单导出。\n- 重点盯住跨批次重复出现的摩擦点：输入准备与案例结构\n- 把最卡步骤写成一句结论，后续 UI 讨论时直接使用。\n- 至少补齐 1 批关键人工判断字段，再重新生成 UI 就绪报告。\n\n## 6. 跨批次重复信号\n- 当前状态：接近可以讨论 UI 优化\n- 判断原因：已经开始出现跨批次重复摩擦点，但证据还不算非常稳。\n- 汇总批次数：2\n- 最强重复类别：输入准备与案例结构\n- 人工完整覆盖批次数：0\n- 人工仍未补齐批次数：0\n\n## 7. 当前证据\n- 工作单 / real-701_to_real-702：读回已确认 / 2026-06-28T13:04:25.019Z\n- 工作单 / real-601：读回已确认 / 2026-06-28T13:04:25.016Z\n- 工作单 / real-002_to_real-003：读回已确认 / 2026-06-27T03:54:26.375Z\n- 试跑记录 / real-904：读回已确认 / 2026-06-28T13:04:25.029Z\n- 试跑记录 / real-002_to_real-003：读回已确认 / 2026-06-27T04:45:51.120Z\n\n## 2. 人工判断\n- 当前最值得优先改的模块：\n- 当前最应该后置讨论的视觉项：\n- 是否正式进入 UI 讨论：\n"
+    },
+    "readback": {
+      "ok": true,
+      "matchedExpectedContent": true
+    },
+    "report": {
+      "summary": {
+        "batchFillWorksheetBatchCount": 3,
+        "batchFillReadbackConfirmedCount": 3,
+        "batchRunRecordBatchCount": 2,
+        "batchRunReadbackConfirmedCount": 2,
+        "manualReviewReviewedBatchCount": 0,
+        "manualReviewMissingBatchCount": 2,
+        "manualReviewFullyCoveredBatchCount": 0,
+        "manualReviewPartiallyCoveredBatchCount": 0
+      },
+      "crossBatchSignal": {
+        "status": "emerging-signal",
+        "label": "接近可以讨论 UI 优化",
+        "reason": "已经开始出现跨批次重复摩擦点，但证据还不算非常稳。",
+        "repeatedCategories": 5,
+        "totalBatches": 2,
+        "topRepeatedCategoryLabel": "输入准备与案例结构"
+      },
+      "readinessLevel": "near-ready",
+      "readinessLabel": "接近可以进入 UI 讨论",
+      "passedChecks": [
+        {
+          "label": "至少 2 批批量工作单导出",
+          "passed": true
+        },
+        {
+          "label": "至少 2 批批量工作单读回确认",
+          "passed": true
+        },
+        {
+          "label": "至少 2 批真实批次试跑记录",
+          "passed": true
+        },
+        {
+          "label": "至少 1 批试跑记录读回确认",
+          "passed": true
+        },
+        {
+          "label": "至少 1 批关键人工判断字段补完整",
+          "passed": false
+        },
+        {
+          "label": "跨批次重复摩擦点信号至少达到 emerging-signal",
+          "passed": true
+        }
+      ],
+      "risks": [
+        "虽然已有试跑记录，但还没有人工复盘结论，UI 讨论缺少主观最卡点证据。",
+        "人工关键判断字段还没有至少一批补完整，当前更像零散观察，UI 讨论容易判断失真。"
+      ],
+      "nextActions": [
+        "至少再补 1 批真实案例试跑记录。",
+        "确认每批至少有一份可读回的批量工作单导出。",
+        "重点盯住跨批次重复出现的摩擦点：输入准备与案例结构",
+        "把最卡步骤写成一句结论，后续 UI 讨论时直接使用。",
+        "至少补齐 1 批关键人工判断字段，再重新生成 UI 就绪报告。"
+      ],
+      "evidence": {
+        "batchFillWorksheetStatuses": [
+          {
+            "batchLabel": "real-701_to_real-702",
+            "normalizedLabel": "real-701_to_real-702",
+            "exportedAt": "2026-06-28T13:04:25.019Z",
+            "readbackOk": true,
+            "actionLabel": "新建草稿",
+            "targetPath": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-batch-fill-history-2SGaaA/05_验证与实验/批量真实案例回填工作单/已生成记录/real-701_to_real-702_批量回填工作单_2026-06-28.md"
+          },
+          {
+            "batchLabel": "real-601",
+            "normalizedLabel": "real-601",
+            "exportedAt": "2026-06-28T13:04:25.016Z",
+            "readbackOk": true,
+            "actionLabel": "新建草稿",
+            "targetPath": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-batch-fill-obsidian-HgH6nW/05_验证与实验/批量真实案例回填工作单/已生成记录/real-601_批量回填工作单_2026-06-28.md"
+          },
+          {
+            "batchLabel": "real-002_to_real-003",
+            "normalizedLabel": "real-002_to_real-003",
+            "exportedAt": "2026-06-27T03:54:26.375Z",
+            "readbackOk": true,
+            "actionLabel": "覆盖现有草稿",
+            "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批量真实案例回填工作单/已生成记录/real-002_to_real-003_批量回填工作单_2026-06-27.md"
+          }
+        ],
+        "batchRunRecordStatuses": [
+          {
+            "batchLabel": "real-904",
+            "normalizedLabel": "real-904",
+            "exportedAt": "2026-06-28T13:04:25.029Z",
+            "readbackOk": true,
+            "actionLabel": "新建草稿",
+            "targetPath": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-batch-run-record-nCsxUD/05_验证与实验/批次试跑记录/已生成记录/real-904_批次试跑记录_2026-06-28.md"
+          },
+          {
+            "batchLabel": "real-002_to_real-003",
+            "normalizedLabel": "real-002_to_real-003",
+            "exportedAt": "2026-06-27T04:45:51.120Z",
+            "readbackOk": true,
+            "actionLabel": "新建草稿",
+            "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md"
+          }
+        ],
+        "crossBatchFrictionSummary": {
+          "summary": {
+            "totalBatches": 2,
+            "totalCases": 3,
+            "worksheetMissingCount": 1,
+            "repeatedCategories": 5,
+            "reviewedBatchCount": 0,
+            "missingManualReviewCount": 2,
+            "fullyCoveredBatchCount": 0,
+            "partiallyCoveredBatchCount": 0
+          },
+          "uiDiscussionSignal": {
+            "status": "emerging-signal",
+            "label": "接近可以讨论 UI 优化",
+            "reason": "已经开始出现跨批次重复摩擦点，但证据还不算非常稳。"
+          },
+          "manualReview": {
+            "reviewedBatchCount": 0,
+            "missingManualReviewCount": 2,
+            "fullyCoveredBatchCount": 0,
+            "partiallyCoveredBatchCount": 0,
+            "issueTypeCounts": {},
+            "uiTimingCounts": {},
+            "prioritizedModuleCounts": {},
+            "keyFieldCoverage": {},
+            "pendingBatchRows": [
+              {
+                "batchLabel": "real-002_to_real-003",
+                "hasManualConclusion": false,
+                "missingKeyFields": [
+                  {
+                    "key": "bottleneckStep",
+                    "label": "最卡环节"
+                  },
+                  {
+                    "key": "issueType",
+                    "label": "问题类型判断"
+                  },
+                  {
+                    "key": "prioritizedModule",
+                    "label": "最该前置模块"
+                  },
+                  {
+                    "key": "uiOptimizationTiming",
+                    "label": "UI 时机判断"
+                  }
+                ]
+              },
+              {
+                "batchLabel": "real-904",
+                "hasManualConclusion": false,
+                "missingKeyFields": [
+                  {
+                    "key": "bottleneckStep",
+                    "label": "最卡环节"
+                  },
+                  {
+                    "key": "issueType",
+                    "label": "问题类型判断"
+                  },
+                  {
+                    "key": "prioritizedModule",
+                    "label": "最该前置模块"
+                  },
+                  {
+                    "key": "uiOptimizationTiming",
+                    "label": "UI 时机判断"
+                  }
+                ]
+              }
+            ],
+            "latestManualConclusions": []
+          },
+          "topCategories": [
+            {
+              "rank": 1,
+              "categoryId": "input-structure",
+              "label": "输入准备与案例结构",
+              "batchCount": 2,
+              "averagePriorityScore": 95,
+              "whyItMatters": "如果一开始输入就不稳定，后面的工作单、结果判断和 UI 讨论都会被噪音带偏。",
+              "latestPriorityReason": "当前这批还有 9 个缺失字段，先判断是不是输入结构本身太重或太散。"
+            },
+            {
+              "rank": 2,
+              "categoryId": "guidance-and-prioritization",
+              "label": "补写建议与优先顺序",
+              "batchCount": 2,
+              "averagePriorityScore": 90,
+              "whyItMatters": "如果系统给的“先补什么”不清楚，用户会觉得产品只是把问题重新抛回给他。",
+              "latestPriorityReason": "当前已有 4 条批量推荐动作，需要验证这些动作是否真的帮助用户少想一步。"
+            },
+            {
+              "rank": 3,
+              "categoryId": "ui-decision-readiness",
+              "label": "是否进入 UI 优化讨论",
+              "batchCount": 2,
+              "averagePriorityScore": 75,
+              "whyItMatters": "不是所有不顺手都是 UI 问题，先分清是规则问题、输入问题，还是展示问题，能避免过早改版。",
+              "latestPriorityReason": "这类记录的目标不是立即给 UI 方案，而是把“该不该开始做 UI”这件事说清楚。"
+            },
+            {
+              "rank": 4,
+              "categoryId": "result-reading",
+              "label": "结果阅读与选择判断",
+              "batchCount": 2,
+              "averagePriorityScore": 68,
+              "whyItMatters": "如果用户看完结果还是不知道该先做什么，问题常常不在规则本身，而在结果组织方式。",
+              "latestPriorityReason": "当前这批共有 1 条案例，需要确认逐条结果是否容易扫描、容易选下一步。"
+            },
+            {
+              "rank": 5,
+              "categoryId": "export-and-handoff",
+              "label": "导出沉淀与后续接力",
+              "batchCount": 2,
+              "averagePriorityScore": 71.5,
+              "whyItMatters": "如果导出后不能直接继续补写或复盘，整条链路就会断在最后一步。",
+              "latestPriorityReason": "当前还没有稳定导出记录，这会影响真实试跑闭环的可信度。"
+            }
+          ],
+          "topRecommendedActions": [
+            {
+              "rank": 1,
+              "label": "来源链接或截图路径",
+              "count": 2,
+              "maxPriorityScore": 100,
+              "latestPriorityReason": "没有原始链接或截图，后续所有分析都缺少可回看的证据基础。"
+            },
+            {
+              "rank": 2,
+              "label": "内容主题",
+              "count": 2,
+              "maxPriorityScore": 95,
+              "latestPriorityReason": "主题不明确，方向判断和案例归类都会失真。"
+            },
+            {
+              "rank": 3,
+              "label": "素材描述",
+              "count": 2,
+              "maxPriorityScore": 90,
+              "latestPriorityReason": "不知道封面里具体有什么，就无法判断该保留还是该补图。"
+            },
+            {
+              "rank": 4,
+              "label": "内容目标",
+              "count": 2,
+              "maxPriorityScore": 80,
+              "latestPriorityReason": "点开后要传达什么不清楚，会影响结果感和点击价值判断。"
+            }
+          ],
+          "batchRows": [
+            {
+              "batchLabel": "real-002_to_real-003",
+              "createdCount": 2,
+              "topCategoryLabels": [
+                "输入准备与案例结构",
+                "补写建议与优先顺序",
+                "是否进入 UI 优化讨论"
+              ],
+              "topActionLabels": [
+                "来源链接或截图路径",
+                "内容主题",
+                "素材描述"
+              ],
+              "hasWorksheetExport": true,
+              "worksheetReadbackOk": true,
+              "hasManualConclusion": false,
+              "manualReviewFilledFields": []
+            },
+            {
+              "batchLabel": "real-904",
+              "createdCount": 1,
+              "topCategoryLabels": [
+                "输入准备与案例结构",
+                "补写建议与优先顺序",
+                "导出沉淀与后续接力"
+              ],
+              "topActionLabels": [
+                "来源链接或截图路径",
+                "内容主题",
+                "素材描述"
+              ],
+              "hasWorksheetExport": false,
+              "worksheetReadbackOk": false,
+              "hasManualConclusion": false,
+              "manualReviewFilledFields": []
+            }
+          ]
+        }
+      }
+    },
+    "readinessMarkdown": "# UI优化进入条件报告\n\n## 1. 当前判断\n- 当前状态：接近可以进入 UI 讨论\n- readiness_level：near-ready\n\n## 2. 汇总\n- 批量工作单批次数：3\n- 批量工作单读回确认数：3\n- 批次试跑记录批次数：2\n- 批次试跑记录读回确认数：2\n- 已写人工结论批次数：0\n- 人工关键字段完整覆盖批次数：0\n- 人工关键字段未补齐批次数：0\n- 跨批次信号：接近可以讨论 UI 优化\n- 重复摩擦点类别数：5\n\n## 3. 检查项\n- [x] 至少 2 批批量工作单导出\n- [x] 至少 2 批批量工作单读回确认\n- [x] 至少 2 批真实批次试跑记录\n- [x] 至少 1 批试跑记录读回确认\n- [ ] 至少 1 批关键人工判断字段补完整\n- [x] 跨批次重复摩擦点信号至少达到 emerging-signal\n\n## 4. 当前风险\n- 虽然已有试跑记录，但还没有人工复盘结论，UI 讨论缺少主观最卡点证据。\n- 人工关键判断字段还没有至少一批补完整，当前更像零散观察，UI 讨论容易判断失真。\n\n## 5. 下一步动作\n- 至少再补 1 批真实案例试跑记录。\n- 确认每批至少有一份可读回的批量工作单导出。\n- 重点盯住跨批次重复出现的摩擦点：输入准备与案例结构\n- 把最卡步骤写成一句结论，后续 UI 讨论时直接使用。\n- 至少补齐 1 批关键人工判断字段，再重新生成 UI 就绪报告。\n\n## 6. 跨批次重复信号\n- 当前状态：接近可以讨论 UI 优化\n- 判断原因：已经开始出现跨批次重复摩擦点，但证据还不算非常稳。\n- 汇总批次数：2\n- 最强重复类别：输入准备与案例结构\n- 人工完整覆盖批次数：0\n- 人工仍未补齐批次数：0\n\n## 7. 当前证据\n- 工作单 / real-701_to_real-702：读回已确认 / 2026-06-28T13:04:25.019Z\n- 工作单 / real-601：读回已确认 / 2026-06-28T13:04:25.016Z\n- 工作单 / real-002_to_real-003：读回已确认 / 2026-06-27T03:54:26.375Z\n- 试跑记录 / real-904：读回已确认 / 2026-06-28T13:04:25.029Z\n- 试跑记录 / real-002_to_real-003：读回已确认 / 2026-06-27T04:45:51.120Z\n"
+  },
+  "dashboardExport": {
+    "ok": true,
+    "exportId": "BRD-2026-06-28T13-17-14-542Z",
+    "exportedAt": "2026-06-28T13:17:14.543Z",
+    "targetPath": "/private/tmp/ai-cover-review-suite-obsidian-9/05_验证与实验/批次试跑记录/批次复盘看板/批次复盘看板_2026-06-28.md",
+    "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-review-dashboard/batch-review-dashboard.md",
+    "sourceJsonPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-review-dashboard/batch-review-dashboard.json",
+    "obsidianDraft": {
+      "generatedDate": "2026-06-28",
+      "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-review-dashboard/batch-review-dashboard.md",
+      "targetDir": "/private/tmp/ai-cover-review-suite-obsidian-9/05_验证与实验/批次试跑记录/批次复盘看板",
+      "targetPath": "/private/tmp/ai-cover-review-suite-obsidian-9/05_验证与实验/批次试跑记录/批次复盘看板/批次复盘看板_2026-06-28.md",
+      "markdown": "# 批次复盘看板_2026-06-28\n\n> 生成方式：代码侧批次复盘看板自动生成草稿\n> 生成日期：2026-06-28\n> 对应代码底稿：/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-review-dashboard/batch-review-dashboard.md\n> 文档状态：可继续编辑\n\n## 0. 使用说明\n- 这份看板用于把当前最该补的批次、人工复盘趋势和 UI 时机判断收成一个日常推进入口。\n- 它不是替代跨批次汇总或 UI readiness，而是帮助你决定下一步先补哪一批。\n- 你后续应继续补：最卡环节、最该前置模块、以及是否已经到 UI 讨论时机。\n\n## 1. 代码侧看板底稿\n\n# 批次复盘看板\n\n## 1. 当前判断\n- UI 时机：接近可以进入 UI 讨论\n- 跨批次信号：接近可以讨论 UI 优化\n- 人工复盘趋势：人工复盘仍然零散\n- 当前原因：当前更多是零散观察或半填状态，先补齐关键人工字段比提前讨论 UI 更重要。\n\n## 2. 复盘覆盖汇总\n- 批次数：2\n- 已写人工结论批次数：0\n- 人工完整覆盖批次数：0\n- 人工半填批次数：0\n- 完全未写人工结论批次数：2\n- 重复摩擦点类别数：5\n\n## 3. 当前最该补的批次\n- real-002_to_real-003：先补人工结论\n  - 缺口：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 案例数：2\n  - 当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n- real-904：先补人工结论\n  - 缺口：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 案例数：1\n  - 当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 导出沉淀与后续接力\n\n## 4. 下一步动作\n- 先补 real-002_to_real-003 这一批：整批人工结论还没写\n- 补完后重新生成跨批次摩擦点汇总，确认关键人工字段完整覆盖批次有没有增长。\n- 等至少 1 批人工关键字段补完整后，再重新看 UI 就绪度报告。\n\n## 5. 复盘后操作清单\n- 先确认这轮复盘材料\n  - 先回看跨批次摩擦点汇总，确认重复摩擦点有没有变化。\n    - 页面入口：生成跨批次摩擦点预览\n  - 再回看 UI 优化进入条件报告，确认这轮到底是不是还不该进入 UI 讨论。\n    - 页面入口：生成 UI 就绪度预览\n- 先补当前最关键缺口\n  - real-002_to_real-003 是当前优先级最高的批次，先处理：先补人工结论。\n    - 页面入口：生成批次试跑记录\n  - 先补这批的关键字段：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断。\n    - 页面入口：回到批次试跑记录区\n  - 补字段时重点回看这些摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论。\n    - 页面入口：对照跨批次摩擦点\n- 补完后立刻重跑复盘判断\n  - 补完人工关键字段后，重新生成跨批次摩擦点汇总，确认重复信号有没有变化。\n    - 页面入口：重跑跨批次摩擦点\n  - 再重新生成 UI 优化进入条件报告和批次复盘看板，检查完整覆盖批次数有没有增长。\n    - 页面入口：重跑 UI 报告和复盘看板\n- 暂不进入 UI 讨论\n  - 当前 UI 时机判断仍是：接近可以进入 UI 讨论。\n    - 页面入口：回看 UI 时机判断\n  - 在新增完整人工复盘批次前，不优先做大规模视觉改版，先让判断证据继续增长。\n\n## 2. 人工补充\n- 当前最该先补的批次：\n- 这一批补完后最想验证的点：\n- 是否开始进入 UI 交互层优化讨论：\n"
+    },
+    "readback": {
+      "ok": true,
+      "matchedExpectedContent": true
+    },
+    "report": {
+      "summary": {
+        "totalBatches": 2,
+        "reviewedBatchCount": 0,
+        "fullyCoveredBatchCount": 0,
+        "partiallyCoveredBatchCount": 0,
+        "missingManualReviewCount": 2,
+        "repeatedCategories": 5
+      },
+      "crossBatchSignal": {
+        "status": "emerging-signal",
+        "label": "接近可以讨论 UI 优化",
+        "reason": "已经开始出现跨批次重复摩擦点，但证据还不算非常稳。"
+      },
+      "uiReadiness": {
+        "readinessLevel": "near-ready",
+        "readinessLabel": "接近可以进入 UI 讨论"
+      },
+      "coverageTrend": {
+        "status": "fragmented",
+        "label": "人工复盘仍然零散",
+        "reason": "当前更多是零散观察或半填状态，先补齐关键人工字段比提前讨论 UI 更重要。"
+      },
+      "priorityRows": [
+        {
+          "rank": 1,
+          "batchLabel": "real-002_to_real-003",
+          "urgencyLabel": "先补人工结论",
+          "missingFieldLabels": [
+            "最卡环节",
+            "问题类型判断",
+            "最该前置模块",
+            "UI 时机判断"
+          ],
+          "createdCount": 2,
+          "topCategoryLabels": [
+            "输入准备与案例结构",
+            "补写建议与优先顺序",
+            "是否进入 UI 优化讨论"
+          ],
+          "hasManualConclusion": false
+        },
+        {
+          "rank": 2,
+          "batchLabel": "real-904",
+          "urgencyLabel": "先补人工结论",
+          "missingFieldLabels": [
+            "最卡环节",
+            "问题类型判断",
+            "最该前置模块",
+            "UI 时机判断"
+          ],
+          "createdCount": 1,
+          "topCategoryLabels": [
+            "输入准备与案例结构",
+            "补写建议与优先顺序",
+            "导出沉淀与后续接力"
+          ],
+          "hasManualConclusion": false
+        }
+      ],
+      "nextActions": [
+        "先补 real-002_to_real-003 这一批：整批人工结论还没写",
+        "补完后重新生成跨批次摩擦点汇总，确认关键人工字段完整覆盖批次有没有增长。",
+        "等至少 1 批人工关键字段补完整后，再重新看 UI 就绪度报告。"
+      ],
+      "followUpChecklist": {
+        "title": "复盘后操作清单",
+        "focusLabel": "real-002_to_real-003 优先",
+        "readyForUi": false,
+        "phases": [
+          {
+            "label": "先确认这轮复盘材料",
+            "items": [
+              {
+                "label": "先回看跨批次摩擦点汇总，确认重复摩擦点有没有变化。",
+                "actionId": "preview-batch-run-friction-summary",
+                "actionLabel": "生成跨批次摩擦点预览"
+              },
+              {
+                "label": "再回看 UI 优化进入条件报告，确认这轮到底是不是还不该进入 UI 讨论。",
+                "actionId": "preview-ui-optimization-readiness",
+                "actionLabel": "生成 UI 就绪度预览"
+              }
+            ]
+          },
+          {
+            "label": "先补当前最关键缺口",
+            "items": [
+              {
+                "label": "real-002_to_real-003 是当前优先级最高的批次，先处理：先补人工结论。",
+                "actionId": "preview-real-case-batch-run-record",
+                "actionLabel": "生成批次试跑记录"
+              },
+              {
+                "label": "先补这批的关键字段：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断。",
+                "actionId": "preview-real-case-batch-run-record",
+                "actionLabel": "回到批次试跑记录区"
+              },
+              {
+                "label": "补字段时重点回看这些摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论。",
+                "actionId": "preview-batch-run-friction-summary",
+                "actionLabel": "对照跨批次摩擦点"
+              }
+            ]
+          },
+          {
+            "label": "补完后立刻重跑复盘判断",
+            "items": [
+              {
+                "label": "补完人工关键字段后，重新生成跨批次摩擦点汇总，确认重复信号有没有变化。",
+                "actionId": "preview-batch-run-friction-summary",
+                "actionLabel": "重跑跨批次摩擦点"
+              },
+              {
+                "label": "再重新生成 UI 优化进入条件报告和批次复盘看板，检查完整覆盖批次数有没有增长。",
+                "actionId": "preview-ui-and-dashboard",
+                "actionLabel": "重跑 UI 报告和复盘看板"
+              }
+            ]
+          },
+          {
+            "label": "暂不进入 UI 讨论",
+            "items": [
+              {
+                "label": "当前 UI 时机判断仍是：接近可以进入 UI 讨论。",
+                "actionId": "preview-ui-optimization-readiness",
+                "actionLabel": "回看 UI 时机判断"
+              },
+              {
+                "label": "在新增完整人工复盘批次前，不优先做大规模视觉改版，先让判断证据继续增长。",
+                "actionId": "",
+                "actionLabel": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dashboardMarkdown": "# 批次复盘看板\n\n## 1. 当前判断\n- UI 时机：接近可以进入 UI 讨论\n- 跨批次信号：接近可以讨论 UI 优化\n- 人工复盘趋势：人工复盘仍然零散\n- 当前原因：当前更多是零散观察或半填状态，先补齐关键人工字段比提前讨论 UI 更重要。\n\n## 2. 复盘覆盖汇总\n- 批次数：2\n- 已写人工结论批次数：0\n- 人工完整覆盖批次数：0\n- 人工半填批次数：0\n- 完全未写人工结论批次数：2\n- 重复摩擦点类别数：5\n\n## 3. 当前最该补的批次\n- real-002_to_real-003：先补人工结论\n  - 缺口：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 案例数：2\n  - 当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n- real-904：先补人工结论\n  - 缺口：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 案例数：1\n  - 当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 导出沉淀与后续接力\n\n## 4. 下一步动作\n- 先补 real-002_to_real-003 这一批：整批人工结论还没写\n- 补完后重新生成跨批次摩擦点汇总，确认关键人工字段完整覆盖批次有没有增长。\n- 等至少 1 批人工关键字段补完整后，再重新看 UI 就绪度报告。\n\n## 5. 复盘后操作清单\n- 先确认这轮复盘材料\n  - 先回看跨批次摩擦点汇总，确认重复摩擦点有没有变化。\n    - 页面入口：生成跨批次摩擦点预览\n  - 再回看 UI 优化进入条件报告，确认这轮到底是不是还不该进入 UI 讨论。\n    - 页面入口：生成 UI 就绪度预览\n- 先补当前最关键缺口\n  - real-002_to_real-003 是当前优先级最高的批次，先处理：先补人工结论。\n    - 页面入口：生成批次试跑记录\n  - 先补这批的关键字段：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断。\n    - 页面入口：回到批次试跑记录区\n  - 补字段时重点回看这些摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论。\n    - 页面入口：对照跨批次摩擦点\n- 补完后立刻重跑复盘判断\n  - 补完人工关键字段后，重新生成跨批次摩擦点汇总，确认重复信号有没有变化。\n    - 页面入口：重跑跨批次摩擦点\n  - 再重新生成 UI 优化进入条件报告和批次复盘看板，检查完整覆盖批次数有没有增长。\n    - 页面入口：重跑 UI 报告和复盘看板\n- 暂不进入 UI 讨论\n  - 当前 UI 时机判断仍是：接近可以进入 UI 讨论。\n    - 页面入口：回看 UI 时机判断\n  - 在新增完整人工复盘批次前，不优先做大规模视觉改版，先让判断证据继续增长。\n"
+  },
+  "suiteMarkdown": "# 批次复盘套件\n\n## 1. 当前导出概览\n- 跨批次摩擦点汇总：已导出并读回确认\n- UI 优化进入条件报告：已导出并读回确认\n- 批次复盘看板：已导出并读回确认\n\n## 2. 产物路径\n- 跨批次摩擦点汇总：/private/tmp/ai-cover-review-suite-obsidian-9/05_验证与实验/批次试跑记录/跨批次摩擦点汇总/跨批次摩擦点汇总_2026-06-28.md\n- UI 优化进入条件报告：/private/tmp/ai-cover-review-suite-obsidian-9/06_PRD与版本记录/UI优化进入条件报告/已生成记录/UI优化进入条件报告_2026-06-28.md\n- 批次复盘看板：/private/tmp/ai-cover-review-suite-obsidian-9/05_验证与实验/批次试跑记录/批次复盘看板/批次复盘看板_2026-06-28.md\n\n## 3. 当前最关键判断\n- 跨批次信号：接近可以讨论 UI 优化\n- UI 时机：接近可以进入 UI 讨论\n- 人工复盘趋势：人工复盘仍然零散\n\n## 4. 当前最该补的批次\n- real-002_to_real-003：先补人工结论\n  - 缺口：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n- real-904：先补人工结论\n  - 缺口：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 导出沉淀与后续接力\n\n## 5. 下一步动作\n- 先补 real-002_to_real-003 这一批：整批人工结论还没写\n- 补完后重新生成跨批次摩擦点汇总，确认关键人工字段完整覆盖批次有没有增长。\n- 等至少 1 批人工关键字段补完整后，再重新看 UI 就绪度报告。\n\n## 6. 复盘后操作清单\n- 先确认这轮复盘材料\n  - 先回看跨批次摩擦点汇总，确认重复摩擦点有没有变化。\n    - 页面入口：生成跨批次摩擦点预览\n  - 再回看 UI 优化进入条件报告，确认这轮到底是不是还不该进入 UI 讨论。\n    - 页面入口：生成 UI 就绪度预览\n- 先补当前最关键缺口\n  - real-002_to_real-003 是当前优先级最高的批次，先处理：先补人工结论。\n    - 页面入口：生成批次试跑记录\n  - 先补这批的关键字段：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断。\n    - 页面入口：回到批次试跑记录区\n  - 补字段时重点回看这些摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论。\n    - 页面入口：对照跨批次摩擦点\n- 补完后立刻重跑复盘判断\n  - 补完人工关键字段后，重新生成跨批次摩擦点汇总，确认重复信号有没有变化。\n    - 页面入口：重跑跨批次摩擦点\n  - 再重新生成 UI 优化进入条件报告和批次复盘看板，检查完整覆盖批次数有没有增长。\n    - 页面入口：重跑 UI 报告和复盘看板\n- 暂不进入 UI 讨论\n  - 当前 UI 时机判断仍是：接近可以进入 UI 讨论。\n    - 页面入口：回看 UI 时机判断\n  - 在新增完整人工复盘批次前，不优先做大规模视觉改版，先让判断证据继续增长。\n"
+}

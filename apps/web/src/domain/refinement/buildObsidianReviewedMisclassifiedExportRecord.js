@@ -1,0 +1,30 @@
+export function buildObsidianReviewedMisclassifiedExportRecord({
+  generatedDate,
+  sourceMarkdownPath,
+  summaryMarkdown,
+}) {
+  return [
+    `# 二轮误判样本导出_${generatedDate}`,
+    "",
+    "> 生成方式：代码侧 `report:reviewed-misclassified` + `export:obsidian-reviewed-misclassified` 自动生成草稿",
+    `> 生成日期：${generatedDate}`,
+    `> 对应代码报告：${sourceMarkdownPath}`,
+    "> 文档状态：可继续编辑",
+    "",
+    "## 0. 使用说明",
+    "- 这份记录只收集已被人工判定为误判、并标记需要导出的二轮解释样本。",
+    "- 下面的“代码侧导出底稿”来自结构化人工复核字段和 case-run 结果的自动汇总。",
+    "- 你后续应继续补：是否确认进入规则修订、是否需要新增案例、是否需要改默认兜底逻辑。",
+    "",
+    "## 1. 代码侧导出底稿",
+    "",
+    summaryMarkdown.trim(),
+    "",
+    "## 2. 后续处理",
+    "- [ ] 回填到规则修订任务单",
+    "- [ ] 更新 feedback-catalog.json",
+    "- [ ] 更新案例标注库",
+    "- [ ] 更新实验结论",
+    "",
+  ].join("\n");
+}

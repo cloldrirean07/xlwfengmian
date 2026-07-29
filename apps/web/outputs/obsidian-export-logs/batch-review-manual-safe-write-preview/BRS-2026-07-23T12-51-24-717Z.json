@@ -1,0 +1,11 @@
+{
+  "exportId": "BRS-2026-07-23T12-51-24-717Z",
+  "exportedAt": "2026-07-23T12:51:24.735Z",
+  "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md",
+  "sourceMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/batch-review-manual-safe-write-preview.md",
+  "sourceJsonPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/batch-review-manual-safe-write-preview.json",
+  "readback": {
+    "ok": true,
+    "matchedExpectedContent": true
+  }
+}

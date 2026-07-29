@@ -1,0 +1,121 @@
+{
+  "ok": true,
+  "status": "formal-write-execution-packet-ready",
+  "summary": "正式写回执行包已生成，可作为人工确认前的最后审计材料。",
+  "target": {
+    "batchLabel": "real-002_to_real-003",
+    "safePreviewPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md",
+    "targetRecordPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+    "manualReviewConclusion": "本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。",
+    "confirmedLines": "这批案例最卡的环节 / 哪个按钮或模块最该前置 / 当前更像功能问题，还是界面问题 / 这批试跑最关键的结论 / 下一批还要不要继续同样赛道 / UI 优化是否已经到时机",
+    "readyDecision": "可以"
+  },
+  "confirmation": {
+    "requiredPhrase": "确认执行正式写回",
+    "phraseRequiredBeforeWrite": true
+  },
+  "writePlan": {
+    "willOverwriteTargetRecord": true,
+    "sourceMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.md",
+    "sourceJsonPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.json",
+    "sourcePreviousMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.previous.md",
+    "logDirectory": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/obsidian-export-logs/batch-review-manual-formal-write",
+    "previousContentLength": 2728,
+    "finalContentLength": 2869,
+    "contentLengthDelta": 141,
+    "previousLineCount": 139,
+    "finalLineCount": 137,
+    "lineCountDelta": -2
+  },
+  "lineDiff": {
+    "hasChanges": true,
+    "removedLineCount": 7,
+    "addedLineCount": 6,
+    "hunkCount": 4,
+    "visibleHunkCount": 4,
+    "truncated": false,
+    "hunks": [
+      {
+        "hunkId": "hunk-1",
+        "contextBefore": "## 6. 人工试跑结论",
+        "removedLines": [
+          "- 这批案例最卡的环节："
+        ],
+        "addedLines": [
+          "- 这批案例最卡的环节：最卡在准备输入信息时，不知道先补哪项。"
+        ],
+        "contextAfter": "- 哪些字段最难补："
+      },
+      {
+        "hunkId": "hunk-2",
+        "contextBefore": "## 7. 对产品的影响",
+        "removedLines": [
+          "- 哪个按钮或模块最该前置："
+        ],
+        "addedLines": [
+          "- 哪个按钮或模块最该前置：建议先把输入准备区前置，因为它和“来源链接或截图路径”最直接相关。"
+        ],
+        "contextAfter": "- 哪段说明文字太多："
+      },
+      {
+        "hunkId": "hunk-3",
+        "contextBefore": "- 哪个步骤最值得做成更强引导：",
+        "removedLines": [
+          "- 当前更像功能问题，还是界面问题："
+        ],
+        "addedLines": [
+          "- 当前更像功能问题，还是界面问题：更像流程问题，因为关键补写顺序还不明确，容易停在中间。"
+        ],
+        "contextAfter": ""
+      },
+      {
+        "hunkId": "hunk-4",
+        "contextBefore": "## 2. 补充结论",
+        "removedLines": [
+          "- 这批试跑最关键的结论：",
+          "- 下一批还要不要继续同样赛道：",
+          "- UI 优化是否已经到时机：",
+          ""
+        ],
+        "addedLines": [
+          "- 这批试跑最关键的结论：最卡在准备输入信息时，不知道先补哪项。",
+          "- 下一批还要不要继续同样赛道：先基于当前建议态改写草稿做一轮人工确认。",
+          "- UI 优化是否已经到时机：先别急着做 UI，先补齐关键人工判断再重跑更稳。"
+        ],
+        "contextAfter": ""
+      }
+    ]
+  },
+  "rollback": {
+    "previousSnapshotPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.previous.md",
+    "restoreWhenReadbackMismatch": true,
+    "readbackMustMatchFinalMarkdown": true,
+    "summary": "正式写回执行时会先保存目标记录旧版本；读回不一致时恢复旧版本并报错。"
+  },
+  "precheck": {
+    "status": "formal-write-execution-precheck-ready",
+    "ok": true,
+    "blockers": []
+  },
+  "nextAction": {
+    "actionId": "export-manual-review-formal-write",
+    "label": "执行正式写回",
+    "requiredPhrase": "确认执行正式写回",
+    "summary": "人工确认后执行正式写回，并读回校验目标记录。"
+  },
+  "outputPaths": {
+    "json": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/manual-formal-write-execution-packet/manual-formal-write-execution-packet.json",
+    "markdown": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/manual-formal-write-execution-packet/manual-formal-write-execution-packet.md",
+    "sourceMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.md",
+    "sourceJsonPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.json",
+    "sourcePreviousMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.previous.md",
+    "logDirectory": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/obsidian-export-logs/batch-review-manual-formal-write"
+  },
+  "safetyBoundary": "仅生成正式写回执行包，不写入 Obsidian，不执行正式写回。",
+  "nextChecks": [
+    "复核目标记录路径和安全预览来源。",
+    "复核写入前后内容长度与行数变化。",
+    "确认回滚快照路径和读回校验策略。",
+    "输入正式写回确认短语后再执行正式写回。"
+  ]
+}

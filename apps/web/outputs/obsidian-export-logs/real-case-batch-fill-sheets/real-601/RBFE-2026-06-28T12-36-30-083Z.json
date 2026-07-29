@@ -1,0 +1,25 @@
+{
+  "exportId": "RBFE-2026-06-28T12-36-30-083Z",
+  "exportedAt": "2026-06-28T12:36:30.090Z",
+  "batchLabel": "real-601",
+  "normalizedLabel": "real-601",
+  "createdCount": 1,
+  "targetPath": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-batch-fill-obsidian-teHGaX/05_验证与实验/批量真实案例回填工作单/已生成记录/real-601_批量回填工作单_2026-06-28.md",
+  "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-fill-sheets/real-601/fill-sheet.md",
+  "sourceJsonPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-fill-sheets/real-601/fill-sheet.json",
+  "generatedDate": "2026-06-28",
+  "overwrite": {
+    "requestedMode": "overwrite",
+    "targetAlreadyExisted": false,
+    "actionLabel": "新建草稿",
+    "previousHeading": "",
+    "previousLength": 0,
+    "previousMatchedExpectedContent": false
+  },
+  "readback": {
+    "ok": true,
+    "persistedHeading": "# 批量真实案例回填工作单_2026-06-28",
+    "persistedLength": 1781,
+    "matchedExpectedContent": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "status": "rejection-preview-ready",
+  "currentDecision": {
+    "ok": true,
+    "status": "awaiting-decision",
+    "decisionStatus": "pending",
+    "decisionLabel": "待确认",
+    "targetBatchLabel": "real-002_to_real-003",
+    "sourcePath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-handoff-packet/manual-confirmation-handoff-packet.md",
+    "decisionNote": "待确认",
+    "canProceedToSafePreviewWrite": false,
+    "handoffReady": true,
+    "targetMatches": true,
+    "safetyBoundary": "仅校验项目内决策记录，不写入 Obsidian，不执行正式写回。",
+    "summary": "决策仍待确认，正式写回保持锁定。"
+  },
+  "rejectedDecision": {
+    "ok": true,
+    "status": "decision-rejected",
+    "decisionStatus": "reject-recommended",
+    "decisionLabel": "暂不采用推荐确认块",
+    "targetBatchLabel": "real-002_to_real-003",
+    "sourcePath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-handoff-packet/manual-confirmation-handoff-packet.md",
+    "decisionNote": "预演暂不采用推荐确认块",
+    "canProceedToSafePreviewWrite": false,
+    "handoffReady": true,
+    "targetMatches": true,
+    "safetyBoundary": "仅校验项目内决策记录，不写入 Obsidian，不执行正式写回。",
+    "summary": "已暂不采用推荐确认块，正式写回保持锁定。"
+  },
+  "rejectedDecisionMarkdown": "# 人工确认决策记录\n\n- 决策状态：reject-recommended\n- 目标批次：real-002_to_real-003\n- 推荐确认块来源：/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-handoff-packet/manual-confirmation-handoff-packet.md\n- 决策说明：预演暂不采用推荐确认块\n\n## 1. 可选状态\n\n- pending：继续等待人工决策，不进入安全预览写入。\n- adopt-recommended：采用推荐确认块，进入安全预览写入前复查。\n- reject-recommended：暂不采用推荐确认块，保持正式写回锁定。\n\n## 2. 推荐确认块\n\n```markdown\n## 4. 人工补充\n- 人工复盘结论：本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。\n- 哪几行确认可以正式写回：这批案例最卡的环节 / 哪个按钮或模块最该前置 / 当前更像功能问题，还是界面问题 / 这批试跑最关键的结论 / 下一批还要不要继续同样赛道 / UI 优化是否已经到时机\n- 哪几行仍需手改：\n- 是否已经可以进入正式写回：可以\n```\n\n## 3. 安全边界\n\n- 本记录只表达是否采用推荐确认块。\n- 本记录不会写入 Obsidian。\n- 正式写回仍需在安全预览写入后重新检查门禁。\n",
+  "validationMarkdown": "# 人工确认决策校验报告\n\n- 校验结论：通过\n- 状态码：decision-rejected\n- 决策状态：暂不采用推荐确认块\n- 目标批次：real-002_to_real-003\n- 推荐确认块来源：/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-handoff-packet/manual-confirmation-handoff-packet.md\n- 决策说明：预演暂不采用推荐确认块\n- 交接包是否就绪：是\n- 目标批次是否匹配：是\n- 是否可进入安全预览写入前复查：否\n- 安全边界：仅校验项目内决策记录，不写入 Obsidian，不执行正式写回。\n\n## 1. 结论\n\n已暂不采用推荐确认块，正式写回保持锁定。",
+  "canProceedToSafePreviewWriteAfterRejection": false,
+  "safetyBoundary": "仅生成暂不采用推荐确认块后的项目内预演，不修改决策记录，不写入 Obsidian，不执行正式写回。",
+  "summary": "暂不采用推荐确认块后的决策预演通过，正式写回保持锁定。"
+}

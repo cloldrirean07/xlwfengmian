@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产品实现方案确认（待确认）</title>
+  <style>
+    :root {
+      --page: #f6f7fb;
+      --panel: #ffffff;
+      --line: #e5e7eb;
+      --line-soft: #eef2f7;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --soft: #8a94a6;
+      --primary: #246bfe;
+      --primary-soft: #eef5ff;
+      --success: #168a4a;
+      --success-soft: #edf8f1;
+      --warning: #b96b00;
+      --warning-soft: #fff7e6;
+      --danger: #c9372c;
+      --danger-soft: #fff1f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 52px;
+    }
+
+    .hero,
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .hero {
+      padding: 28px 30px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.32;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 20px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 18px 0 10px;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 24px 26px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 12px 13px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f3f5f8;
+      color: var(--text);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    td.group {
+      min-width: 128px;
+      color: var(--text);
+      font-weight: 700;
+      background: #fbfcff;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .meta-card,
+    .note-box,
+    .state-card {
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+    }
+
+    .meta-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--soft);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .meta-card span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .note-box {
+      padding: 14px 16px;
+    }
+
+    .note-box h3 {
+      margin-top: 0;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .tag.warning {
+      background: var(--warning-soft);
+      color: var(--warning);
+    }
+
+    .tag.success {
+      background: var(--success-soft);
+      color: var(--success);
+    }
+
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 8px 0 2px;
+    }
+
+    .flow-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .flow-node {
+      min-width: 176px;
+      max-width: min(360px, 92%);
+      padding: 10px 15px;
+      border: 2px solid #b79cff;
+      border-radius: 2px;
+      background: #f3efff;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.45;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .flow-node.decision {
+      border-color: #f6b94f;
+      background: var(--warning-soft);
+    }
+
+    .flow-node.success {
+      border-color: #89d6a5;
+      background: var(--success-soft);
+    }
+
+    .flow-node.danger {
+      border-color: #ff9c96;
+      background: var(--danger-soft);
+    }
+
+    .flow-arrow {
+      position: relative;
+      width: 0;
+      height: 34px;
+      border-left: 3px solid #333333;
+    }
+
+    .flow-arrow::after {
+      content: "";
+      position: absolute;
+      left: -7px;
+      bottom: -1px;
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 11px solid #333333;
+    }
+
+    .state-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .state-card {
+      flex: 1 1 180px;
+      padding: 13px 14px;
+    }
+
+    .state-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .state-card span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .confirm-box {
+      border-color: #d7e5ff;
+      background: #f7fbff;
+    }
+
+    .confirm-box strong {
+      color: var(--primary);
+    }
+
+    .footer-note {
+      margin-top: 10px;
+      color: var(--soft);
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .meta-grid,
+      .scope-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding: 18px 12px 36px;
+      }
+
+      .hero,
+      section {
+        padding: 20px 16px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">AI封面创意助手 · 严格重做范围确认</p>
+      <h1>AI项目资料驱动项目重做</h1>
+      <p class="subtitle">基于现有规则、案例、导出和测试资产，按资料包流程重做项目主线、文档体系、确认机制与首屏体验。</p>
+      <div class="meta-grid">
+        <div class="meta-card"><strong>需求等级</strong><span>L3</span></div>
+<div class="meta-card"><strong>模式</strong><span>既有项目维护 + 产品线重做</span></div>
+<div class="meta-card"><strong>基线验证</strong><span>npm test 178 pass</span></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>需求目标</h2>
+      <p>判断当前 AI封面创意助手哪些内容需要重做、哪些内容应保留，并按 AI项目资料 的确认、规格、PRD、实现、验证、复盘流程重新推进该项目。</p>
+    </section>
+
+    <section>
+      <h2>本次范围</h2>
+      <ul>
+        <li>重做项目需求与文档生产线：补齐方案确认、Requirement Spec、PRD、架构计划、操作记录</li>
+<li>重做产品主路径：输入准备、首轮方向判断、工作区深化、二轮修订、案例复盘与规则沉淀</li>
+<li>重做首页与主工作台的信息架构：减少说明堆叠，强化核心操作路径</li>
+<li>保留现有规则引擎、案例体系、Obsidian 导出、Node 测试与分层代码资产</li>
+<li>暂不新建 web-v2，除非确认当前静态 UI 已无法承载目标体验</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>页面与功能拆解</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>页面/区块</th>
+            <th>入口</th>
+            <th>功能</th>
+            <th>核心交互</th>
+            <th>输出结果</th>
+            <th>状态/边界</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="group" rowspan="1">项目治理</td><td rowspan="1">docs 目录</td><td>文档生产线重做</td><td>按资料包流程建立确认页、Requirement Spec、PRD、架构计划和操作记录</td><td>每个阶段有稳定落盘产物</td><td>不把临时讨论直接当正式需求</td></tr>
+<tr><td class="group" rowspan="1">产品主线</td><td rowspan="1">MVP 主流程</td><td>产品链路重做</td><td>把现有能力重新收束为输入准备、首轮判断、工作区深化、二轮修订、案例复盘</td><td>用户路径从功能集合变为连续闭环</td><td>不删除现有规则和案例能力</td></tr>
+<tr><td class="group" rowspan="1">首页工作台</td><td rowspan="1">public/index.html</td><td>首屏与输入区重做</td><td>突出核心输入与生成动作，弱化过多解释型内容</td><td>用户能更快进入第一轮方向判断</td><td>先改信息架构和文案，不做整站视觉推翻</td></tr>
+<tr><td class="group" rowspan="1">结果与工作区</td><td rowspan="1">第一轮结果区</td><td>工作区承接重做</td><td>让方向卡、配图路径和工作区建议形成更清楚的下一步</td><td>首轮结果能自然进入深化和二轮修订</td><td>不接真实生图模型</td></tr>
+<tr><td class="group" rowspan="1">案例复盘</td><td rowspan="1">真实案例与批次看板</td><td>复盘链路整理</td><td>保留批次试跑、人工复盘、写回和规则修订能力，重新放回产品主线</td><td>案例资产能解释规则如何持续变好</td><td>不重写 Obsidian 导出系统</td></tr>
+<tr><td class="group" rowspan="1">工程实现</td><td rowspan="1">apps/web</td><td>维护模式改造</td><td>基于确认后的 Requirement Spec 做最小必要修改并跑测试</td><td>历史功能保持可用，新增改造可验证</td><td>不引入新框架或新依赖</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>产品实现流程</h2>
+      <div class="flowchart">
+        <div class="flow-unit"><div class="flow-node">读取现状</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node decision">判断边界</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">生成确认</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">确认规格</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">输出PRD</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">维护实现</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node success">测试复盘</div></div>
+      </div>
+      <p class="footer-note">流程图只表达主链路；判断分支、失败/回退路径在下方“关键分支说明”中确认。</p>
+    </section>
+
+    <section>
+      <h2>关键状态流转</h2>
+      <div class="state-strip">
+        <div class="state-card"><strong>项目重做状态</strong><span>现状评估 -&gt; 范围确认 -&gt; 规格成文 -&gt; PRD 成文 -&gt; 维护实现 -&gt; 验证复盘</span></div>
+<div class="state-card"><strong>代码资产状态</strong><span>已验证可用 -&gt; 保留复用 -&gt; 局部改造 -&gt; 回归测试</span></div>
+<div class="state-card"><strong>文档资产状态</strong><span>分散记录 -&gt; 重做目录 -&gt; 确认页/规格/PRD/记录齐备</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>关键分支说明</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>分支/场景</th>
+            <th>触发条件</th>
+            <th>页面反馈</th>
+            <th>用户可执行动作</th>
+            <th>数据/状态变化</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>确认产品线重做</td><td>用户接受保留现有代码资产并重做主路径</td><td>进入 Requirement Spec 与 PRD 阶段</td><td>生成正式规格与 PRD</td><td>范围已确认</td></tr>
+<tr><td>要求全新 web-v2</td><td>用户明确要新建 React + TypeScript + Vite 版本</td><td>提示双线维护和迁移成本</td><td>先生成迁移计划再建目录</td><td>等待迁移确认</td></tr>
+<tr><td>只整理文档</td><td>用户暂不想改 UI 或代码</td><td>只执行文档生产线重做</td><td>生成方案、规格、PRD 和架构计划</td><td>代码不变</td></tr>
+<tr><td>继续补充范围</td><td>用户认为重做范围不完整</td><td>吸收补充后重新生成确认页</td><td>更新确认页</td><td>待确认</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="confirm-box">
+      <h2>成文前需确认</h2>
+      <p>请确认当前重做范围；确认后可选择继续生成原型规格或 PRD。</p>
+      <div class="tag-list">
+        <span class="tag success">请回复：确认</span>
+        <span class="tag success">确认后选：原型 / PRD</span>
+        <span class="tag warning">或：补充</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

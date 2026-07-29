@@ -1,0 +1,363 @@
+{
+  "batchLabel": "real-904",
+  "createdCount": 1,
+  "created": [
+    {
+      "id": "real-904",
+      "title": "待补真实案例 real-904",
+      "platformCaseId": "P-904"
+    }
+  ],
+  "validationSummary": {
+    "summary": {
+      "totalRealCases": 1,
+      "readyCount": 0,
+      "partialCount": 0,
+      "pendingCount": 1,
+      "totalMissingFields": 9,
+      "avgMissingFields": 9
+    },
+    "missingFieldStats": [
+      {
+        "label": "保留项反馈",
+        "count": 1
+      },
+      {
+        "label": "内容主题",
+        "count": 1
+      },
+      {
+        "label": "内容目标",
+        "count": 1
+      },
+      {
+        "label": "封面偏好",
+        "count": 1
+      },
+      {
+        "label": "来源链接或截图路径",
+        "count": 1
+      },
+      {
+        "label": "第二轮反馈",
+        "count": 1
+      },
+      {
+        "label": "素材备注",
+        "count": 1
+      },
+      {
+        "label": "素材描述",
+        "count": 1
+      },
+      {
+        "label": "证据说明",
+        "count": 1
+      }
+    ],
+    "recommendedBatchActions": [
+      {
+        "label": "来源链接或截图路径",
+        "priority": "P0",
+        "priorityScore": 100,
+        "codeField": "evidence.sourceLink / evidence.screenshotPath",
+        "obsidianField": "0.基础信息 / link_or_asset_path",
+        "prompt": "补真实链接或截图路径，至少提供一项能回看原始案例的证据。",
+        "priorityReason": "没有原始链接或截图，后续所有分析都缺少可回看的证据基础。",
+        "affectedCaseIds": [
+          "real-904"
+        ],
+        "affectedCaseCount": 1
+      },
+      {
+        "label": "内容主题",
+        "priority": "P0",
+        "priorityScore": 95,
+        "codeField": "contentTopic",
+        "obsidianField": "0.基础信息 / content_topic",
+        "prompt": "用一句话写清这条内容到底在讲什么，不要写成很泛的大主题。",
+        "priorityReason": "主题不明确，方向判断和案例归类都会失真。",
+        "affectedCaseIds": [
+          "real-904"
+        ],
+        "affectedCaseCount": 1
+      },
+      {
+        "label": "素材描述",
+        "priority": "P0",
+        "priorityScore": 90,
+        "codeField": "assetDescription",
+        "obsidianField": "1.客观封面事实 / subject_description + visual_focus",
+        "prompt": "描述当前封面/截图里真正出现了什么主体、画面位置和可用视觉线索。",
+        "priorityReason": "不知道封面里具体有什么，就无法判断该保留还是该补图。",
+        "affectedCaseIds": [
+          "real-904"
+        ],
+        "affectedCaseCount": 1
+      },
+      {
+        "label": "内容目标",
+        "priority": "P1",
+        "priorityScore": 80,
+        "codeField": "contentGoal",
+        "obsidianField": "0.基础信息 / content_goal_guess",
+        "prompt": "写清用户点开后最该得到什么，或者作者最想传达什么价值。",
+        "priorityReason": "点开后要传达什么不清楚，会影响结果感和点击价值判断。",
+        "affectedCaseIds": [
+          "real-904"
+        ],
+        "affectedCaseCount": 1
+      }
+    ],
+    "rows": [
+      {
+        "caseId": "real-904",
+        "title": "待补真实案例 real-904",
+        "platformCaseId": "P-904",
+        "status": "待回填",
+        "missingCount": 9,
+        "missingFields": [
+          "内容主题",
+          "内容目标",
+          "素材描述",
+          "封面偏好",
+          "素材备注",
+          "证据说明",
+          "保留项反馈",
+          "第二轮反馈",
+          "来源链接或截图路径"
+        ],
+        "topMissingFields": [
+          "内容主题",
+          "内容目标",
+          "素材描述"
+        ],
+        "nextTask": {
+          "order": 1,
+          "label": "来源链接或截图路径",
+          "codeField": "evidence.sourceLink / evidence.screenshotPath",
+          "obsidianField": "0.基础信息 / link_or_asset_path",
+          "prompt": "补真实链接或截图路径，至少提供一项能回看原始案例的证据。",
+          "priority": "P0",
+          "priorityScore": 100,
+          "priorityReason": "没有原始链接或截图，后续所有分析都缺少可回看的证据基础。"
+        }
+      }
+    ]
+  },
+  "latestWorksheetHistory": {
+    "batchLabel": "real-904",
+    "normalizedLabel": "real-904",
+    "createdCount": 1,
+    "createdIds": [
+      "real-904"
+    ],
+    "latestExportStatus": null,
+    "history": {
+      "logsDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/obsidian-export-logs/real-case-batch-fill-sheets/real-904",
+      "rows": []
+    }
+  },
+  "frictionTemplate": [
+    {
+      "id": "input-structure",
+      "label": "输入准备与案例结构",
+      "whyItMatters": "如果一开始输入就不稳定，后面的工作单、结果判断和 UI 讨论都会被噪音带偏。",
+      "priorityReason": "当前这批还有 9 个缺失字段，先判断是不是输入结构本身太重或太散。",
+      "priorityScore": 95,
+      "prompts": [
+        "用户准备这一批案例输入时，最容易卡在哪一步？",
+        "哪些字段其实用户不容易一次性想清楚？",
+        "现在的输入结构里，哪一项最像“为了完整而完整”？"
+      ],
+      "signals": [
+        "平均每条缺失字段：9",
+        "缺失字段总数：9",
+        "缺失 3 项及以上的案例数：1"
+      ]
+    },
+    {
+      "id": "guidance-and-prioritization",
+      "label": "补写建议与优先顺序",
+      "whyItMatters": "如果系统给的“先补什么”不清楚，用户会觉得产品只是把问题重新抛回给他。",
+      "priorityReason": "当前已有 4 条批量推荐动作，需要验证这些动作是否真的帮助用户少想一步。",
+      "priorityScore": 90,
+      "prompts": [
+        "你看到“建议先补什么”时，是否能立即理解并开始行动？",
+        "哪些建议像真正帮你省脑力，哪些只是换一种说法复述问题？",
+        "有没有哪一步更适合直接给模板或结果，而不是只给建议？"
+      ],
+      "signals": [
+        "推荐动作数：4",
+        "最高优先动作：来源链接或截图路径",
+        "最高优先动作原因：没有原始链接或截图，后续所有分析都缺少可回看的证据基础。"
+      ]
+    },
+    {
+      "id": "export-and-handoff",
+      "label": "导出沉淀与后续接力",
+      "whyItMatters": "如果导出后不能直接继续补写或复盘，整条链路就会断在最后一步。",
+      "priorityReason": "当前还没有稳定导出记录，这会影响真实试跑闭环的可信度。",
+      "priorityScore": 88,
+      "prompts": [
+        "导出后的文档，你是否愿意继续在里面补？",
+        "导出结果更像“存档”，还是更像“下一步工作面板”？",
+        "如果要把这份结果发给别人协作，哪里还不够清楚？"
+      ],
+      "signals": [
+        "最近导出动作：暂无",
+        "最近读回一致性：暂无",
+        "最近导出时间：暂无"
+      ]
+    },
+    {
+      "id": "ui-decision-readiness",
+      "label": "是否进入 UI 优化讨论",
+      "whyItMatters": "不是所有不顺手都是 UI 问题，先分清是规则问题、输入问题，还是展示问题，能避免过早改版。",
+      "priorityReason": "这类记录的目标不是立即给 UI 方案，而是把“该不该开始做 UI”这件事说清楚。",
+      "priorityScore": 75,
+      "prompts": [
+        "这批最卡的是功能逻辑、输入结构，还是界面组织？",
+        "如果只能先改一个模块，你会先改哪里，为什么？",
+        "现在讨论 UI 优化，是已经到时机，还是还会被更多真实试跑推翻？"
+      ],
+      "signals": [
+        "待回填：1",
+        "结构性推荐动作：4",
+        "工作单导出状态：暂无记录"
+      ]
+    },
+    {
+      "id": "result-reading",
+      "label": "结果阅读与选择判断",
+      "whyItMatters": "如果用户看完结果还是不知道该先做什么，问题常常不在规则本身，而在结果组织方式。",
+      "priorityReason": "当前这批共有 1 条案例，需要确认逐条结果是否容易扫描、容易选下一步。",
+      "priorityScore": 68,
+      "prompts": [
+        "你看到逐条案例结果时，第一眼能不能知道哪条先做？",
+        "现在的结果是更像“报告”，还是更像“可执行工作区”？",
+        "有没有哪些说明其实可以折叠、合并或后置？"
+      ],
+      "signals": [
+        "案例条数：1",
+        "可进入手动验证：0",
+        "部分回填：0"
+      ]
+    }
+  ],
+  "manualReviewGuide": {
+    "headline": "先补这 4 个关键人工判断",
+    "reason": "这 4 项先补齐，跨批次汇总才更容易判断现在是规则问题、流程问题，还是已经到该做 UI 的时机。",
+    "completionRule": "最低建议先填完最卡环节、问题类型、最该前置模块、UI 时机判断，再补其他开放结论。",
+    "fillOrder": [
+      {
+        "key": "bottleneckStep",
+        "label": "这批案例最卡的环节",
+        "shortLabel": "最卡环节",
+        "prompt": "这一批真实试跑里，你最容易停住的步骤是哪一步？",
+        "whyItMatters": "先确认最卡步骤，后面才能判断问题是在输入、结果还是导出接力。",
+        "answerHint": "尽量写成一个具体动作，例如“看完结果不知道先选哪条”。",
+        "labelShort": "最卡环节",
+        "rank": 1
+      },
+      {
+        "key": "issueType",
+        "label": "当前更像功能问题，还是界面问题",
+        "shortLabel": "问题类型",
+        "prompt": "如果现在只能先归因一次，你更觉得是能力不够，还是展示组织不顺？",
+        "whyItMatters": "这项会直接影响是否应该先补规则能力，还是开始进入 UI 调整。",
+        "answerHint": "先只做一级判断，例如“更像功能问题”或“更像界面问题”。",
+        "labelShort": "问题类型判断",
+        "rank": 2
+      },
+      {
+        "key": "prioritizedModule",
+        "label": "哪个按钮或模块最该前置",
+        "shortLabel": "前置模块",
+        "prompt": "如果只能先把一个模块提前或强调，你会改哪块？",
+        "whyItMatters": "这项能把抽象的“不顺手”变成具体模块，为后续 UI 讨论收口。",
+        "answerHint": "优先写模块名，例如“结果区”“输入准备区”“导出后下一步”。",
+        "labelShort": "最该前置模块",
+        "rank": 3
+      },
+      {
+        "key": "uiOptimizationTiming",
+        "label": "UI 优化是否已经到时机",
+        "shortLabel": "UI 时机",
+        "prompt": "基于这批真实试跑，现在讨论 UI 会不会太早？",
+        "whyItMatters": "这项是是否正式开启 UI 优化专题的直接判断输入。",
+        "answerHint": "先用阶段性判断，例如“先别急着做 UI”或“接近可以讨论 UI”。",
+        "labelShort": "UI 时机判断",
+        "rank": 4
+      }
+    ],
+    "supportingSignals": [
+      "输入准备：当前这批还有 9 个缺失字段，先判断是不是输入结构本身太重或太散。",
+      "结果阅读：当前这批共有 1 条案例，需要确认逐条结果是否容易扫描、容易选下一步。",
+      "UI 判断：这类记录的目标不是立即给 UI 方案，而是把“该不该开始做 UI”这件事说清楚。",
+      "导出接力：当前还没有稳定导出记录，这会影响真实试跑闭环的可信度。"
+    ],
+    "suggestedWorkflow": [
+      "先回看输入准备和结果阅读，写出你真实卡住的动作。",
+      "再判断它更像功能问题还是界面问题，不要一开始就跳到视觉层。",
+      "最后写最该前置的模块和是否到 UI 时机，方便下一轮跨批次汇总直接吸收。"
+    ]
+  },
+  "latestManualReviewStatus": {
+    "exportId": "RBR-2026-07-29T03-58-55-445Z",
+    "exportedAt": "2026-07-29T03:58:55.448Z",
+    "batchLabel": "real-904",
+    "normalizedLabel": "real-904",
+    "targetPath": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-batch-run-record-LhP4G9/05_验证与实验/批次试跑记录/已生成记录/real-904_批次试跑记录_2026-07-29.md",
+    "actionLabel": "新建草稿",
+    "requestedMode": "overwrite",
+    "readbackOk": true,
+    "matchedExpectedContent": true,
+    "logPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/obsidian-export-logs/real-case-batch-run-records/real-904/RBR-2026-07-29T03-58-55-445Z.json",
+    "hasManualConclusion": false,
+    "filledFields": [],
+    "filledFieldCount": 0,
+    "missingKeyFields": [
+      {
+        "key": "bottleneckStep",
+        "label": "最卡环节"
+      },
+      {
+        "key": "issueType",
+        "label": "问题类型判断"
+      },
+      {
+        "key": "prioritizedModule",
+        "label": "最该前置模块"
+      },
+      {
+        "key": "uiOptimizationTiming",
+        "label": "UI 时机判断"
+      }
+    ],
+    "filledKeyFields": [],
+    "review": {
+      "bottleneckStep": "",
+      "hardestFields": "",
+      "mostValuableOutput": "",
+      "strongerThanGenericAi": "",
+      "weakerThanGenericAi": "",
+      "prioritizedModule": "",
+      "tooMuchCopy": "",
+      "strongGuideStep": "",
+      "issueType": "",
+      "batchCriticalConclusion": "",
+      "nextBatchSameTrack": "",
+      "uiOptimizationTiming": ""
+    }
+  },
+  "runRecordMarkdown": "# 批次试跑记录｜real-904\n\n## 0. 本次批次\n- 案例数：1\n- 案例编号：real-904\n\n## 1. 当前结构质量\n- 待回填：1\n- 部分回填：0\n- 可进入手动验证：0\n- 缺失字段总数：9\n- 平均每条缺失：9\n\n## 2. 当前最值得先看的动作\n- 来源链接或截图路径（P0）\n  - 影响案例：real-904\n  - 为什么先做：没有原始链接或截图，后续所有分析都缺少可回看的证据基础。\n- 内容主题（P0）\n  - 影响案例：real-904\n  - 为什么先做：主题不明确，方向判断和案例归类都会失真。\n- 素材描述（P0）\n  - 影响案例：real-904\n  - 为什么先做：不知道封面里具体有什么，就无法判断该保留还是该补图。\n\n## 3. 工作单状态\n- 当前还没有这批案例的工作单导出记录。\n\n## 4. 逐条案例观察入口\n- real-904：待回填 / 下一步 来源链接或截图路径\n\n## 5. 结构化摩擦点记录\n### 输入准备与案例结构\n- 为什么看这块：如果一开始输入就不稳定，后面的工作单、结果判断和 UI 讨论都会被噪音带偏。\n- 当前优先原因：当前这批还有 9 个缺失字段，先判断是不是输入结构本身太重或太散。\n- 观察信号：\n  - 平均每条缺失字段：9\n  - 缺失字段总数：9\n  - 缺失 3 项及以上的案例数：1\n- 试跑记录：\n  - 用户准备这一批案例输入时，最容易卡在哪一步？\n  - 哪些字段其实用户不容易一次性想清楚？\n  - 现在的输入结构里，哪一项最像“为了完整而完整”？\n- 本批结论：\n\n### 补写建议与优先顺序\n- 为什么看这块：如果系统给的“先补什么”不清楚，用户会觉得产品只是把问题重新抛回给他。\n- 当前优先原因：当前已有 4 条批量推荐动作，需要验证这些动作是否真的帮助用户少想一步。\n- 观察信号：\n  - 推荐动作数：4\n  - 最高优先动作：来源链接或截图路径\n  - 最高优先动作原因：没有原始链接或截图，后续所有分析都缺少可回看的证据基础。\n- 试跑记录：\n  - 你看到“建议先补什么”时，是否能立即理解并开始行动？\n  - 哪些建议像真正帮你省脑力，哪些只是换一种说法复述问题？\n  - 有没有哪一步更适合直接给模板或结果，而不是只给建议？\n- 本批结论：\n\n### 导出沉淀与后续接力\n- 为什么看这块：如果导出后不能直接继续补写或复盘，整条链路就会断在最后一步。\n- 当前优先原因：当前还没有稳定导出记录，这会影响真实试跑闭环的可信度。\n- 观察信号：\n  - 最近导出动作：暂无\n  - 最近读回一致性：暂无\n  - 最近导出时间：暂无\n- 试跑记录：\n  - 导出后的文档，你是否愿意继续在里面补？\n  - 导出结果更像“存档”，还是更像“下一步工作面板”？\n  - 如果要把这份结果发给别人协作，哪里还不够清楚？\n- 本批结论：\n\n### 是否进入 UI 优化讨论\n- 为什么看这块：不是所有不顺手都是 UI 问题，先分清是规则问题、输入问题，还是展示问题，能避免过早改版。\n- 当前优先原因：这类记录的目标不是立即给 UI 方案，而是把“该不该开始做 UI”这件事说清楚。\n- 观察信号：\n  - 待回填：1\n  - 结构性推荐动作：4\n  - 工作单导出状态：暂无记录\n- 试跑记录：\n  - 这批最卡的是功能逻辑、输入结构，还是界面组织？\n  - 如果只能先改一个模块，你会先改哪里，为什么？\n  - 现在讨论 UI 优化，是已经到时机，还是还会被更多真实试跑推翻？\n- 本批结论：\n\n### 结果阅读与选择判断\n- 为什么看这块：如果用户看完结果还是不知道该先做什么，问题常常不在规则本身，而在结果组织方式。\n- 当前优先原因：当前这批共有 1 条案例，需要确认逐条结果是否容易扫描、容易选下一步。\n- 观察信号：\n  - 案例条数：1\n  - 可进入手动验证：0\n  - 部分回填：0\n- 试跑记录：\n  - 你看到逐条案例结果时，第一眼能不能知道哪条先做？\n  - 现在的结果是更像“报告”，还是更像“可执行工作区”？\n  - 有没有哪些说明其实可以折叠、合并或后置？\n- 本批结论：\n\n## 6. 人工试跑结论\n- 建议先填：最卡环节 / 问题类型 / 前置模块 / UI 时机\n- 最近一次人工结论导出：2026-07-29T03:58:55.448Z\n- 最近一次人工结论覆盖：上次导出仍未填写人工结论\n- 关键字段还缺：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n- 这批案例最卡的环节：\n- 哪些字段最难补：\n- 哪个输出最有价值：\n- 和通用 AI 相比更有帮助的点：\n- 和通用 AI 相比仍然不够好的点：\n\n## 7. 对产品的影响\n- 哪个按钮或模块最该前置：\n- 哪段说明文字太多：\n- 哪个步骤最值得做成更强引导：\n- 当前更像功能问题，还是界面问题：\n\n## 8. 下一步动作\n- [ ] 继续补这批案例\n- [ ] 再跑一批真实案例\n- [ ] 记录 UI 摩擦点\n- [ ] 判断是否进入 UI 优化讨论\n",
+  "obsidianDraft": {
+    "generatedDate": "2026-07-29",
+    "normalizedLabel": "real-904",
+    "sourceMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-run-records/real-904/run-record.md",
+    "targetDir": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-batch-run-record-BOrgQt/05_验证与实验/批次试跑记录/已生成记录",
+    "targetPath": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-batch-run-record-BOrgQt/05_验证与实验/批次试跑记录/已生成记录/real-904_批次试跑记录_2026-07-29.md",
+    "markdown": "# 批次试跑记录_2026-07-29\n\n> 生成方式：代码侧批量真实案例试跑记录导出\n> 生成日期：2026-07-29\n> 对应代码底稿：/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-run-records/real-904/run-record.md\n> 文档状态：可继续编辑\n\n## 0. 使用说明\n- 这是一份帮助你记录一整批真实案例试跑观察的底稿。\n- 它会带出当前批次结构质量、工作单状态和逐条下一步。\n- 你后续应重点补：真实使用摩擦、和通用 AI 的差异、是否进入 UI 优化讨论。\n\n## 1. 代码侧试跑底稿\n\n# 批次试跑记录｜real-904\n\n## 0. 本次批次\n- 案例数：1\n- 案例编号：real-904\n\n## 1. 当前结构质量\n- 待回填：1\n- 部分回填：0\n- 可进入手动验证：0\n- 缺失字段总数：9\n- 平均每条缺失：9\n\n## 2. 当前最值得先看的动作\n- 来源链接或截图路径（P0）\n  - 影响案例：real-904\n  - 为什么先做：没有原始链接或截图，后续所有分析都缺少可回看的证据基础。\n- 内容主题（P0）\n  - 影响案例：real-904\n  - 为什么先做：主题不明确，方向判断和案例归类都会失真。\n- 素材描述（P0）\n  - 影响案例：real-904\n  - 为什么先做：不知道封面里具体有什么，就无法判断该保留还是该补图。\n\n## 3. 工作单状态\n- 当前还没有这批案例的工作单导出记录。\n\n## 4. 逐条案例观察入口\n- real-904：待回填 / 下一步 来源链接或截图路径\n\n## 5. 结构化摩擦点记录\n### 输入准备与案例结构\n- 为什么看这块：如果一开始输入就不稳定，后面的工作单、结果判断和 UI 讨论都会被噪音带偏。\n- 当前优先原因：当前这批还有 9 个缺失字段，先判断是不是输入结构本身太重或太散。\n- 观察信号：\n  - 平均每条缺失字段：9\n  - 缺失字段总数：9\n  - 缺失 3 项及以上的案例数：1\n- 试跑记录：\n  - 用户准备这一批案例输入时，最容易卡在哪一步？\n  - 哪些字段其实用户不容易一次性想清楚？\n  - 现在的输入结构里，哪一项最像“为了完整而完整”？\n- 本批结论：\n\n### 补写建议与优先顺序\n- 为什么看这块：如果系统给的“先补什么”不清楚，用户会觉得产品只是把问题重新抛回给他。\n- 当前优先原因：当前已有 4 条批量推荐动作，需要验证这些动作是否真的帮助用户少想一步。\n- 观察信号：\n  - 推荐动作数：4\n  - 最高优先动作：来源链接或截图路径\n  - 最高优先动作原因：没有原始链接或截图，后续所有分析都缺少可回看的证据基础。\n- 试跑记录：\n  - 你看到“建议先补什么”时，是否能立即理解并开始行动？\n  - 哪些建议像真正帮你省脑力，哪些只是换一种说法复述问题？\n  - 有没有哪一步更适合直接给模板或结果，而不是只给建议？\n- 本批结论：\n\n### 导出沉淀与后续接力\n- 为什么看这块：如果导出后不能直接继续补写或复盘，整条链路就会断在最后一步。\n- 当前优先原因：当前还没有稳定导出记录，这会影响真实试跑闭环的可信度。\n- 观察信号：\n  - 最近导出动作：暂无\n  - 最近读回一致性：暂无\n  - 最近导出时间：暂无\n- 试跑记录：\n  - 导出后的文档，你是否愿意继续在里面补？\n  - 导出结果更像“存档”，还是更像“下一步工作面板”？\n  - 如果要把这份结果发给别人协作，哪里还不够清楚？\n- 本批结论：\n\n### 是否进入 UI 优化讨论\n- 为什么看这块：不是所有不顺手都是 UI 问题，先分清是规则问题、输入问题，还是展示问题，能避免过早改版。\n- 当前优先原因：这类记录的目标不是立即给 UI 方案，而是把“该不该开始做 UI”这件事说清楚。\n- 观察信号：\n  - 待回填：1\n  - 结构性推荐动作：4\n  - 工作单导出状态：暂无记录\n- 试跑记录：\n  - 这批最卡的是功能逻辑、输入结构，还是界面组织？\n  - 如果只能先改一个模块，你会先改哪里，为什么？\n  - 现在讨论 UI 优化，是已经到时机，还是还会被更多真实试跑推翻？\n- 本批结论：\n\n### 结果阅读与选择判断\n- 为什么看这块：如果用户看完结果还是不知道该先做什么，问题常常不在规则本身，而在结果组织方式。\n- 当前优先原因：当前这批共有 1 条案例，需要确认逐条结果是否容易扫描、容易选下一步。\n- 观察信号：\n  - 案例条数：1\n  - 可进入手动验证：0\n  - 部分回填：0\n- 试跑记录：\n  - 你看到逐条案例结果时，第一眼能不能知道哪条先做？\n  - 现在的结果是更像“报告”，还是更像“可执行工作区”？\n  - 有没有哪些说明其实可以折叠、合并或后置？\n- 本批结论：\n\n## 6. 人工试跑结论\n- 建议先填：最卡环节 / 问题类型 / 前置模块 / UI 时机\n- 最近一次人工结论导出：2026-07-29T03:58:55.448Z\n- 最近一次人工结论覆盖：上次导出仍未填写人工结论\n- 关键字段还缺：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n- 这批案例最卡的环节：\n- 哪些字段最难补：\n- 哪个输出最有价值：\n- 和通用 AI 相比更有帮助的点：\n- 和通用 AI 相比仍然不够好的点：\n\n## 7. 对产品的影响\n- 哪个按钮或模块最该前置：\n- 哪段说明文字太多：\n- 哪个步骤最值得做成更强引导：\n- 当前更像功能问题，还是界面问题：\n\n## 8. 下一步动作\n- [ ] 继续补这批案例\n- [ ] 再跑一批真实案例\n- [ ] 记录 UI 摩擦点\n- [ ] 判断是否进入 UI 优化讨论\n\n## 2. 补充结论\n- 这批试跑最关键的结论：\n- 下一批还要不要继续同样赛道：\n- UI 优化是否已经到时机：\n"
+  }
+}

@@ -1,0 +1,30 @@
+export function buildObsidianBatchRunFrictionSummaryRecord({
+  generatedDate,
+  sourceMarkdownPath,
+  summaryMarkdown,
+}) {
+  return [
+    `# 跨批次摩擦点汇总_${generatedDate}`,
+    "",
+    "> 生成方式：代码侧跨批次摩擦点汇总自动生成草稿",
+    `> 生成日期：${generatedDate}`,
+    `> 对应代码底稿：${sourceMarkdownPath}`,
+    "> 文档状态：可继续编辑",
+    "",
+    "## 0. 使用说明",
+    "- 这份汇总用于横向比较多批次真实试跑里重复出现的摩擦点。",
+    "- 它的作用不是直接给 UI 方案，而是帮助判断哪些问题已经重复出现到值得单独讨论。",
+    "- 你后续应继续补：哪些类别更像规则问题，哪些更像 UI 问题。",
+    "",
+    "## 1. 代码侧汇总底稿",
+    "",
+    summaryMarkdown.trim(),
+    "",
+    "## 2. 人工补充",
+    "- 当前最稳定重复的摩擦点：",
+    "- 更像规则问题的类别：",
+    "- 更像 UI 问题的类别：",
+    "- 是否正式进入 UI 优化讨论：",
+    "",
+  ].join("\n");
+}

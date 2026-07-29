@@ -1,0 +1,30 @@
+export function buildObsidianPlatformCasePriorityDraftsRecord({
+  generatedAt,
+  platformCaseId,
+  sourceMarkdownPath,
+  draftsMarkdown,
+}) {
+  return [
+    `# ${platformCaseId}_前三优先字段初稿卡_${generatedAt}`,
+    "",
+    "> 生成方式：代码侧 `generate:platform-case-priority-drafts` + `export:obsidian-platform-priority-drafts` 自动生成草稿",
+    `> 生成时间：${generatedAt}`,
+    `> 对应代码底稿：${sourceMarkdownPath}`,
+    "> 文档状态：可继续编辑",
+    "",
+    "## 0. 使用说明",
+    "- 这是一份针对前三优先字段的初稿卡草稿，用来帮助你快速从空白进入可编辑状态。",
+    "- 下面的“代码侧初稿卡底稿”来自当前复核结果、补全顺序建议和候选填写。",
+    "- 你可以直接在这里改，再回填到原始平台案例笔记。",
+    "",
+    "## 1. 代码侧初稿卡底稿",
+    "",
+    draftsMarkdown.trim(),
+    "",
+    "## 2. 人工补充",
+    "- 这 3 张卡里，哪一张最容易先改完：",
+    "- 哪些初稿句子需要替换成真实事实：",
+    "- 回填后是否要立刻重新跑复核：",
+    "",
+  ].join("\n");
+}

@@ -1,0 +1,33 @@
+{
+  "id": "real-001",
+  "title": "真实平台案例标题",
+  "sourceType": "real",
+  "platform": "抖音",
+  "tracking": {
+    "platformCaseId": "P-01",
+    "obsidianCasePath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md"
+  },
+  "contentTopic": "真实内容主题",
+  "contentGoal": "这条内容想传达的价值或点击目标",
+  "userAssetType": "截图",
+  "assetDescription": "当前已有截图/画面/用户想法，以及希望补什么类型的图",
+  "referencePreference": "更高级一点，但别太平",
+  "assetNotes": "当前素材状态、画面特点、限制条件",
+  "operations": {
+    "keyCaseRerunPriority": 1,
+    "maintenanceTags": [
+      "real-case",
+      "待确认是否纳入关键复跑"
+    ]
+  },
+  "evidence": {
+    "sourceLink": "",
+    "screenshotPath": "",
+    "notes": "为什么这条真实案例值得被纳入代码层样例"
+  },
+  "mockUserSelection": {
+    "selectedCardId": "B",
+    "preserveElement": "保留这个方向的点击钩子",
+    "feedback": "别太像营销号，同时更贴内容一点"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "planId": "key-case-rerun-default",
+  "description": "规则升级后优先复跑的关键样例清单，用于刷新方向判断、误判样本导出和规则修订任务单。",
+  "caseIds": [
+    "sample-001",
+    "real-001"
+  ],
+  "downstreamRefreshTargets": [
+    "reviewed-misclassified",
+    "rule-revision-task-sheet"
+  ],
+  "generatedFromCaseOperations": [
+    {
+      "caseId": "sample-001",
+      "title": "为什么你总觉得自己很忙但没结果",
+      "sourceType": "sample",
+      "keyCaseRerunPriority": 10,
+      "maintenanceTags": [
+        "sample",
+        "baseline",
+        "misclassified-seed"
+      ]
+    },
+    {
+      "caseId": "real-001",
+      "title": "P-01 待补真实案例",
+      "sourceType": "real",
+      "keyCaseRerunPriority": 6,
+      "maintenanceTags": [
+        "real-case",
+        "platform-bridge",
+        "high-priority-candidate"
+      ]
+    }
+  ]
+}

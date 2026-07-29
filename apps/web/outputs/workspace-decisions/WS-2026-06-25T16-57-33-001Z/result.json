@@ -1,0 +1,66 @@
+{
+  "decisionId": "WS-2026-06-25T16-57-33-001Z",
+  "generatedAt": "2026-06-25T16:57:33.000Z",
+  "decision": "accept",
+  "analysisMeta": {
+    "contentTopic": "为什么你总觉得自己很忙但没结果",
+    "contentGoal": "让用户意识到忙不等于有效产出",
+    "primaryAssetActionLabel": "先优化现有图",
+    "suggestedAssetType": "截图"
+  },
+  "workspace": {
+    "workspaceId": "optimize-current",
+    "workspaceTitle": "现有图提炼工作区",
+    "workspaceGoal": "先围绕你当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
+    "whyNow": "当前已经带图进入流程，先优化现有素材通常是最快形成结果的路径。",
+    "nextSteps": [
+      "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
+      "优先裁掉和主题无关、只会分散注意力的边角信息。",
+      "让封面大字和主体形成明确主次，不要平均分配注意力。"
+    ],
+    "checkpoints": [
+      "第一眼焦点是否单一",
+      "现有图里最值得保留的主体是否明确",
+      "标题区是否压住了无关背景噪音"
+    ],
+    "suggestedInputs": [
+      "描述你想保留的主体区域",
+      "描述你想裁掉或弱化的部分",
+      "说明当前图最不满意的地方"
+    ],
+    "inputSchema": [
+      {
+        "fieldId": "keep_subject",
+        "label": "想保留的主体",
+        "inputType": "text",
+        "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
+      },
+      {
+        "fieldId": "remove_noise",
+        "label": "想弱化或裁掉的部分",
+        "inputType": "textarea",
+        "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
+      },
+      {
+        "fieldId": "current_problem",
+        "label": "当前图最不满意的地方",
+        "inputType": "textarea",
+        "placeholder": "例如：太平、不聚焦、不够像热门封面"
+      }
+    ],
+    "linkedCardDirection": "更有收获感"
+  },
+  "suggestion": {
+    "workspaceId": "optimize-current",
+    "summary": "先围绕现有图提炼主体和标题区，比直接重做更快形成结果。",
+    "refinedTask": "优先保留「人物表情」，并处理「背景杂讯」这类分散注意力的问题。",
+    "nextSuggestion": "先把「第一眼不够聚焦」作为唯一主问题处理，再观察封面大字和主体是否形成单焦点。",
+    "riskChecks": [
+      "不要一边想保留所有信息，一边又希望画面更聚焦。",
+      "如果裁掉噪音后主体仍不成立，再考虑进入补图路径。"
+    ],
+    "draftPromptLine": "请基于当前已有图片，保留 人物表情，弱化 背景杂讯，优先解决 第一眼不够聚焦。",
+    "recommendedFollowUp": "完成一次裁切和标题区重排后，再进入二轮反馈会更有效。",
+    "linkedDirection": "更有收获感"
+  }
+}

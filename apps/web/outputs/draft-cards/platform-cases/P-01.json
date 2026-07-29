@@ -1,0 +1,44 @@
+{
+  "platformCaseId": "P-01",
+  "cards": [
+    {
+      "order": 1,
+      "label": "主封面方向",
+      "priority": "P1",
+      "reason": "主方向不明确，后续很难把案例沉淀回你的 5 类封面体系。",
+      "obsidianField": "4.封面效果方向判断 / direction_type_primary",
+      "prompt": "明确这条封面最像哪一种封面效果方向，并写成统一标签。",
+      "candidateText": "待人工确认：从 5 类封面效果方向里选最接近的一类。",
+      "candidateSource": "规则提示",
+      "draftText": "主封面方向初稿：[从 5 类封面效果方向里选最接近的一类]。",
+      "editHint": "优先保持具体、可复核、可被别人理解。",
+      "example": "例如：风险损失型。"
+    },
+    {
+      "order": 2,
+      "label": "正向反馈词",
+      "priority": "P2",
+      "reason": "正向反馈词决定后续如何保留有效特征，但前提是案例事实先补齐。",
+      "obsidianField": "7.反馈词提炼 / likely_positive_feedback",
+      "prompt": "写 1 到 2 条用户可能会认可这张封面的原因，偏感受化表达。",
+      "candidateText": "待人工确认：写 1 到 2 个用户可能会认可的点，比如更抓眼、重点更明确。",
+      "candidateSource": "规则提示",
+      "draftText": "正向反馈词初稿：[例如 更抓眼 / 更明确 / 更像平台热门内容]。",
+      "editHint": "优先保持具体、可复核、可被别人理解。",
+      "example": "例如：更抓眼、重点更明确。"
+    },
+    {
+      "order": 3,
+      "label": "可能调整方向",
+      "priority": "P2",
+      "reason": "调整方向更适合在已经理解案例后再写，优先级略后。",
+      "obsidianField": "7.反馈词提炼 / possible_adjustment_direction",
+      "prompt": "写一句自然语言，说明如果继续优化这张封面，最该改哪一点。",
+      "candidateText": "待人工确认：写一句如果继续优化最该改什么。",
+      "candidateSource": "规则提示",
+      "draftText": "调整方向初稿：[一句话写清如果继续优化最该改哪里]。",
+      "editHint": "优先保持具体、可复核、可被别人理解。",
+      "example": "例如：图更贴内容一点，别只靠大字。"
+    }
+  ]
+}

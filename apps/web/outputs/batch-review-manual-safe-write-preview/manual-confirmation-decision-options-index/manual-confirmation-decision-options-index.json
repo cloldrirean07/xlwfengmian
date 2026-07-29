@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "status": "decision-already-set",
+  "decisionStatus": "adopt-recommended",
+  "decisionLabel": "采用推荐确认块",
+  "adoption": {
+    "ok": true,
+    "label": "采用推荐确认块",
+    "result": "进入安全预览写入前复查",
+    "previewStatus": "adoption-preview-ready",
+    "packetStatus": "adoption-packet-applied",
+    "canProceedToSafePreviewWrite": true,
+    "packetPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-decision-adoption-packet/manual-confirmation-decision-adoption-packet.md"
+  },
+  "rejection": {
+    "ok": true,
+    "label": "暂不采用推荐确认块",
+    "result": "正式写回保持锁定",
+    "previewStatus": "rejection-preview-ready",
+    "packetStatus": "rejection-packet-ready",
+    "canProceedToSafePreviewWrite": false,
+    "packetPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-decision-rejection-packet/manual-confirmation-decision-rejection-packet.md"
+  },
+  "outputPaths": {
+    "json": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-decision-options-index/manual-confirmation-decision-options-index.json",
+    "markdown": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-decision-options-index/manual-confirmation-decision-options-index.md"
+  },
+  "safetyBoundary": "仅汇总项目内人工决策证据，不修改决策记录，不写入 Obsidian，不执行正式写回。",
+  "summary": "人工决策记录已不处于待确认状态，请按当前决策继续复查。"
+}

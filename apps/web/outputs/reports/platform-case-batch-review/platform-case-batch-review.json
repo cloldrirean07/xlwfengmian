@@ -1,0 +1,260 @@
+{
+  "summary": {
+    "totalCases": 1,
+    "pendingCount": 1,
+    "partialCount": 0,
+    "readyCount": 0
+  },
+  "topPriorityRows": [
+    {
+      "platformCaseId": "P-01",
+      "completenessStatus": "待回填",
+      "topPriorityItems": [
+        "内容主题",
+        "内容目标",
+        "来源链接或素材路径"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "platformCaseId": "P-01",
+      "notePath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md",
+      "parsedNote": {
+        "sample_status": "待回填",
+        "case_id": "P-01",
+        "source_platform": "抖音",
+        "creator_type": "",
+        "creator_stage_guess": "",
+        "content_topic": "",
+        "content_goal_guess": "",
+        "content_type_primary": "",
+        "content_type_secondary": "",
+        "capture_date": "",
+        "link_or_asset_path": "",
+        "source_observation_note": "",
+        "subject_description": "",
+        "visual_focus": "",
+        "composition_features": "",
+        "color_mood_features": "",
+        "cover_copy_features": "",
+        "title_cover_relationship": "",
+        "click_driver_primary": "",
+        "click_driver_secondary": "",
+        "has_clear_result": "",
+        "has_contrast": "",
+        "has_curiosity_gap": "",
+        "requires_clarity": "",
+        "requires_trust": "",
+        "click_mechanism_note": "",
+        "asset_subject_strength": "",
+        "asset_visual_tension": "",
+        "asset_aesthetic_quality": "",
+        "asset_information_density": "",
+        "asset_support_note": "",
+        "direction_type_primary": "",
+        "direction_type_secondary": "",
+        "direction_fit_reason": "",
+        "direction_risk": "",
+        "direction_boundary": "",
+        "visual_strategy": "",
+        "copy_strategy": "",
+        "composition_strategy": "",
+        "expected_click_reason": "",
+        "reusable_elements_priority": "",
+        "platform_native_signal": "",
+        "platform_expression_habit": "",
+        "why_it_feels_clickable_on_platform": "",
+        "likely_positive_feedback": "",
+        "likely_negative_feedback": "",
+        "feedback_keywords_extract": "",
+        "possible_adjustment_direction": "",
+        "which_rule_it_strengthens": "",
+        "which_user_scenario_it_fits": "",
+        "whether_it_requires_rule_revision": "",
+        "revision_note_if_any": "",
+        "one_sentence_summary": "",
+        "reusable_level": "",
+        "reuse_warning": ""
+      },
+      "completeness": {
+        "platformCaseId": "P-01",
+        "status": "待回填",
+        "totalChecks": 12,
+        "completedChecks": 2,
+        "missingFields": [
+          "内容主题",
+          "内容目标",
+          "来源链接或素材路径",
+          "主体描述",
+          "视觉焦点",
+          "主点击机制",
+          "主封面方向",
+          "正向反馈词",
+          "可能调整方向",
+          "一句话结论"
+        ],
+        "checks": [
+          {
+            "fieldKey": "case_id",
+            "label": "案例编号",
+            "complete": true
+          },
+          {
+            "fieldKey": "source_platform",
+            "label": "来源平台",
+            "complete": true
+          },
+          {
+            "fieldKey": "content_topic",
+            "label": "内容主题",
+            "complete": false
+          },
+          {
+            "fieldKey": "content_goal_guess",
+            "label": "内容目标",
+            "complete": false
+          },
+          {
+            "fieldKey": "link_or_asset_path",
+            "label": "来源链接或素材路径",
+            "complete": false
+          },
+          {
+            "fieldKey": "subject_description",
+            "label": "主体描述",
+            "complete": false
+          },
+          {
+            "fieldKey": "visual_focus",
+            "label": "视觉焦点",
+            "complete": false
+          },
+          {
+            "fieldKey": "click_driver_primary",
+            "label": "主点击机制",
+            "complete": false
+          },
+          {
+            "fieldKey": "direction_type_primary",
+            "label": "主封面方向",
+            "complete": false
+          },
+          {
+            "fieldKey": "likely_positive_feedback",
+            "label": "正向反馈词",
+            "complete": false
+          },
+          {
+            "fieldKey": "possible_adjustment_direction",
+            "label": "可能调整方向",
+            "complete": false
+          },
+          {
+            "fieldKey": "one_sentence_summary",
+            "label": "一句话结论",
+            "complete": false
+          }
+        ]
+      },
+      "linkedCases": [
+        {
+          "caseId": "real-001",
+          "title": "P-01 待补真实案例",
+          "sourceType": "real",
+          "platform": "抖音",
+          "trackingStatus": "已映射"
+        }
+      ],
+      "syncPreview": {
+        "caseId": "real-001",
+        "title": "P-01 待补真实案例",
+        "platformCaseId": "P-01",
+        "notePath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md",
+        "targetPath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md",
+        "extracted": {
+          "content_topic": "",
+          "content_goal_guess": "",
+          "link_or_asset_path": "",
+          "subject_description": "",
+          "visual_focus": "",
+          "likely_positive_feedback": "",
+          "possible_adjustment_direction": ""
+        },
+        "preview": {
+          "id": "real-001",
+          "title": "P-01 待补真实案例",
+          "sourceType": "real",
+          "platform": "抖音",
+          "contentTopic": "待补真实内容主题",
+          "contentGoal": "待补这条内容想传达的价值或点击目标",
+          "userAssetType": "截图",
+          "assetDescription": "待补当前已有截图/画面/用户想法，以及希望补什么类型的图",
+          "referencePreference": "待补希望的封面风格和质感倾向",
+          "assetNotes": "待补当前素材状态、画面特点、限制条件",
+          "tracking": {
+            "platformCaseId": "P-01",
+            "obsidianCasePath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md"
+          },
+          "evidence": {
+            "sourceLink": "",
+            "screenshotPath": "",
+            "notes": "待补为什么这条真实案例值得被纳入代码层样例"
+          },
+          "mockUserSelection": {
+            "selectedCardId": "B",
+            "preserveElement": "待补希望保留的点击钩子或视觉元素",
+            "feedback": "待补第二轮优化反馈"
+          }
+        },
+        "syncSummary": {
+          "changedFields": [],
+          "readinessBefore": {
+            "status": "待回填",
+            "completedChecks": 0,
+            "totalChecks": 9,
+            "missingFields": [
+              "内容主题",
+              "内容目标",
+              "素材描述",
+              "封面偏好",
+              "素材备注",
+              "证据说明",
+              "保留项反馈",
+              "第二轮反馈",
+              "来源链接或截图路径"
+            ]
+          },
+          "readinessAfter": {
+            "status": "待回填",
+            "completedChecks": 0,
+            "totalChecks": 9,
+            "missingFields": [
+              "内容主题",
+              "内容目标",
+              "素材描述",
+              "封面偏好",
+              "素材备注",
+              "证据说明",
+              "保留项反馈",
+              "第二轮反馈",
+              "来源链接或截图路径"
+            ]
+          }
+        }
+      },
+      "summary": {
+        "completenessStatus": "待回填",
+        "completedChecks": 2,
+        "totalChecks": 12,
+        "linkedCaseCount": 1,
+        "readyToSync": false,
+        "topPriorityItems": [
+          "内容主题",
+          "内容目标",
+          "来源链接或素材路径"
+        ]
+      }
+    }
+  ]
+}

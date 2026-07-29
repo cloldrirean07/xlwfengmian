@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "status": "formal-write-execution-precheck-ready",
+  "summary": "正式写回执行前预检通过，执行前仍需输入正式写回确认短语。",
+  "confirmation": {
+    "requiredPhrase": "确认执行正式写回",
+    "phraseRequiredBeforeWrite": true
+  },
+  "readiness": {
+    "status": "ready-to-formal-write",
+    "statusLabel": "可以进入正式写回",
+    "summary": "最近一份安全写回预览已经有明确确认，可以继续设计正式写回模式。"
+  },
+  "target": {
+    "batchLabel": "real-002_to_real-003",
+    "safePreviewPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md",
+    "targetRecordPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+    "hasPatchedMarkdown": true,
+    "readbackOk": true,
+    "hasManualConfirmation": true,
+    "canProceedToFormalWrite": true
+  },
+  "manualDecision": {
+    "decisionStatus": "adopt-recommended",
+    "decisionLabel": "采用推荐确认块",
+    "canProceedToSafePreviewWrite": true,
+    "adopted": true
+  },
+  "blockers": [],
+  "nextAction": {
+    "actionId": "export-manual-review-formal-write",
+    "label": "执行正式写回",
+    "requiredPhrase": "确认执行正式写回",
+    "summary": "执行前会再次校验正式写回门禁。"
+  },
+  "sourcePaths": {
+    "json": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/manual-formal-write-execution-precheck/manual-formal-write-execution-precheck.json",
+    "markdown": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/manual-formal-write-execution-precheck/manual-formal-write-execution-precheck.md",
+    "safePreview": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md",
+    "targetRecord": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md"
+  },
+  "safetyBoundary": "仅生成正式写回执行前只读预检，不写入 Obsidian，不执行正式写回。",
+  "nextChecks": [
+    "确认目标记录路径和安全预览来源。",
+    "输入正式写回确认短语。",
+    "执行正式写回后检查读回结果和后续任务。"
+  ]
+}

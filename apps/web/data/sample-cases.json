@@ -1,0 +1,22 @@
+[
+  {
+    "id": "sample-001",
+    "title": "为什么你总觉得自己很忙但没结果",
+    "contentTopic": "为什么你总觉得自己很忙但没结果",
+    "contentGoal": "让用户意识到忙碌不等于有效产出，并点开后理解问题不在时间而在动作质量",
+    "userAssetType": "截图",
+    "assetDescription": "当前是普通口播截图，人物主体不够强，想补一张更贴内容的辅助图",
+    "platform": "抖音",
+    "referencePreference": "更高级一点，但不能太平，要让人想点开",
+    "assetNotes": "当前素材偏普通口播截图，没有强冲突画面",
+    "operations": {
+      "keyCaseRerunPriority": 10,
+      "maintenanceTags": ["sample", "baseline", "misclassified-seed"]
+    },
+    "mockUserSelection": {
+      "selectedCardId": "B",
+      "preserveElement": "保留第二张的点击钩子",
+      "feedback": "我喜欢这个方向，但别太像营销号，同时再更贴内容一点"
+    }
+  }
+]

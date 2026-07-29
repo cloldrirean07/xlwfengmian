@@ -1,0 +1,14 @@
+node_modules/
+dist/
+apps/*/dist/
+
+.DS_Store
+*.log
+
+.env
+.env.*
+!.env.example
+
+.cache/
+.tmp/
+tmp/

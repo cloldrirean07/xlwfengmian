@@ -1,0 +1,131 @@
+{
+  "ok": true,
+  "status": "formal-write-post-execution-acceptance-passed",
+  "summary": "正式写回后验收通过，目标读回、快照、元数据和承接任务均已确认。",
+  "target": {
+    "batchLabel": "real-002_to_real-003",
+    "targetRecordPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+    "safePreviewPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md"
+  },
+  "executionPacket": {
+    "status": "formal-write-execution-packet-ready",
+    "lineDiff": {
+      "hasChanges": true,
+      "removedLineCount": 7,
+      "addedLineCount": 6,
+      "hunkCount": 4,
+      "visibleHunkCount": 4,
+      "truncated": false,
+      "hunks": [
+        {
+          "hunkId": "hunk-1",
+          "contextBefore": "## 6. 人工试跑结论",
+          "removedLines": [
+            "- 这批案例最卡的环节："
+          ],
+          "addedLines": [
+            "- 这批案例最卡的环节：最卡在准备输入信息时，不知道先补哪项。"
+          ],
+          "contextAfter": "- 哪些字段最难补："
+        },
+        {
+          "hunkId": "hunk-2",
+          "contextBefore": "## 7. 对产品的影响",
+          "removedLines": [
+            "- 哪个按钮或模块最该前置："
+          ],
+          "addedLines": [
+            "- 哪个按钮或模块最该前置：建议先把输入准备区前置，因为它和“来源链接或截图路径”最直接相关。"
+          ],
+          "contextAfter": "- 哪段说明文字太多："
+        },
+        {
+          "hunkId": "hunk-3",
+          "contextBefore": "- 哪个步骤最值得做成更强引导：",
+          "removedLines": [
+            "- 当前更像功能问题，还是界面问题："
+          ],
+          "addedLines": [
+            "- 当前更像功能问题，还是界面问题：更像流程问题，因为关键补写顺序还不明确，容易停在中间。"
+          ],
+          "contextAfter": ""
+        },
+        {
+          "hunkId": "hunk-4",
+          "contextBefore": "## 2. 补充结论",
+          "removedLines": [
+            "- 这批试跑最关键的结论：",
+            "- 下一批还要不要继续同样赛道：",
+            "- UI 优化是否已经到时机：",
+            ""
+          ],
+          "addedLines": [
+            "- 这批试跑最关键的结论：最卡在准备输入信息时，不知道先补哪项。",
+            "- 下一批还要不要继续同样赛道：先基于当前建议态改写草稿做一轮人工确认。",
+            "- UI 优化是否已经到时机：先别急着做 UI，先补齐关键人工判断再重跑更稳。"
+          ],
+          "contextAfter": ""
+        }
+      ]
+    },
+    "confirmationPhrase": "确认执行正式写回"
+  },
+  "formalWriteExport": {
+    "exportId": "BRF-2026-07-29T06-53-32-869Z",
+    "exportedAt": "2026-07-29T06:53:32.889Z",
+    "readback": {
+      "ok": true,
+      "matchedExpectedContent": true
+    },
+    "followUpTaskCount": 2
+  },
+  "acceptanceChecks": [
+    {
+      "checkId": "target-readback",
+      "label": "目标记录读回",
+      "status": "passed",
+      "expectedEvidence": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+      "summary": "正式写回后，目标记录内容必须与最终 Markdown 完全一致。"
+    },
+    {
+      "checkId": "final-markdown-snapshot",
+      "label": "写入后快照",
+      "status": "passed",
+      "expectedEvidence": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.md",
+      "summary": "正式写回应保存写入后的 Markdown 快照，便于后续复核。"
+    },
+    {
+      "checkId": "previous-markdown-snapshot",
+      "label": "写入前快照",
+      "status": "passed",
+      "expectedEvidence": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.previous.md",
+      "summary": "正式写回前应保存旧版本快照，读回异常时可恢复。"
+    },
+    {
+      "checkId": "formal-write-metadata",
+      "label": "写回元数据",
+      "status": "passed",
+      "expectedEvidence": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/batch-review-manual-formal-write.json",
+      "summary": "正式写回应保存 exportId、时间、来源和目标路径等元数据。"
+    },
+    {
+      "checkId": "follow-up-tasks",
+      "label": "承接任务生成",
+      "status": "passed",
+      "expectedEvidence": "规则修订任务单 / 关键样例复跑",
+      "summary": "正式写回后应生成规则修订任务单和关键样例复跑两个承接任务。"
+    }
+  ],
+  "passedCount": 5,
+  "totalCount": 5,
+  "nextAction": {
+    "actionId": "review-formal-write-follow-up",
+    "label": "复核写回后承接任务",
+    "summary": "检查规则修订任务单和关键样例复跑是否进入下一轮处理。"
+  },
+  "outputPaths": {
+    "json": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/manual-formal-write-post-execution-acceptance/manual-formal-write-post-execution-acceptance.json",
+    "markdown": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-formal-write/manual-formal-write-post-execution-acceptance/manual-formal-write-post-execution-acceptance.md"
+  },
+  "safetyBoundary": "仅生成正式写回后验收包，不写入 Obsidian，不执行正式写回。"
+}

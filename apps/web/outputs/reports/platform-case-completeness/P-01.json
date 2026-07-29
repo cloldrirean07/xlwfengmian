@@ -1,0 +1,82 @@
+{
+  "platformCaseId": "P-01",
+  "status": "待回填",
+  "totalChecks": 12,
+  "completedChecks": 0,
+  "missingFields": [
+    "案例编号",
+    "来源平台",
+    "内容主题",
+    "内容目标",
+    "来源链接或素材路径",
+    "主体描述",
+    "视觉焦点",
+    "主点击机制",
+    "主封面方向",
+    "正向反馈词",
+    "可能调整方向",
+    "一句话结论"
+  ],
+  "checks": [
+    {
+      "fieldKey": "case_id",
+      "label": "案例编号",
+      "complete": false
+    },
+    {
+      "fieldKey": "source_platform",
+      "label": "来源平台",
+      "complete": false
+    },
+    {
+      "fieldKey": "content_topic",
+      "label": "内容主题",
+      "complete": false
+    },
+    {
+      "fieldKey": "content_goal_guess",
+      "label": "内容目标",
+      "complete": false
+    },
+    {
+      "fieldKey": "link_or_asset_path",
+      "label": "来源链接或素材路径",
+      "complete": false
+    },
+    {
+      "fieldKey": "subject_description",
+      "label": "主体描述",
+      "complete": false
+    },
+    {
+      "fieldKey": "visual_focus",
+      "label": "视觉焦点",
+      "complete": false
+    },
+    {
+      "fieldKey": "click_driver_primary",
+      "label": "主点击机制",
+      "complete": false
+    },
+    {
+      "fieldKey": "direction_type_primary",
+      "label": "主封面方向",
+      "complete": false
+    },
+    {
+      "fieldKey": "likely_positive_feedback",
+      "label": "正向反馈词",
+      "complete": false
+    },
+    {
+      "fieldKey": "possible_adjustment_direction",
+      "label": "可能调整方向",
+      "complete": false
+    },
+    {
+      "fieldKey": "one_sentence_summary",
+      "label": "一句话结论",
+      "complete": false
+    }
+  ]
+}

@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI封面创意助手 MVP</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">AI Cover Creative Assistant</p>
+            <h1>封面方向从输入到二轮修订的完整工作台</h1>
+            <p class="hero-copy">
+              围绕内容主题、素材状态与发布目标，先完成点击机制判断，再输出方向卡、路径建议、采纳反馈与二轮修订承接，让封面创意从想法进入可复盘的产品流程。
+            </p>
+            <div class="hero-badges">
+              <span>首轮：3 个方向卡</span>
+              <span>中段：工作区建议确认</span>
+              <span>二轮：采纳后承接修订</span>
+              <span>支持：Prompt / LLM Draft</span>
+            </div>
+          </div>
+
+          <aside class="hero-side">
+            <article class="hero-side-card hero-side-primary">
+              <p class="section-kicker">Product Line Scope</p>
+              <h2>先打通主路径第一段闭环</h2>
+              <p>
+                当前版本不追求一次生成终稿，而是把输入准备、方向判断、工作区建议、采纳反馈和二轮承接串成稳定主链路。
+              </p>
+              <div class="hero-metrics">
+                <div>
+                  <span>首轮输出</span>
+                  <strong>3 个封面方向</strong>
+                </div>
+                <div>
+                  <span>中间决策</span>
+                  <strong>采纳 / 不采纳</strong>
+                </div>
+                <div>
+                  <span>二轮承接</span>
+                  <strong>仅采纳后接入</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="hero-side-card hero-side-secondary">
+              <strong>维护模式边界</strong>
+              <ul class="hero-side-list">
+                <li>保留现有案例、规则与导出资产</li>
+                <li>不新建第二套前端项目</li>
+                <li>不引入新的运行时依赖</li>
+              </ul>
+            </article>
+          </aside>
+        </div>
+
+        <nav class="jump-nav" aria-label="页面跳转">
+          <a href="#first-round-workbench" data-product-view-link="creation">进入主路径</a>
+          <a href="#action-workspace-panel" data-product-view-link="creation">确认工作区建议</a>
+          <a href="#real-case-form" data-workspace-group-link="cases">进入复盘态</a>
+          <a href="#review-dashboard-section" data-workspace-group-link="validation">进入写回态</a>
+        </nav>
+      </section>
+
+      <nav class="product-view-switch" id="product-view-switch" aria-label="产品工作视图切换">
+        <button type="button" class="product-view-button active" data-product-view-target="creation" data-view-tone="creation" aria-pressed="true" aria-controls="product-view-creation">
+          <span class="product-view-meta"><span class="product-view-index">01</span><span>创作主线</span></span>
+          <strong>输入到二轮</strong>
+        </button>
+        <button type="button" class="product-view-button" data-product-view-target="review" data-view-tone="review" aria-pressed="false" aria-controls="product-view-review">
+          <span class="product-view-meta"><span class="product-view-index">02</span><span>复盘态</span></span>
+          <strong>案例与批次证据</strong>
+        </button>
+        <button type="button" class="product-view-button" data-product-view-target="writeback" data-view-tone="writeback" aria-pressed="false" aria-controls="product-view-writeback">
+          <span class="product-view-meta"><span class="product-view-index">03</span><span>写回态</span></span>
+          <strong>门禁与正式写回</strong>
+        </button>
+      </nav>
+
+      <section class="product-view product-view-active" id="product-view-creation" data-product-view="creation">
+        <section class="view-stage-panel" data-view-tone="creation" aria-label="创作主线视图说明">
+          <div>
+            <p class="section-kicker">Creation Line</p>
+            <h2>创作主线</h2>
+            <p>
+              从内容主题、素材状态和平台目标开始，完成首轮方向判断、工作区建议确认与二轮修订承接。
+            </p>
+          </div>
+          <div class="view-stage-meta">
+            <span>输入：内容与素材信息</span>
+            <span>产出：方向卡与修订结果</span>
+            <span>去向：案例记录或继续调整</span>
+          </div>
+        </section>
+
+        <section class="workflow-strip">
+          <article>
+            <span>01</span>
+            <h2>输入准备</h2>
+            <p>收集内容主题、内容目标、素材状态与风格偏好，形成可判断的首轮输入。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h2>方向判断</h2>
+            <p>先判断看懂、收益、好奇、冲击或信任机制，再输出差异化方向卡。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h2>建议确认与二轮承接</h2>
+            <p>工作区建议必须经过采纳确认，才会进入第二轮修订与后续生成。</p>
+          </article>
+        </section>
+
+        <section class="workspace-grid">
+          <section class="panel form-panel" id="first-round-workbench">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Main Workflow</p>
+              <h2>输入准备</h2>
+            </div>
+            <div class="button-row">
+              <button type="button" id="load-sample-button">加载结构化样例</button>
+              <button type="button" id="run-sample-button" class="ghost-button">运行完整样例</button>
+            </div>
+          </div>
+          <p class="panel-note">
+            主路径围绕「内容主题 + 内容目标 + 素材状态 + 风格偏好」完成首轮方向判断，先收束判断逻辑，再进入工作区建议。
+          </p>
+          <div class="workbench-intro-grid">
+            <article class="workbench-callout workbench-callout-primary">
+              <strong>输入范围</strong>
+              <p>内容主题、目标、素材状态与风格偏好会共同决定封面方向的点击机制。</p>
+            </article>
+            <article class="workbench-callout">
+              <strong>最小链路</strong>
+              <p>主题、目标与一段素材描述即可启动首轮判断；参考图用于提升路径建议的贴合度。</p>
+            </article>
+          </div>
+          <form id="analyze-form" novalidate>
+            <label>
+              内容主题
+              <input name="contentTopic" placeholder="例如：为什么总觉得很忙却没有结果" maxlength="80" required />
+            </label>
+            <label>
+              内容目标
+              <input name="contentGoal" placeholder="例如：让用户意识到忙碌不等于有效产出" maxlength="120" required />
+            </label>
+            <div class="field-row">
+              <label>
+                素材类型
+                <select name="userAssetType">
+                  <option value="截图">截图</option>
+                  <option value="人像">人像</option>
+                  <option value="场景图">场景图</option>
+                  <option value="商品图">商品图</option>
+                  <option value="无图只有想法">无图只有想法</option>
+                </select>
+              </label>
+              <label>
+                目标平台
+                <select name="platform">
+                  <option value="抖音">抖音</option>
+                  <option value="小红书">小红书</option>
+                  <option value="Instagram">Instagram</option>
+                </select>
+              </label>
+            </div>
+            <div class="asset-upload-block">
+              <div class="asset-upload-header">
+                <div>
+                  <p class="section-kicker">Asset Context</p>
+                  <h3>本地参考图 / 截图预览</h3>
+                </div>
+                <button type="button" id="clear-asset-button" class="ghost-button hidden">清除预览</button>
+              </div>
+              <label>
+                上传图片
+                <input id="asset-upload-input" type="file" accept="image/*" />
+              </label>
+              <div id="asset-preview-panel" class="asset-preview-shell">
+                <div id="asset-preview-content"></div>
+              </div>
+            </div>
+            <label>
+              素材描述
+              <textarea
+                name="assetDescription"
+                rows="3"
+                maxlength="300"
+                placeholder="例如：口播截图，人物在左侧，背景比较空"
+              ></textarea>
+            </label>
+            <label>
+              封面倾向
+              <input name="referencePreference" placeholder="例如：更高级一点，但不要太平" maxlength="120" />
+            </label>
+            <label>
+              补充说明
+              <textarea name="assetNotes" rows="3" maxlength="300" placeholder="例如：想更像热门内容，但不要太营销化"></textarea>
+            </label>
+            <div class="submit-row">
+              <button type="submit">生成 3 张方向卡片</button>
+              <span id="first-round-status" class="micro-copy">提交后将先判断点击机制，再输出方向卡。</span>
+            </div>
+          </form>
+        </section>
+
+          <section class="panel guide-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Decision Frame</p>
+              <h2>系统当前怎么判断</h2>
+            </div>
+          </div>
+          <div class="guide-highlight">
+            <strong>这不是一句 Prompt 换写法。</strong>
+            <p>当前系统会先缩小“哪种点击机制更值得优先尝试”，再决定用什么图、什么文案和什么构图去承接。</p>
+          </div>
+          <div class="guide-list">
+            <article>
+              <strong>先看内容任务</strong>
+              <p>这条内容更需要被“看懂”、被“相信”，还是先让人“停住并点开”。</p>
+            </article>
+            <article>
+              <strong>再看现有素材</strong>
+              <p>用户是只有截图、有人像、有场景，还是根本没有可用图，这决定先改现有图还是先补贴内容的图。</p>
+            </article>
+            <article>
+              <strong>最后给 3 个有差异的方向</strong>
+              <p>不是换同义词，而是让每张卡的主变量不同，便于用户真的做选择和迭代。</p>
+            </article>
+          </div>
+          <div class="direction-pills">
+            <span>更清楚重点</span>
+            <span>更有收获感</span>
+            <span>更让人想点开</span>
+            <span>更有冲击力</span>
+            <span>更高级专业</span>
+          </div>
+          </section>
+        </section>
+
+        <section class="panel hidden" id="analysis-panel">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">First Round</p>
+            <h2>第一轮方向结果</h2>
+          </div>
+        </div>
+        <div id="analysis-summary"></div>
+        <div id="analysis-meta"></div>
+        <div class="panel-inner-block" id="action-workspace-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Branch Workspace</p>
+              <h2>工作区建议确认</h2>
+            </div>
+          </div>
+          <div id="action-workspace-content"></div>
+          <form id="action-workspace-form" class="workspace-form">
+            <div id="action-workspace-paths"></div>
+            <div id="action-workspace-fields"></div>
+            <button type="submit" id="action-workspace-run-button">生成这一步建议</button>
+          </form>
+          <div id="action-workspace-result"></div>
+          <div class="button-row workspace-decision-row" id="workspace-decision-row">
+            <button type="button" id="workspace-accept-button">采纳并接入第二轮</button>
+            <button type="button" id="workspace-reject-button" class="ghost-button">不采纳本次建议</button>
+          </div>
+          <div id="workspace-decision-status"></div>
+        </div>
+        <div id="cards" class="cards"></div>
+        </section>
+
+        <section class="workspace-grid">
+          <section class="panel hidden" id="refine-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Second Round</p>
+              <h2>第二轮优化</h2>
+            </div>
+          </div>
+          <div id="selected-card-summary"></div>
+          <div id="refine-workspace-hint"></div>
+          <form id="refine-form" novalidate>
+            <label>
+              希望保留的元素
+              <input name="preserveElement" placeholder="例如：保留第二张的冲击感" />
+            </label>
+            <label>
+              希望调整的重点
+              <textarea name="feedback" rows="3" maxlength="200" placeholder="例如：更高级一点，但不要太平" required></textarea>
+            </label>
+            <button type="submit">生成第二轮优化结果</button>
+          </form>
+          </section>
+
+          <section class="panel hidden" id="second-round-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Refined Direction</p>
+              <h2>第二轮优化结果</h2>
+            </div>
+          </div>
+          <div id="second-round-result"></div>
+          </section>
+        </section>
+
+        <section class="panel case-bridge-panel" id="case-review-entry">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Review Loop</p>
+            <h2>案例复盘承接</h2>
+          </div>
+          <div class="button-row">
+            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">查看复盘态</a>
+            <a class="link-button" href="#review-dashboard-section" data-workspace-group-link="validation">进入写回态</a>
+          </div>
+        </div>
+        <p class="panel-note">
+          二轮结果确认后，可进入案例维护与复盘看板，把真实案例缺口、人工复盘结论和后续规则修订任务继续沉淀到项目资产中。
+        </p>
+        <div class="case-bridge-grid">
+          <article>
+            <span>01</span>
+            <strong>检查案例缺口</strong>
+            <p>优先查看待补字段较多或近期待处理的真实案例。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>生成复盘材料</strong>
+            <p>通过复盘看板收束人工结论、批次趋势和下一步任务。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>沉淀规则任务</strong>
+            <p>把高频问题转化为规则修订或关键样例复跑任务。</p>
+          </article>
+        </div>
+        </section>
+
+      <section
+        class="product-view product-view-active workspace-group workspace-group-tools workspace-group-collapsed"
+        data-product-view="creation"
+        data-workspace-group="tools"
+      >
+        <div class="group-intro">
+          <div class="group-intro-head">
+            <div>
+              <p class="section-kicker">Developer Aids</p>
+              <h2>主链路辅助验证工具</h2>
+            </div>
+            <button
+              type="button"
+              class="ghost-button group-toggle-button"
+              data-workspace-group-toggle="tools"
+              aria-expanded="false"
+            >
+              展开这组工具
+            </button>
+          </div>
+          <p>这组能力不直接属于用户首轮体验，主要用于快速检查 Prompt 层和固定样例链路是否稳定。</p>
+          <div class="group-meta-row">
+            <span class="group-meta-chip">用途：Prompt 与样例验证</span>
+            <span class="group-meta-chip">触发：检查模型层输出</span>
+            <span class="group-meta-chip">默认：按需展开</span>
+          </div>
+        </div>
+        <div class="group-body">
+          <section class="panel hidden" id="prompt-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Model Layer</p>
+              <h2>Prompt 与 LLM Draft</h2>
+            </div>
+            <div class="button-row">
+              <button type="button" id="prompt-preview-button" class="ghost-button">生成 Prompt 预览</button>
+              <button type="button" id="llm-draft-button">生成 LLM Draft</button>
+            </div>
+          </div>
+          <p class="panel-note">当前默认使用 mock provider，后续可替换成真实模型 provider，并保持这一层接口不变。</p>
+          <div id="prompt-result"></div>
+          </section>
+
+          <section class="panel hidden" id="sample-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Flow Check</p>
+              <h2>样例运行结果</h2>
+            </div>
+          </div>
+          <div id="sample-result"></div>
+          </section>
+        </div>
+        </section>
+      </section>
+
+      <section class="product-view workspace-group workspace-group-cases" id="product-view-review" data-product-view="review" data-workspace-group="cases">
+        <section class="view-stage-panel" data-view-tone="review" aria-label="复盘态视图说明">
+          <div>
+            <p class="section-kicker">Review State</p>
+            <h2>复盘态</h2>
+            <p>
+              将真实案例、批量回填、试跑记录与平台复核集中维护，为规则判断、批次复盘和写回门禁提供稳定证据。
+            </p>
+          </div>
+          <div class="view-stage-meta">
+            <span>输入：真实案例与平台笔记</span>
+            <span>产出：工作单、批次记录与复盘证据</span>
+            <span>去向：写回态与规则任务</span>
+          </div>
+        </section>
+
+        <div class="group-intro" id="real-case-form">
+          <div class="group-intro-head">
+            <div>
+              <p class="section-kicker">Evidence Pipeline</p>
+              <h2>复盘证据工作台</h2>
+            </div>
+            <button
+              type="button"
+              class="ghost-button group-toggle-button"
+              data-workspace-group-toggle="cases"
+              aria-expanded="true"
+            >
+              收起这组工具
+            </button>
+          </div>
+          <p>将真实案例从录入、回填、批次试跑到平台复核串成同一条证据链，为后续规则修订、写回判断和主路径优化提供依据。</p>
+          <div class="group-meta-row">
+            <span class="group-meta-chip">用途：案例资产沉淀</span>
+            <span class="group-meta-chip">触发：二轮结果需要进入复盘</span>
+            <span class="group-meta-chip">产出：案例、工作单、批次记录</span>
+          </div>
+          <nav class="group-shortcut-row" aria-label="案例维护组内快捷入口">
+            <a href="#single-case-flow">单条案例录入</a>
+            <a href="#batch-maintenance-flow">批量案例维护</a>
+            <a href="#case-sync-flow">平台案例复核</a>
+          </nav>
+        </div>
+        <div class="group-body">
+          <section class="case-pipeline-strip" aria-label="案例沉淀流程">
+            <article>
+              <span>01</span>
+              <strong>录入案例</strong>
+              <p>先把真实案例转成代码侧可追踪结构。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <strong>补齐字段</strong>
+              <p>通过回填工作单补齐主题、素材和证据字段。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <strong>批次试跑</strong>
+              <p>将多条案例沉淀为可复盘的批次记录。</p>
+            </article>
+            <article>
+              <span>04</span>
+              <strong>复核同步</strong>
+              <p>对齐平台笔记和真实案例库，减少字段漂移。</p>
+            </article>
+          </section>
+          <section class="subgroup-intro" id="single-case-flow">
+            <p class="section-kicker">Single Case Flow</p>
+            <h3>单条录入与确认写入</h3>
+            <p>用于把一条新案例从表单录入、骨架预览推进到确认写入，验证字段结构和最小录入链路。</p>
+          </section>
+          <section class="workspace-grid">
+            <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Real Case Intake</p>
+              <h2>真实案例录入预览台</h2>
+            </div>
+            <div class="button-row">
+              <button type="button" id="load-real-case-template-button" class="ghost-button">填入默认模板</button>
+              <button type="button" id="preview-real-case-button">预览真实案例骨架</button>
+            </div>
+          </div>
+          <p class="panel-note">
+            该步骤先生成真实案例结构预览，不直接写入数据文件；确认字段结构稳定后，再沿用同一套输入执行正式写入。
+          </p>
+          <form id="real-case-intake-form">
+            <div class="field-row">
+              <label>
+                真实案例 ID
+                <input name="id" placeholder="例如：real-002" required />
+              </label>
+              <label>
+                平台案例 ID
+                <input name="platformCaseId" placeholder="例如：P-02" required />
+              </label>
+            </div>
+            <div class="field-row">
+              <label>
+                标题
+                <input name="title" placeholder="例如：待补真实案例 real-002" required />
+              </label>
+              <label>
+                平台
+                <select name="platform">
+                  <option value="抖音">抖音</option>
+                  <option value="小红书">小红书</option>
+                  <option value="Instagram">Instagram</option>
+                </select>
+              </label>
+            </div>
+            <div class="field-row">
+              <label>
+                状态
+                <select name="status">
+                  <option value="draft">draft</option>
+                  <option value="ready">ready</option>
+                  <option value="archived">archived</option>
+                </select>
+              </label>
+              <label>
+                关键复跑优先级
+                <input name="keyCaseRerunPriority" type="number" min="0" step="1" value="5" />
+              </label>
+            </div>
+            <label>
+              维护标签
+              <input
+                name="maintenanceTags"
+                placeholder="例如：real-case, high-priority-candidate"
+                value="real-case, high-priority-candidate"
+              />
+            </label>
+            <label>
+              Obsidian 案例路径
+              <input
+                name="obsidianCasePath"
+                placeholder="留空则自动生成默认路径"
+              />
+            </label>
+            <div class="field-row">
+              <label>
+                来源链接
+                <input name="sourceLink" placeholder="例如：https://example.com/post/2" />
+              </label>
+              <label>
+                截图路径
+                <input name="screenshotPath" placeholder="例如：assets/screenshots/real-002.png" />
+              </label>
+            </div>
+          </form>
+          <div class="submit-row">
+            <span id="real-case-status" class="micro-copy">填写后可先预览真实案例骨架，不会直接写入数据文件。</span>
+          </div>
+            </section>
+
+            <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Scaffold Preview</p>
+              <h2>真实案例骨架预览</h2>
+            </div>
+          </div>
+          <div id="real-case-preview-result">
+            <p class="empty-state">预览后将展示即将生成的 indexEntry、record 结构和后续动作。</p>
+          </div>
+          <div class="button-row panel-inner-block">
+            <button type="button" id="commit-real-case-button">确认写入真实案例</button>
+          </div>
+          <div id="real-case-commit-result"></div>
+            </section>
+          </section>
+
+          <section class="subgroup-intro" id="batch-maintenance-flow">
+            <p class="section-kicker">Batch Maintenance Flow</p>
+            <h3>批量维护、回填与复核</h3>
+            <p>用于集中处理批量录入、工作单导出、试跑记录、案例概览和平台复核，形成可复盘的案例资产批次。</p>
+          </section>
+          <section class="workspace-grid">
+            <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Batch Intake</p>
+              <h2>批量真实案例录入</h2>
+            </div>
+            <div class="button-row">
+              <button type="button" id="load-real-case-batch-template-button" class="ghost-button">加载批量模板</button>
+              <button type="button" id="preview-real-case-batch-button">预览批量骨架</button>
+            </div>
+          </div>
+          <p class="panel-note">用于一次准备 2 到 3 条真实案例，先稳定批次结构，再统一写入代码侧案例库。</p>
+          <form id="real-case-batch-form" class="stack-form">
+            <label>
+              批量案例 JSON
+              <textarea
+                name="batchJson"
+                rows="18"
+                placeholder='[{"id":"real-002","title":"待补真实案例 real-002","platformCaseId":"P-02"}]'
+              ></textarea>
+            </label>
+          </form>
+          <div class="submit-row">
+            <span id="real-case-batch-status" class="micro-copy">可先加载批量模板，再调整为当前需要整理的真实案例批次。</span>
+          </div>
+            </section>
+
+            <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Batch Preview</p>
+              <h2>批量写入预览</h2>
+            </div>
+          </div>
+          <div id="real-case-batch-preview-result">
+            <p class="empty-state">预览后将展示本次批量录入新增的真实案例条目和索引变化。</p>
+          </div>
+          <div class="button-row panel-inner-block">
+            <button type="button" id="commit-real-case-batch-button">确认批量写入真实案例</button>
+            <button type="button" id="preview-real-case-batch-worksheet-button" class="ghost-button">生成批量回填工作单</button>
+            <button type="button" id="export-real-case-batch-worksheet-button" class="ghost-button">导出批量工作单到 Obsidian</button>
+            <button type="button" id="load-real-case-batch-worksheet-history-button" class="ghost-button">查看最近工作单记录</button>
+            <button type="button" id="preview-real-case-batch-run-record-button" class="ghost-button">生成批次试跑记录</button>
+            <button type="button" id="export-real-case-batch-run-record-button" class="ghost-button">导出批次试跑记录</button>
+          </div>
+          <div id="real-case-batch-commit-result"></div>
+          <div id="real-case-batch-worksheet-result"></div>
+          <div id="real-case-batch-run-record-result"></div>
+            </section>
+          </section>
+
+          <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Real Case Library</p>
+              <h2>真实案例已写入概览</h2>
+            </div>
+            <div class="button-row">
+              <button type="button" id="refresh-real-case-library-button" class="ghost-button">刷新真实案例列表</button>
+            </div>
+          </div>
+          <p class="panel-note">用于确认已写入案例是否进入代码侧案例集合，并查看后续维护状态。</p>
+          <div id="real-case-lane-filter-bar" class="hidden"></div>
+          <div id="real-case-library-result">
+            <p class="empty-state">刷新后将展示当前代码侧真实案例概览。</p>
+          </div>
+          <div id="real-case-maintenance-result"></div>
+          <div id="real-case-export-result"></div>
+          </section>
+
+          <section class="panel" id="case-sync-flow">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Platform Sync Review</p>
+              <h2>平台案例复核台</h2>
+            </div>
+            <div class="button-row">
+              <input id="platform-case-id-input" value="P-01" />
+              <button type="button" id="load-platform-review-button" class="ghost-button">加载单案例复核</button>
+              <button type="button" id="load-platform-batch-button" class="ghost-button">加载批量复核</button>
+              <button type="button" id="load-platform-sync-preview-button" class="ghost-button">查看同步预览</button>
+            </div>
+          </div>
+          <p class="panel-note">用于连接 Obsidian 平台案例笔记和代码侧真实案例草稿，先判断完整度，再预览同步会变更的字段。</p>
+          <div class="stack-block">
+            <div id="platform-review-summary"></div>
+            <div id="platform-batch-summary"></div>
+            <div id="platform-sync-summary"></div>
+          </div>
+          </section>
+        </div>
+      </section>
+
+      <section
+        class="product-view workspace-group workspace-group-validation workspace-group-collapsed"
+        id="product-view-writeback"
+        data-product-view="writeback"
+        data-workspace-group="validation"
+      >
+        <section class="view-stage-panel" data-view-tone="writeback" aria-label="写回态视图说明">
+          <div>
+            <p class="section-kicker">Writeback State</p>
+            <h2>写回态</h2>
+            <p>
+              汇总 UI 就绪度、跨批次摩擦点、人工结论和安全写回状态，确认门禁完整后再进入正式写回。
+            </p>
+          </div>
+          <div class="view-stage-meta">
+            <span>输入：批次证据与人工结论</span>
+            <span>产出：复盘看板、安全预览与写回状态</span>
+            <span>去向：规则修订、关键复跑或正式写回</span>
+          </div>
+        </section>
+
+        <div class="group-intro">
+          <div class="group-intro-head">
+            <div>
+              <p class="section-kicker">Formal Write Gate</p>
+              <h2>写回门禁工作台</h2>
+            </div>
+            <button
+              type="button"
+              class="ghost-button group-toggle-button"
+              data-workspace-group-toggle="validation"
+              aria-expanded="false"
+            >
+              展开这组工具
+            </button>
+          </div>
+          <p>基于多批次证据判断是否进入 UI 讨论、是否沉淀规则修订任务，并确认正式写回前的安全预览与人工结论。</p>
+          <div class="group-meta-row">
+            <span class="group-meta-chip">用途：写回门禁与规则沉淀</span>
+            <span class="group-meta-chip">触发：安全预览进入人工确认</span>
+            <span class="group-meta-chip">产出：写回状态与承接任务</span>
+          </div>
+          <nav class="group-shortcut-row" aria-label="验证与复盘组内快捷入口">
+            <a href="#writeback-gate-overview">写回门禁总览</a>
+            <a href="#ui-readiness-gate">UI 时机判断</a>
+            <a href="#cross-batch-signals-section">跨批次信号</a>
+            <a href="#review-dashboard-section">复盘看板</a>
+          </nav>
+        </div>
+        <div class="group-body">
+          <section class="panel writeback-overview-panel" id="writeback-gate-overview">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Gate Overview</p>
+            <h2>正式写回门禁总览</h2>
+          </div>
+          <div class="button-row">
+            <a class="link-button ghost-button" href="#review-dashboard-section">查看复盘看板</a>
+          </div>
+        </div>
+        <p class="panel-note">正式写回必须先经过安全预览、人工确认、状态检查和读回校验；当前页面只聚合入口，不替代人工判断。</p>
+        <div id="writeback-gate-status-result">
+          <p class="empty-state">刷新后将展示最新安全预览、人工确认和正式写回许可。</p>
+        </div>
+        <div class="writeback-overview-grid">
+          <article>
+            <span>01</span>
+            <strong>生成安全预览</strong>
+            <p>先把建议改写结果导出为可编辑预览，保留当前记录原文和拟写回版本。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>补齐人工确认</strong>
+            <p>在 Obsidian 预览文档中填写人工结论、确认字段、仍需手改和写回判断。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>检查写回状态</strong>
+            <p>读回最新安全预览，确认人工结论有效且仍需手改为空。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <strong>执行正式写回</strong>
+            <p>门禁满足后再覆盖真实批次记录，并生成规则修订与关键样例复跑任务。</p>
+          </article>
+        </div>
+        <div class="writeback-gate-actions" aria-label="正式写回门禁操作顺序">
+          <button type="button" id="refresh-writeback-gate-status-button">刷新门禁状态</button>
+          <button type="button" data-review-followup-action="export-manual-review-safe-write">导出安全预览</button>
+          <button type="button" data-review-followup-action="check-manual-review-formal-write-readiness">检查写回门禁</button>
+          <a href="#review-dashboard-section">查看复盘看板写回状态</a>
+        </div>
+          </section>
+
+          <section class="panel" id="ui-readiness-gate">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">UI Readiness Gate</p>
+            <h2>UI 优化进入条件报告</h2>
+          </div>
+          <div class="button-row">
+            <button type="button" id="preview-ui-optimization-readiness-button" class="ghost-button">生成 UI 就绪度预览</button>
+            <button type="button" id="export-ui-optimization-readiness-button">导出 UI 就绪度报告</button>
+          </div>
+        </div>
+        <p class="panel-note">用于判断当前是否已经积累足够真实批次证据，是否值得进入主链路 UI 优化讨论。</p>
+        <div id="ui-optimization-readiness-result">
+          <p class="empty-state">生成报告后将展示 UI 讨论时机、证据覆盖度和主要风险。</p>
+        </div>
+          </section>
+
+          <section class="panel" id="cross-batch-signals-section">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Cross-Batch Signals</p>
+            <h2>跨批次摩擦点汇总</h2>
+          </div>
+          <div class="button-row">
+            <button type="button" id="preview-batch-run-friction-summary-button" class="ghost-button">生成跨批次摩擦点预览</button>
+            <button type="button" id="export-batch-run-friction-summary-button">导出跨批次摩擦点汇总</button>
+          </div>
+        </div>
+        <p class="panel-note">用于横向比较已导出的多批次试跑记录，识别重复摩擦点和更值得进入 UI 讨论的稳定问题。</p>
+        <div id="batch-run-friction-summary-result">
+          <p class="empty-state">生成汇总后将展示最常重复的摩擦点类别、推荐动作和 UI 讨论时机。</p>
+        </div>
+          </section>
+
+          <section class="panel" id="review-dashboard-section">
+        <div class="panel-header">
+          <div>
+            <p class="section-kicker">Review Dashboard</p>
+            <h2>批次复盘看板</h2>
+          </div>
+          <div class="button-row">
+            <button type="button" id="preview-batch-review-dashboard-button" class="ghost-button">生成复盘看板</button>
+            <button type="button" id="export-batch-review-dashboard-button">导出复盘看板</button>
+            <button type="button" id="export-batch-review-suite-button">一键导出复盘套件</button>
+          </div>
+        </div>
+        <p class="panel-note">用于汇总最近人工结论覆盖状态、跨批次重复信号和 UI 时机判断，并形成下一批优先补齐项；正式复盘材料可通过复盘套件一次性导出。</p>
+        <div id="batch-review-dashboard-result">
+          <p class="empty-state">生成看板后将展示当前最该补的批次、人工复盘趋势和 UI 讨论缺口。</p>
+        </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,374 @@
+{
+  "platformCaseId": "P-01",
+  "notePath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md",
+  "parsedNote": {
+    "sample_status": "待回填",
+    "case_id": "P-01",
+    "source_platform": "抖音",
+    "creator_type": "",
+    "creator_stage_guess": "",
+    "content_topic": "[待确认草稿] 这条内容主要在讲：[把具体主题写清，例如“为什么你总觉得自己很忙但没结果”]。",
+    "content_goal_guess": "[待确认草稿] 这条内容希望用户点开后获得：[一句话写清认知收获或结果感]。",
+    "content_type_primary": "",
+    "content_type_secondary": "",
+    "capture_date": "",
+    "link_or_asset_path": "[待确认草稿] 待补真实案例来源：[粘贴抖音链接 / 小红书链接 / 本地截图文件名]。",
+    "source_observation_note": "",
+    "subject_description": "[待确认草稿] 封面主体初稿：画面中是[人物/物体/截图主体]，位于[左/中/右]，当前最显眼的是[大字/表情/动作/色块]。",
+    "visual_focus": "[待确认草稿] 第一眼视觉焦点初稿：[写清用户最先看到的是大字、人物表情、动作，还是某个冲突画面]。",
+    "composition_features": "",
+    "color_mood_features": "",
+    "cover_copy_features": "",
+    "title_cover_relationship": "",
+    "click_driver_primary": "[待确认草稿] 主点击机制初稿：[风险损失 / 结果承诺 / 好奇悬念 / 反差冲突 / 信息清单]。",
+    "click_driver_secondary": "",
+    "has_clear_result": "",
+    "has_contrast": "",
+    "has_curiosity_gap": "",
+    "requires_clarity": "",
+    "requires_trust": "",
+    "click_mechanism_note": "",
+    "asset_subject_strength": "",
+    "asset_visual_tension": "",
+    "asset_aesthetic_quality": "",
+    "asset_information_density": "",
+    "asset_support_note": "",
+    "direction_type_primary": "",
+    "direction_type_secondary": "",
+    "direction_fit_reason": "",
+    "direction_risk": "",
+    "direction_boundary": "",
+    "visual_strategy": "",
+    "copy_strategy": "",
+    "composition_strategy": "",
+    "expected_click_reason": "",
+    "reusable_elements_priority": "",
+    "platform_native_signal": "",
+    "platform_expression_habit": "",
+    "why_it_feels_clickable_on_platform": "",
+    "likely_positive_feedback": "",
+    "likely_negative_feedback": "",
+    "feedback_keywords_extract": "",
+    "possible_adjustment_direction": "",
+    "which_rule_it_strengthens": "",
+    "which_user_scenario_it_fits": "",
+    "whether_it_requires_rule_revision": "",
+    "revision_note_if_any": "",
+    "one_sentence_summary": "",
+    "reusable_level": "",
+    "reuse_warning": ""
+  },
+  "completeness": {
+    "platformCaseId": "P-01",
+    "status": "部分回填",
+    "totalChecks": 12,
+    "completedChecks": 8,
+    "missingFields": [
+      "主封面方向",
+      "正向反馈词",
+      "可能调整方向",
+      "一句话结论"
+    ],
+    "checks": [
+      {
+        "fieldKey": "case_id",
+        "label": "案例编号",
+        "complete": true
+      },
+      {
+        "fieldKey": "source_platform",
+        "label": "来源平台",
+        "complete": true
+      },
+      {
+        "fieldKey": "content_topic",
+        "label": "内容主题",
+        "complete": true
+      },
+      {
+        "fieldKey": "content_goal_guess",
+        "label": "内容目标",
+        "complete": true
+      },
+      {
+        "fieldKey": "link_or_asset_path",
+        "label": "来源链接或素材路径",
+        "complete": true
+      },
+      {
+        "fieldKey": "subject_description",
+        "label": "主体描述",
+        "complete": true
+      },
+      {
+        "fieldKey": "visual_focus",
+        "label": "视觉焦点",
+        "complete": true
+      },
+      {
+        "fieldKey": "click_driver_primary",
+        "label": "主点击机制",
+        "complete": true
+      },
+      {
+        "fieldKey": "direction_type_primary",
+        "label": "主封面方向",
+        "complete": false
+      },
+      {
+        "fieldKey": "likely_positive_feedback",
+        "label": "正向反馈词",
+        "complete": false
+      },
+      {
+        "fieldKey": "possible_adjustment_direction",
+        "label": "可能调整方向",
+        "complete": false
+      },
+      {
+        "fieldKey": "one_sentence_summary",
+        "label": "一句话结论",
+        "complete": false
+      }
+    ]
+  },
+  "quality": {
+    "platformCaseId": "P-01",
+    "status": "待补强",
+    "totalChecks": 10,
+    "usableCount": 6,
+    "missingFields": [
+      "主封面方向",
+      "正向反馈词",
+      "可能调整方向",
+      "一句话结论"
+    ],
+    "weakFields": [],
+    "checks": [
+      {
+        "fieldKey": "content_topic",
+        "label": "内容主题",
+        "status": "usable",
+        "issue": "",
+        "value": "[待确认草稿] 这条内容主要在讲：[把具体主题写清，例如“为什么你总觉得自己很忙但没结果”]。"
+      },
+      {
+        "fieldKey": "content_goal_guess",
+        "label": "内容目标",
+        "status": "usable",
+        "issue": "",
+        "value": "[待确认草稿] 这条内容希望用户点开后获得：[一句话写清认知收获或结果感]。"
+      },
+      {
+        "fieldKey": "link_or_asset_path",
+        "label": "来源链接或素材路径",
+        "status": "usable",
+        "issue": "",
+        "value": "[待确认草稿] 待补真实案例来源：[粘贴抖音链接 / 小红书链接 / 本地截图文件名]。"
+      },
+      {
+        "fieldKey": "subject_description",
+        "label": "主体描述",
+        "status": "usable",
+        "issue": "",
+        "value": "[待确认草稿] 封面主体初稿：画面中是[人物/物体/截图主体]，位于[左/中/右]，当前最显眼的是[大字/表情/动作/色块]。"
+      },
+      {
+        "fieldKey": "visual_focus",
+        "label": "视觉焦点",
+        "status": "usable",
+        "issue": "",
+        "value": "[待确认草稿] 第一眼视觉焦点初稿：[写清用户最先看到的是大字、人物表情、动作，还是某个冲突画面]。"
+      },
+      {
+        "fieldKey": "click_driver_primary",
+        "label": "主点击机制",
+        "status": "usable",
+        "issue": "",
+        "value": "[待确认草稿] 主点击机制初稿：[风险损失 / 结果承诺 / 好奇悬念 / 反差冲突 / 信息清单]。"
+      },
+      {
+        "fieldKey": "direction_type_primary",
+        "label": "主封面方向",
+        "status": "missing",
+        "issue": "缺失",
+        "value": ""
+      },
+      {
+        "fieldKey": "likely_positive_feedback",
+        "label": "正向反馈词",
+        "status": "missing",
+        "issue": "缺失",
+        "value": ""
+      },
+      {
+        "fieldKey": "possible_adjustment_direction",
+        "label": "可能调整方向",
+        "status": "missing",
+        "issue": "缺失",
+        "value": ""
+      },
+      {
+        "fieldKey": "one_sentence_summary",
+        "label": "一句话结论",
+        "status": "missing",
+        "issue": "缺失",
+        "value": ""
+      }
+    ]
+  },
+  "actionPlan": {
+    "totalTasks": 4,
+    "topPriorityTasks": [],
+    "tasks": [
+      {
+        "label": "主封面方向",
+        "type": "missing",
+        "issue": "",
+        "priority": "P1",
+        "priorityScore": 74,
+        "reason": "主方向不明确，后续很难把案例沉淀回你的 5 类封面体系。",
+        "obsidianField": "4.封面效果方向判断 / direction_type_primary",
+        "prompt": "明确这条封面最像哪一种封面效果方向，并写成统一标签。",
+        "example": "例如：风险损失型。",
+        "order": 1
+      },
+      {
+        "label": "正向反馈词",
+        "type": "missing",
+        "issue": "",
+        "priority": "P2",
+        "priorityScore": 64,
+        "reason": "正向反馈词决定后续如何保留有效特征，但前提是案例事实先补齐。",
+        "obsidianField": "7.反馈词提炼 / likely_positive_feedback",
+        "prompt": "写 1 到 2 条用户可能会认可这张封面的原因，偏感受化表达。",
+        "example": "例如：更抓眼、重点更明确。",
+        "order": 2
+      },
+      {
+        "label": "可能调整方向",
+        "type": "missing",
+        "issue": "",
+        "priority": "P2",
+        "priorityScore": 60,
+        "reason": "调整方向更适合在已经理解案例后再写，优先级略后。",
+        "obsidianField": "7.反馈词提炼 / possible_adjustment_direction",
+        "prompt": "写一句自然语言，说明如果继续优化这张封面，最该改哪一点。",
+        "example": "例如：图更贴内容一点，别只靠大字。",
+        "order": 3
+      },
+      {
+        "label": "一句话结论",
+        "type": "missing",
+        "issue": "",
+        "priority": "P2",
+        "priorityScore": 56,
+        "reason": "一句话结论适合在前面字段成形后再总结，否则容易流于空话。",
+        "obsidianField": "9.案例结论 / one_sentence_summary",
+        "prompt": "用一句话总结这条封面为什么能点，或为什么值得纳入规则库。",
+        "example": "例如：它用‘忙和没结果’的损失感对比，先抢点击再交代原因。",
+        "order": 4
+      }
+    ]
+  },
+  "linkedCases": [
+    {
+      "caseId": "real-001",
+      "title": "P-01 待补真实案例",
+      "sourceType": "real",
+      "platform": "抖音",
+      "trackingStatus": "已映射"
+    }
+  ],
+  "syncPreview": {
+    "caseId": "real-001",
+    "title": "P-01 待补真实案例",
+    "platformCaseId": "P-01",
+    "notePath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md",
+    "targetPath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md",
+    "extracted": {
+      "content_topic": "[待确认草稿] 这条内容主要在讲：[把具体主题写清，例如“为什么你总觉得自己很忙但没结果”]。",
+      "content_goal_guess": "[待确认草稿] 这条内容希望用户点开后获得：[一句话写清认知收获或结果感]。",
+      "link_or_asset_path": "[待确认草稿] 待补真实案例来源：[粘贴抖音链接 / 小红书链接 / 本地截图文件名]。",
+      "subject_description": "[待确认草稿] 封面主体初稿：画面中是[人物/物体/截图主体]，位于[左/中/右]，当前最显眼的是[大字/表情/动作/色块]。",
+      "visual_focus": "[待确认草稿] 第一眼视觉焦点初稿：[写清用户最先看到的是大字、人物表情、动作，还是某个冲突画面]。",
+      "likely_positive_feedback": "",
+      "possible_adjustment_direction": ""
+    },
+    "preview": {
+      "id": "real-001",
+      "title": "P-01 待补真实案例",
+      "sourceType": "real",
+      "platform": "抖音",
+      "contentTopic": "[待确认草稿] 这条内容主要在讲：[把具体主题写清，例如“为什么你总觉得自己很忙但没结果”]。",
+      "contentGoal": "[待确认草稿] 这条内容希望用户点开后获得：[一句话写清认知收获或结果感]。",
+      "userAssetType": "截图",
+      "assetDescription": "[待确认草稿] 封面主体初稿：画面中是[人物/物体/截图主体]，位于[左/中/右]，当前最显眼的是[大字/表情/动作/色块]。；[待确认草稿] 第一眼视觉焦点初稿：[写清用户最先看到的是大字、人物表情、动作，还是某个冲突画面]。",
+      "referencePreference": "待补希望的封面风格和质感倾向",
+      "assetNotes": "待补当前素材状态、画面特点、限制条件",
+      "tracking": {
+        "platformCaseId": "P-01",
+        "obsidianCasePath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md"
+      },
+      "evidence": {
+        "sourceLink": "",
+        "screenshotPath": "[待确认草稿] 待补真实案例来源：[粘贴抖音链接 / 小红书链接 / 本地截图文件名]。",
+        "notes": "待补为什么这条真实案例值得被纳入代码层样例"
+      },
+      "mockUserSelection": {
+        "selectedCardId": "B",
+        "preserveElement": "待补希望保留的点击钩子或视觉元素",
+        "feedback": "待补第二轮优化反馈"
+      }
+    },
+    "syncSummary": {
+      "changedFields": [
+        "内容主题",
+        "内容目标",
+        "素材描述",
+        "截图路径"
+      ],
+      "readinessBefore": {
+        "status": "待回填",
+        "completedChecks": 0,
+        "totalChecks": 9,
+        "missingFields": [
+          "内容主题",
+          "内容目标",
+          "素材描述",
+          "封面偏好",
+          "素材备注",
+          "证据说明",
+          "保留项反馈",
+          "第二轮反馈",
+          "来源链接或截图路径"
+        ]
+      },
+      "readinessAfter": {
+        "status": "部分回填",
+        "completedChecks": 4,
+        "totalChecks": 9,
+        "missingFields": [
+          "封面偏好",
+          "素材备注",
+          "证据说明",
+          "保留项反馈",
+          "第二轮反馈"
+        ]
+      }
+    }
+  },
+  "summary": {
+    "completenessStatus": "部分回填",
+    "qualityStatus": "待补强",
+    "completedChecks": 8,
+    "totalChecks": 12,
+    "linkedCaseCount": 1,
+    "readyToSync": false,
+    "topPriorityItems": [
+      "主封面方向",
+      "正向反馈词",
+      "可能调整方向"
+    ]
+  }
+}

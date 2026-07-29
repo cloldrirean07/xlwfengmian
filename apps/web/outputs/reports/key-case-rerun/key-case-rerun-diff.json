@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "generatedAt": "2026-07-23 11:19:28",
+    "planId": "key-case-rerun-default",
+    "caseIds": [
+      "sample-001",
+      "real-001"
+    ]
+  },
+  "summary": {
+    "comparedCaseCount": 2,
+    "changedCaseCount": 0,
+    "unchangedCaseCount": 2,
+    "downstreamChangedCount": 0
+  },
+  "caseDiffRows": [
+    {
+      "caseId": "sample-001",
+      "title": "为什么你总觉得自己很忙但没结果",
+      "sourceType": "sample",
+      "platform": "抖音",
+      "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/sample-001",
+      "before": {
+        "caseId": "sample-001",
+        "title": "为什么你总觉得自己很忙但没结果",
+        "sourceType": "sample",
+        "platform": "抖音",
+        "ruleVersion": "c18a3eda29",
+        "topDirectionLabel": "更有收获感",
+        "topDirectionType": "强结果感",
+        "topMatchedSignals": [
+          "内容目标里已经带明确结果导向",
+          "用户描述了希望用户获得什么收获"
+        ],
+        "selectedCardId": "B",
+        "selectedDirectionLabel": "更让人想点开",
+        "refinementMappingId": "neg-too-salesy",
+        "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/sample-001"
+      },
+      "after": {
+        "caseId": "sample-001",
+        "title": "为什么你总觉得自己很忙但没结果",
+        "sourceType": "sample",
+        "platform": "抖音",
+        "ruleVersion": "c18a3eda29",
+        "topDirectionLabel": "更有收获感",
+        "topDirectionType": "强结果感",
+        "topMatchedSignals": [
+          "内容目标里已经带明确结果导向",
+          "用户描述了希望用户获得什么收获"
+        ],
+        "selectedCardId": "B",
+        "selectedDirectionLabel": "更让人想点开",
+        "refinementMappingId": "neg-too-salesy",
+        "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/sample-001"
+      },
+      "changeCount": 0,
+      "changes": []
+    },
+    {
+      "caseId": "real-001",
+      "title": "P-01 待补真实案例",
+      "sourceType": "real",
+      "platform": "抖音",
+      "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-001",
+      "before": {
+        "caseId": "real-001",
+        "title": "P-01 待补真实案例",
+        "sourceType": "real",
+        "platform": "抖音",
+        "ruleVersion": "c18a3eda29",
+        "topDirectionLabel": "更清楚重点",
+        "topDirectionType": "强信息感",
+        "topMatchedSignals": [
+          "当前内容需要更快讲明白",
+          "现有素材是截图，更适合先做信息提炼"
+        ],
+        "selectedCardId": "B",
+        "selectedDirectionLabel": "更高级专业",
+        "refinementMappingId": "neg-content-distance",
+        "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-001"
+      },
+      "after": {
+        "caseId": "real-001",
+        "title": "P-01 待补真实案例",
+        "sourceType": "real",
+        "platform": "抖音",
+        "ruleVersion": "c18a3eda29",
+        "topDirectionLabel": "更清楚重点",
+        "topDirectionType": "强信息感",
+        "topMatchedSignals": [
+          "当前内容需要更快讲明白",
+          "现有素材是截图，更适合先做信息提炼"
+        ],
+        "selectedCardId": "B",
+        "selectedDirectionLabel": "更高级专业",
+        "refinementMappingId": "neg-content-distance",
+        "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-001"
+      },
+      "changeCount": 0,
+      "changes": []
+    }
+  ],
+  "downstreamDiffs": [
+    {
+      "field": "eligibleExportCount",
+      "label": "可导出误判样本数",
+      "before": 1,
+      "after": 1,
+      "changed": false
+    },
+    {
+      "field": "taskCount",
+      "label": "规则修订任务数",
+      "before": 1,
+      "after": 1,
+      "changed": false
+    }
+  ]
+}

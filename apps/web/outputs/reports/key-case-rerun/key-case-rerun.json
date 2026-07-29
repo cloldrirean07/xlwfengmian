@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "generatedAt": "2026-07-23 11:19:28",
+    "planId": "key-case-rerun-default",
+    "description": "规则升级后优先复跑的关键样例清单，用于刷新方向判断、误判样本导出和规则修订任务单。",
+    "caseIds": [
+      "sample-001",
+      "real-001"
+    ],
+    "downstreamRefreshTargets": [
+      "reviewed-misclassified",
+      "rule-revision-task-sheet"
+    ]
+  },
+  "summary": {
+    "plannedCaseCount": 2,
+    "rerunCaseCount": 2,
+    "sampleCaseCount": 1,
+    "realCaseCount": 1
+  },
+  "rows": [
+    {
+      "caseId": "sample-001",
+      "title": "为什么你总觉得自己很忙但没结果",
+      "sourceType": "sample",
+      "platform": "抖音",
+      "ruleVersion": "c18a3eda29",
+      "topDirectionLabel": "更有收获感",
+      "topDirectionType": "强结果感",
+      "topMatchedSignals": [
+        "内容目标里已经带明确结果导向",
+        "用户描述了希望用户获得什么收获"
+      ],
+      "selectedCardId": "B",
+      "selectedDirectionLabel": "更让人想点开",
+      "refinementMappingId": "neg-too-salesy",
+      "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/sample-001"
+    },
+    {
+      "caseId": "real-001",
+      "title": "P-01 待补真实案例",
+      "sourceType": "real",
+      "platform": "抖音",
+      "ruleVersion": "c18a3eda29",
+      "topDirectionLabel": "更清楚重点",
+      "topDirectionType": "强信息感",
+      "topMatchedSignals": [
+        "当前内容需要更快讲明白",
+        "现有素材是截图，更适合先做信息提炼"
+      ],
+      "selectedCardId": "B",
+      "selectedDirectionLabel": "更高级专业",
+      "refinementMappingId": "neg-content-distance",
+      "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-001"
+    }
+  ],
+  "downstreamReports": {
+    "reviewedMisclassified": {
+      "summary": {
+        "totalReviewedRows": 1,
+        "eligibleExportCount": 1,
+        "missingCaseRunCount": 0
+      },
+      "rows": [
+        {
+          "caseId": "sample-001",
+          "title": "为什么你总觉得自己很忙但没结果",
+          "platform": "抖音",
+          "sourceType": "sample",
+          "ruleVersion": "c18a3eda29",
+          "negativeMappingId": "neg-too-salesy",
+          "positiveMappingId": "",
+          "matchedKeywords": [
+            "像营销号"
+          ],
+          "systemIssue": "太油/像营销号",
+          "systemAction": "降低夸张感，统一版式和语气",
+          "explanationSummary": "规则 c18a3eda29 将当前反馈归因为「太油/像营销号」，因此优先把方向往「更高级专业」修正。",
+          "sourceDirectionLabel": "更让人想点开",
+          "sourceDirectionType": "强悬念感",
+          "sourceMatchedSignals": [
+            "内容里存在异常点或可留白空间",
+            "用户偏好里已有「更高级一点，但不能太平，要让人想点开」这类抓眼诉求"
+          ],
+          "sourceBoundaryRules": [
+            "悬念不能变成标题党",
+            "留白必须贴内容，不是单纯故弄玄虚"
+          ],
+          "actualIssue": "更像离内容太远",
+          "suggestedKeyword": "不贴内容",
+          "suggestedMappingId": "neg-content-distance",
+          "suggestedPositiveSignalId": "pos-suspense-click",
+          "fallbackAdjustment": "不要默认走 too-salesy",
+          "reviewStatus": "misclassified",
+          "explanationStatus": "unclear",
+          "missingCaseRun": false
+        }
+      ]
+    },
+    "ruleRevisionTaskSheet": {
+      "summary": {
+        "sourceSampleCount": 1,
+        "taskCount": 1,
+        "p1Count": 0,
+        "p2Count": 0,
+        "p3Count": 1
+      },
+      "tasks": [
+        {
+          "taskId": "REV-001",
+          "taskTitle": "补强 neg-content-distance 相关关键词：不贴内容",
+          "priority": "P3",
+          "sampleCount": 1,
+          "caseIds": [
+            "sample-001"
+          ],
+          "sourceNegativeMappingIds": [
+            "neg-too-salesy"
+          ],
+          "sourceDirectionLabels": [
+            "更让人想点开"
+          ],
+          "sourceMatchedSignals": [
+            "内容里存在异常点或可留白空间",
+            "用户偏好里已有「更高级一点，但不能太平，要让人想点开」这类抓眼诉求"
+          ],
+          "sourceBoundaryRules": [
+            "悬念不能变成标题党",
+            "留白必须贴内容，不是单纯故弄玄虚"
+          ],
+          "actualIssues": [
+            "更像离内容太远"
+          ],
+          "titles": [
+            "为什么你总觉得自己很忙但没结果"
+          ],
+          "suggestedMappingId": "neg-content-distance",
+          "suggestedKeyword": "不贴内容",
+          "fallbackAdjustment": "不要默认走 too-salesy"
+        }
+      ]
+    }
+  }
+}

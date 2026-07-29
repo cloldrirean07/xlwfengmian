@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "sourceSampleCount": 1,
+    "taskCount": 1,
+    "p1Count": 0,
+    "p2Count": 0,
+    "p3Count": 1
+  },
+  "tasks": [
+    {
+      "taskId": "REV-001",
+      "taskTitle": "补强 neg-content-distance 相关关键词：不贴内容",
+      "priority": "P3",
+      "sampleCount": 1,
+      "caseIds": [
+        "sample-001"
+      ],
+      "sourceNegativeMappingIds": [
+        "neg-too-salesy"
+      ],
+      "sourceDirectionLabels": [
+        "更让人想点开"
+      ],
+      "sourceMatchedSignals": [
+        "内容里存在异常点或可留白空间",
+        "用户偏好里已有「更高级一点，但不能太平，要让人想点开」这类抓眼诉求"
+      ],
+      "sourceBoundaryRules": [
+        "悬念不能变成标题党",
+        "留白必须贴内容，不是单纯故弄玄虚"
+      ],
+      "actualIssues": [
+        "更像离内容太远"
+      ],
+      "titles": [
+        "为什么你总觉得自己很忙但没结果"
+      ],
+      "suggestedMappingId": "neg-content-distance",
+      "suggestedKeyword": "不贴内容",
+      "fallbackAdjustment": "不要默认走 too-salesy"
+    }
+  ]
+}

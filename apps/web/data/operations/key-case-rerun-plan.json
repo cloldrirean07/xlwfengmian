@@ -1,0 +1,12 @@
+{
+  "planId": "key-case-rerun-default",
+  "description": "规则升级后优先复跑的关键样例清单，用于刷新方向判断、误判样本导出和规则修订任务单。",
+  "caseIds": [
+    "sample-001",
+    "real-001"
+  ],
+  "downstreamRefreshTargets": [
+    "reviewed-misclassified",
+    "rule-revision-task-sheet"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "exportId": "RBR-2026-06-30T05-24-53-515Z",
+  "exportedAt": "2026-06-30T05:24:53.516Z",
+  "batchLabel": "real-904",
+  "normalizedLabel": "real-904",
+  "targetPath": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-batch-run-record-HvdWLl/05_验证与实验/批次试跑记录/已生成记录/real-904_批次试跑记录_2026-06-30.md",
+  "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-records/real-904/run-record.md",
+  "sourceJsonPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-records/real-904/run-record.json",
+  "generatedDate": "2026-06-30",
+  "overwrite": {
+    "requestedMode": "overwrite",
+    "targetAlreadyExisted": false,
+    "actionLabel": "新建草稿"
+  },
+  "readback": {
+    "ok": true,
+    "matchedExpectedContent": true
+  }
+}

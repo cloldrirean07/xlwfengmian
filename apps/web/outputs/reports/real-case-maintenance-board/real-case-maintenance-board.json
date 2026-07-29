@@ -1,0 +1,46 @@
+{
+  "summary": {
+    "totalRealCases": 1,
+    "p1Count": 0,
+    "p2Count": 1,
+    "p3Count": 0,
+    "backlogCount": 0,
+    "readyHighPriorityCount": 0
+  },
+  "rows": [
+    {
+      "caseId": "real-001",
+      "title": "P-01 待补真实案例",
+      "platform": "抖音",
+      "platformCaseId": "P-01",
+      "rerunPriority": 6,
+      "priorityBand": "P2",
+      "maintenanceTags": [
+        "real-case",
+        "platform-bridge",
+        "high-priority-candidate"
+      ],
+      "readinessStatus": "待回填",
+      "completedChecks": 0,
+      "totalChecks": 9,
+      "missingFields": [
+        "内容主题",
+        "内容目标",
+        "素材描述",
+        "封面偏好",
+        "素材备注",
+        "证据说明",
+        "保留项反馈",
+        "第二轮反馈",
+        "来源链接或截图路径"
+      ],
+      "reasonNotes": [
+        "已进入关键复跑池",
+        "已标为高优先候选",
+        "承担平台案例到代码层桥接作用",
+        "当前字段缺失较多"
+      ],
+      "actionRecommendation": "先完成基础字段回填"
+    }
+  ]
+}

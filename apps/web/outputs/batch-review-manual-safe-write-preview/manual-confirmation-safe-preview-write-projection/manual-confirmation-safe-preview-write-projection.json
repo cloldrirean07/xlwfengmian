@@ -1,0 +1,43 @@
+{
+  "ok": true,
+  "status": "safe-preview-write-projection-ready-to-formal-write",
+  "summary": "投影验证通过：安全预览确认块写入后，正式写回门禁预计会进入 ready-to-formal-write。",
+  "projectedReadiness": {
+    "status": "ready-to-formal-write",
+    "statusLabel": "预计可以进入正式写回"
+  },
+  "writePrecheck": {
+    "status": "safe-preview-write-precheck-ready",
+    "ok": true,
+    "targetBatchLabel": "real-002_to_real-003",
+    "targetSafePreviewPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md",
+    "suggestedPreviewPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-apply-preview/suggested-safe-write-preview.md",
+    "changedFieldCount": 0,
+    "canProceedToFormalWriteAfterApply": true,
+    "hasManualConfirmationAfterApply": true
+  },
+  "manualDecision": {
+    "decisionStatus": "adopt-recommended",
+    "decisionLabel": "采用推荐确认块",
+    "adopted": true
+  },
+  "blockers": [],
+  "nextAction": {
+    "actionId": "apply-manual-confirmation-safe-preview-write",
+    "label": "写入安全预览确认块",
+    "requiredPhrase": "确认写入安全预览确认块",
+    "summary": "写入成功后重新检查正式写回门禁。"
+  },
+  "sourcePaths": {
+    "writePrecheck": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-safe-preview-write-precheck/manual-confirmation-safe-preview-write-precheck.md",
+    "manualDecision": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-decision/manual-confirmation-decision.md",
+    "json": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-safe-preview-write-projection/manual-confirmation-safe-preview-write-projection.json",
+    "markdown": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-safe-preview-write-projection/manual-confirmation-safe-preview-write-projection.md"
+  },
+  "safetyBoundary": "仅生成安全预览确认写入后的门禁投影，不写入 Obsidian，不执行正式写回。",
+  "nextChecks": [
+    "执行安全预览确认块写入前，核对写入目标与建议来源。",
+    "写入后重新检查正式写回门禁。",
+    "正式写回仍需单独确认短语后执行。"
+  ]
+}

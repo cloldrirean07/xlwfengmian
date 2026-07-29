@@ -1,0 +1,11 @@
+{
+  "exportId": "BRD-2026-06-27T15-07-42-283Z",
+  "exportedAt": "2026-06-27T15:07:42.285Z",
+  "targetPath": "/private/tmp/ai-cover-review-suite-obsidian-4/05_验证与实验/批次试跑记录/批次复盘看板/批次复盘看板_2026-06-27.md",
+  "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-review-dashboard/batch-review-dashboard.md",
+  "sourceJsonPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-review-dashboard/batch-review-dashboard.json",
+  "readback": {
+    "ok": true,
+    "matchedExpectedContent": true
+  }
+}

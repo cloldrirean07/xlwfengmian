@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "totalRows": 1,
+    "uniqueNegativeMappingCount": 1,
+    "uniquePositiveMappingCount": 0,
+    "fallbackCount": 0,
+    "noPositiveSignalCount": 1,
+    "workspaceInjectedCount": 0,
+    "reviewedCount": 0,
+    "reasonableCount": 0,
+    "misclassifiedCount": 0,
+    "exportToMisclassifiedCount": 0
+  },
+  "topNegativeMappings": [
+    {
+      "id": "neg-too-salesy",
+      "count": 1
+    }
+  ],
+  "topPositiveMappings": [],
+  "topMisclassifiedMappings": [],
+  "fallbackRows": [],
+  "noPositiveSignalRows": [
+    {
+      "caseId": "sample-001",
+      "negativeMappingId": "neg-too-salesy",
+      "title": "为什么你总觉得自己很忙但没结果"
+    }
+  ],
+  "workspaceInjectedRows": [],
+  "misclassifiedRows": [],
+  "exportToMisclassifiedRows": [],
+  "rows": [
+    {
+      "caseId": "sample-001",
+      "title": "为什么你总觉得自己很忙但没结果",
+      "platform": "抖音",
+      "sourceType": "sample",
+      "ruleVersion": "a7ac9b509d",
+      "negativeMappingId": "neg-too-salesy",
+      "positiveMappingId": "",
+      "usedFallback": false,
+      "workspaceInjected": false,
+      "matchedKeywords": [
+        "像营销号"
+      ],
+      "summary": "规则 a7ac9b509d 将当前反馈归因为「太油/像营销号」，因此优先把方向往「更高级专业」修正。",
+      "selectedCardId": "B",
+      "reviewStatus": "pending",
+      "explanationStatus": "pending",
+      "misclassified": "pending",
+      "shouldExportToMisclassified": "pending",
+      "actualIssue": "",
+      "suggestedKeyword": "",
+      "suggestedMappingId": "",
+      "suggestedPositiveSignalId": "",
+      "fallbackAdjustment": ""
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "totalReviewedRows": 1,
+    "eligibleExportCount": 1,
+    "missingCaseRunCount": 0
+  },
+  "rows": [
+    {
+      "caseId": "sample-001",
+      "title": "为什么你总觉得自己很忙但没结果",
+      "platform": "抖音",
+      "sourceType": "sample",
+      "ruleVersion": "c18a3eda29",
+      "negativeMappingId": "neg-too-salesy",
+      "positiveMappingId": "",
+      "matchedKeywords": [
+        "像营销号"
+      ],
+      "systemIssue": "太油/像营销号",
+      "systemAction": "降低夸张感，统一版式和语气",
+      "explanationSummary": "规则 c18a3eda29 将当前反馈归因为「太油/像营销号」，因此优先把方向往「更高级专业」修正。",
+      "sourceDirectionLabel": "更让人想点开",
+      "sourceDirectionType": "强悬念感",
+      "sourceMatchedSignals": [
+        "内容里存在异常点或可留白空间",
+        "用户偏好里已有「更高级一点，但不能太平，要让人想点开」这类抓眼诉求"
+      ],
+      "sourceBoundaryRules": [
+        "悬念不能变成标题党",
+        "留白必须贴内容，不是单纯故弄玄虚"
+      ],
+      "actualIssue": "更像离内容太远",
+      "suggestedKeyword": "不贴内容",
+      "suggestedMappingId": "neg-content-distance",
+      "suggestedPositiveSignalId": "pos-suspense-click",
+      "fallbackAdjustment": "不要默认走 too-salesy",
+      "reviewStatus": "misclassified",
+      "explanationStatus": "unclear",
+      "missingCaseRun": false
+    }
+  ]
+}

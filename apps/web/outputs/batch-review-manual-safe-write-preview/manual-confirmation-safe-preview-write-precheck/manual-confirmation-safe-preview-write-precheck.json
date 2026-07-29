@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "status": "safe-preview-write-precheck-ready",
+  "summary": "安全预览确认写入预检通过，建议版本可作为人工确认后的写入内容。",
+  "targetBatchLabel": "real-002_to_real-003",
+  "targetSafePreviewPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md",
+  "suggestedPreviewPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-apply-preview/suggested-safe-write-preview.md",
+  "confirmation": {
+    "requiredPhrase": "确认写入安全预览确认块",
+    "phraseRequiredBeforeWrite": true
+  },
+  "nextAction": {
+    "actionId": "apply-manual-confirmation-safe-preview-write",
+    "label": "写入安全预览确认块",
+    "requiredPhrase": "确认写入安全预览确认块",
+    "summary": "写入后会读回安全预览记录，并重新检查正式写回门禁。"
+  },
+  "writePlan": {
+    "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md",
+    "sourcePath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-apply-preview/suggested-safe-write-preview.md",
+    "currentContentLength": 6523,
+    "suggestedContentLength": 6523,
+    "contentLengthDelta": 0,
+    "currentLineCount": 306,
+    "suggestedLineCount": 306,
+    "lineCountDelta": 0,
+    "changedFieldCount": 0,
+    "requiredPhrase": "确认写入安全预览确认块",
+    "postWriteChecks": [
+      "写入后读回安全预览记录并校验内容一致。",
+      "读回失败时恢复写入前内容。",
+      "读回通过后重新检查正式写回门禁。"
+    ]
+  },
+  "before": {
+    "hasManualConfirmation": true,
+    "canProceedToFormalWrite": true,
+    "manualReviewConclusionValidation": {
+      "ok": true,
+      "message": ""
+    }
+  },
+  "after": {
+    "hasManualConfirmation": true,
+    "canProceedToFormalWrite": true,
+    "manualReviewConclusionValidation": {
+      "ok": true,
+      "message": ""
+    }
+  },
+  "targetMatches": true,
+  "changedFieldCount": 0,
+  "fieldChanges": [
+    {
+      "label": "人工复盘结论",
+      "before": "本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。",
+      "after": "本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。",
+      "changed": false
+    },
+    {
+      "label": "确认写回行",
+      "before": "这批案例最卡的环节 / 哪个按钮或模块最该前置 / 当前更像功能问题，还是界面问题 / 这批试跑最关键的结论 / 下一批还要不要继续同样赛道 / UI 优化是否已经到时机",
+      "after": "这批案例最卡的环节 / 哪个按钮或模块最该前置 / 当前更像功能问题，还是界面问题 / 这批试跑最关键的结论 / 下一批还要不要继续同样赛道 / UI 优化是否已经到时机",
+      "changed": false
+    },
+    {
+      "label": "仍需手改",
+      "before": "",
+      "after": "",
+      "changed": false
+    },
+    {
+      "label": "正式写回许可",
+      "before": "可以",
+      "after": "可以",
+      "changed": false
+    }
+  ],
+  "sourcePaths": {
+    "currentSafePreview": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘安全写回预览/真实批次试跑记录安全写回预览_2026-07-23.md",
+    "suggestedPreview": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-apply-preview/suggested-safe-write-preview.md",
+    "adoptionPacket": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-safe-preview-adoption-packet/manual-confirmation-safe-preview-adoption-packet.md",
+    "json": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-safe-preview-write-precheck/manual-confirmation-safe-preview-write-precheck.json",
+    "markdown": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-safe-preview-write-precheck/manual-confirmation-safe-preview-write-precheck.md"
+  },
+  "safetyBoundary": "仅生成项目内写入预检，不写入 Obsidian，不执行正式写回。",
+  "nextChecks": [
+    "人工确认预检结果后，才可将建议版本写入安全预览记录。",
+    "写入后重新读取正式写回 readiness，确认状态是否进入 ready-to-formal-write。",
+    "正式写回仍需再次人工确认后执行。"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "exportId": "BRFS-2026-06-28T12-36-29-904Z",
+  "exportedAt": "2026-06-28T12:36:29.909Z",
+  "targetPath": "/private/tmp/ai-cover-review-suite-obsidian-5/05_验证与实验/批次试跑记录/跨批次摩擦点汇总/跨批次摩擦点汇总_2026-06-28.md",
+  "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-friction-summary/batch-run-friction-summary.md",
+  "sourceJsonPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-friction-summary/batch-run-friction-summary.json",
+  "readback": {
+    "ok": true,
+    "matchedExpectedContent": true
+  }
+}

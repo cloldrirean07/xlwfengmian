@@ -1,0 +1,540 @@
+{
+  "report": {
+    "status": "no-manual-input",
+    "statusLabel": "草稿已导出但还没填写",
+    "targetBatchLabel": "real-002_to_real-003",
+    "filledFieldLabels": [],
+    "missingFieldLabels": [
+      "最卡环节",
+      "问题类型判断",
+      "最该前置模块",
+      "UI 时机判断"
+    ],
+    "reviewPatch": {
+      "bottleneckStep": "",
+      "issueType": "",
+      "prioritizedModule": "",
+      "uiOptimizationTiming": ""
+    },
+    "summary": "当前任务草稿还没有可回流的人工判断，先填写关键字段再重跑判断。"
+  },
+  "backfillMarkdown": "# 人工复盘回流预览\n\n## 1. 当前状态\n- 当前状态：草稿已导出但还没填写\n- 目标批次：real-002_to_real-003\n- 当前结论：当前任务草稿还没有可回流的人工判断，先填写关键字段再重跑判断。\n- 最近任务草稿：/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘待补任务/人工复盘待补任务_2026-07-23.md\n- 最近批次试跑记录：/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md\n\n## 2. 已填写字段\n- 当前还没有已填写字段。\n\n## 3. 仍缺字段\n- 最卡环节\n- 问题类型判断\n- 最该前置模块\n- UI 时机判断\n\n## 4. 可回流批次试跑结论 patch\n- 这批案例最卡的环节：\n- 当前更像功能问题，还是界面问题：\n- 哪个按钮或模块最该前置：\n- UI 优化是否已经到时机：\n\n## 5. 可写回草稿\n- 这批案例最卡的环节：\n- 哪些字段最难补：\n- 哪个输出最有价值：\n- 和通用 AI 相比更有帮助的点：\n- 和通用 AI 相比仍然不够好的点：\n\n- 哪个按钮或模块最该前置：\n- 哪段说明文字太多：\n- 哪个步骤最值得做成更强引导：\n- 当前更像功能问题，还是界面问题：\n\n- 这批试跑最关键的结论：\n- 下一批还要不要继续同样赛道：\n- UI 优化是否已经到时机：",
+  "latestTaskCardStatus": {
+    "exportId": "BRM-2026-07-23T11-51-46-747Z",
+    "exportedAt": "2026-07-23T11:51:46.762Z",
+    "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘待补任务/人工复盘待补任务_2026-07-23.md",
+    "sourceMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-task-card/batch-review-manual-task-card.md",
+    "sourceJsonPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-task-card/batch-review-manual-task-card.json",
+    "readbackOk": true,
+    "matchedExpectedContent": true,
+    "logPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/obsidian-export-logs/batch-review-manual-task-card/BRM-2026-07-23T11-51-46-747Z.json",
+    "targetBatchLabel": "real-002_to_real-003",
+    "hasManualInput": false,
+    "filledFields": [],
+    "filledFieldCount": 0,
+    "parsed": {
+      "parsed": {
+        "targetBatchLabel": "real-002_to_real-003",
+        "bottleneckStep": "",
+        "issueType": "",
+        "prioritizedModule": "",
+        "uiOptimizationTiming": "",
+        "keyConclusion": "",
+        "rerunFocus": "",
+        "uiDiscussionProgress": ""
+      },
+      "filledFields": [],
+      "filledFieldCount": 0,
+      "hasManualInput": false,
+      "targetBatchLabel": "real-002_to_real-003"
+    }
+  },
+  "latestRunRecordStatus": {
+    "exportId": "RBR-2026-06-27T04-45-51-114Z",
+    "exportedAt": "2026-06-27T04:45:51.120Z",
+    "batchLabel": "real-002_to_real-003",
+    "normalizedLabel": "real-002_to_real-003",
+    "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+    "actionLabel": "新建草稿",
+    "requestedMode": "overwrite",
+    "readbackOk": true,
+    "matchedExpectedContent": true,
+    "logPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/obsidian-export-logs/real-case-batch-run-records/real-002_to_real-003/RBR-2026-06-27T04-45-51-114Z.json",
+    "hasManualConclusion": false,
+    "filledFields": [],
+    "filledFieldCount": 0,
+    "missingKeyFields": [
+      {
+        "key": "bottleneckStep",
+        "label": "最卡环节"
+      },
+      {
+        "key": "issueType",
+        "label": "问题类型判断"
+      },
+      {
+        "key": "prioritizedModule",
+        "label": "最该前置模块"
+      },
+      {
+        "key": "uiOptimizationTiming",
+        "label": "UI 时机判断"
+      }
+    ],
+    "filledKeyFields": [],
+    "review": {
+      "bottleneckStep": "",
+      "hardestFields": "",
+      "mostValuableOutput": "",
+      "strongerThanGenericAi": "",
+      "weakerThanGenericAi": "",
+      "prioritizedModule": "",
+      "tooMuchCopy": "",
+      "strongGuideStep": "",
+      "issueType": "",
+      "batchCriticalConclusion": "",
+      "nextBatchSameTrack": "",
+      "uiOptimizationTiming": ""
+    }
+  },
+  "manualTaskPreview": {
+    "report": {
+      "title": "人工复盘待补任务",
+      "status": "start-manual-review",
+      "statusLabel": "先写第一轮人工复盘",
+      "summary": "先为 real-002_to_real-003 补第一轮人工复盘，不要直接跳进 UI 方案讨论。",
+      "targetBatchLabel": "real-002_to_real-003",
+      "topCategoryLabels": [
+        "输入准备与案例结构",
+        "补写建议与优先顺序",
+        "是否进入 UI 优化讨论"
+      ],
+      "topActionLabels": [
+        "来源链接或截图路径",
+        "内容主题",
+        "素材描述"
+      ],
+      "fieldTasks": [
+        {
+          "key": "bottleneckStep",
+          "label": "最卡环节",
+          "prompt": "这一批真实试跑里，最容易停住的步骤是哪一步？",
+          "answerHint": "尽量写成具体动作，例如“看完结果不知道先选哪条”。",
+          "startSuggestion": "可以先从“输入准备与案例结构”下手，写成一句具体动作，例如：看到结果后不知道先改哪一步。",
+          "suggestedDraft": "最卡在准备输入信息时，不知道先补哪项。"
+        },
+        {
+          "key": "issueType",
+          "label": "问题类型判断",
+          "prompt": "这批问题现在更像功能问题、流程问题，还是界面问题？",
+          "answerHint": "先做一级归因，例如“更像功能问题”或“更像界面问题”。",
+          "startSuggestion": "先在“功能问题 / 流程问题 / 界面问题”里选一个最像的，再补一句原因，例如：更像流程问题，因为关键补写顺序还不明确。",
+          "suggestedDraft": "更像流程问题，因为现在还不知道该先补哪块，容易停在中间。"
+        },
+        {
+          "key": "prioritizedModule",
+          "label": "最该前置模块",
+          "prompt": "如果只能先把一个模块前置或强调，优先选择哪块？",
+          "answerHint": "优先写模块名，例如“输入准备区”“结果区”“导出后下一步”。",
+          "startSuggestion": "先写一个最该前置的模块名即可，例如：输入准备区。它通常和“来源链接或截图路径”最相关。",
+          "suggestedDraft": "建议先把输入准备区前置，因为它和“来源链接或截图路径”最直接相关。"
+        },
+        {
+          "key": "uiOptimizationTiming",
+          "label": "UI 时机判断",
+          "prompt": "基于这批真实试跑，现在讨论 UI 会不会太早？",
+          "answerHint": "先给阶段性判断，例如“先别急着做 UI”或“接近可以讨论 UI”。",
+          "startSuggestion": "可以先写成阶段性判断，例如：先别急着做 UI，先补齐关键人工判断再重跑。",
+          "suggestedDraft": "先别急着做 UI，先补齐关键人工判断再重跑更稳。"
+        }
+      ]
+    },
+    "taskCardMarkdown": "# 人工复盘待补任务\n\n## 1. 当前判断\n- 当前状态：先写第一轮人工复盘\n- 目标批次：real-002_to_real-003\n- 当前结论：先为 real-002_to_real-003 补第一轮人工复盘，不要直接跳进 UI 方案讨论。\n- 当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n- 当前最该先补的信息：来源链接或截图路径 / 内容主题 / 素材描述\n\n## 2. 待补字段\n- 最卡环节：这一批真实试跑里，最容易停住的步骤是哪一步？\n  - 填写提示：尽量写成具体动作，例如“看完结果不知道先选哪条”。\n  - 起笔建议：可以先从“输入准备与案例结构”下手，写成一句具体动作，例如：看到结果后不知道先改哪一步。\n  - 建议初稿：最卡在准备输入信息时，不知道先补哪项。\n- 问题类型判断：这批问题现在更像功能问题、流程问题，还是界面问题？\n  - 填写提示：先做一级归因，例如“更像功能问题”或“更像界面问题”。\n  - 起笔建议：先在“功能问题 / 流程问题 / 界面问题”里选一个最像的，再补一句原因，例如：更像流程问题，因为关键补写顺序还不明确。\n  - 建议初稿：更像流程问题，因为现在还不知道该先补哪块，容易停在中间。\n- 最该前置模块：如果只能先把一个模块前置或强调，优先选择哪块？\n  - 填写提示：优先写模块名，例如“输入准备区”“结果区”“导出后下一步”。\n  - 起笔建议：先写一个最该前置的模块名即可，例如：输入准备区。它通常和“来源链接或截图路径”最相关。\n  - 建议初稿：建议先把输入准备区前置，因为它和“来源链接或截图路径”最直接相关。\n- UI 时机判断：基于这批真实试跑，现在讨论 UI 会不会太早？\n  - 填写提示：先给阶段性判断，例如“先别急着做 UI”或“接近可以讨论 UI”。\n  - 起笔建议：可以先写成阶段性判断，例如：先别急着做 UI，先补齐关键人工判断再重跑。\n  - 建议初稿：先别急着做 UI，先补齐关键人工判断再重跑更稳。\n\n## 3. 人工填写区\n- 最卡环节：\n  - 可直接改写起笔句：可以先从“输入准备与案例结构”下手，写成一句具体动作，例如：看到结果后不知道先改哪一步。\n  - 可直接修改初稿：最卡在准备输入信息时，不知道先补哪项。\n- 问题类型判断：\n  - 可直接改写起笔句：先在“功能问题 / 流程问题 / 界面问题”里选一个最像的，再补一句原因，例如：更像流程问题，因为关键补写顺序还不明确。\n  - 可直接修改初稿：更像流程问题，因为现在还不知道该先补哪块，容易停在中间。\n- 最该前置模块：\n  - 可直接改写起笔句：先写一个最该前置的模块名即可，例如：输入准备区。它通常和“来源链接或截图路径”最相关。\n  - 可直接修改初稿：建议先把输入准备区前置，因为它和“来源链接或截图路径”最直接相关。\n- UI 时机判断：\n  - 可直接改写起笔句：可以先写成阶段性判断，例如：先别急着做 UI，先补齐关键人工判断再重跑。\n  - 可直接修改初稿：先别急着做 UI，先补齐关键人工判断再重跑更稳。",
+    "latestTaskCardStatus": {
+      "exportId": "BRM-2026-07-23T11-51-46-747Z",
+      "exportedAt": "2026-07-23T11:51:46.762Z",
+      "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/人工复盘待补任务/人工复盘待补任务_2026-07-23.md",
+      "sourceMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-task-card/batch-review-manual-task-card.md",
+      "sourceJsonPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-task-card/batch-review-manual-task-card.json",
+      "readbackOk": true,
+      "matchedExpectedContent": true,
+      "logPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/obsidian-export-logs/batch-review-manual-task-card/BRM-2026-07-23T11-51-46-747Z.json",
+      "targetBatchLabel": "real-002_to_real-003",
+      "hasManualInput": false,
+      "filledFields": [],
+      "filledFieldCount": 0,
+      "parsed": {
+        "parsed": {
+          "targetBatchLabel": "real-002_to_real-003",
+          "bottleneckStep": "",
+          "issueType": "",
+          "prioritizedModule": "",
+          "uiOptimizationTiming": "",
+          "keyConclusion": "",
+          "rerunFocus": "",
+          "uiDiscussionProgress": ""
+        },
+        "filledFields": [],
+        "filledFieldCount": 0,
+        "hasManualInput": false,
+        "targetBatchLabel": "real-002_to_real-003"
+      }
+    },
+    "backfillPreview": {
+      "status": "no-manual-input",
+      "statusLabel": "草稿已导出但还没填写",
+      "targetBatchLabel": "real-002_to_real-003",
+      "filledFieldLabels": [],
+      "missingFieldLabels": [
+        "最卡环节",
+        "问题类型判断",
+        "最该前置模块",
+        "UI 时机判断"
+      ],
+      "reviewPatch": {
+        "bottleneckStep": "",
+        "issueType": "",
+        "prioritizedModule": "",
+        "uiOptimizationTiming": ""
+      },
+      "summary": "当前任务草稿还没有可回流的人工判断，先填写关键字段再重跑判断。"
+    },
+    "dashboardReport": {
+      "summary": {
+        "totalBatches": 2,
+        "reviewedBatchCount": 0,
+        "fullyCoveredBatchCount": 0,
+        "partiallyCoveredBatchCount": 0,
+        "missingManualReviewCount": 2,
+        "repeatedCategories": 5
+      },
+      "crossBatchSignal": {
+        "status": "emerging-signal",
+        "label": "接近可以讨论 UI 优化",
+        "reason": "已经开始出现跨批次重复摩擦点，但证据还不算非常稳。"
+      },
+      "uiReadiness": {
+        "readinessLevel": "near-ready",
+        "readinessLabel": "接近可以进入 UI 讨论"
+      },
+      "ruleRevisionSignal": {
+        "status": "has-rule-task",
+        "label": "已有规则修订任务",
+        "taskCount": 1,
+        "sourceSampleCount": 1,
+        "prioritySummary": "P1 0 / P2 0 / P3 1",
+        "topTasks": [
+          {
+            "taskId": "REV-001",
+            "taskTitle": "补强 neg-content-distance 相关关键词：不贴内容",
+            "priority": "P3",
+            "sampleCount": 1,
+            "caseIds": [
+              "sample-001"
+            ],
+            "sourceNegativeMappingIds": [
+              "neg-too-salesy"
+            ],
+            "sourceDirectionLabels": [
+              "更让人想点开"
+            ],
+            "sourceMatchedSignals": [
+              "内容里存在异常点或可留白空间",
+              "用户偏好里已有「更高级一点，但不能太平，要让人想点开」这类抓眼诉求"
+            ],
+            "sourceBoundaryRules": [
+              "悬念不能变成标题党",
+              "留白必须贴内容，不是单纯故弄玄虚"
+            ],
+            "actualIssues": [
+              "更像离内容太远"
+            ],
+            "titles": [
+              "为什么你总觉得自己很忙但没结果"
+            ],
+            "suggestedMappingId": "neg-content-distance",
+            "suggestedKeyword": "不贴内容",
+            "fallbackAdjustment": "不要默认走 too-salesy"
+          }
+        ]
+      },
+      "keyCaseRerunHandoff": {
+        "status": "rerun-complete",
+        "label": "关键样例复跑已完成",
+        "candidateCaseIds": [
+          "sample-001"
+        ],
+        "summary": "已完成 2 个关键样例复跑，差异样例 0 个，下游变化 0 项。",
+        "commandSequence": [
+          "npm run generate:key-case-rerun-plan",
+          "npm run export:obsidian-key-case-rerun-plan",
+          "npm run rerun:key-cases",
+          "npm run export:obsidian-key-case-rerun",
+          "npm run export:obsidian-key-case-rerun-diff"
+        ],
+        "downstreamRefreshTargets": [
+          "reviewed-misclassified",
+          "rule-revision-task-sheet"
+        ],
+        "latestRun": {
+          "planId": "key-case-rerun-default",
+          "generatedAt": "2026-07-23 11:19:28",
+          "rerunCaseCount": 2,
+          "changedCaseCount": 0,
+          "downstreamChangedCount": 0
+        }
+      },
+      "coverageTrend": {
+        "status": "fragmented",
+        "label": "人工复盘仍然零散",
+        "reason": "当前更多是零散观察或半填状态，先补齐关键人工字段比提前讨论 UI 更重要。"
+      },
+      "priorityRows": [
+        {
+          "rank": 1,
+          "batchLabel": "real-002_to_real-003",
+          "urgencyLabel": "先补人工结论",
+          "missingFieldLabels": [
+            "最卡环节",
+            "问题类型判断",
+            "最该前置模块",
+            "UI 时机判断"
+          ],
+          "missingKeyFields": [
+            {
+              "key": "bottleneckStep",
+              "label": "最卡环节"
+            },
+            {
+              "key": "issueType",
+              "label": "问题类型判断"
+            },
+            {
+              "key": "prioritizedModule",
+              "label": "最该前置模块"
+            },
+            {
+              "key": "uiOptimizationTiming",
+              "label": "UI 时机判断"
+            }
+          ],
+          "createdCount": 2,
+          "topCategoryLabels": [
+            "输入准备与案例结构",
+            "补写建议与优先顺序",
+            "是否进入 UI 优化讨论"
+          ],
+          "topActionLabels": [
+            "来源链接或截图路径",
+            "内容主题",
+            "素材描述"
+          ],
+          "hasManualConclusion": false
+        },
+        {
+          "rank": 2,
+          "batchLabel": "real-904",
+          "urgencyLabel": "先补人工结论",
+          "missingFieldLabels": [
+            "最卡环节",
+            "问题类型判断",
+            "最该前置模块",
+            "UI 时机判断"
+          ],
+          "missingKeyFields": [
+            {
+              "key": "bottleneckStep",
+              "label": "最卡环节"
+            },
+            {
+              "key": "issueType",
+              "label": "问题类型判断"
+            },
+            {
+              "key": "prioritizedModule",
+              "label": "最该前置模块"
+            },
+            {
+              "key": "uiOptimizationTiming",
+              "label": "UI 时机判断"
+            }
+          ],
+          "createdCount": 1,
+          "topCategoryLabels": [
+            "输入准备与案例结构",
+            "补写建议与优先顺序",
+            "导出沉淀与后续接力"
+          ],
+          "topActionLabels": [
+            "来源链接或截图路径",
+            "内容主题",
+            "素材描述"
+          ],
+          "hasManualConclusion": false
+        }
+      ],
+      "manualReviewTaskCard": {
+        "title": "人工复盘待补任务",
+        "status": "start-manual-review",
+        "statusLabel": "先写第一轮人工复盘",
+        "summary": "先为 real-002_to_real-003 补第一轮人工复盘，不要直接跳进 UI 方案讨论。",
+        "targetBatchLabel": "real-002_to_real-003",
+        "topCategoryLabels": [
+          "输入准备与案例结构",
+          "补写建议与优先顺序",
+          "是否进入 UI 优化讨论"
+        ],
+        "topActionLabels": [
+          "来源链接或截图路径",
+          "内容主题",
+          "素材描述"
+        ],
+        "fieldTasks": [
+          {
+            "key": "bottleneckStep",
+            "label": "最卡环节",
+            "prompt": "这一批真实试跑里，最容易停住的步骤是哪一步？",
+            "answerHint": "尽量写成具体动作，例如“看完结果不知道先选哪条”。",
+            "startSuggestion": "可以先从“输入准备与案例结构”下手，写成一句具体动作，例如：看到结果后不知道先改哪一步。",
+            "suggestedDraft": "最卡在准备输入信息时，不知道先补哪项。"
+          },
+          {
+            "key": "issueType",
+            "label": "问题类型判断",
+            "prompt": "这批问题现在更像功能问题、流程问题，还是界面问题？",
+            "answerHint": "先做一级归因，例如“更像功能问题”或“更像界面问题”。",
+            "startSuggestion": "先在“功能问题 / 流程问题 / 界面问题”里选一个最像的，再补一句原因，例如：更像流程问题，因为关键补写顺序还不明确。",
+            "suggestedDraft": "更像流程问题，因为现在还不知道该先补哪块，容易停在中间。"
+          },
+          {
+            "key": "prioritizedModule",
+            "label": "最该前置模块",
+            "prompt": "如果只能先把一个模块前置或强调，优先选择哪块？",
+            "answerHint": "优先写模块名，例如“输入准备区”“结果区”“导出后下一步”。",
+            "startSuggestion": "先写一个最该前置的模块名即可，例如：输入准备区。它通常和“来源链接或截图路径”最相关。",
+            "suggestedDraft": "建议先把输入准备区前置，因为它和“来源链接或截图路径”最直接相关。"
+          },
+          {
+            "key": "uiOptimizationTiming",
+            "label": "UI 时机判断",
+            "prompt": "基于这批真实试跑，现在讨论 UI 会不会太早？",
+            "answerHint": "先给阶段性判断，例如“先别急着做 UI”或“接近可以讨论 UI”。",
+            "startSuggestion": "可以先写成阶段性判断，例如：先别急着做 UI，先补齐关键人工判断再重跑。",
+            "suggestedDraft": "先别急着做 UI，先补齐关键人工判断再重跑更稳。"
+          }
+        ]
+      },
+      "uiRecheckPlan": {
+        "title": "人工复盘补齐后的再判断链路",
+        "status": "awaiting-manual-fill",
+        "statusLabel": "先补人工复盘，再重跑判断",
+        "summary": "当前最关键的前置动作仍然是补齐人工复盘字段。只有先把人真实卡点写清楚，再重跑 UI readiness，后续 UI 讨论才不会偏成审美猜测。",
+        "blockers": [
+          "real-002_to_real-003 仍缺：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断",
+          "当前 UI readiness 还是：接近可以进入 UI 讨论",
+          "当前人工复盘趋势还是：人工复盘仍然零散"
+        ],
+        "steps": [
+          {
+            "label": "先补 real-002_to_real-003 的人工复盘字段：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断。",
+            "status": "current",
+            "note": "这批当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论"
+          },
+          {
+            "label": "补完后重新生成跨批次摩擦点汇总，确认重复信号是否更稳定。",
+            "status": "upcoming",
+            "note": "当前跨批次信号：接近可以讨论 UI 优化"
+          },
+          {
+            "label": "再重新生成 UI readiness 和批次复盘看板，确认完整覆盖批次数有没有增长。",
+            "status": "upcoming",
+            "note": ""
+          },
+          {
+            "label": "只有当人工复盘开始稳定后，再进入首页系统 UI 讨论。",
+            "status": "upcoming",
+            "note": ""
+          }
+        ]
+      },
+      "nextActions": [
+        "先补 real-002_to_real-003 这一批：整批人工结论还没写",
+        "补完后重新生成跨批次摩擦点汇总，确认关键人工字段完整覆盖批次有没有增长。",
+        "等至少 1 批人工关键字段补完整后，再重新看 UI 就绪度报告。"
+      ],
+      "followUpChecklist": {
+        "title": "复盘后操作清单",
+        "focusLabel": "real-002_to_real-003 优先",
+        "readyForUi": false,
+        "phases": [
+          {
+            "label": "先确认这轮复盘材料",
+            "items": [
+              {
+                "label": "先回看跨批次摩擦点汇总，确认重复摩擦点有没有变化。",
+                "actionId": "preview-batch-run-friction-summary",
+                "actionLabel": "生成跨批次摩擦点预览"
+              },
+              {
+                "label": "再回看 UI 优化进入条件报告，确认这轮到底是不是还不该进入 UI 讨论。",
+                "actionId": "preview-ui-optimization-readiness",
+                "actionLabel": "生成 UI 就绪度预览"
+              }
+            ]
+          },
+          {
+            "label": "先补当前最关键缺口",
+            "items": [
+              {
+                "label": "real-002_to_real-003 是当前优先级最高的批次，先处理：先补人工结论。",
+                "actionId": "preview-real-case-batch-run-record",
+                "actionLabel": "生成批次试跑记录"
+              },
+              {
+                "label": "先补这批的关键字段：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断。",
+                "actionId": "preview-real-case-batch-run-record",
+                "actionLabel": "回到批次试跑记录区"
+              },
+              {
+                "label": "补字段时重点回看这些摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论。",
+                "actionId": "preview-batch-run-friction-summary",
+                "actionLabel": "对照跨批次摩擦点"
+              }
+            ]
+          },
+          {
+            "label": "补完后立刻重跑复盘判断",
+            "items": [
+              {
+                "label": "补完人工关键字段后，重新生成跨批次摩擦点汇总，确认重复信号有没有变化。",
+                "actionId": "preview-batch-run-friction-summary",
+                "actionLabel": "重跑跨批次摩擦点"
+              },
+              {
+                "label": "再重新生成 UI 优化进入条件报告和批次复盘看板，检查完整覆盖批次数有没有增长。",
+                "actionId": "preview-ui-and-dashboard",
+                "actionLabel": "重跑 UI 报告和复盘看板"
+              }
+            ]
+          },
+          {
+            "label": "暂不进入 UI 讨论",
+            "items": [
+              {
+                "label": "当前 UI 时机判断仍是：接近可以进入 UI 讨论。",
+                "actionId": "preview-ui-optimization-readiness",
+                "actionLabel": "回看 UI 时机判断"
+              },
+              {
+                "label": "在新增完整人工复盘批次前，不优先做大规模视觉改版，先让判断证据继续增长。",
+                "actionId": "",
+                "actionLabel": ""
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dashboardMarkdown": "# 批次复盘看板\n\n## 1. 当前判断\n- UI 时机：接近可以进入 UI 讨论\n- 跨批次信号：接近可以讨论 UI 优化\n- 人工复盘趋势：人工复盘仍然零散\n- 规则修订信号：已有规则修订任务\n- 关键样例复跑：关键样例复跑已完成\n- 当前原因：当前更多是零散观察或半填状态，先补齐关键人工字段比提前讨论 UI 更重要。\n\n## 2. 复盘覆盖汇总\n- 批次数：2\n- 已写人工结论批次数：0\n- 人工完整覆盖批次数：0\n- 人工半填批次数：0\n- 完全未写人工结论批次数：2\n- 重复摩擦点类别数：5\n\n## 3. 规则修订任务信号\n- 任务数量：1\n- 来源样本：1\n- 优先级分布：P1 0 / P2 0 / P3 1\n- REV-001｜P3｜补强 neg-content-distance 相关关键词：不贴内容\n  - 建议映射：neg-content-distance\n  - 关联样本：sample-001\n\n## 4. 关键样例复跑承接\n- 当前状态：关键样例复跑已完成\n- 候选样例：sample-001\n- 下游刷新：reviewed-misclassified / rule-revision-task-sheet\n- 说明：已完成 2 个关键样例复跑，差异样例 0 个，下游变化 0 项。\n- 最近复跑计划：key-case-rerun-default\n- 最近复跑时间：2026-07-23 11:19:28\n- 最近复跑样例数：2\n- 最近变化样例数：0\n- 最近下游变化数：0\n- 建议命令顺序：\n  - npm run generate:key-case-rerun-plan\n  - npm run export:obsidian-key-case-rerun-plan\n  - npm run rerun:key-cases\n  - npm run export:obsidian-key-case-rerun\n  - npm run export:obsidian-key-case-rerun-diff\n\n## 5. 当前最该补的批次\n- real-002_to_real-003：先补人工结论\n  - 缺口：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 案例数：2\n  - 当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n- real-904：先补人工结论\n  - 缺口：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 案例数：1\n  - 当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 导出沉淀与后续接力\n\n## 6. 下一步动作\n- 先补 real-002_to_real-003 这一批：整批人工结论还没写\n- 补完后重新生成跨批次摩擦点汇总，确认关键人工字段完整覆盖批次有没有增长。\n- 等至少 1 批人工关键字段补完整后，再重新看 UI 就绪度报告。\n\n## 7. 人工复盘补齐后的再判断链路\n- 当前状态：先补人工复盘，再重跑判断\n- 当前结论：当前最关键的前置动作仍然是补齐人工复盘字段。只有先把人真实卡点写清楚，再重跑 UI readiness，后续 UI 讨论才不会偏成审美猜测。\n- 当前阻塞：\n  - real-002_to_real-003 仍缺：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断\n  - 当前 UI readiness 还是：接近可以进入 UI 讨论\n  - 当前人工复盘趋势还是：人工复盘仍然零散\n- 建议顺序：\n  - [current] 先补 real-002_to_real-003 的人工复盘字段：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断。\n    - 这批当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n  - [upcoming] 补完后重新生成跨批次摩擦点汇总，确认重复信号是否更稳定。\n    - 当前跨批次信号：接近可以讨论 UI 优化\n  - [upcoming] 再重新生成 UI readiness 和批次复盘看板，确认完整覆盖批次数有没有增长。\n  - [upcoming] 只有当人工复盘开始稳定后，再进入首页系统 UI 讨论。\n\n## 8. 人工复盘待补任务\n- 当前状态：先写第一轮人工复盘\n- 目标批次：real-002_to_real-003\n- 当前结论：先为 real-002_to_real-003 补第一轮人工复盘，不要直接跳进 UI 方案讨论。\n- 当前最强摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论\n- 当前最该先补的信息：来源链接或截图路径 / 内容主题 / 素材描述\n- 待补字段：\n  - 最卡环节：这一批真实试跑里，最容易停住的步骤是哪一步？\n    - 填写提示：尽量写成具体动作，例如“看完结果不知道先选哪条”。\n  - 问题类型判断：这批问题现在更像功能问题、流程问题，还是界面问题？\n    - 填写提示：先做一级归因，例如“更像功能问题”或“更像界面问题”。\n  - 最该前置模块：如果只能先把一个模块前置或强调，优先选择哪块？\n    - 填写提示：优先写模块名，例如“输入准备区”“结果区”“导出后下一步”。\n  - UI 时机判断：基于这批真实试跑，现在讨论 UI 会不会太早？\n    - 填写提示：先给阶段性判断，例如“先别急着做 UI”或“接近可以讨论 UI”。\n\n## 9. 复盘后操作清单\n- 先确认这轮复盘材料\n  - 先回看跨批次摩擦点汇总，确认重复摩擦点有没有变化。\n    - 页面入口：生成跨批次摩擦点预览\n  - 再回看 UI 优化进入条件报告，确认这轮到底是不是还不该进入 UI 讨论。\n    - 页面入口：生成 UI 就绪度预览\n- 先补当前最关键缺口\n  - real-002_to_real-003 是当前优先级最高的批次，先处理：先补人工结论。\n    - 页面入口：生成批次试跑记录\n  - 先补这批的关键字段：最卡环节 / 问题类型判断 / 最该前置模块 / UI 时机判断。\n    - 页面入口：回到批次试跑记录区\n  - 补字段时重点回看这些摩擦点：输入准备与案例结构 / 补写建议与优先顺序 / 是否进入 UI 优化讨论。\n    - 页面入口：对照跨批次摩擦点\n- 补完后立刻重跑复盘判断\n  - 补完人工关键字段后，重新生成跨批次摩擦点汇总，确认重复信号有没有变化。\n    - 页面入口：重跑跨批次摩擦点\n  - 再重新生成 UI 优化进入条件报告和批次复盘看板，检查完整覆盖批次数有没有增长。\n    - 页面入口：重跑 UI 报告和复盘看板\n- 暂不进入 UI 讨论\n  - 当前 UI 时机判断仍是：接近可以进入 UI 讨论。\n    - 页面入口：回看 UI 时机判断\n  - 在新增完整人工复盘批次前，不优先做大规模视觉改版，先让判断证据继续增长。\n"
+  }
+}

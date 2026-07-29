@@ -1,0 +1,17 @@
+[
+  {
+    "id": "real-002",
+    "title": "待补真实案例 real-002",
+    "platform": "抖音",
+    "platformCaseId": "P-02",
+    "obsidianCasePath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-02_待补.md",
+    "sourceLink": "",
+    "screenshotPath": "",
+    "status": "draft",
+    "keyCaseRerunPriority": 5,
+    "maintenanceTags": [
+      "real-case",
+      "high-priority-candidate"
+    ]
+  }
+]

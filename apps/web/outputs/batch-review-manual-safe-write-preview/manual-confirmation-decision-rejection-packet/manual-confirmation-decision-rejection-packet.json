@@ -1,0 +1,56 @@
+{
+  "ok": true,
+  "status": "rejection-packet-ready",
+  "summary": "人工暂不采用操作包已生成，可用于人工更新决策记录。",
+  "safetyBoundary": "仅生成项目内人工操作包，不修改决策记录，不写入 Obsidian，不执行正式写回。",
+  "sourcePaths": {
+    "decision": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-decision/manual-confirmation-decision.md",
+    "handoffPacket": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-handoff-packet/manual-confirmation-handoff-packet.json"
+  },
+  "replacements": [
+    {
+      "label": "决策状态",
+      "from": "- 决策状态：pending",
+      "to": "- 决策状态：reject-recommended"
+    },
+    {
+      "label": "决策说明",
+      "from": "- 决策说明：待确认",
+      "to": "- 决策说明：暂不采用推荐确认块"
+    }
+  ],
+  "currentDecision": {
+    "ok": true,
+    "status": "awaiting-decision",
+    "decisionStatus": "pending",
+    "decisionLabel": "待确认",
+    "targetBatchLabel": "real-002_to_real-003",
+    "sourcePath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-handoff-packet/manual-confirmation-handoff-packet.md",
+    "decisionNote": "待确认",
+    "canProceedToSafePreviewWrite": false,
+    "handoffReady": true,
+    "targetMatches": true,
+    "safetyBoundary": "仅校验项目内决策记录，不写入 Obsidian，不执行正式写回。",
+    "summary": "决策仍待确认，正式写回保持锁定。"
+  },
+  "rejectedDecision": {
+    "ok": true,
+    "status": "decision-rejected",
+    "decisionStatus": "reject-recommended",
+    "decisionLabel": "暂不采用推荐确认块",
+    "targetBatchLabel": "real-002_to_real-003",
+    "sourcePath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-handoff-packet/manual-confirmation-handoff-packet.md",
+    "decisionNote": "预演暂不采用推荐确认块",
+    "canProceedToSafePreviewWrite": false,
+    "handoffReady": true,
+    "targetMatches": true,
+    "safetyBoundary": "仅校验项目内决策记录，不写入 Obsidian，不执行正式写回。",
+    "summary": "已暂不采用推荐确认块，正式写回保持锁定。"
+  },
+  "canProceedToSafePreviewWriteAfterRejection": false,
+  "nextChecks": [
+    "人工确认暂不采用后，按替换项更新项目内决策记录。",
+    "重新生成决策校验报告。",
+    "确认状态进入 decision-rejected 后，正式写回保持锁定。"
+  ]
+}

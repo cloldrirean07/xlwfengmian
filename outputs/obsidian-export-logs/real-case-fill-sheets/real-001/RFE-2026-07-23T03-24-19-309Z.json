@@ -1,0 +1,23 @@
+{
+  "exportId": "RFE-2026-07-23T03-24-19-309Z",
+  "exportedAt": "2026-07-23T03:24:19.311Z",
+  "caseId": "real-001",
+  "title": "P-01 待补真实案例",
+  "targetPath": "/var/folders/2x/3fgr3s4d4h9b_sgmb08j4g700000gn/T/ai-cover-real-fill-copy-MmQbL3/05_验证与实验/真实案例回填工作单/已生成记录/real-001_回填工作单_2026-07-23__副本_RFE-2026-07-23T03-24-19-309Z.md",
+  "sourceMarkdownPath": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/outputs/fill-sheets/real-001/fill-sheet.md",
+  "generatedDate": "2026-07-23",
+  "overwrite": {
+    "requestedMode": "copy",
+    "targetAlreadyExisted": false,
+    "actionLabel": "新建副本草稿",
+    "previousHeading": "",
+    "previousLength": 0,
+    "previousMatchedExpectedContent": false
+  },
+  "readback": {
+    "ok": true,
+    "persistedHeading": "# 真实案例回填工作单_2026-07-23",
+    "persistedLength": 2597,
+    "matchedExpectedContent": true
+  }
+}

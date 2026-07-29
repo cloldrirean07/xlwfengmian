@@ -1,0 +1,30 @@
+export function buildObsidianPlatformCaseFillDraftRecord({
+  generatedAt,
+  platformCaseId,
+  sourceMarkdownPath,
+  fillDraftMarkdown,
+}) {
+  return [
+    `# ${platformCaseId}_补写草稿_${generatedAt}`,
+    "",
+    "> 生成方式：代码侧 `generate:platform-case-fill-draft` + `export:obsidian-platform-fill-draft` 自动生成草稿",
+    `> 生成时间：${generatedAt}`,
+    `> 对应代码底稿：${sourceMarkdownPath}`,
+    "> 文档状态：可继续编辑",
+    "",
+    "## 0. 使用说明",
+    "- 这是一份平台案例补写草稿，用来把当前复核结果转成可直接填写的任务单。",
+    "- 下面的“代码侧补写底稿”来自当前复核结果和补全顺序建议引擎。",
+    "- 你可以先在这里补，再决定回填到原始平台案例笔记。",
+    "",
+    "## 1. 代码侧补写底稿",
+    "",
+    fillDraftMarkdown.trim(),
+    "",
+    "## 2. 人工补充",
+    "- 实际准备先补哪 3 个字段：",
+    "- 哪些参考写法需要按真实案例改写：",
+    "- 当前是否已经能进入下一轮复核：",
+    "",
+  ].join("\n");
+}

@@ -1,0 +1,84 @@
+{
+  "negativeMappings": [
+    {
+      "id": "neg-content-distance",
+      "issue": "离内容太远",
+      "targetVariable": "信息",
+      "supportVariable": "结果",
+      "action": "增强主题词和内容相关图像线索",
+      "keywords": ["离内容太远", "不真实", "不贴内容", "有点远"]
+    },
+    {
+      "id": "neg-hard-to-understand",
+      "issue": "看不懂",
+      "targetVariable": "信息",
+      "supportVariable": "无",
+      "action": "把表达从隐喻改成更直接的点题",
+      "keywords": ["看不懂", "太抽象", "不够直接", "不清楚"]
+    },
+    {
+      "id": "neg-too-salesy",
+      "issue": "太油/像营销号",
+      "targetVariable": "质感",
+      "supportVariable": "信息",
+      "action": "降低夸张感，统一版式和语气",
+      "keywords": ["太油", "像营销号", "太夸张", "不够专业", "不够高级"]
+    },
+    {
+      "id": "neg-not-eye-catching",
+      "issue": "不够抓眼",
+      "targetVariable": "悬念",
+      "supportVariable": "冲突",
+      "action": "放大异常点，减少解释性文字",
+      "keywords": ["不够抓眼", "太平", "太普通", "不够吸引"]
+    },
+    {
+      "id": "neg-no-click-value",
+      "issue": "没看出为什么值得点",
+      "targetVariable": "结果",
+      "supportVariable": "信息",
+      "action": "增加收益词，让结果更前置",
+      "keywords": ["不够有用", "收获感不强", "值得点", "没学到", "价值点不明显"]
+    }
+  ],
+  "positiveMappings": [
+    {
+      "id": "pos-texture-premium",
+      "signal": "高级/有质感",
+      "preserveVariable": "质感",
+      "keywords": ["高级", "有质感", "很专业"]
+    },
+    {
+      "id": "pos-suspense-click",
+      "signal": "很抓人/想点",
+      "preserveVariable": "悬念",
+      "keywords": ["很抓人", "忍不住想点", "有记忆点", "一下就记住"]
+    },
+    {
+      "id": "pos-conflict-tension",
+      "signal": "有张力/有态度",
+      "preserveVariable": "冲突",
+      "keywords": ["有张力", "有态度"]
+    },
+    {
+      "id": "pos-suspense-creative",
+      "signal": "有创意",
+      "preserveVariable": "悬念",
+      "keywords": ["有创意"]
+    }
+  ],
+  "variableToUserLabel": {
+    "信息": "更清楚重点",
+    "结果": "更有收获感",
+    "悬念": "更让人想点开",
+    "冲突": "更有冲击力",
+    "质感": "更高级专业"
+  },
+  "effectToPrimaryVariable": {
+    "information": "信息",
+    "result": "结果",
+    "suspense": "悬念",
+    "conflict": "冲突",
+    "texture": "质感"
+  }
+}

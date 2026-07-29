@@ -1,0 +1,30 @@
+{
+  "id": "real-001",
+  "title": "P-01 待补真实案例",
+  "sourceType": "real",
+  "platform": "抖音",
+  "tracking": {
+    "platformCaseId": "P-01",
+    "obsidianCasePath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-01_待补.md"
+  },
+  "contentTopic": "待补真实内容主题",
+  "contentGoal": "待补这条内容想传达的价值或点击目标",
+  "userAssetType": "截图",
+  "assetDescription": "待补当前已有截图/画面/用户想法，以及希望补什么类型的图",
+  "referencePreference": "待补希望的封面风格和质感倾向",
+  "assetNotes": "待补当前素材状态、画面特点、限制条件",
+  "operations": {
+    "keyCaseRerunPriority": 6,
+    "maintenanceTags": ["real-case", "platform-bridge", "high-priority-candidate"]
+  },
+  "evidence": {
+    "sourceLink": "",
+    "screenshotPath": "",
+    "notes": "待补为什么这条真实案例值得被纳入代码层样例"
+  },
+  "mockUserSelection": {
+    "selectedCardId": "B",
+    "preserveElement": "待补希望保留的点击钩子或视觉元素",
+    "feedback": "待补第二轮优化反馈"
+  }
+}

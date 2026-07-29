@@ -1,0 +1,31 @@
+export function buildObsidianPlatformCaseReviewRecord({
+  generatedAt,
+  platformCaseId,
+  sourceMarkdownPath,
+  reviewMarkdown,
+}) {
+  return [
+    `# ${platformCaseId}_复核总览_${generatedAt}`,
+    "",
+    "> 生成方式：代码侧 `report:platform-case-review` + `export:obsidian-platform-review` 自动生成草稿",
+    `> 生成时间：${generatedAt}`,
+    `> 对应代码底稿：${sourceMarkdownPath}`,
+    "> 文档状态：可继续编辑",
+    "",
+    "## 0. 使用说明",
+    "- 这是一份单个平台案例的复核总览草稿，用来同时查看完整度、字段质量和 sync 预览。",
+    "- 下面的“代码侧复核底稿”来自当前平台案例笔记与代码真实案例映射的自动分析结果。",
+    "- 你后续可以直接在这里补充：先补哪些字段、是否进入 sync、是否要改模板。",
+    "",
+    "## 1. 代码侧复核底稿",
+    "",
+    reviewMarkdown.trim(),
+    "",
+    "## 2. 人工补充",
+    "- 当前最该先补的字段：",
+    "- 当前哪些字段虽然已填，但质量仍不够：",
+    "- 当前是否建议进入 sync：",
+    "- 是否需要调整案例模板字段：",
+    "",
+  ].join("\n");
+}

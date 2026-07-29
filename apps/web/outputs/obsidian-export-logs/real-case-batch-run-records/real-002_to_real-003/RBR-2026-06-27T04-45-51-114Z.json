@@ -1,0 +1,19 @@
+{
+  "exportId": "RBR-2026-06-27T04-45-51-114Z",
+  "exportedAt": "2026-06-27T04:45:51.120Z",
+  "batchLabel": "real-002_to_real-003",
+  "normalizedLabel": "real-002_to_real-003",
+  "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+  "sourceMarkdownPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-records/real-002_to_real-003/run-record.md",
+  "sourceJsonPath": "/Users/xlw/Documents/codex1/ai-cover-creative-assistant/apps/web/outputs/batch-run-records/real-002_to_real-003/run-record.json",
+  "generatedDate": "2026-06-27",
+  "overwrite": {
+    "requestedMode": "overwrite",
+    "targetAlreadyExisted": false,
+    "actionLabel": "新建草稿"
+  },
+  "readback": {
+    "ok": true,
+    "matchedExpectedContent": true
+  }
+}

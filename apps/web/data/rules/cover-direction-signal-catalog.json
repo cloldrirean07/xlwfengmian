@@ -1,0 +1,221 @@
+{
+  "order": [
+    "information",
+    "result",
+    "suspense",
+    "conflict",
+    "texture"
+  ],
+  "directions": {
+    "information": {
+      "id": "information",
+      "signalGroups": [
+        {
+          "groupId": "content-goal",
+          "groupLabel": "内容目标信号",
+          "signals": [
+            "用户更想让人一眼看懂内容讲什么",
+            "内容本身偏方法、清单、步骤、避坑",
+            "点击前最重要的是降低理解门槛"
+          ]
+        },
+        {
+          "groupId": "asset-fit",
+          "groupLabel": "素材适配信号",
+          "signals": [
+            "现有素材是截图或可裁切的信息画面",
+            "画面里已经有可提炼的重点区域",
+            "适合通过放大信息区而不是补氛围图解决问题"
+          ]
+        },
+        {
+          "groupId": "copy-shape",
+          "groupLabel": "文案与构图信号",
+          "signals": [
+            "封面文案应直接点题而不是绕",
+            "标题和封面要一起承担解释作用",
+            "构图优先稳定、清晰、分层明显"
+          ]
+        }
+      ],
+      "feedbackTriggers": [
+        "看不懂",
+        "太抽象",
+        "离内容太远",
+        "重点不清楚"
+      ],
+      "boundaryRules": [
+        "不能为了信息完整把字堆得像海报",
+        "清楚重点不等于把所有信息一次讲完"
+      ]
+    },
+    "result": {
+      "id": "result",
+      "signalGroups": [
+        {
+          "groupId": "content-goal",
+          "groupLabel": "内容目标信号",
+          "signals": [
+            "用户更关心点开后能获得什么结果",
+            "内容存在明确收益、变化、完成态",
+            "主题适合强调结果而不是问题本身"
+          ]
+        },
+        {
+          "groupId": "asset-fit",
+          "groupLabel": "素材适配信号",
+          "signals": [
+            "素材里能提炼结果页、完成态、前后变化",
+            "即使没有现成结果图，也能想象明确收获画面",
+            "适合把收益放到第一视觉中心"
+          ]
+        },
+        {
+          "groupId": "copy-shape",
+          "groupLabel": "文案与构图信号",
+          "signals": [
+            "文案适合使用收益词、结果词、变化词",
+            "构图适合突出结果区域或前后差异",
+            "用户需要感到这条内容值得花时间"
+          ]
+        }
+      ],
+      "feedbackTriggers": [
+        "没收获感",
+        "价值点不明显",
+        "不值得点",
+        "没结果"
+      ],
+      "boundaryRules": [
+        "收益表达不能承诺过猛",
+        "结果感必须和内容承接得住"
+      ]
+    },
+    "suspense": {
+      "id": "suspense",
+      "signalGroups": [
+        {
+          "groupId": "content-goal",
+          "groupLabel": "内容目标信号",
+          "signals": [
+            "用户更想先让人停下来点开",
+            "主题存在异常点、未说完空间或反常识角度",
+            "点击前最强驱动力是好奇而不是收益"
+          ]
+        },
+        {
+          "groupId": "asset-fit",
+          "groupLabel": "素材适配信号",
+          "signals": [
+            "现有画面能裁出一个异常点或留白点",
+            "画面不需要讲全，只要先制造停顿",
+            "适合从截图或画面局部里找单焦点"
+          ]
+        },
+        {
+          "groupId": "copy-shape",
+          "groupLabel": "文案与构图信号",
+          "signals": [
+            "文案适合半揭示、反问、留白式表达",
+            "构图适合单焦点和适度留白",
+            "不能第一眼把答案讲满"
+          ]
+        }
+      ],
+      "feedbackTriggers": [
+        "太平",
+        "不够抓眼",
+        "太普通",
+        "想更有好奇心"
+      ],
+      "boundaryRules": [
+        "悬念不能变成标题党",
+        "留白必须贴内容，不是单纯故弄玄虚"
+      ]
+    },
+    "conflict": {
+      "id": "conflict",
+      "signalGroups": [
+        {
+          "groupId": "content-goal",
+          "groupLabel": "内容目标信号",
+          "signals": [
+            "用户想放大误区、反差、对立观点",
+            "主题自带错误/正确、前后差异或冲突结构",
+            "点击驱动力来自冲击和态度差"
+          ]
+        },
+        {
+          "groupId": "asset-fit",
+          "groupLabel": "素材适配信号",
+          "signals": [
+            "素材适合做左右对照或前后对比",
+            "主体与文案之间可以形成明显反差",
+            "即使补图，也应优先找能表达冲突的画面"
+          ]
+        },
+        {
+          "groupId": "copy-shape",
+          "groupLabel": "文案与构图信号",
+          "signals": [
+            "文案适合误区句式、反差句式、纠错句式",
+            "构图适合对照布局和强主视觉",
+            "中性过渡元素应尽量减少"
+          ]
+        }
+      ],
+      "feedbackTriggers": [
+        "想更炸",
+        "更有冲击",
+        "差距感",
+        "误区"
+      ],
+      "boundaryRules": [
+        "冲突不能脱离内容硬造反差",
+        "如果不贴内容，最容易被判断成营销号"
+      ]
+    },
+    "texture": {
+      "id": "texture",
+      "signalGroups": [
+        {
+          "groupId": "content-goal",
+          "groupLabel": "内容目标信号",
+          "signals": [
+            "用户更在意高级感、专业感和可信度",
+            "内容需要建立判断力或可信表达",
+            "长期表达比一次性刺激点击更重要"
+          ]
+        },
+        {
+          "groupId": "asset-fit",
+          "groupLabel": "素材适配信号",
+          "signals": [
+            "现有素材可通过裁切、减噪、统一氛围来变稳",
+            "画面适合强调秩序感、留白、完成度",
+            "如果补图，优先找质感完整的主体而不是花哨元素"
+          ]
+        },
+        {
+          "groupId": "copy-shape",
+          "groupLabel": "文案与构图信号",
+          "signals": [
+            "文案应克制但有分量，不要太油",
+            "构图要稳，主体与背景关系要干净",
+            "画面完成度比刺激元素更重要"
+          ]
+        }
+      ],
+      "feedbackTriggers": [
+        "更高级",
+        "更专业",
+        "别像营销号",
+        "更稳一点"
+      ],
+      "boundaryRules": [
+        "高级感不能把点击欲降得太低",
+        "克制表达也要保留一个可点开的钩子"
+      ]
+    }
+  }
+}

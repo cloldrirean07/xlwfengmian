@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "status": "ready-for-manual-transfer",
+  "summary": "人工确认交接包已生成，可用于人工写入安全预览记录。",
+  "safetyBoundary": "仅生成项目内交接包，不写入 Obsidian，不执行正式写回。",
+  "targetBatchLabel": "real-002_to_real-003",
+  "targetPath": "/Users/xlw/Library/Mobile Documents/iCloud~md~obsidian/Documents/Xlwbrain/AI封面创意助手/05_验证与实验/批次试跑记录/已生成记录/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+  "patchSourceLabel": "系统建议初稿",
+  "confirmationBlock": "## 4. 人工补充\n- 人工复盘结论：本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。\n- 哪几行确认可以正式写回：这批案例最卡的环节 / 哪个按钮或模块最该前置 / 当前更像功能问题，还是界面问题 / 这批试跑最关键的结论 / 下一批还要不要继续同样赛道 / UI 优化是否已经到时机\n- 哪几行仍需手改：\n- 是否已经可以进入正式写回：可以",
+  "suggestedGateResult": {
+    "canProceedToFormalWrite": true,
+    "stillNeedsEdit": "",
+    "readyDecision": "可以",
+    "confirmedLines": "这批案例最卡的环节 / 哪个按钮或模块最该前置 / 当前更像功能问题，还是界面问题 / 这批试跑最关键的结论 / 下一批还要不要继续同样赛道 / UI 优化是否已经到时机",
+    "manualReviewConclusion": "本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。"
+  },
+  "conservativeGateResult": {
+    "canProceedToFormalWrite": false,
+    "stillNeedsEdit": "需人工复核措辞",
+    "readyDecision": "暂不进入"
+  },
+  "sourcePaths": {
+    "safeWritePreview": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/batch-review-manual-safe-write-preview.md",
+    "manualConfirmationDraft": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/batch-review-manual-safe-write-preview/manual-confirmation-draft.md"
+  },
+  "nextChecks": [
+    "将推荐确认块写入 Obsidian 安全预览记录底部。",
+    "重新检查正式写回门禁。",
+    "门禁进入 ready-to-formal-write 后，再人工确认是否执行正式写回。"
+  ]
+}

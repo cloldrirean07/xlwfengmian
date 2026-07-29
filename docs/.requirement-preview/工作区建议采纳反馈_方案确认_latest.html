@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产品实现方案确认（待确认）</title>
+  <style>
+    :root {
+      --page: #f6f7fb;
+      --panel: #ffffff;
+      --line: #e5e7eb;
+      --line-soft: #eef2f7;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --soft: #8a94a6;
+      --primary: #246bfe;
+      --primary-soft: #eef5ff;
+      --success: #168a4a;
+      --success-soft: #edf8f1;
+      --warning: #b96b00;
+      --warning-soft: #fff7e6;
+      --danger: #c9372c;
+      --danger-soft: #fff1f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 52px;
+    }
+
+    .hero,
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .hero {
+      padding: 28px 30px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.32;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 20px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 18px 0 10px;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 24px 26px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 12px 13px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f3f5f8;
+      color: var(--text);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    td.group {
+      min-width: 128px;
+      color: var(--text);
+      font-weight: 700;
+      background: #fbfcff;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .meta-card,
+    .note-box,
+    .state-card {
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+    }
+
+    .meta-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--soft);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .meta-card span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .note-box {
+      padding: 14px 16px;
+    }
+
+    .note-box h3 {
+      margin-top: 0;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .tag.warning {
+      background: var(--warning-soft);
+      color: var(--warning);
+    }
+
+    .tag.success {
+      background: var(--success-soft);
+      color: var(--success);
+    }
+
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 8px 0 2px;
+    }
+
+    .flow-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .flow-node {
+      min-width: 176px;
+      max-width: min(360px, 92%);
+      padding: 10px 15px;
+      border: 2px solid #b79cff;
+      border-radius: 2px;
+      background: #f3efff;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.45;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .flow-node.decision {
+      border-color: #f6b94f;
+      background: var(--warning-soft);
+    }
+
+    .flow-node.success {
+      border-color: #89d6a5;
+      background: var(--success-soft);
+    }
+
+    .flow-node.danger {
+      border-color: #ff9c96;
+      background: var(--danger-soft);
+    }
+
+    .flow-arrow {
+      position: relative;
+      width: 0;
+      height: 34px;
+      border-left: 3px solid #333333;
+    }
+
+    .flow-arrow::after {
+      content: "";
+      position: absolute;
+      left: -7px;
+      bottom: -1px;
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 11px solid #333333;
+    }
+
+    .state-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .state-card {
+      flex: 1 1 180px;
+      padding: 13px 14px;
+    }
+
+    .state-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .state-card span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .confirm-box {
+      border-color: #d7e5ff;
+      background: #f7fbff;
+    }
+
+    .confirm-box strong {
+      color: var(--primary);
+    }
+
+    .footer-note {
+      margin-top: 10px;
+      color: var(--soft);
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .meta-grid,
+      .scope-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding: 18px 12px 36px;
+      }
+
+      .hero,
+      section {
+        padding: 20px 16px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">AI封面创意助手 · 产品实现方案确认</p>
+      <h1>工作区建议采纳反馈</h1>
+      <p class="subtitle">让工作区建议从一次性结果变成可被采纳、搁置和带入后续二轮的中间决策。</p>
+      <div class="meta-grid">
+        <div class="meta-card"><strong>需求等级</strong><span>L2</span></div>
+<div class="meta-card"><strong>项目</strong><span>AI封面创意助手</span></div>
+<div class="meta-card"><strong>模式</strong><span>既有项目维护</span></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>需求目标</h2>
+      <p>在首轮方向卡后的工作区建议区增加轻量反馈闭环，使用户能够标记建议是否采纳，并为后续二轮反馈或中间状态保存留下清晰入口。</p>
+    </section>
+
+    <section>
+      <h2>本次范围</h2>
+      <ul>
+        <li>在下一步工作区建议结果中增加采纳、暂不采纳两类反馈动作</li>
+<li>反馈后展示明确状态与下一步引导</li>
+<li>采纳建议后为进入二轮反馈提供上下文承接</li>
+<li>保留现有三类工作区输入和建议生成能力，不重做首页信息架构</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>页面与功能拆解</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>页面/区块</th>
+            <th>入口</th>
+            <th>功能</th>
+            <th>核心交互</th>
+            <th>输出结果</th>
+            <th>状态/边界</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="group" rowspan="3">首轮结果页</td><td rowspan="3">下一步工作区</td><td>建议反馈动作</td><td>用户在生成工作区建议后选择采纳或暂不采纳</td><td>建议区显示当前反馈状态</td><td>未生成建议前不展示反馈动作</td></tr>
+<tr><td>采纳后承接</td><td>用户采纳建议后点击进入后续调整</td><td>二轮反馈入口可读取本次建议摘要</td><td>本轮只做上下文承接，不直接触发生图或找图</td></tr>
+<tr><td>暂不采纳反馈</td><td>用户标记暂不采纳并保留当前建议</td><td>系统提示可继续修改工作区输入后重新生成</td><td>不记录复杂原因，不新增长表单</td></tr>
+<tr><td class="group" rowspan="1">应用记录</td><td rowspan="1">项目文档</td><td>复刻流程留痕</td><td>本次需求按方案确认、规格、实现、验证的顺序推进</td><td>后续每一步都有文档可追溯</td><td>未确认前不进入代码实现</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>产品实现流程</h2>
+      <div class="flowchart">
+        <div class="flow-unit"><div class="flow-node">生成建议</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node decision">选择反馈</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">记录状态</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">承接二轮</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node success">完成留痕</div></div>
+      </div>
+      <p class="footer-note">流程图只表达主链路；判断分支、失败/回退路径在下方“关键分支说明”中确认。</p>
+    </section>
+
+    <section>
+      <h2>关键状态流转</h2>
+      <div class="state-strip">
+        <div class="state-card"><strong>工作区建议</strong><span>未生成 -&gt; 已生成 -&gt; 已采纳 / 暂不采纳 -&gt; 可进入二轮</span></div>
+<div class="state-card"><strong>二轮上下文</strong><span>无承接 -&gt; 读取已采纳建议摘要 -&gt; 等待用户补充反馈</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>关键分支说明</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>分支/场景</th>
+            <th>触发条件</th>
+            <th>页面反馈</th>
+            <th>用户可执行动作</th>
+            <th>数据/状态变化</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>尚未生成建议</td><td>工作区建议结果为空</td><td>不展示采纳反馈动作</td><td>先填写工作区输入并生成建议</td><td>维持未生成</td></tr>
+<tr><td>暂不采纳</td><td>用户认为建议方向不合适</td><td>展示可调整输入后重新生成的提示</td><td>修改工作区输入</td><td>暂不采纳</td></tr>
+<tr><td>采纳后继续</td><td>用户确认建议可作为后续调整基础</td><td>显示已采纳状态和进入二轮入口</td><td>进入后续调整</td><td>已采纳</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="confirm-box">
+      <h2>成文前需确认</h2>
+      <p>请确认当前方案；确认后可继续生成 Requirement Spec，并进入维护模式实现。</p>
+      <div class="tag-list">
+        <span class="tag success">请回复：确认</span>
+        <span class="tag success">确认后选：原型 / PRD</span>
+        <span class="tag warning">或：补充</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

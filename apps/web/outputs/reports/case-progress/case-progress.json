@@ -1,0 +1,85 @@
+{
+  "summary": {
+    "placeholderOpenCount": 6,
+    "plannedRealCaseCount": 6,
+    "indexedRealCaseCount": 1,
+    "realCaseItemCount": 1,
+    "runExportCount": 1,
+    "obsidianDraftCount": 1,
+    "fullyBridgedCount": 1,
+    "sampleRunExportCount": 1,
+    "sampleObsidianDraftCount": 1,
+    "mappingWarningCount": 0
+  },
+  "placeholders": [
+    "P-01_待补.md",
+    "P-02_待补.md",
+    "P-03_待补.md",
+    "P-04_待补.md",
+    "P-05_待补.md",
+    "P-06_待补.md"
+  ],
+  "mappingWarnings": [],
+  "rows": [
+    {
+      "caseId": "real-001",
+      "platformCaseId": "P-01",
+      "inIndex": true,
+      "hasItem": true,
+      "hasRunExport": true,
+      "hasObsidianDraft": true,
+      "mappingConsistent": true,
+      "status": "已生成 Obsidian 草稿"
+    },
+    {
+      "caseId": "real-002",
+      "platformCaseId": "P-02",
+      "inIndex": false,
+      "hasItem": false,
+      "hasRunExport": false,
+      "hasObsidianDraft": false,
+      "mappingConsistent": true,
+      "status": "索引已规划未入代码"
+    },
+    {
+      "caseId": "real-003",
+      "platformCaseId": "P-03",
+      "inIndex": false,
+      "hasItem": false,
+      "hasRunExport": false,
+      "hasObsidianDraft": false,
+      "mappingConsistent": true,
+      "status": "索引已规划未入代码"
+    },
+    {
+      "caseId": "real-004",
+      "platformCaseId": "P-04",
+      "inIndex": false,
+      "hasItem": false,
+      "hasRunExport": false,
+      "hasObsidianDraft": false,
+      "mappingConsistent": true,
+      "status": "索引已规划未入代码"
+    },
+    {
+      "caseId": "real-005",
+      "platformCaseId": "P-05",
+      "inIndex": false,
+      "hasItem": false,
+      "hasRunExport": false,
+      "hasObsidianDraft": false,
+      "mappingConsistent": true,
+      "status": "索引已规划未入代码"
+    },
+    {
+      "caseId": "real-006",
+      "platformCaseId": "P-06",
+      "inIndex": false,
+      "hasItem": false,
+      "hasRunExport": false,
+      "hasObsidianDraft": false,
+      "mappingConsistent": true,
+      "status": "索引已规划未入代码"
+    }
+  ]
+}
