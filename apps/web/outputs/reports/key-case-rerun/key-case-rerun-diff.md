@@ -1,11 +1,11 @@
 # 关键样例复跑前后差异报告
 
 ## 汇总
-- 生成时间：2026-07-29 09:36:28
+- 生成时间：2026-07-30 09:01:51
 - 复跑计划：key-case-rerun-default
-- 对比样例数：2
+- 对比样例数：4
 - 发生变化的样例数：0
-- 未变化样例数：2
+- 未变化样例数：4
 - 下游变化项数：0
 
 ## 样例差异
@@ -15,6 +15,22 @@
 - 平台：抖音
 - 变化项数：0
 - 输出目录：/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/sample-001
+- 本次复跑未发现关键字段变化
+
+### real-002
+- 标题：P-02 美食封面制作真实案例
+- 来源类型：real
+- 平台：抖音
+- 变化项数：0
+- 输出目录：/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-002
+- 本次复跑未发现关键字段变化
+
+### real-003
+- 标题：P-03 夏日晚霞封面制作真实案例
+- 来源类型：real
+- 平台：抖音
+- 变化项数：0
+- 输出目录：/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-003
 - 本次复跑未发现关键字段变化
 
 ### real-001

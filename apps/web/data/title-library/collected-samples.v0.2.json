@@ -1,0 +1,242 @@
+{
+  "version": "0.2",
+  "collectedAt": "2026-07-30T16:15:00+08:00",
+  "extends": "apps/web/data/title-library/collected-samples.v0.1.json",
+  "collectionMethod": {
+    "source": "Safari logged-in web pages",
+    "mode": "read-only visible search results",
+    "note": "第二批采样使用同义查询扩展真实标题库，优先补充可复用标题风格，不代表全站热门榜单。"
+  },
+  "platformAttempts": [
+    {
+      "platform": "抖音",
+      "query": "香辣蟹 鱿鱼 家常菜",
+      "status": "limited",
+      "result": "页面已打开，但当前可访问文本未返回可用标题列表。",
+      "action": "未写入样本，仅记录平台受限。"
+    },
+    {
+      "platform": "抖音",
+      "query": "晚霞 文案 火烧云",
+      "status": "login-required",
+      "result": "页面触发登录提示：登录后即可搜索更多精彩视频。",
+      "action": "未进行登录、验证码或账号操作。"
+    }
+  ],
+  "queries": [
+    {
+      "platform": "小红书",
+      "query": "香辣蟹 鱿鱼 复刻",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "sourceUrl": "https://www.xiaohongshu.com/search_result?keyword=香辣蟹+鱿鱼+复刻&source=web_search_result_notes&type=51",
+      "samples": [
+        {
+          "sourceTitle": "零失败家庭版香辣蟹，一锅啤酒焖出饭店味道",
+          "engagementSnapshot": "782",
+          "creatorSnapshot": "饱饱饿了咩",
+          "dateSnapshot": "06-25",
+          "materialKeywords": ["香辣蟹", "家庭版", "啤酒焖", "饭店味道"],
+          "styleTags": ["失败规避", "家庭复刻", "结果承诺"]
+        },
+        {
+          "sourceTitle": "香辣孜然鱿鱼，在家复刻夜市风味",
+          "engagementSnapshot": "94",
+          "creatorSnapshot": "我先敷个面膜",
+          "dateSnapshot": "05-17",
+          "materialKeywords": ["香辣", "孜然鱿鱼", "在家复刻", "夜市风味"],
+          "styleTags": ["夜市场景", "复刻证明", "味型直给"]
+        },
+        {
+          "sourceTitle": "无情复刻七欣天香辣海鲜，附详细做法",
+          "engagementSnapshot": "468",
+          "creatorSnapshot": "南方大momo",
+          "dateSnapshot": "05-30",
+          "materialKeywords": ["七欣天", "香辣海鲜", "详细做法"],
+          "styleTags": ["品牌同款", "教程承诺", "复刻证明"]
+        },
+        {
+          "sourceTitle": "成功复刻出夜市美味的香辣鱿鱼须",
+          "engagementSnapshot": "224",
+          "creatorSnapshot": "树的厨房日记",
+          "dateSnapshot": "05-21",
+          "materialKeywords": ["香辣鱿鱼须", "夜市美味", "复刻"],
+          "styleTags": ["成功证明", "夜市场景", "食欲表达"]
+        },
+        {
+          "sourceTitle": "这盘干锅鱿鱼，香辣到直接多吃两碗饭",
+          "engagementSnapshot": "62",
+          "creatorSnapshot": "好困的白米饭",
+          "dateSnapshot": "07-14",
+          "materialKeywords": ["干锅鱿鱼", "香辣", "多吃两碗饭"],
+          "styleTags": ["结果承诺", "下饭钩子", "感官刺激"]
+        },
+        {
+          "sourceTitle": "谁懂啊！在家做出夜市同款香辣鱿鱼",
+          "engagementSnapshot": "20",
+          "creatorSnapshot": "玥玥觅食记",
+          "dateSnapshot": "07-22",
+          "materialKeywords": ["在家", "夜市同款", "香辣鱿鱼"],
+          "styleTags": ["共鸣开场", "同款复刻", "夜市场景"]
+        },
+        {
+          "sourceTitle": "超级好吃火爆香辣鱿鱼！做法简单！一学就会",
+          "engagementSnapshot": "200",
+          "creatorSnapshot": "冬馬W",
+          "dateSnapshot": "06-29",
+          "materialKeywords": ["香辣鱿鱼", "做法简单", "一学就会"],
+          "styleTags": ["简单教程", "学习门槛", "强感官"]
+        },
+        {
+          "sourceTitle": "求你们去做！这个香辣蟹香到舔手指",
+          "engagementSnapshot": "92",
+          "creatorSnapshot": "米其林-五星大厨",
+          "dateSnapshot": "07-19",
+          "materialKeywords": ["香辣蟹", "舔手指"],
+          "styleTags": ["强推荐", "感官结果", "行动号召"]
+        }
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "晚霞 文案 火烧云 调色",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "sourceUrl": "https://www.xiaohongshu.com/search_result?keyword=晚霞+文案+火烧云+调色&source=web_search_result_notes&type=51",
+      "samples": [
+        {
+          "sourceTitle": "被1k人追着问的晚霞调色参数，秒变大片",
+          "engagementSnapshot": "684",
+          "creatorSnapshot": "林佳渔",
+          "dateSnapshot": "2025-07-01",
+          "materialKeywords": ["晚霞", "调色参数", "大片"],
+          "styleTags": ["社交证明", "工具教程", "效果承诺"]
+        },
+        {
+          "sourceTitle": "iphone调色，一键还原落日余晖感",
+          "engagementSnapshot": "991",
+          "creatorSnapshot": "两只鞋先生",
+          "dateSnapshot": "2024-10-23",
+          "materialKeywords": ["iPhone", "调色", "落日余晖"],
+          "styleTags": ["工具教程", "一键效果", "氛围还原"]
+        },
+        {
+          "sourceTitle": "如果此刻你也抬头看",
+          "engagementSnapshot": "76",
+          "creatorSnapshot": "秀篱冰颖",
+          "dateSnapshot": "06-09",
+          "materialKeywords": ["天空", "抬头"],
+          "styleTags": ["情绪短句", "共时感", "氛围表达"]
+        },
+        {
+          "sourceTitle": "摄影小白必看！AI帮我实现了火烧云自由！",
+          "engagementSnapshot": "49",
+          "creatorSnapshot": "喵呜老师",
+          "dateSnapshot": "05-19",
+          "materialKeywords": ["摄影小白", "AI", "火烧云"],
+          "styleTags": ["AI工具", "低门槛", "结果自由"]
+        },
+        {
+          "sourceTitle": "手机调色大公开！再教一次鎏金火烧云",
+          "engagementSnapshot": "76",
+          "creatorSnapshot": "柒柒似時久",
+          "dateSnapshot": "2025-09-24",
+          "materialKeywords": ["手机调色", "鎏金火烧云"],
+          "styleTags": ["教程公开", "视觉命名", "重复教学"]
+        },
+        {
+          "sourceTitle": "小众高级的落日晚霞文案",
+          "engagementSnapshot": "732",
+          "creatorSnapshot": "momo",
+          "dateSnapshot": "2025-09-02",
+          "materialKeywords": ["落日", "晚霞", "文案"],
+          "styleTags": ["文案合集", "高级感", "小众定位"]
+        },
+        {
+          "sourceTitle": "教你3秒调出好看的晚霞",
+          "engagementSnapshot": "10",
+          "creatorSnapshot": "七杯抹茶星冰乐",
+          "dateSnapshot": "2025-09-04",
+          "materialKeywords": ["3秒", "调色", "晚霞"],
+          "styleTags": ["时间承诺", "简单教程", "效果承诺"]
+        },
+        {
+          "sourceTitle": "绝了！苹果相册调色瞬间让照片高级起来了",
+          "engagementSnapshot": "1981",
+          "creatorSnapshot": "好摄帮 手机摄影",
+          "dateSnapshot": "2024-06-04",
+          "materialKeywords": ["苹果相册", "调色", "高级"],
+          "styleTags": ["工具教程", "高级感", "瞬间效果"]
+        },
+        {
+          "sourceTitle": "晚霞文案 | 贩卖人间黄昏",
+          "engagementSnapshot": "261",
+          "creatorSnapshot": "浅墨入画",
+          "dateSnapshot": "03-17",
+          "materialKeywords": ["晚霞文案", "人间黄昏"],
+          "styleTags": ["诗意短句", "文案合集", "氛围表达"]
+        },
+        {
+          "sourceTitle": "iPhone调色，氛围感落日橘子海live",
+          "engagementSnapshot": "4056",
+          "creatorSnapshot": "樱桃小丸犊子",
+          "dateSnapshot": "2025-05-09",
+          "materialKeywords": ["iPhone调色", "落日", "橘子海"],
+          "styleTags": ["工具教程", "氛围命名", "高互动样本"]
+        }
+      ]
+    }
+  ],
+  "newStyleSignals": [
+    {
+      "styleId": "night-market-remake",
+      "styleLabel": "夜市复刻",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "pattern": "在家/成功 + 复刻 + 夜市/饭店/品牌风味",
+      "signals": ["夜市风味", "饭店味道", "七欣天", "同款", "成功复刻"],
+      "candidateTemplates": ["在家复刻{placeTaste}的{dish}", "{dish}做出{placeTaste}味道"]
+    },
+    {
+      "styleId": "low-barrier-recipe",
+      "styleLabel": "低门槛教程",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "pattern": "零失败/做法简单/一学就会 + 菜品结果",
+      "signals": ["零失败", "做法简单", "一学就会", "附详细做法"],
+      "candidateTemplates": ["零失败做出{dish}", "{dish}这样做，一学就会"]
+    },
+    {
+      "styleId": "phone-editing-proof",
+      "styleLabel": "手机调色证明",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "pattern": "手机/相册/iPhone + 调色 + 明确效果",
+      "signals": ["iPhone调色", "苹果相册", "调色参数", "一键还原", "秒变大片"],
+      "candidateTemplates": ["手机调出{skyObject}氛围感", "{tool}一键还原{lightObject}"]
+    },
+    {
+      "styleId": "ai-scenery-result",
+      "styleLabel": "AI风景效果",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "pattern": "用户水平 + AI辅助 + 稀缺景观结果",
+      "signals": ["摄影小白", "AI", "火烧云自由"],
+      "candidateTemplates": ["AI帮摄影小白做出{skyObject}封面", "用AI把{skyObject}做成封面大片"]
+    },
+    {
+      "styleId": "poetic-copy-collection",
+      "styleLabel": "诗意文案合集",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "pattern": "小众/高级/诗意名词 + 晚霞文案",
+      "signals": ["小众高级", "贩卖人间黄昏", "此刻抬头"],
+      "candidateTemplates": ["把{lightObject}写进封面", "{skyObject}文案，越短越有氛围"]
+    }
+  ],
+  "applicationNotes": [
+    "real-002 后续可增加夜市复刻和低门槛教程两条标题路径。",
+    "real-003 后续可把 AI 封面教程与手机调色类标题合流，形成“AI 生成封面 + 调色/氛围参数”的教程标题。",
+    "抖音第二批搜索受限，不应把空结果误判为平台无相关内容。"
+  ]
+}

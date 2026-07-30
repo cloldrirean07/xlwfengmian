@@ -2,6 +2,11 @@ import { coverEffectCatalog } from "../effects/coverEffectCatalog.js";
 import { shortenText } from "../../shared/text.js";
 import { buildImageDirectionCandidates } from "./buildImageDirectionCandidates.js";
 import { buildRankedImageStrategies } from "./buildRankedImageStrategies.js";
+import {
+  buildMaterialAwareTitleOptionDetails,
+  extractMaterialKeywords,
+  injectMaterialKeywordsIntoCopy,
+} from "../copy/materialKeywordCopy.js";
 
 function fillTemplate(template, fields) {
   const goalShort = shortenText(fields.contentGoal || fields.contentTopic || "内容表达", 10);
@@ -11,6 +16,8 @@ function fillTemplate(template, fields) {
 }
 
 export function buildFirstRoundCards(fields, rankedDirections) {
+  const materialKeywords = extractMaterialKeywords(fields);
+
   return rankedDirections.map((direction, index) => {
     const config = coverEffectCatalog[direction.directionId];
     const imageDirection =
@@ -25,6 +32,10 @@ export function buildFirstRoundCards(fields, rankedDirections) {
       candidates: imageDirectionCandidates,
     });
     const topExecutionStrategy = rankedImageStrategies[0];
+    const titleOptionDetails = buildMaterialAwareTitleOptionDetails(
+      config.titleTemplates.map((template) => fillTemplate(template, fields)),
+      fields,
+    ).slice(0, 3);
 
     return {
       cardId: direction.cardId,
@@ -32,8 +43,13 @@ export function buildFirstRoundCards(fields, rankedDirections) {
       directionTypeInternal: config.internalName,
       directionLabelUserFacing: config.userLabel,
       directionDescription: `${config.effectSummary} ${direction.directionFitReason}。`,
-      coverCopyMain: fillTemplate(config.coverCopyTemplates[index % config.coverCopyTemplates.length], fields),
-      titleOptions: config.titleTemplates.map((template) => fillTemplate(template, fields)).slice(0, 2),
+      coverCopyMain: injectMaterialKeywordsIntoCopy(
+        fillTemplate(config.coverCopyTemplates[index % config.coverCopyTemplates.length], fields),
+        fields,
+      ),
+      titleOptions: titleOptionDetails.map((item) => item.title),
+      titleOptionDetails,
+      materialKeywords,
       imageDirection,
       imageDirectionCandidates,
       rankedImageStrategies,

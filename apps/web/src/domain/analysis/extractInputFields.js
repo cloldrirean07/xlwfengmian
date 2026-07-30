@@ -178,6 +178,7 @@ export function extractInputFields(payload) {
     userReferencePreference: referencePreference,
     assetDescription,
     assetNotes,
+    copyReview: payload.copyReview || {},
     assetContext,
     hasLocalAssetContext: assetContext.hasLocalPreview ? "是" : "否",
     suggestedAssetType: assetSuggestion.suggestedAssetType,

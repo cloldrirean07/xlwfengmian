@@ -1,0 +1,40 @@
+{
+  "id": "real-003",
+  "title": "P-03 夏日晚霞封面制作真实案例",
+  "sourceType": "real",
+  "platform": "抖音",
+  "tracking": {
+    "platformCaseId": "P-03",
+    "obsidianCasePath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-03_待补.md"
+  },
+  "contentTopic": "用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。",
+  "contentGoal": "让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。",
+  "userAssetType": "截图",
+  "assetDescription": "当前素材包含三张傍晚图片，画面包含晚霞、云层和落日。用户希望通过这组三张美景图片做出更有吸引力的小红书封面，获得更多点击、认同和赞美，并进一步带来流量。",
+  "referencePreference": "小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。",
+  "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。",
+  "copyReview": {
+    "preferredTitle": "最后一抹霞光",
+    "titleRationale": "人工判断认为该标题更能抓住晚霞素材的时间感和情绪余韵，比直接罗列风景元素更有封面感。"
+  },
+  "operations": {
+    "keyCaseRerunPriority": 7,
+    "maintenanceTags": [
+      "real-case",
+      "formal-write-candidate",
+      "real-002_to_real-003",
+      "input-preparation-gap",
+      "high-priority-candidate"
+    ]
+  },
+  "evidence": {
+    "sourceLink": "",
+    "screenshotPath": "apps/web/data/real-cases/assets/real-003/IMG_0486.HEIC; apps/web/data/real-cases/assets/real-003/IMG_0487.HEIC; apps/web/data/real-cases/assets/real-003/IMG_0488.HEIC",
+    "notes": "由 real-002_to_real-003 批次拆分而来。2026-07-30 已根据用户提供的三张夏日晚霞图片补齐 P0 字段，保留原始文件名线索 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。"
+  },
+  "mockUserSelection": {
+    "selectedCardId": "B",
+    "preserveElement": "保留晚霞、云层和落日带来的夏日氛围感。",
+    "feedback": "标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。"
+  }
+}

@@ -2,7 +2,7 @@
 
 ## 汇总
 - 计划 ID：key-case-rerun-default
-- 样例数：2
+- 样例数：4
 - 正式写回候选批次：1
 - 下游刷新目标：reviewed-misclassified / rule-revision-task-sheet
 
@@ -12,6 +12,18 @@
 - 来源类型：sample
 - 关键复跑优先级：10
 - 维护标签：sample / baseline / misclassified-seed
+
+### real-002
+- 标题：P-02 美食封面制作真实案例
+- 来源类型：real
+- 关键复跑优先级：8
+- 维护标签：real-case / formal-write-candidate / real-002_to_real-003 / input-preparation-gap / high-priority-candidate
+
+### real-003
+- 标题：P-03 夏日晚霞封面制作真实案例
+- 来源类型：real
+- 关键复跑优先级：7
+- 维护标签：real-case / formal-write-candidate / real-002_to_real-003 / input-preparation-gap / high-priority-candidate
 
 ### real-001
 - 标题：P-01 待补真实案例

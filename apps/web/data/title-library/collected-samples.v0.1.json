@@ -1,0 +1,275 @@
+{
+  "version": "0.1",
+  "collectedAt": "2026-07-30T15:57:00+08:00",
+  "collectionMethod": {
+    "source": "Safari logged-in web pages",
+    "mode": "read-only visible search results",
+    "note": "样本来自当前 Safari 已登录页面的可见搜索结果文本，仅记录标题、平台、场景、互动快照与归纳标签。"
+  },
+  "queries": [
+    {
+      "platform": "抖音",
+      "query": "辣炒鱿鱼 螃蟹 美食",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "sourceUrl": "https://www.douyin.com/search/辣炒鱿鱼%20螃蟹%20美食?type=general",
+      "samples": [
+        {
+          "sourceTitle": "几只梭子蟹一只鱿鱼，做个香辣鱿鱼蟹，又麻又辣巴适得板",
+          "engagementSnapshot": "5.2万",
+          "creatorSnapshot": "小弟萝卜呀",
+          "dateSnapshot": "2023年9月9日",
+          "materialKeywords": ["梭子蟹", "鱿鱼", "香辣", "麻辣"],
+          "styleTags": ["食材直给", "感官刺激", "地域口语"]
+        },
+        {
+          "sourceTitle": "朋友说随便带个菜，我端了一锅香辣蟹…",
+          "engagementSnapshot": "395",
+          "creatorSnapshot": "碳“碳水脑袋”",
+          "dateSnapshot": "5天前",
+          "materialKeywords": ["香辣蟹", "虾", "鱿鱼须", "聚餐"],
+          "styleTags": ["生活场景", "反差叙事", "聚餐钩子"]
+        },
+        {
+          "sourceTitle": "好吃到舔手指的香辣蟹！香香辣辣超过瘾~搭配糯叽叽的年糕！真的巨巨巨好吃！",
+          "engagementSnapshot": "8.7万",
+          "creatorSnapshot": "食堂大叔不讲李",
+          "dateSnapshot": "2023年11月8日",
+          "materialKeywords": ["香辣蟹", "年糕", "香辣", "过瘾"],
+          "styleTags": ["强感官", "夸张强化", "教程分享"]
+        },
+        {
+          "sourceTitle": "如果幸福是一道干锅鱿鱼虾",
+          "engagementSnapshot": "82.1万",
+          "creatorSnapshot": "故人何夕",
+          "dateSnapshot": "1月18日",
+          "materialKeywords": ["干锅", "鱿鱼", "虾"],
+          "styleTags": ["情绪隐喻", "短句标题", "食欲联想"]
+        },
+        {
+          "sourceTitle": "花甲炒鱿鱼 香辣过瘾好吃到根本停不下来",
+          "engagementSnapshot": "587",
+          "creatorSnapshot": "小乔美食",
+          "dateSnapshot": "2025年10月18日",
+          "materialKeywords": ["花甲", "鱿鱼", "香辣", "下饭"],
+          "styleTags": ["结果承诺", "感官刺激", "停不下来"]
+        }
+      ]
+    },
+    {
+      "platform": "抖音",
+      "query": "夏日晚霞 落日 云层",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "sourceUrl": "https://www.douyin.com/search/夏日晚霞%20落日%20云层?type=general",
+      "samples": [
+        {
+          "sourceTitle": "云彩收集者～夏天就要多拍拍好看的云啊",
+          "engagementSnapshot": "1.3万",
+          "creatorSnapshot": "@小郭同学",
+          "dateSnapshot": "2025年9月4日",
+          "materialKeywords": ["云彩", "夏天", "晚霞"],
+          "styleTags": ["身份标签", "轻情绪", "收集感"]
+        },
+        {
+          "sourceTitle": "天在将黑未黑时最美",
+          "engagementSnapshot": "255.4万",
+          "creatorSnapshot": "Feeling dreams",
+          "dateSnapshot": "2025年6月3日",
+          "materialKeywords": ["天空", "海边日落", "晚霞"],
+          "styleTags": ["时间切片", "审美判断", "短句标题"]
+        },
+        {
+          "sourceTitle": "日落八分钟是一天的布洛芬",
+          "engagementSnapshot": "1.1万",
+          "creatorSnapshot": "D",
+          "dateSnapshot": "2025年9月3日",
+          "materialKeywords": ["日落", "晚霞", "武汉"],
+          "styleTags": ["情绪疗愈", "时间切片", "比喻"]
+        },
+        {
+          "sourceTitle": "这么美的火烧云 当然要分享给你呀 见到的人都会有好运噢",
+          "engagementSnapshot": "301.2万",
+          "creatorSnapshot": "栖川",
+          "dateSnapshot": "6月10日",
+          "materialKeywords": ["火烧云", "晚霞", "云霞"],
+          "styleTags": ["分享欲", "好运暗示", "视觉奇观"]
+        },
+        {
+          "sourceTitle": "6月26日傍晚19:33海口云洞图书馆 出现史诗级火烧云晚霞 简直美爆了",
+          "engagementSnapshot": "2.9万",
+          "creatorSnapshot": "海口市民",
+          "dateSnapshot": "6月26日",
+          "materialKeywords": ["傍晚", "火烧云", "晚霞", "海口"],
+          "styleTags": ["具体时间", "地点证据", "奇观表达"]
+        }
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "辣炒鱿鱼 螃蟹 美食",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "sourceUrl": "https://www.xiaohongshu.com/search_result?keyword=辣炒鱿鱼+螃蟹+美食&source=web_search_result_notes&type=51",
+      "samples": [
+        {
+          "sourceTitle": "香辣虾蟹！七欣天同款被我复刻出来了，绝绝子",
+          "engagementSnapshot": "1357",
+          "creatorSnapshot": "菠萝精",
+          "dateSnapshot": "2025-07-10",
+          "materialKeywords": ["香辣虾蟹", "七欣天", "复刻"],
+          "styleTags": ["同款复刻", "强口语", "结果展示"]
+        },
+        {
+          "sourceTitle": "给我一家店，一定只卖这一道！！！",
+          "engagementSnapshot": "26",
+          "creatorSnapshot": "林北北慢煮",
+          "dateSnapshot": "06-20",
+          "materialKeywords": ["招牌菜", "单品"],
+          "styleTags": ["开店假设", "强推荐", "短句钩子"]
+        },
+        {
+          "sourceTitle": "这碗香辣蟹一绝",
+          "engagementSnapshot": "4772",
+          "creatorSnapshot": "怪",
+          "dateSnapshot": "2025-12-07",
+          "materialKeywords": ["香辣蟹"],
+          "styleTags": ["评价短句", "食材直给", "封面大字友好"]
+        },
+        {
+          "sourceTitle": "拒绝失败，教你在家复刻七欣天香辣蟹",
+          "engagementSnapshot": "4211",
+          "creatorSnapshot": "money不是potato",
+          "dateSnapshot": "2025-08-25",
+          "materialKeywords": ["香辣蟹", "复刻", "七欣天"],
+          "styleTags": ["教程承诺", "失败规避", "同款复刻"]
+        },
+        {
+          "sourceTitle": "10分钟搞定 辣炒海鲜什锦，巨下饭！",
+          "engagementSnapshot": "253",
+          "creatorSnapshot": "陈家胖胖青",
+          "dateSnapshot": "05-05",
+          "materialKeywords": ["辣炒海鲜", "什锦", "下饭"],
+          "styleTags": ["时间承诺", "结果承诺", "家常菜"]
+        },
+        {
+          "sourceTitle": "如果我去开店，这一定是招牌！！！",
+          "engagementSnapshot": "6051",
+          "creatorSnapshot": "Lily的美食日记",
+          "dateSnapshot": "2025-07-14",
+          "materialKeywords": ["招牌菜", "开店"],
+          "styleTags": ["开店假设", "强推荐", "短句钩子"]
+        }
+      ]
+    },
+    {
+      "platform": "小红书",
+      "query": "夏日晚霞 落日 云层",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "sourceUrl": "https://www.xiaohongshu.com/search_result?keyword=夏日晚霞+落日+云层&source=web_search_result_notes&type=51",
+      "samples": [
+        {
+          "sourceTitle": "无敌简单追晚霞的方法！普通人秒学会！",
+          "engagementSnapshot": "1193",
+          "creatorSnapshot": "文小棠",
+          "dateSnapshot": "2025-08-27",
+          "materialKeywords": ["追晚霞", "方法", "普通人"],
+          "styleTags": ["教程承诺", "低门槛", "行动方法"]
+        },
+        {
+          "sourceTitle": "我总结的火烧云判断法，不一定准但很好用",
+          "engagementSnapshot": "505",
+          "creatorSnapshot": "枫枫知道",
+          "dateSnapshot": "05-12",
+          "materialKeywords": ["火烧云", "判断法"],
+          "styleTags": ["经验总结", "方法论", "可信克制"]
+        },
+        {
+          "sourceTitle": "北京的天空又杀疯了！",
+          "engagementSnapshot": "3416",
+          "creatorSnapshot": "晚和风",
+          "dateSnapshot": "07-08",
+          "materialKeywords": ["北京", "天空"],
+          "styleTags": ["地点证据", "强情绪", "短句标题"]
+        },
+        {
+          "sourceTitle": "绝了！iPhone 调色还原随手拍晚霞日常",
+          "engagementSnapshot": "290",
+          "creatorSnapshot": "甜大甜。",
+          "dateSnapshot": "2025-08-17",
+          "materialKeywords": ["iPhone", "调色", "晚霞"],
+          "styleTags": ["工具教程", "效果还原", "日常拍摄"]
+        },
+        {
+          "sourceTitle": "卧槽！卧槽！7.24在厦门拍到了世纪晚霞！！",
+          "engagementSnapshot": "1019",
+          "creatorSnapshot": "野N壮",
+          "dateSnapshot": "5天前",
+          "materialKeywords": ["厦门", "世纪晚霞"],
+          "styleTags": ["地点证据", "时间证据", "强情绪"]
+        },
+        {
+          "sourceTitle": "天空会告诉你答案",
+          "engagementSnapshot": "42",
+          "creatorSnapshot": "听海",
+          "dateSnapshot": "06-05",
+          "materialKeywords": ["天空"],
+          "styleTags": ["情绪隐喻", "短句标题", "治愈感"]
+        }
+      ]
+    }
+  ],
+  "styleLibraryDraft": [
+    {
+      "styleId": "platform-remake-proof",
+      "styleLabel": "同款复刻证明",
+      "platformBias": ["小红书", "抖音"],
+      "bestScenes": ["spicy-seafood"],
+      "pattern": "平台/店名/爆款对象 + 同款/复刻 + 成功结果",
+      "realSignals": ["复刻", "同款", "在家", "七欣天"],
+      "candidateTemplates": ["{reference}同款被复刻出来了", "在家复刻{dish}，香辣到上头"]
+    },
+    {
+      "styleId": "sensory-result",
+      "styleLabel": "感官结果承诺",
+      "platformBias": ["小红书", "抖音"],
+      "bestScenes": ["spicy-seafood"],
+      "pattern": "食材/味型 + 强感官结果",
+      "realSignals": ["香辣", "过瘾", "巨下饭", "舔手指", "停不下来"],
+      "candidateTemplates": ["{dish}香辣到停不下来", "{dish}一口就上头"]
+    },
+    {
+      "styleId": "scene-time-slice",
+      "styleLabel": "时间切片氛围",
+      "platformBias": ["小红书", "抖音"],
+      "bestScenes": ["sunset-glow"],
+      "pattern": "具体时刻/将变未变的瞬间 + 审美判断",
+      "realSignals": ["傍晚", "将黑未黑", "八分钟", "19:33", "最后"],
+      "candidateTemplates": ["{time}的{skyObject}最美", "最后一抹{lightObject}"]
+    },
+    {
+      "styleId": "scenery-method",
+      "styleLabel": "风景方法论",
+      "platformBias": ["小红书"],
+      "bestScenes": ["sunset-glow"],
+      "pattern": "普通人/简单/判断法 + 美景目标",
+      "realSignals": ["方法", "判断法", "普通人", "秒学会", "调色"],
+      "candidateTemplates": ["普通人也能拍出{skyObject}", "{skyObject}判断法，拍之前先看这个"]
+    },
+    {
+      "styleId": "place-proof-wow",
+      "styleLabel": "地点证据惊叹",
+      "platformBias": ["小红书", "抖音"],
+      "bestScenes": ["sunset-glow"],
+      "pattern": "地点/日期 + 稀缺景观 + 强情绪",
+      "realSignals": ["北京", "厦门", "海口", "世纪晚霞", "火烧云"],
+      "candidateTemplates": ["{place}的天空又美疯了", "{date}拍到这片{skyObject}"]
+    }
+  ],
+  "applicationNotes": [
+    "real-002 的标题生成不宜只写食材，应优先匹配“感官结果承诺”或“同款复刻证明”。",
+    "real-003 若强调 AI 封面教程，应优先匹配“风景方法论”；若强调封面大字，应匹配“时间切片氛围”。",
+    "下一步应把 styleLibraryDraft 抽成可被标题生成规则读取的数据源，避免继续在代码中写死单条标题。"
+  ]
+}

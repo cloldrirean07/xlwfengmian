@@ -2443,6 +2443,26 @@ export function renderCards(cardsContainer, cards, selectedCardId) {
         .join("");
       const isSelected = selectedCardId === card.cardId;
       const isPrimary = card.role === "primary";
+      const titleOptions = Array.isArray(card.titleOptionDetails) && card.titleOptionDetails.length
+        ? card.titleOptionDetails
+        : (card.titleOptions || []).map((title) => ({
+            title,
+            sourceLabel: "标题建议",
+            styleLabel: "基础模板",
+          }));
+      const titleOptionRows = titleOptions
+        .map(
+          (option, optionIndex) => `
+            <li>
+              <div>
+                <strong>${escapeHtml(option.title || "待补充")}</strong>
+                <p>${escapeHtml(option.styleLabel || "基础模板")}</p>
+              </div>
+              <span>${escapeHtml(option.sourceLabel || `候选 ${optionIndex + 1}`)}</span>
+            </li>
+          `,
+        )
+        .join("");
 
       return `
         <article class="card ${isPrimary ? "card-primary" : ""} ${isSelected ? "card-selected" : ""}">
@@ -2467,6 +2487,15 @@ export function renderCards(cardsContainer, cards, selectedCardId) {
             <span>建议先试的封面大字</span>
             <strong>${escapeHtml(card.coverCopyMain)}</strong>
             <p>${escapeHtml(card.titleOptions?.[0] || "待补充")}</p>
+          </div>
+          <div class="title-option-panel">
+            <div class="title-option-heading">
+              <span>标题风格来源</span>
+              <strong>${escapeHtml(titleOptions.length)} 条候选</strong>
+            </div>
+            <ol class="title-option-list">
+              ${titleOptionRows || "<li><div><strong>待补充</strong><p>基础模板</p></div><span>候选</span></li>"}
+            </ol>
           </div>
           <div class="card-summary-grid">
             ${topSummary

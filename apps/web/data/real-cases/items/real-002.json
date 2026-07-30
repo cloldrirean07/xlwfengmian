@@ -1,0 +1,40 @@
+{
+  "id": "real-002",
+  "title": "P-02 美食封面制作真实案例",
+  "sourceType": "real",
+  "platform": "抖音",
+  "tracking": {
+    "platformCaseId": "P-02",
+    "obsidianCasePath": "03_方法论与规则库/案例库/平台原生案例/第一批案例/P-02_待补.md"
+  },
+  "contentTopic": "用 AI 工具快速做一张小红书封面，从选方向到改标题的完整流程；素材主题为螃蟹和辣炒鱿鱼美食分享。",
+  "contentGoal": "让用户一眼知道这是一篇 AI 封面制作教程，并愿意点开学习如何快速做出更专业的小红书封面。",
+  "userAssetType": "截图",
+  "assetDescription": "当前素材包含两张美食照片：一张以螃蟹、辣椒、葱段和酱汁为主体，另一张以辣炒鱿鱼、香菜、辣椒和餐桌环境为主体。用户希望基于这些照片快速生成抓人眼球的小红书封面，并配套产出让人愿意继续阅读的标题。",
+  "referencePreference": "小红书美食封面方向，突出食欲、冲击力和清晰标题层级，避免画面信息过散。",
+  "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件线索来自 Finder 预览：IMG_7959.HEIC 与 IMG_7955.HEIC。",
+  "copyReview": {
+    "preferredTitle": "辣炒的味蕾",
+    "titleRationale": "人工判断认为该标题更能抓住美食素材的感官体验，比直接罗列食材更有封面感。"
+  },
+  "operations": {
+    "keyCaseRerunPriority": 8,
+    "maintenanceTags": [
+      "real-case",
+      "formal-write-candidate",
+      "real-002_to_real-003",
+      "input-preparation-gap",
+      "high-priority-candidate"
+    ]
+  },
+  "evidence": {
+    "sourceLink": "",
+    "screenshotPath": "apps/web/data/real-cases/assets/real-002/IMG_7959_finder-preview.png; apps/web/data/real-cases/assets/real-002/IMG_7955_finder-preview.png",
+    "notes": "由 real-002_to_real-003 批次拆分而来。2026-07-30 已根据用户提供的两张 Finder 预览截图补齐 P0 字段，保留原始文件名线索 IMG_7959.HEIC 与 IMG_7955.HEIC。"
+  },
+  "mockUserSelection": {
+    "selectedCardId": "B",
+    "preserveElement": "保留螃蟹、辣炒鱿鱼、红油辣椒和香菜形成的食欲冲击点。",
+    "feedback": "标题需要更直接地呈现美食吸引力，同时让读者理解封面制作流程的学习价值。"
+  }
+}

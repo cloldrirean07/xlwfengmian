@@ -1334,6 +1334,72 @@ button:disabled:hover {
   margin: 10px 0 0;
 }
 
+.title-option-panel {
+  padding: 14px;
+  border: 1px solid rgba(178, 78, 44, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 252, 246, 0.86);
+}
+
+.title-option-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.title-option-heading strong {
+  color: var(--accent-deep);
+  font-size: 12px;
+}
+
+.title-option-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title-option-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.title-option-list strong {
+  display: block;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.title-option-list p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.title-option-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 9px;
+  border-radius: 999px;
+  background: rgba(178, 78, 44, 0.1);
+  color: var(--accent-deep);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .card-summary-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

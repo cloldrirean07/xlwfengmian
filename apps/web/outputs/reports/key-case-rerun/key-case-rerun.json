@@ -1,10 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-07-29 09:36:28",
+    "generatedAt": "2026-07-30 09:01:51",
     "planId": "key-case-rerun-default",
     "description": "规则升级后优先复跑的关键样例清单，用于刷新方向判断、误判样本导出和规则修订任务单。",
     "caseIds": [
       "sample-001",
+      "real-002",
+      "real-003",
       "real-001"
     ],
     "downstreamRefreshTargets": [
@@ -13,10 +15,10 @@
     ]
   },
   "summary": {
-    "plannedCaseCount": 2,
-    "rerunCaseCount": 2,
+    "plannedCaseCount": 4,
+    "rerunCaseCount": 4,
     "sampleCaseCount": 1,
-    "realCaseCount": 1
+    "realCaseCount": 3
   },
   "rows": [
     {
@@ -35,6 +37,36 @@
       "selectedDirectionLabel": "更让人想点开",
       "refinementMappingId": "neg-too-salesy",
       "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/sample-001"
+    },
+    {
+      "caseId": "real-002",
+      "title": "P-02 美食封面制作真实案例",
+      "sourceType": "real",
+      "platform": "抖音",
+      "ruleVersion": "c18a3eda29",
+      "topDirectionLabel": "更有冲击力",
+      "topDirectionType": "强冲突感",
+      "topMatchedSignals": [],
+      "selectedCardId": "B",
+      "selectedDirectionLabel": "更清楚重点",
+      "refinementMappingId": "neg-content-distance",
+      "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-002"
+    },
+    {
+      "caseId": "real-003",
+      "title": "P-03 夏日晚霞封面制作真实案例",
+      "sourceType": "real",
+      "platform": "抖音",
+      "ruleVersion": "c18a3eda29",
+      "topDirectionLabel": "更让人想点开",
+      "topDirectionType": "强悬念感",
+      "topMatchedSignals": [
+        "用户偏好里已有「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」这类抓眼诉求"
+      ],
+      "selectedCardId": "B",
+      "selectedDirectionLabel": "更清楚重点",
+      "refinementMappingId": "neg-content-distance",
+      "outputDir": "/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-003"
     },
     {
       "caseId": "real-001",

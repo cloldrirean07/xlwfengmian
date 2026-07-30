@@ -378,6 +378,91 @@ test("createAnalysisSession returns three cards and extracted fields", () => {
   );
 });
 
+test("createAnalysisSession injects real material keywords into cover copy and titles", () => {
+  const result = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面，从标题到封面的构思选择",
+    contentGoal: "让用户一眼知道这是一篇 AI 封面制作教程",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "三张傍晚图片，画面包含晚霞、云层和落日。",
+    referencePreference: "小红书风景封面方向，突出夏日晚霞的氛围感和标题辨识度。",
+  });
+
+  const copyPool = result.cards
+    .flatMap((card) => [card.coverCopyMain, ...card.titleOptions])
+    .join(" ");
+
+  assert.ok(copyPool.includes("夏日晚霞"));
+  assert.ok(copyPool.includes("落日") || copyPool.includes("云层"));
+  assert.equal(copyPool.includes("夏日晚霞晚霞"), false);
+});
+
+test("createAnalysisSession promotes title style library options from real material keywords", () => {
+  const food = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含螃蟹、辣炒鱿鱼、红油和香菜。",
+    referencePreference: "小红书美食封面方向，突出食欲和冲击力。",
+  });
+  const sunset = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含夏日晚霞、云层和落日。",
+    referencePreference: "小红书风景封面方向，突出氛围感。",
+  });
+
+  const foodTitles = food.cards.flatMap((card) => card.titleOptions);
+  const sunsetTitles = sunset.cards.flatMap((card) => card.titleOptions);
+
+  assert.ok(foodTitles.includes("在家复刻夜市香辣鱿鱼"));
+  assert.ok(foodTitles.includes("香辣蟹新手零失败"));
+  assert.ok(sunsetTitles.includes("AI把晚霞做成封面大片"));
+  assert.ok(sunsetTitles.includes("适合晚霞封面的朋友圈文案"));
+});
+
+test("createAnalysisSession keeps manual preferred title ahead of title style library", () => {
+  const food = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含螃蟹、辣炒鱿鱼、红油和香菜。",
+    referencePreference: "小红书美食封面方向，突出食欲和冲击力。",
+    copyReview: {
+      preferredTitle: "辣炒的味蕾",
+    },
+  });
+
+  assert.equal(food.cards[0].titleOptions[0], "辣炒的味蕾");
+  assert.equal(food.cards[0].titleOptions[1], "在家复刻夜市香辣鱿鱼");
+  assert.equal(food.cards[0].titleOptionDetails[0].sourceLabel, "人工优选");
+  assert.equal(food.cards[0].titleOptionDetails[1].sourceLabel, "风格库");
+  assert.equal(food.cards[0].titleOptionDetails[1].styleLabel, "夜市复刻");
+});
+
+test("renderCards shows title style source labels", () => {
+  const result = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含夏日晚霞、云层和落日。",
+    referencePreference: "小红书风景封面方向，突出氛围感。",
+  });
+  const container = { innerHTML: "" };
+
+  renderCards(container, result.cards, "");
+
+  assert.ok(container.innerHTML.includes("标题风格来源"));
+  assert.ok(container.innerHTML.includes("风格库"));
+  assert.ok(container.innerHTML.includes("AI风景效果"));
+  assert.ok(container.innerHTML.includes("AI把晚霞做成封面大片"));
+});
+
 test("renderCards adds first-round comparison rhythm before card details", () => {
   const result = createAnalysisSession({
     contentTopic: "为什么你总觉得自己很忙但没结果",

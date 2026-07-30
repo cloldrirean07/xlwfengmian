@@ -1,0 +1,233 @@
+{
+  "version": "0.3",
+  "collectedAt": "2026-07-30T16:30:00+08:00",
+  "extends": "apps/web/data/title-library/collected-samples.v0.2.json",
+  "collectionMethod": {
+    "source": "Safari logged-in Douyin web page",
+    "mode": "read-only visible search results",
+    "note": "第三批采样在抖音登录态恢复后补采 v0.2 中受限的两组查询。"
+  },
+  "queries": [
+    {
+      "platform": "抖音",
+      "query": "香辣蟹 鱿鱼 家常菜",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "sourceUrl": "https://www.douyin.com/search/香辣蟹%20鱿鱼%20家常菜?type=general",
+      "samples": [
+        {
+          "sourceTitle": "几只梭子蟹一只鱿鱼，做个香辣鱿鱼蟹，又麻又辣巴适得板",
+          "engagementSnapshot": "5.2万",
+          "creatorSnapshot": "小弟萝卜呀",
+          "dateSnapshot": "2023年9月9日",
+          "materialKeywords": ["梭子蟹", "鱿鱼", "香辣鱿鱼蟹", "麻辣"],
+          "styleTags": ["食材组合", "感官刺激", "地域口语"]
+        },
+        {
+          "sourceTitle": "香辣蟹创新，加鸡爪加鱿鱼！",
+          "engagementSnapshot": "546",
+          "creatorSnapshot": "千江味业-唐门餐饮",
+          "dateSnapshot": "6月23日",
+          "materialKeywords": ["香辣蟹", "鸡爪", "鱿鱼", "创新"],
+          "styleTags": ["食材加法", "创新卖点", "短句标题"]
+        },
+        {
+          "sourceTitle": "在家封神！挑战复刻七某天！！！",
+          "engagementSnapshot": "1404",
+          "creatorSnapshot": "来財姐妹的厨房日记",
+          "dateSnapshot": "1月16日",
+          "materialKeywords": ["在家", "复刻", "香辣蟹做法", "海鲜火锅"],
+          "styleTags": ["同款复刻", "强情绪", "成本对比"]
+        },
+        {
+          "sourceTitle": "好吃到舔手指的香辣蟹！香香辣辣超过瘾",
+          "engagementSnapshot": "8.7万",
+          "creatorSnapshot": "食堂大叔不讲李",
+          "dateSnapshot": "2023年11月8日",
+          "materialKeywords": ["香辣蟹", "年糕", "过瘾"],
+          "styleTags": ["感官结果", "强口语", "高互动样本"]
+        },
+        {
+          "sourceTitle": "目前最全的一饭封神香辣蟹做法",
+          "engagementSnapshot": "4718",
+          "creatorSnapshot": "阿晨吃饱了",
+          "dateSnapshot": "2025年9月23日",
+          "materialKeywords": ["香辣蟹做法", "梭子蟹", "一饭封神"],
+          "styleTags": ["教程完整性", "封神表达", "方法承诺"]
+        },
+        {
+          "sourceTitle": "厨师长教你：香辣鱿鱼须的家常做法，脆嫩弹牙，香辣够味",
+          "engagementSnapshot": "9523",
+          "creatorSnapshot": "美食作家王刚",
+          "dateSnapshot": "2025年3月19日",
+          "materialKeywords": ["香辣鱿鱼须", "家常做法", "脆嫩弹牙"],
+          "styleTags": ["权威教学", "口感描述", "家常教程"]
+        },
+        {
+          "sourceTitle": "开海季，螃蟹和鱿鱼的碰撞，好吃好吃",
+          "engagementSnapshot": "4",
+          "creatorSnapshot": "顶住",
+          "dateSnapshot": "2022年8月20日",
+          "materialKeywords": ["开海季", "螃蟹", "鱿鱼"],
+          "styleTags": ["季节场景", "食材碰撞", "生活表达"]
+        },
+        {
+          "sourceTitle": "复刻酒店招牌香辣蟹！记住“拍粉、三煎、啤酒烧”，新手零失败",
+          "engagementSnapshot": "3512",
+          "creatorSnapshot": "方芳教做菜",
+          "dateSnapshot": "2025年12月15日",
+          "materialKeywords": ["酒店招牌", "香辣蟹", "啤酒烧", "新手零失败"],
+          "styleTags": ["招牌复刻", "步骤口诀", "低门槛教程"]
+        },
+        {
+          "sourceTitle": "香辣蟹做法简单 一学就会，香辣过瘾 好吃到连壳都不剩",
+          "engagementSnapshot": "13.4万",
+          "creatorSnapshot": "程小程",
+          "dateSnapshot": "2024年9月13日",
+          "materialKeywords": ["香辣蟹", "做法简单", "一学就会"],
+          "styleTags": ["低门槛教程", "感官结果", "高互动样本"]
+        }
+      ]
+    },
+    {
+      "platform": "抖音",
+      "query": "晚霞 文案 火烧云",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "sourceUrl": "https://www.douyin.com/search/晚霞%20文案%20火烧云?type=general",
+      "samples": [
+        {
+          "sourceTitle": "描写晚霞的绝美温柔文案",
+          "engagementSnapshot": "3.7万",
+          "creatorSnapshot": "田园橘子",
+          "dateSnapshot": "2023年9月7日",
+          "materialKeywords": ["晚霞", "文案", "日落", "人间黄昏"],
+          "styleTags": ["文案合集", "温柔表达", "高互动样本"]
+        },
+        {
+          "sourceTitle": "想要一个全是今晚日落的评论区",
+          "engagementSnapshot": "745",
+          "creatorSnapshot": "Zora • Lumi",
+          "dateSnapshot": "2025年8月16日",
+          "materialKeywords": ["今晚日落", "评论区", "火烧云"],
+          "styleTags": ["互动提问", "共创评论", "情绪共鸣"]
+        },
+        {
+          "sourceTitle": "火烧云是天空最美的文案",
+          "engagementSnapshot": "246",
+          "creatorSnapshot": "竹花凌",
+          "dateSnapshot": "2024年8月15日",
+          "materialKeywords": ["火烧云", "天空", "文案"],
+          "styleTags": ["诗意判断", "短句标题", "视觉隐喻"]
+        },
+        {
+          "sourceTitle": "文人关于日落的高级绝美金句",
+          "engagementSnapshot": "2326",
+          "creatorSnapshot": "Miss Z的布克",
+          "dateSnapshot": "2023年9月21日",
+          "materialKeywords": ["日落", "高级金句", "读书笔记"],
+          "styleTags": ["高级感", "金句合集", "内容收藏"]
+        },
+        {
+          "sourceTitle": "日落的八分钟是一天的布洛芬",
+          "engagementSnapshot": "1.7万",
+          "creatorSnapshot": "小狗日记",
+          "dateSnapshot": "2025年6月16日",
+          "materialKeywords": ["日落", "八分钟", "布洛芬"],
+          "styleTags": ["情绪疗愈", "时间切片", "高互动样本"]
+        },
+        {
+          "sourceTitle": "暮色里的那抹橙红",
+          "engagementSnapshot": "7633",
+          "creatorSnapshot": "XJang",
+          "dateSnapshot": "2025年8月21日",
+          "materialKeywords": ["暮色", "橙红", "火烧云"],
+          "styleTags": ["颜色命名", "电影感", "氛围表达"]
+        },
+        {
+          "sourceTitle": "在世纪晚霞这天，我们应当同频共振",
+          "engagementSnapshot": "202",
+          "creatorSnapshot": "Lighters",
+          "dateSnapshot": "2025年7月24日",
+          "materialKeywords": ["世纪晚霞", "同频共振", "火烧云"],
+          "styleTags": ["稀缺景观", "共时感", "情绪表达"]
+        },
+        {
+          "sourceTitle": "适合黄昏晚霞发朋友圈的绝美文案短句",
+          "engagementSnapshot": "2451",
+          "creatorSnapshot": "悬戊先生",
+          "dateSnapshot": "2022年7月13日",
+          "materialKeywords": ["黄昏", "晚霞", "朋友圈文案"],
+          "styleTags": ["文案合集", "发布场景", "收藏价值"]
+        },
+        {
+          "sourceTitle": "适合日落朋友圈发的文案",
+          "engagementSnapshot": "5069",
+          "creatorSnapshot": "休息文案馆",
+          "dateSnapshot": "2024年12月5日",
+          "materialKeywords": ["日落", "朋友圈", "文案"],
+          "styleTags": ["文案合集", "发布场景", "高互动样本"]
+        },
+        {
+          "sourceTitle": "如果你也刚好抬头",
+          "engagementSnapshot": "3660",
+          "creatorSnapshot": "Yik文案馆",
+          "dateSnapshot": "2024年8月14日",
+          "materialKeywords": ["抬头", "晚霞", "日落"],
+          "styleTags": ["共时感", "情绪短句", "氛围表达"]
+        }
+      ],
+      "platformAiSummarySignals": [
+        "浪漫抒情版",
+        "生活日常版",
+        "趣味脑洞版",
+        "简约短句版",
+        "文艺诗句版"
+      ],
+      "platformAiSummaryNote": "抖音搜索页出现 AI 智能总结，本文件仅将其作为风格分类参考，不并入用户内容标题样本。"
+    }
+  ],
+  "newStyleSignals": [
+    {
+      "styleId": "authority-recipe",
+      "styleLabel": "权威教学",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "pattern": "厨师长/教做菜 + 家常做法 + 口感结果",
+      "signals": ["厨师长教你", "家常做法", "脆嫩弹牙", "香辣够味"],
+      "candidateTemplates": ["厨师长教你做{dish}", "{dish}家常做法，{textureResult}"]
+    },
+    {
+      "styleId": "step-mantra",
+      "styleLabel": "步骤口诀",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "pattern": "记住几个关键步骤 + 新手零失败",
+      "signals": ["拍粉", "三煎", "啤酒烧", "新手零失败"],
+      "candidateTemplates": ["记住这几步，{dish}新手也能做", "{dish}口诀：{stepMantra}"]
+    },
+    {
+      "styleId": "copy-collection",
+      "styleLabel": "文案合集",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "pattern": "适合发布场景 + 晚霞/日落 + 文案短句",
+      "signals": ["朋友圈", "文案", "绝美", "温柔", "金句"],
+      "candidateTemplates": ["适合{publishScene}的{skyObject}封面文案", "{skyObject}文案，发出去就有氛围"]
+    },
+    {
+      "styleId": "comment-area-hook",
+      "styleLabel": "评论区互动",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "pattern": "想要/如果 + 评论区/抬头/同频 + 共同观看",
+      "signals": ["评论区", "如果你也刚好抬头", "同频共振"],
+      "candidateTemplates": ["想要一个全是{skyObject}的评论区", "如果此刻也抬头看{skyObject}"]
+    }
+  ],
+  "applicationNotes": [
+    "real-002 的标题库应补充“权威教学”和“步骤口诀”，这比单纯情绪短句更适合教程型封面。",
+    "real-003 的标题库应区分用户标题与平台 AI 总结，AI 总结可作为风格分类参考，但不能当作真实用户标题样本。",
+    "抖音登录态恢复后，v0.2 中受限的两组查询已补采完成。"
+  ]
+}

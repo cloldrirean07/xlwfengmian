@@ -4,5 +4,17 @@
     "platformCaseId": "P-01",
     "file": "items/real-001.json",
     "status": "draft"
+  },
+  {
+    "id": "real-002",
+    "platformCaseId": "P-02",
+    "file": "items/real-002.json",
+    "status": "draft"
+  },
+  {
+    "id": "real-003",
+    "platformCaseId": "P-03",
+    "file": "items/real-003.json",
+    "status": "draft"
   }
 ]

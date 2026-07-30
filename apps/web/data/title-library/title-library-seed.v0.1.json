@@ -1,0 +1,95 @@
+{
+  "version": "0.1",
+  "updatedAt": "2026-07-30T15:34:00+08:00",
+  "scope": {
+    "platforms": ["小红书", "抖音"],
+    "purpose": "为 AI 封面创意助手沉淀标题风格库，支持真实素材到封面标题的风格化转译。",
+    "collectionStatus": "douyin-login-recovered-samples-collected",
+    "limitation": "v0.1-v0.3 已通过 Safari 已登录页面完成三批可见搜索结果采样；当前样本仍是首屏可见结果，不代表全站热门榜单。"
+  },
+  "taxonomy": [
+    {
+      "categoryId": "food-sharing",
+      "categoryLabel": "美食分享",
+      "scenes": [
+        {
+          "sceneId": "spicy-seafood",
+          "sceneLabel": "辣味海鲜",
+          "materialKeywords": ["辣炒鱿鱼", "螃蟹", "红油", "香菜", "辣椒"],
+          "titleStyles": [
+            {
+              "styleId": "sensory-short",
+              "styleLabel": "感官短句",
+              "pattern": "把味觉感受压缩成 4-8 字封面标题。",
+              "seedTitles": ["辣炒的味蕾"],
+              "suitableFor": ["封面大字", "首位标题建议"],
+              "risk": "过短时需要配图足够强，否则信息不完整。"
+            },
+            {
+              "styleId": "contrast-hook",
+              "styleLabel": "反差钩子",
+              "pattern": "用味道、做法或食材反差制造停顿。",
+              "seedTitles": ["一口就上头", "辣到停不下"],
+              "suitableFor": ["第二标题建议", "冲击力方向"],
+              "risk": "避免夸张到像低质营销。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": "travel-scenery",
+      "categoryLabel": "旅游美景",
+      "scenes": [
+        {
+          "sceneId": "sunset-glow",
+          "sceneLabel": "落日晚霞",
+          "materialKeywords": ["夏日晚霞", "晚霞", "云层", "落日", "霞光"],
+          "titleStyles": [
+            {
+              "styleId": "atmosphere-short",
+              "styleLabel": "氛围短句",
+              "pattern": "把时间感、光线和情绪压缩成 4-8 字封面标题。",
+              "seedTitles": ["最后一抹霞光"],
+              "suitableFor": ["封面大字", "首位标题建议"],
+              "risk": "只保留氛围时，可能弱化教程属性。"
+            },
+            {
+              "styleId": "curiosity-scene",
+              "styleLabel": "场景悬念",
+              "pattern": "用未说满的风景瞬间制造点开理由。",
+              "seedTitles": ["这片晚霞差点错过", "傍晚最美的一分钟"],
+              "suitableFor": ["想点开方向", "第二标题建议"],
+              "risk": "悬念不能脱离真实画面。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "collectionSchema": {
+    "requiredFields": [
+      "platform",
+      "categoryLabel",
+      "sceneLabel",
+      "sourceUrl",
+      "sourceTitle",
+      "engagementSnapshot",
+      "coverText",
+      "materialKeywords",
+      "titleStyleLabel",
+      "manualNotes"
+    ],
+    "engagementSnapshotFields": ["likeCount", "commentCount", "shareCount", "favoriteCount", "collectedAt"]
+  },
+  "nextCollectionQueries": [
+    {
+      "platform": "小红书",
+      "queries": ["辣炒鱿鱼", "螃蟹 美食 分享", "晚霞", "落日 晚霞", "夏日晚霞"]
+    },
+    {
+      "platform": "抖音",
+      "queries": ["辣炒鱿鱼", "螃蟹 美食", "晚霞", "落日", "夏日晚霞"]
+    }
+  ]
+}

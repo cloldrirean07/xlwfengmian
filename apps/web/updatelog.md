@@ -1,5 +1,186 @@
 # 更新日志
 
+## 2026-07-30 17:02
+
+- 更新文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)
+  - 新增 `buildMaterialAwareTitleOptionDetails`，为每条标题候选补充来源类型、来源标签和风格标签。
+  - 保留 `buildMaterialAwareTitleOptions` 字符串数组输出，兼容既有脚本、报告和二轮链路。
+- 更新文件：[src/domain/cards/buildFirstRoundCards.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildFirstRoundCards.js)
+  - 首轮方向卡新增 `titleOptionDetails`，让前端能展示标题来源。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 首轮方向卡新增“标题风格来源”面板，展示每条候选标题的来源和风格。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 新增标题来源面板样式，保持卡片内信息密度与移动端可读性。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 增加标题来源数据和前端可见文案测试。
+- 新增文件：[docs/operations/2026-07-30_标题风格来源标签前端露出闭环记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_标题风格来源标签前端露出闭环记录.md)
+  - 记录标题来源标签的实现范围、复跑结果和下一步标题选择回流建议。
+
+## 2026-07-30 16:48
+
+- 新增文件：[src/domain/copy/titleStyleLibrary.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/titleStyleLibrary.js)
+  - 建立标题风格库 v0.2，将小红书/抖音标题样本抽象为夜市复刻、低门槛教程、权威教学、手机调色证明、AI 风景效果、文案合集、评论区互动等风格。
+  - 按素材关键词、内容主题、内容目标匹配标题候选，避免继续写死单条标题。
+- 新增文件：[data/title-library/title-style-library.v0.2.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/title-library/title-style-library.v0.2.json)
+  - 记录标题风格库的数据结构、触发词、候选标题与样本来源。
+- 更新文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)
+  - 接入标题风格库，标题建议按“人工优选标题、风格库候选、情绪标题种子、素材词兜底”排序。
+  - 补充香辣蟹、香辣鱿鱼、火烧云、霞光、朋友圈文案、调色、AI 等真实素材关键词。
+- 更新文件：[src/domain/analysis/extractInputFields.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/analysis/extractInputFields.js)
+  - 补齐 `copyReview` 字段透传，使人工优选标题能进入生成链路。
+- 更新文件：[src/domain/cards/buildFirstRoundCards.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildFirstRoundCards.js)
+  - 首轮标题建议扩展为 3 条，支持多风格候选露出。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 增加标题风格库命中测试与人工优选标题优先级测试。
+- 新增文件：[docs/operations/2026-07-30_标题风格库v0.2接入生成规则记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_标题风格库v0.2接入生成规则记录.md)
+  - 记录本轮实现范围、real-002 / real-003 复跑观察、验证结果和下一步建议。
+
+## 2026-07-30 16:30
+
+- 新增文件：[data/title-library/collected-samples.v0.3.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/title-library/collected-samples.v0.3.json)
+  - 在抖音登录态恢复后，补采 `v0.2` 中受限的两组抖音查询。
+  - 新增抖音“香辣蟹 鱿鱼 家常菜”和“晚霞 文案 火烧云”两组有效用户标题样本。
+  - 将抖音搜索页 AI 总结单独记录为风格分类参考，不混入真实用户标题样本。
+  - 新增权威教学、步骤口诀、文案合集、评论区互动四类标题信号。
+- 新增文件：[docs/research/2026-07-30_抖音登录后标题样本补采记录_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/research/2026-07-30_抖音登录后标题样本补采记录_v0.1.md)
+  - 记录抖音登录态恢复、补采范围、关键发现和下一步接入建议。
+- 更新文件：[data/title-library/title-library-seed.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/title-library/title-library-seed.v0.1.json)
+  - 将标题库状态更新为“抖音登录后补采完成”。
+
+## 2026-07-30 16:15
+
+- 新增文件：[data/title-library/collected-samples.v0.2.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/title-library/collected-samples.v0.2.json)
+  - 继续通过 Safari 已登录页面只读采集标题样本。
+  - 新增小红书“香辣蟹 鱿鱼 复刻”和“晚霞 文案 火烧云 调色”两组有效样本。
+  - 记录抖音第二批搜索受限情况，避免误判为空样本。
+  - 抽象夜市复刻、低门槛教程、手机调色证明、AI 风景效果、诗意文案合集五类新增标题信号。
+- 新增文件：[docs/research/2026-07-30_小红书抖音标题样本第二批采集记录_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/research/2026-07-30_小红书抖音标题样本第二批采集记录_v0.1.md)
+  - 记录第二批采集范围、平台限制、样本风格和对标题生成规则的影响。
+- 更新文件：[data/title-library/title-library-seed.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/title-library/title-library-seed.v0.1.json)
+  - 将标题库状态更新为“两批可见样本已采集”。
+
+## 2026-07-30 15:57
+
+- 新增文件：[data/title-library/collected-samples.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/title-library/collected-samples.v0.1.json)
+  - 通过 Safari 已登录页面只读采集小红书与抖音首批标题样本。
+  - 覆盖 `real-002` 辣味海鲜和 `real-003` 夏日晚霞两个真实案例场景。
+  - 初步抽象“同款复刻证明、感官结果承诺、时间切片氛围、风景方法论、地点证据惊叹”五类标题风格。
+- 新增文件：[docs/research/2026-07-30_小红书抖音标题样本首批采集记录_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/research/2026-07-30_小红书抖音标题样本首批采集记录_v0.1.md)
+  - 记录采集范围、样本结论、对 real-002 / real-003 的产品意义和下一步建议。
+- 更新文件：[data/title-library/title-library-seed.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/title-library/title-library-seed.v0.1.json)
+  - 将标题库状态从“种子结构”更新为“首批可见样本已采集”。
+  - 明确当前样本是搜索结果首屏采样，不代表全站热门榜单。
+
+## 2026-07-30 15:34
+
+- 新增文件：[data/title-library/title-library-seed.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/title-library/title-library-seed.v0.1.json)
+  - 建立标题风格库 v0.1 种子结构。
+  - 覆盖小红书/抖音两个目标平台、美食分享和旅游美景两个首批分类。
+  - 记录辣味海鲜、落日晚霞两个细分场景，以及感官短句、氛围短句、反差钩子、场景悬念等标题风格。
+- 新增文件：[docs/research/2026-07-30_小红书抖音标题库采集分类计划_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/research/2026-07-30_小红书抖音标题库采集分类计划_v0.1.md)
+  - 记录标题库采集目标、分类结构、采集字段、第一批关键词和后续执行方式。
+  - 明确当前环境暂不能直接读取小红书/抖音站内热门详情，先建立可复用采集结构。
+
+## 2026-07-30 15:23
+
+- 更新文件：[data/real-cases/items/real-002.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/items/real-002.json)
+  - 新增 `copyReview.preferredTitle`，记录人工优选标题“辣炒的味蕾”。
+  - 补充人工标题判断理由，用作后续标题规则样例标准。
+- 更新文件：[data/real-cases/items/real-003.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/items/real-003.json)
+  - 新增 `copyReview.preferredTitle`，记录人工优选标题“最后一抹霞光”。
+  - 补充人工标题判断理由，用作后续标题规则样例标准。
+- 更新文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)
+  - 新增情绪标题种子规则，将美食素材转译为“辣炒的味蕾”，将晚霞素材转译为“最后一抹霞光”。
+  - 新增 `buildMaterialAwareTitleOptions`，让标题建议按“情绪标题优先、关键词标题兜底”输出。
+- 更新文件：[src/domain/cards/buildFirstRoundCards.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildFirstRoundCards.js)
+  - 首轮标题建议改用素材感知标题选项。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 增加情绪标题种子测试，覆盖“辣炒的味蕾”和“最后一抹霞光”。
+- 新增文件：[docs/operations/2026-07-30_人工优选标题接入情绪标题规则记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_人工优选标题接入情绪标题规则记录.md)
+  - 记录本轮问题来源、实现范围、样例效果和验证结果。
+
+## 2026-07-30 15:12
+
+- 新增文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)
+  - 新增真实素材关键词抽取、包含关系去重和标题/封面大字注入逻辑。
+  - 将“用 AI 工具快速做一张...”类泛化主题替换为更具体的素材焦点。
+- 更新文件：[src/domain/cards/buildFirstRoundCards.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildFirstRoundCards.js)
+  - 首轮封面大字与标题建议接入素材关键词注入。
+  - 卡片结果新增 `materialKeywords`，便于后续案例复盘观察。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 增加真实素材关键词注入测试，覆盖夏日晚霞案例和重复关键词去重。
+- 更新文件：[outputs/case-runs/real-002/summary.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-002/summary.md)
+  - 复跑后标题与封面大字注入“辣炒鱿鱼、螃蟹、香菜”等真实素材词。
+- 更新文件：[outputs/case-runs/real-003/summary.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-003/summary.md)
+  - 复跑后标题与封面大字注入“夏日晚霞、云层、落日”等真实素材词。
+- 新增文件：[docs/operations/2026-07-30_真实素材关键词注入标题建议记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_真实素材关键词注入标题建议记录.md)
+  - 记录本轮问题来源、实现范围、样例效果和验证结果。
+
+## 2026-07-30 15:02
+
+- 新增文件：[docs/operations/2026-07-30_real-002_real-003人工判断记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_real-002_real-003人工判断记录.md)
+  - 对 `real-002` 美食案例和 `real-003` 夏日晚霞案例做人工方向判断。
+  - 判断结论：两条案例首轮方向基本成立，暂不进入方向规则修订。
+  - 识别下一段产品优化重点：标题与封面大字需要注入真实素材关键词，减少泛化模板感。
+
+## 2026-07-30 14:53
+
+- 更新文件：[data/real-cases/items/real-003.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/items/real-003.json)
+  - 根据用户提供的三张夏日晚霞素材，补齐 `real-003` 的 P0 字段：来源截图路径、内容主题、素材描述、内容目标。
+  - 将案例标题从待补占位更新为“P-03 夏日晚霞封面制作真实案例”。
+  - 补充小红书风景封面方向、夏日晚霞氛围感和标题优化反馈，保持案例可复跑、可对比。
+- 新增文件：[data/real-cases/assets/real-003/IMG_0486.HEIC](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/assets/real-003/IMG_0486.HEIC)
+  - 固化第一张夏日晚霞素材作为 `real-003` 的来源证据。
+- 新增文件：[data/real-cases/assets/real-003/IMG_0487.HEIC](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/assets/real-003/IMG_0487.HEIC)
+  - 固化第二张夏日晚霞素材作为 `real-003` 的来源证据。
+- 新增文件：[data/real-cases/assets/real-003/IMG_0488.HEIC](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/assets/real-003/IMG_0488.HEIC)
+  - 固化第三张夏日晚霞素材作为 `real-003` 的来源证据。
+
+## 2026-07-30 11:52
+
+- 更新文件：[data/real-cases/items/real-002.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/items/real-002.json)
+  - 根据用户提供的两张美食素材预览截图，补齐 `real-002` 的 P0 字段：来源截图路径、内容主题、素材描述、内容目标。
+  - 将案例标题从待补占位更新为“P-02 美食封面制作真实案例”。
+  - 补充小红书美食封面方向、食欲冲击点和标题优化反馈，保持案例可复跑、可对比。
+- 新增文件：[data/real-cases/assets/real-002/IMG_7959_finder-preview.png](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/assets/real-002/IMG_7959_finder-preview.png)
+  - 固化 `IMG_7959.HEIC` 的 Finder 预览截图作为 `real-002` 的来源证据。
+- 新增文件：[data/real-cases/assets/real-002/IMG_7955_finder-preview.png](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/assets/real-002/IMG_7955_finder-preview.png)
+  - 固化 `IMG_7955.HEIC` 的 Finder 预览截图作为 `real-002` 的来源证据。
+
+## 2026-07-30 10:37
+
+- 更新文件：[data/real-cases/index.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/index.json)
+  - 将 `real-002` 与 `real-003` 加入真实案例索引。
+- 新增文件：[data/real-cases/items/real-002.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/items/real-002.json)
+  - 从 `real-002_to_real-003` 批次拆出 P-02 真实案例占位样例。
+  - 保留待补状态，标记正式写回候选批次、输入准备缺口和关键复跑优先级。
+- 新增文件：[data/real-cases/items/real-003.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/items/real-003.json)
+  - 从 `real-002_to_real-003` 批次拆出 P-03 真实案例占位样例。
+  - 保留待补状态，标记正式写回候选批次、输入准备缺口和关键复跑优先级。
+- 更新文件：[data/operations/key-case-rerun-plan.generated.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/operations/key-case-rerun-plan.generated.json)
+  - 重新生成关键样例复跑计划，复跑样例扩展为 `sample-001 / real-002 / real-003 / real-001`。
+- 新增文件：[outputs/case-runs/real-002/result.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-002/result.json)
+  - 生成 `real-002` 的规则运行结果。
+- 新增文件：[outputs/case-runs/real-002/summary.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-002/summary.md)
+  - 生成 `real-002` 的规则运行摘要。
+- 新增文件：[outputs/case-runs/real-003/result.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-003/result.json)
+  - 生成 `real-003` 的规则运行结果。
+- 新增文件：[outputs/case-runs/real-003/summary.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-003/summary.md)
+  - 生成 `real-003` 的规则运行摘要。
+- 更新文件：[outputs/reports/key-case-rerun/key-case-rerun.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/reports/key-case-rerun/key-case-rerun.json)
+  - 复跑样例数更新为 4，真实样例数更新为 3。
+- 更新文件：[outputs/reports/key-case-rerun/key-case-rerun-diff.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/reports/key-case-rerun/key-case-rerun-diff.json)
+  - 记录 `real-002` 与 `real-003` 首次进入复跑后的新增基线差异。
+- 更新文件：[outputs/reports/real-case-readiness/real-case-readiness.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/reports/real-case-readiness/real-case-readiness.json)
+  - 真实案例总数更新为 3，当前均为待回填。
+- 更新文件：[outputs/reports/real-case-maintenance-board/real-case-maintenance-board.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/reports/real-case-maintenance-board/real-case-maintenance-board.json)
+  - 维护看板纳入 `real-002` 与 `real-003`。
+- 更新文件：[src/application/runPlatformCaseBatchReview.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/application/runPlatformCaseBatchReview.js)
+  - 平台案例批量复盘支持真实案例已建档但平台原生笔记未创建的状态。
+  - 缺失平台笔记时返回 P0 待补项，不再中断整批复盘。
+- 新增文件：[docs/operations/2026-07-30_real-002_to_real-003拆分为可执行真实样例记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_real-002_to_real-003拆分为可执行真实样例记录.md)
+  - 记录批次拆分依据、执行命令、复跑结果和后续补数建议。
+
 ## 2026-07-29 17:38
 
 - 更新文件：[src/domain/cases/buildKeyCaseRerunPlan.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cases/buildKeyCaseRerunPlan.js)

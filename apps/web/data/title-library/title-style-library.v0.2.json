@@ -1,0 +1,67 @@
+{
+  "version": "0.2",
+  "updatedAt": "2026-07-30T16:45:00+08:00",
+  "sourceSampleFiles": [
+    "apps/web/data/title-library/collected-samples.v0.1.json",
+    "apps/web/data/title-library/collected-samples.v0.2.json",
+    "apps/web/data/title-library/collected-samples.v0.3.json"
+  ],
+  "styles": [
+    {
+      "styleId": "night-market-remake",
+      "styleLabel": "夜市复刻",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "signals": ["夜市风味", "饭店味道", "同款", "复刻"],
+      "exampleTitles": ["在家复刻夜市香辣鱿鱼", "香辣蟹做出饭店味道"]
+    },
+    {
+      "styleId": "low-barrier-recipe",
+      "styleLabel": "低门槛教程",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "signals": ["零失败", "做法简单", "一学就会", "新手"],
+      "exampleTitles": ["香辣蟹新手零失败", "香辣鱿鱼一学就会"]
+    },
+    {
+      "styleId": "authority-recipe",
+      "styleLabel": "权威教学",
+      "categoryId": "food-sharing",
+      "sceneId": "spicy-seafood",
+      "signals": ["厨师长教你", "家常做法", "步骤口诀"],
+      "exampleTitles": ["厨师长教你做香辣鱿鱼", "记住这几步，香辣蟹也能做"]
+    },
+    {
+      "styleId": "phone-editing-proof",
+      "styleLabel": "手机调色证明",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "signals": ["iPhone调色", "苹果相册", "调色参数", "一键还原"],
+      "exampleTitles": ["手机调出火烧云氛围感", "一键还原落日余晖感"]
+    },
+    {
+      "styleId": "ai-scenery-result",
+      "styleLabel": "AI风景效果",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "signals": ["AI", "摄影小白", "封面", "火烧云自由"],
+      "exampleTitles": ["AI帮摄影小白做出火烧云封面", "AI把晚霞做成封面大片"]
+    },
+    {
+      "styleId": "copy-collection",
+      "styleLabel": "文案合集",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "signals": ["朋友圈", "文案", "绝美", "温柔", "金句"],
+      "exampleTitles": ["适合晚霞封面的朋友圈文案", "把黄昏写进封面"]
+    },
+    {
+      "styleId": "comment-area-hook",
+      "styleLabel": "评论区互动",
+      "categoryId": "travel-scenery",
+      "sceneId": "sunset-glow",
+      "signals": ["评论区", "抬头", "同频共振"],
+      "exampleTitles": ["想要一个全是晚霞的评论区"]
+    }
+  ]
+}
