@@ -1,5 +1,32 @@
 # 更新日志
 
+## 2026-07-29 17:38
+
+- 更新文件：[src/domain/cases/buildKeyCaseRerunPlan.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cases/buildKeyCaseRerunPlan.js)
+  - 关键样例复跑计划新增 `formalWriteCandidateBatches`，把正式写回后的批次候选与可执行样例分开记录。
+  - 从正式写回记录中提取 `real-002_to_real-003`，避免把批次误当成可执行 caseId。
+- 更新文件：[scripts/generate-key-case-rerun-plan.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/scripts/generate-key-case-rerun-plan.js)
+  - 生成复跑计划时读取正式写回元数据，并输出候选批次摘要。
+- 更新文件：[src/domain/cases/buildGeneratedKeyCaseRerunPlanMarkdown.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cases/buildGeneratedKeyCaseRerunPlanMarkdown.js)
+  - Markdown 增加“正式写回候选批次”段落。
+- 更新文件：[src/domain/review/buildFormalWriteFollowUpPlan.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/review/buildFormalWriteFollowUpPlan.js)
+  - 承接计划展示正式写回候选批次。
+  - 修正复跑完成数读取字段，使用 `rerunCaseCount` 显示实际复跑数量。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 正式写回后承接计划面板新增写回批次数与批次标签展示。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 增加候选批次与复跑完成数断言。
+- 更新文件：[data/operations/key-case-rerun-plan.generated.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/operations/key-case-rerun-plan.generated.json)
+  - 重新生成关键样例复跑计划，候选批次包含 `real-002_to_real-003`。
+- 更新文件：[outputs/reports/key-case-rerun/key-case-rerun-plan.generated.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/reports/key-case-rerun/key-case-rerun-plan.generated.md)
+  - 重新生成关键样例复跑计划 Markdown。
+- 更新文件：[outputs/reports/key-case-rerun/key-case-rerun.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/reports/key-case-rerun/key-case-rerun.json)
+  - 完成 `sample-001` 与 `real-001` 复跑记录。
+- 更新文件：[outputs/reports/key-case-rerun/key-case-rerun-diff.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/reports/key-case-rerun/key-case-rerun-diff.json)
+  - 记录 2 个样例复跑后无差异。
+- 新增文件：[docs/operations/2026-07-29_正式写回候选批次接入关键样例复跑计划记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-29_正式写回候选批次接入关键样例复跑计划记录.md)
+  - 记录本轮候选批次接入范围、命令链和验收结果。
+
 ## 2026-07-29 16:47
 
 - 新增文件：[src/domain/review/buildFormalWriteFollowUpPlan.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/review/buildFormalWriteFollowUpPlan.js)

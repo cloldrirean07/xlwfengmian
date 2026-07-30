@@ -65,7 +65,9 @@ function buildKeyCaseRerunSection({
     (item) => item.taskType === "key-case-rerun",
   );
   const plannedCaseIds = keyCaseRerunPlan?.caseIds || keyCaseRerunReport?.plan?.caseIds || [];
-  const completedCaseCount = keyCaseRerunReport?.summary?.caseCount ??
+  const formalWriteCandidateBatches = keyCaseRerunPlan?.formalWriteCandidateBatches || [];
+  const completedCaseCount = keyCaseRerunReport?.summary?.rerunCaseCount ??
+    keyCaseRerunReport?.summary?.caseCount ??
     keyCaseRerunReport?.results?.length ??
     0;
   const changedCaseCount = keyCaseRerunDiff?.summary?.changedCaseCount ??
@@ -85,6 +87,7 @@ function buildKeyCaseRerunSection({
       ? {
           planId: keyCaseRerunPlan.planId || "",
           caseIds: plannedCaseIds,
+          formalWriteCandidateBatches,
           downstreamRefreshTargets: keyCaseRerunPlan.downstreamRefreshTargets || [],
         }
       : null,
@@ -218,6 +221,11 @@ export function buildFormalWriteFollowUpPlanMarkdown(plan) {
     lines.push(
       `- 计划 ID：${plan.sections.keyCaseRerun.plan.planId || "暂无"}`,
       `- 候选案例：${plan.sections.keyCaseRerun.plan.caseIds.join(" / ") || "暂无"}`,
+      `- 正式写回候选批次：${
+        plan.sections.keyCaseRerun.plan.formalWriteCandidateBatches
+          ?.map((item) => item.batchLabel)
+          .join(" / ") || "暂无"
+      }`,
       `- 下游刷新：${plan.sections.keyCaseRerun.plan.downstreamRefreshTargets.join(" / ") || "暂无"}`,
     );
   }

@@ -30,9 +30,10 @@
 - 命令：npm run generate:key-case-rerun-plan
 - 计划 ID：key-case-rerun-default
 - 候选案例：sample-001 / real-001
+- 正式写回候选批次：real-002_to_real-003
 - 下游刷新：reviewed-misclassified / rule-revision-task-sheet
 - 最近复跑：key-case-rerun-default
-- 已复跑案例数：0
+- 已复跑案例数：2
 - 差异案例数：0
 
 ## 3. 推荐命令链

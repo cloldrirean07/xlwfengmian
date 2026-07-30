@@ -9,6 +9,18 @@
     "reviewed-misclassified",
     "rule-revision-task-sheet"
   ],
+  "formalWriteCandidateBatches": [
+    {
+      "batchLabel": "real-002_to_real-003",
+      "taskId": "key-case-rerun-plan",
+      "status": "pending",
+      "executionMode": "manual-review-required",
+      "summary": "将 real-002_to_real-003 纳入规则调整后的关键样例复跑候选，验证写回判断对主链路的影响。",
+      "evidence": [
+        "本批次最主要的问题集中在输入准备阶段，用户容易卡在优先补充项判断上。当前建议写回内容能把“最卡环节”“优先前置模块”“问题类型”和“UI 优化时机”补齐为可继续复盘的结论，适合作为本轮批次试跑记录的阶段性结论。"
+      ]
+    }
+  ],
   "generatedFromCaseOperations": [
     {
       "caseId": "sample-001",

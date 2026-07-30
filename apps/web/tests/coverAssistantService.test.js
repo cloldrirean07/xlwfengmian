@@ -6955,6 +6955,15 @@ test("buildFormalWriteFollowUpPlan combines rule revision and key rerun first ve
     keyCaseRerunPlan: {
       planId: "key-case-rerun-generated",
       caseIds: ["sample-001"],
+      formalWriteCandidateBatches: [
+        {
+          batchLabel: "real-002_to_real-003",
+          taskId: "key-case-rerun-plan",
+          status: "pending",
+          executionMode: "manual-review-required",
+          summary: "将 real-002_to_real-003 纳入规则调整后的关键样例复跑候选。",
+        },
+      ],
       downstreamRefreshTargets: ["reviewed-misclassified", "rule-revision-task-sheet"],
     },
     keyCaseRerunReport: {
@@ -6962,7 +6971,7 @@ test("buildFormalWriteFollowUpPlan combines rule revision and key rerun first ve
         planId: "key-case-rerun-generated",
       },
       summary: {
-        caseCount: 1,
+        rerunCaseCount: 1,
       },
     },
     keyCaseRerunDiff: {
@@ -6979,10 +6988,12 @@ test("buildFormalWriteFollowUpPlan combines rule revision and key rerun first ve
   assert.equal(plan.sections.keyCaseRerun.label, "关键样例复跑计划已生成");
   assert.equal(plan.sections.ruleRevision.existingReport.taskCount, 1);
   assert.equal(plan.sections.keyCaseRerun.plan.caseIds.length, 1);
+  assert.equal(plan.sections.keyCaseRerun.plan.formalWriteCandidateBatches[0].batchLabel, "real-002_to_real-003");
   assert.equal(plan.commandChain.length, 5);
   assert.ok(markdown.includes("# 正式写回后承接计划"));
   assert.ok(markdown.includes("## 1. 规则修订任务单"));
   assert.ok(markdown.includes("## 2. 关键样例复跑计划"));
+  assert.ok(markdown.includes("正式写回候选批次：real-002_to_real-003"));
   assert.ok(markdown.includes("npm run generate:key-case-rerun-plan"));
 });
 
@@ -11192,11 +11203,59 @@ test("buildKeyCaseRerunPlan sorts cases by rerun priority", () => {
   assert.equal(plan.generatedFromCaseOperations[0].keyCaseRerunPriority, 10);
 });
 
+test("buildKeyCaseRerunPlan carries formal write candidate batch separately from executable cases", () => {
+  const plan = buildKeyCaseRerunPlan(
+    [
+      {
+        id: "sample-001",
+        title: "样例",
+        sourceType: "sample",
+        operations: {
+          keyCaseRerunPriority: 10,
+          maintenanceTags: ["sample"],
+        },
+      },
+    ],
+    {
+      planId: "custom-plan",
+      downstreamRefreshTargets: ["reviewed-misclassified"],
+    },
+    {
+      formalWriteExport: {
+        targetPath: "/tmp/real-002_to_real-003_批次试跑记录_2026-06-27.md",
+        followUpTasks: [
+          {
+            taskId: "key-case-rerun-plan",
+            taskType: "key-case-rerun",
+            status: "pending",
+            executionMode: "manual-review-required",
+            summary: "将 real-002_to_real-003 纳入规则调整后的关键样例复跑候选。",
+            evidence: ["输入准备阶段需要复核。"],
+          },
+        ],
+      },
+    },
+  );
+
+  assert.deepEqual(plan.caseIds, ["sample-001"]);
+  assert.equal(plan.formalWriteCandidateBatches[0].batchLabel, "real-002_to_real-003");
+  assert.equal(plan.formalWriteCandidateBatches[0].taskId, "key-case-rerun-plan");
+});
+
 test("buildGeneratedKeyCaseRerunPlanMarkdown renders generated plan", () => {
   const markdown = buildGeneratedKeyCaseRerunPlanMarkdown({
     planId: "key-case-rerun-generated",
     caseIds: ["sample-001"],
     downstreamRefreshTargets: ["reviewed-misclassified", "rule-revision-task-sheet"],
+    formalWriteCandidateBatches: [
+      {
+        batchLabel: "real-002_to_real-003",
+        taskId: "key-case-rerun-plan",
+        status: "pending",
+        executionMode: "manual-review-required",
+        summary: "正式写回后待拆解为关键样例复跑候选。",
+      },
+    ],
     generatedFromCaseOperations: [
       {
         caseId: "sample-001",
@@ -11211,6 +11270,8 @@ test("buildGeneratedKeyCaseRerunPlanMarkdown renders generated plan", () => {
   assert.ok(markdown.includes("# 自动生成的关键样例复跑计划"));
   assert.ok(markdown.includes("sample-001"));
   assert.ok(markdown.includes("关键复跑优先级：10"));
+  assert.ok(markdown.includes("正式写回候选批次"));
+  assert.ok(markdown.includes("real-002_to_real-003"));
 });
 
 test("buildObsidianGeneratedKeyCaseRerunPlanRecord wraps generated plan into editable draft", () => {

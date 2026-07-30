@@ -1028,6 +1028,7 @@ function renderFormalWriteFollowUpPlan(plan) {
   const ruleReport = ruleRevision.existingReport || null;
   const rerunPlan = keyCaseRerun.plan || null;
   const latestRun = keyCaseRerun.latestRun || null;
+  const formalWriteCandidateBatches = rerunPlan?.formalWriteCandidateBatches || [];
 
   return `
     <div class="formal-write-follow-up-plan-panel" aria-label="正式写回后承接计划">
@@ -1063,8 +1064,16 @@ function renderFormalWriteFollowUpPlan(plan) {
           <dl>
             <div><dt>计划 ID</dt><dd>${escapeHtml(rerunPlan?.planId || latestRun?.planId || "暂无")}</dd></div>
             <div><dt>候选案例</dt><dd>${escapeHtml((rerunPlan?.caseIds || []).length)}</dd></div>
+            <div><dt>写回批次</dt><dd>${escapeHtml(formalWriteCandidateBatches.length)}</dd></div>
             <div><dt>已复跑</dt><dd>${escapeHtml(latestRun?.completedCaseCount ?? 0)}</dd></div>
           </dl>
+          ${
+            formalWriteCandidateBatches.length
+              ? `<small>${escapeHtml(
+                  formalWriteCandidateBatches.map((item) => item.batchLabel).join(" / "),
+                )}</small>`
+              : ""
+          }
           <small>${escapeHtml(keyCaseRerun.nextStep?.summary || "等待复跑计划确认。")}</small>
         </article>
       </div>

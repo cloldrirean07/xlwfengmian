@@ -16,16 +16,31 @@ const generatedPlanPath = join(
   "operations",
   "key-case-rerun-plan.generated.json",
 );
+const formalWriteExportPath = join(
+  appRoot,
+  "outputs",
+  "batch-review-manual-formal-write",
+  "batch-review-manual-formal-write.json",
+);
 
 async function readJson(path) {
   const raw = await readFile(path, "utf-8");
   return JSON.parse(raw);
 }
 
+async function readJsonIfExists(path) {
+  try {
+    return await readJson(path);
+  } catch {
+    return null;
+  }
+}
+
 async function main() {
   const basePlan = await readJson(defaultPlanPath);
   const cases = await loadAllCases();
-  const plan = buildKeyCaseRerunPlan(cases, basePlan);
+  const formalWriteExport = await readJsonIfExists(formalWriteExportPath);
+  const plan = buildKeyCaseRerunPlan(cases, basePlan, { formalWriteExport });
   const markdown = buildGeneratedKeyCaseRerunPlanMarkdown(plan);
   const planMarkdownPath = join(
     appRoot,
@@ -44,6 +59,7 @@ async function main() {
         ok: true,
         planId: plan.planId,
         caseIds: plan.caseIds,
+        formalWriteCandidateBatches: plan.formalWriteCandidateBatches,
         outputs: {
           generatedPlanJson: generatedPlanPath,
           generatedPlanMarkdown: planMarkdownPath,
