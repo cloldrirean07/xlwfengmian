@@ -89,6 +89,18 @@ function normalizeOperations(operations) {
   };
 }
 
+function normalizeCopyReview(copyReview) {
+  if (!copyReview || typeof copyReview !== "object" || Array.isArray(copyReview)) {
+    return {};
+  }
+
+  return {
+    ...copyReview,
+    preferredTitle: compactText(copyReview.preferredTitle),
+    titleRationale: compactText(copyReview.titleRationale),
+  };
+}
+
 export function validateCaseRecord(record, fallbackSourceType) {
   if (!record || typeof record !== "object") {
     throw new Error("Case record must be an object.");
@@ -114,6 +126,7 @@ export function validateCaseRecord(record, fallbackSourceType) {
       "referencePreference",
     ),
     assetNotes: requireText(record.assetNotes, "assetNotes"),
+    copyReview: normalizeCopyReview(record.copyReview),
     operations: normalizeOperations(record.operations),
     tracking: normalizeTracking(record.tracking, sourceType),
     evidence: normalizeEvidence(record.evidence, sourceType),

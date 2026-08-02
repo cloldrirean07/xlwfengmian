@@ -1,5 +1,30 @@
 # 更新日志
 
+## 2026-08-02 12:05
+
+- 更新文件：[src/domain/cases/validateCaseRecord.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cases/validateCaseRecord.js)
+  - 新增 `copyReview` 规范化保留逻辑，避免真实案例运行流丢失人工优选标题。
+  - 保留 `copyReview.preferredTitle` 与 `copyReview.titleRationale`，兼容未填写旧案例。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 新增真实案例运行流测试，确认 `real-003` 的人工优选标题进入首轮标题候选首位。
+- 更新文件：[outputs/case-runs/real-002/result.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-002/result.json)、[outputs/case-runs/real-002/summary.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-002/summary.md)
+  - 复跑后 `辣炒的味蕾` 成为首轮标题候选首位，来源为人工优选。
+- 更新文件：[outputs/case-runs/real-003/result.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-003/result.json)、[outputs/case-runs/real-003/summary.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-003/summary.md)
+  - 复跑后 `AI把晚霞做成封面大片` 成为首轮标题候选首位，来源为人工优选。
+- 新增文件：[docs/operations/2026-08-02_标题优选写回复跑闭环修复记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-08-02_标题优选写回复跑闭环修复记录.md)
+  - 记录本轮问题定位、修复范围、复跑结果和下一步提交建议。
+- 验证结果：
+  - 执行 `npm run validate:cases`
+  - 结果：`ok: true / total: 4 / realCount: 3`
+  - 执行 `npm run generate:key-case-rerun-plan`
+  - 结果：计划样例 `sample-001 / real-002 / real-003 / real-001`
+  - 执行 `npm run rerun:key-cases`
+  - 结果：`rerunCaseCount: 4 / realCaseCount: 3`
+  - 执行 `npm test`
+  - 结果：`294 pass / 0 fail`
+  - 执行 `npm run build`
+  - 结果：构建通过
+
 ## 2026-08-01 16:06
 
 - 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)

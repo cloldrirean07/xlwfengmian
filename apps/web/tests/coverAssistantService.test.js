@@ -451,6 +451,14 @@ test("createAnalysisSession keeps manual preferred title ahead of title style li
   assert.equal(food.cards[0].titleOptionDetails[1].styleLabel, "夜市复刻");
 });
 
+test("runCaseFlow preserves real case manual preferred title in first-round titles", async () => {
+  const result = await runCaseFlow("real-003");
+
+  assert.equal(result.analysis.fields.copyReview.preferredTitle, "AI把晚霞做成封面大片");
+  assert.equal(result.analysis.cards[0].titleOptions[0], "AI把晚霞做成封面大片");
+  assert.equal(result.analysis.cards[0].titleOptionDetails[0].sourceLabel, "人工优选");
+});
+
 test("renderCards shows title style source labels", () => {
   const result = createAnalysisSession({
     contentTopic: "用 AI 工具快速做一张小红书封面",
