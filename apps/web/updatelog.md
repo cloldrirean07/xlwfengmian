@@ -1,5 +1,79 @@
 # 更新日志
 
+## 2026-08-01 16:06
+
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 在真实案例卡片操作区新增“加载到主工作台”入口。
+- 更新文件：[public/app/createApp.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/createApp.js)
+  - 新增 `loadCaseIntoMainWorkbench(caseId)`，复用真实案例运行链路生成主工作台首轮方向卡。
+  - 加载真实案例时同步清空旧标题选择、旧写回结果、旧二轮结果和旧工作区结果，避免跨案例状态串扰。
+  - 点击真实案例卡片入口后自动切回创作主路径并定位首轮方向卡。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 补充真实案例加载主工作台入口的源码结构测试。
+- 新增文件：[docs/operations/2026-08-01_真实案例加载到主工作台入口记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-08-01_真实案例加载到主工作台入口记录.md)
+  - 记录本轮入口补齐范围、受控边界、验证结果与下一步操作建议。
+- 验证结果：
+  - 执行 `npm test`
+  - 结果：`293 pass / 0 fail`
+  - 执行 `npm run build`
+  - 结果：构建通过
+
+## 2026-07-30 22:16
+
+- 新增文件：[src/application/applyTitleSelectionWriteback.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/application/applyTitleSelectionWriteback.js)
+  - 新增标题选择正式写回应用层，支持通过真实案例索引定位原始案例 JSON。
+  - 增加 `确认写入优选标题` 确认短语门禁，并在写入后执行读回一致性校验。
+- 更新文件：[src/server/server.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/server/server.js)
+  - 新增 `/api/title-selection-writeback-apply` 接口，承接前端标题写回执行请求。
+- 更新文件：[src/domain/analysis/extractInputFields.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/analysis/extractInputFields.js)
+  - 分析字段保留真实案例 `caseId`，用于标题写回定位目标案例。
+- 更新文件：[public/app/api.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/api.js)、[public/app/createApp.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/createApp.js)、[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)、[public/app/state.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/state.js)
+  - 在标题写回预览下增加确认短语输入、执行写回按钮和读回结果展示。
+  - 标题重新选择或首轮重新生成时清空旧写回结果，避免状态串扰。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 增加标题写回确认控件和执行结果区样式。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 补充标题写回 patch、临时真实案例文件写入读回、确认短语拦截与前端渲染测试。
+- 新增文件：[docs/operations/2026-07-30_标题选择正式写回受控执行记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_标题选择正式写回受控执行记录.md)
+  - 记录本轮实现范围、受控边界、验证结果与下一步建议。
+- 验证结果：
+  - 执行 `npm test`
+  - 结果：`292 pass / 0 fail`
+  - 执行 `npm run build`
+  - 结果：构建通过
+
+## 2026-07-30 21:12
+
+- 更新文件：[public/app/createApp.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/createApp.js)
+  - 新增 `buildTitleWritebackPreview`，将标题选择草稿转成 `copyReview` 字段写回预览。
+  - 写回预览包含当前值、拟写入值、预览状态和安全说明。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 在“人工优选草稿”下方展示“正式写回预览”。
+  - 展示 `copyReview.preferredTitle` 与 `copyReview.titleRationale` 的当前值和拟写入值。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 新增写回预览面板与字段差异行样式。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 增加标题写回预览字段对比测试和前端可见性断言。
+- 新增文件：[docs/operations/2026-07-30_标题选择正式写回预览记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_标题选择正式写回预览记录.md)
+  - 记录正式写回预览的实现范围、当前边界和后续受控写入建议。
+
+## 2026-07-30 20:16
+
+- 更新文件：[public/app/state.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/state.js)
+  - 新增 `latestTitleSelection`，记录首轮标题候选的人工优选草稿。
+- 更新文件：[public/app/createApp.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/createApp.js)
+  - 新增 `buildTitleSelectionDraft`，将标题候选转成 `copyReviewDraft`。
+  - 标题候选选择后同步选中对应方向卡，并按既有规则处理二轮结果和工作区建议失效。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 标题候选新增“设为优选 / 已设为优选”操作。
+  - 当前标题选择会展示“人工优选草稿”。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 新增标题选择按钮、选中态和人工优选草稿样式。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 增加标题选择草稿生成与前端渲染测试。
+- 新增文件：[docs/operations/2026-07-30_标题选择回流闭环第一版记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-07-30_标题选择回流闭环第一版记录.md)
+  - 记录标题选择回流第一版的实现范围、边界和下一步正式写回预览建议。
+
 ## 2026-07-30 17:02
 
 - 更新文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)

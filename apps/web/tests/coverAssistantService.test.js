@@ -9,6 +9,8 @@ import { buildFollowUpProgressSummary } from "../public/app/followUpProgress.js"
 import {
   shouldInvalidateRefinementForCardChange,
   shouldInvalidateWorkspaceForCardChange,
+  buildTitleSelectionDraft,
+  buildTitleWritebackPreview,
   syncWorkspaceDecisionActions,
   getCaseReviewActionFailureMessage,
   getFirstRoundGenerationFailureMessage,
@@ -56,6 +58,11 @@ import {
   MANUAL_CONFIRMATION_SAFE_PREVIEW_WRITE_PHRASE,
   applyManualConfirmationSafePreviewWrite,
 } from "../src/application/applyManualConfirmationSafePreviewWrite.js";
+import {
+  TITLE_SELECTION_WRITEBACK_PHRASE,
+  applyTitleSelectionWriteback,
+  buildTitleSelectionWritebackPatch,
+} from "../src/application/applyTitleSelectionWriteback.js";
 import { runBatchReviewDashboardPreview } from "../src/application/runBatchReviewDashboardPreview.js";
 import { runBatchReviewManualBackfillPreview } from "../src/application/runBatchReviewManualBackfillPreview.js";
 import { runBatchReviewManualFormalWriteReadinessPreview } from "../src/application/runBatchReviewManualFormalWriteReadinessPreview.js";
@@ -461,6 +468,187 @@ test("renderCards shows title style source labels", () => {
   assert.ok(container.innerHTML.includes("风格库"));
   assert.ok(container.innerHTML.includes("AI风景效果"));
   assert.ok(container.innerHTML.includes("AI把晚霞做成封面大片"));
+});
+
+test("buildTitleSelectionDraft creates copyReview preferred title draft", () => {
+  const result = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含螃蟹、辣炒鱿鱼、红油和香菜。",
+    referencePreference: "小红书美食封面方向，突出食欲和冲击力。",
+  });
+  const card = result.cards[0];
+  const draft = buildTitleSelectionDraft({
+    card,
+    titleOption: card.titleOptionDetails[0],
+  });
+
+  assert.equal(draft.preferredTitle, "在家复刻夜市香辣鱿鱼");
+  assert.equal(draft.copyReviewDraft.preferredTitle, "在家复刻夜市香辣鱿鱼");
+  assert.equal(draft.sourceLabel, "风格库");
+  assert.equal(draft.styleLabel, "夜市复刻");
+  assert.ok(draft.copyReviewDraft.titleSelectionReason.includes(card.directionLabelUserFacing));
+  assert.equal(draft.writebackPreview.patchFields[0].fieldPath, "copyReview.preferredTitle");
+  assert.equal(draft.writebackPreview.patchFields[0].nextValue, "在家复刻夜市香辣鱿鱼");
+});
+
+test("buildTitleWritebackPreview compares current and next copyReview fields", () => {
+  const preview = buildTitleWritebackPreview({
+    titleSelection: {
+      copyReviewDraft: {
+        preferredTitle: "AI把晚霞做成封面大片",
+        titleSelectionReason: "风格库 / AI风景效果，来自「更让人想点开」方向候选。",
+      },
+    },
+    currentCopyReview: {
+      preferredTitle: "最后一抹霞光",
+      titleRationale: "原人工判断。",
+    },
+  });
+
+  assert.equal(preview.mode, "preview-only");
+  assert.equal(preview.patchFields[0].currentValue, "最后一抹霞光");
+  assert.equal(preview.patchFields[0].nextValue, "AI把晚霞做成封面大片");
+  assert.equal(preview.nextCopyReview.titleRationale, "风格库 / AI风景效果，来自「更让人想点开」方向候选。");
+});
+
+test("renderCards exposes preferred title selection draft", () => {
+  const result = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含夏日晚霞、云层和落日。",
+    referencePreference: "小红书风景封面方向，突出氛围感。",
+  });
+  const selection = buildTitleSelectionDraft({
+    card: result.cards[0],
+    titleOption: result.cards[0].titleOptionDetails[1],
+  });
+  const container = { innerHTML: "" };
+
+  renderCards(container, result.cards, result.cards[0].cardId, selection);
+
+  assert.ok(container.innerHTML.includes("data-title-card-id"));
+  assert.ok(container.innerHTML.includes("设为优选"));
+  assert.ok(container.innerHTML.includes("已设为优选"));
+  assert.ok(container.innerHTML.includes("人工优选草稿"));
+  assert.ok(container.innerHTML.includes("正式写回预览"));
+  assert.ok(container.innerHTML.includes("确认写入优选标题"));
+  assert.ok(container.innerHTML.includes("执行写回"));
+  assert.ok(container.innerHTML.includes("copyReview.preferredTitle"));
+  assert.ok(container.innerHTML.includes("拟写入"));
+  assert.ok(container.innerHTML.includes("AI把晚霞做成封面大片"));
+});
+
+test("buildTitleSelectionWritebackPatch merges preferred title into copyReview", () => {
+  const patch = buildTitleSelectionWritebackPatch({
+    record: {
+      id: "real-003",
+      copyReview: {
+        preferredTitle: "最后一抹霞光",
+        titleRationale: "原人工判断。",
+        reviewer: "human",
+      },
+    },
+    copyReviewDraft: {
+      preferredTitle: "AI把晚霞做成封面大片",
+      titleSelectionReason: "风格库 / AI风景效果，来自「更让人想点开」方向候选。",
+    },
+  });
+
+  assert.equal(patch.nextRecord.copyReview.preferredTitle, "AI把晚霞做成封面大片");
+  assert.equal(
+    patch.nextRecord.copyReview.titleRationale,
+    "风格库 / AI风景效果，来自「更让人想点开」方向候选。",
+  );
+  assert.equal(patch.nextRecord.copyReview.reviewer, "human");
+  assert.equal(patch.writtenFields[0].currentValue, "最后一抹霞光");
+});
+
+test("applyTitleSelectionWriteback writes a real case through injected storage and reads it back", async () => {
+  const tempRoot = await mkdtemp(join(os.tmpdir(), "ai-cover-title-writeback-"));
+  const realCasesDir = join(tempRoot, "data", "real-cases");
+  const itemsDir = join(realCasesDir, "items");
+  const indexPath = join(realCasesDir, "index.json");
+  const itemPath = join(itemsDir, "real-003.json");
+
+  await mkdir(itemsDir, { recursive: true });
+  await writeFile(
+    indexPath,
+    `${JSON.stringify([{ id: "real-003", file: "items/real-003.json", status: "draft" }], null, 2)}\n`,
+    "utf-8",
+  );
+  await writeFile(
+    itemPath,
+    `${JSON.stringify(
+      {
+        id: "real-003",
+        title: "P-03 夏日晚霞封面制作真实案例",
+        sourceType: "real",
+        copyReview: {
+          preferredTitle: "最后一抹霞光",
+          titleRationale: "原人工判断。",
+        },
+      },
+      null,
+      2,
+    )}\n`,
+    "utf-8",
+  );
+
+  const result = await applyTitleSelectionWriteback(
+    {
+      caseId: "real-003",
+      confirmationPhrase: TITLE_SELECTION_WRITEBACK_PHRASE,
+      copyReviewDraft: {
+        preferredTitle: "AI把晚霞做成封面大片",
+        titleSelectionReason: "风格库 / AI风景效果，来自「更让人想点开」方向候选。",
+      },
+    },
+    {
+      storagePaths: {
+        realCasesIndexPath: indexPath,
+        realCasesItemsDir: itemsDir,
+        realCasesDir,
+      },
+      onCommitted: null,
+    },
+  );
+
+  const persisted = JSON.parse(await readFile(itemPath, "utf-8"));
+
+  assert.equal(result.ok, true);
+  assert.equal(result.statusLabel, "写回完成");
+  assert.equal(result.readback.ok, true);
+  assert.equal(persisted.copyReview.preferredTitle, "AI把晚霞做成封面大片");
+  assert.equal(
+    persisted.copyReview.titleRationale,
+    "风格库 / AI风景效果，来自「更让人想点开」方向候选。",
+  );
+});
+
+test("applyTitleSelectionWriteback rejects missing confirmation phrase", async () => {
+  await assert.rejects(
+    () =>
+      applyTitleSelectionWriteback(
+        {
+          caseId: "real-003",
+          confirmationPhrase: "",
+          copyReviewDraft: {
+            preferredTitle: "AI把晚霞做成封面大片",
+            titleSelectionReason: "风格库标题。",
+          },
+        },
+        {
+          loadIndex: async () => [],
+          onCommitted: null,
+        },
+      ),
+    /确认写入优选标题/,
+  );
 });
 
 test("renderCards adds first-round comparison rhythm before card details", () => {
@@ -1345,6 +1533,7 @@ test("validateExistingCaseSelection enforces system case availability", () => {
 });
 
 test("getCaseReviewActionFailureMessage follows PRD case review exception copy", () => {
+  assert.equal(getCaseReviewActionFailureMessage("load-workbench"), "案例读取失败，请重试");
   assert.equal(getCaseReviewActionFailureMessage("fill-preview"), "案例读取失败，请重试");
   assert.equal(getCaseReviewActionFailureMessage("sync-preview"), "案例读取失败，请重试");
   assert.equal(getCaseReviewActionFailureMessage("export-obsidian-fill"), "导出失败，请重试");
@@ -1380,6 +1569,26 @@ test("real case library read failures return to case list", async () => {
   assert.ok(createAppSource.includes("dom.realCaseLibraryResult.scrollIntoView"));
   assert.ok(caseLibraryFlow.includes("案例读取失败，请重试"));
   assert.ok(caseLibraryFlow.match(/focusRealCaseLibraryResult\(dom\);/g)?.length >= 4);
+});
+
+test("real case library can load a case into the main workbench", async () => {
+  const createAppSource = await readFile(new URL("../public/app/createApp.js", import.meta.url), "utf-8");
+  const renderersSource = await readFile(new URL("../public/app/renderers.js", import.meta.url), "utf-8");
+  const loadCaseStart = createAppSource.indexOf("async function loadCaseIntoMainWorkbench");
+  const dashboardStart = createAppSource.indexOf("async function generateBatchReviewDashboardPreview", loadCaseStart);
+  const loadCaseFlow = createAppSource.slice(loadCaseStart, dashboardStart);
+  const actionStart = createAppSource.indexOf('if (action === "load-workbench")');
+  const actionFlow = createAppSource.slice(actionStart, actionStart + 180);
+
+  assert.ok(renderersSource.includes('data-real-case-action="load-workbench"'));
+  assert.ok(renderersSource.includes("加载到主工作台"));
+  assert.ok(loadCaseFlow.includes("runAvailableCase(caseId)"));
+  assert.ok(loadCaseFlow.includes("patchFormValues(dom.analyzeForm, payload.analysis.fields)"));
+  assert.ok(loadCaseFlow.includes("state.latestTitleSelection = null"));
+  assert.ok(loadCaseFlow.includes("state.latestTitleWritebackApply = null"));
+  assert.ok(loadCaseFlow.includes('switchProductView("creation")'));
+  assert.ok(loadCaseFlow.includes("focusDirectionCards(dom);"));
+  assert.ok(actionFlow.includes("await loadCaseIntoMainWorkbench(caseId);"));
 });
 
 test("validateFormalWriteReadiness requires confirmed safe write preview", () => {

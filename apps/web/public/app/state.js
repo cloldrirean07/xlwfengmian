@@ -3,6 +3,8 @@ export function createState() {
     currentProductView: "creation",
     latestAnalysis: null,
     selectedCardId: null,
+    latestTitleSelection: null,
+    latestTitleWritebackApply: null,
     selectedWorkspaceId: "",
     sampleCases: [],
     availableCases: [],

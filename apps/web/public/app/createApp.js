@@ -5,6 +5,7 @@ import {
 import {
   analyzeCoverDirection,
   applyBatchReviewManualConfirmationSafePreviewWrite,
+  applyTitleSelectionWriteback,
   classifyRequestError,
   buildPromptPreview,
   commitRealCaseBatchScaffold,
@@ -378,6 +379,71 @@ export function validateActionWorkspacePayloadFields(payload) {
     ok: true,
     fieldName: "",
     message: "",
+  };
+}
+
+export function buildTitleWritebackPreview({ titleSelection, currentCopyReview = {} }) {
+  if (!titleSelection?.copyReviewDraft?.preferredTitle) {
+    return null;
+  }
+
+  const nextPreferredTitle = titleSelection.copyReviewDraft.preferredTitle;
+  const nextTitleRationale = titleSelection.copyReviewDraft.titleSelectionReason;
+
+  return {
+    mode: "preview-only",
+    targetPath: "copyReview",
+    statusLabel: "待确认写入",
+    safetyNote: "当前仅生成写回预览，不会修改真实案例文件。",
+    patchFields: [
+      {
+        fieldPath: "copyReview.preferredTitle",
+        currentValue: String(currentCopyReview?.preferredTitle || "待补充"),
+        nextValue: nextPreferredTitle,
+      },
+      {
+        fieldPath: "copyReview.titleRationale",
+        currentValue: String(currentCopyReview?.titleRationale || "待补充"),
+        nextValue: nextTitleRationale,
+      },
+    ],
+    nextCopyReview: {
+      ...currentCopyReview,
+      preferredTitle: nextPreferredTitle,
+      titleRationale: nextTitleRationale,
+    },
+  };
+}
+
+export function buildTitleSelectionDraft({ card, titleOption, currentCopyReview = {} }) {
+  const preferredTitle = String(titleOption?.title || "").trim();
+
+  if (!card || !preferredTitle) {
+    return null;
+  }
+
+  const sourceLabel = String(titleOption?.sourceLabel || "标题建议").trim();
+  const styleLabel = String(titleOption?.styleLabel || "基础模板").trim();
+  const directionLabel = String(card.directionLabelUserFacing || "首轮方向").trim();
+
+  const titleSelection = {
+    cardId: card.cardId,
+    directionLabel,
+    preferredTitle,
+    sourceLabel,
+    styleLabel,
+    copyReviewDraft: {
+      preferredTitle,
+      titleSelectionReason: `${sourceLabel} / ${styleLabel}，来自「${directionLabel}」方向候选，适合作为人工优选标题继续复跑。`,
+    },
+  };
+
+  return {
+    ...titleSelection,
+    writebackPreview: buildTitleWritebackPreview({
+      titleSelection,
+      currentCopyReview,
+    }),
   };
 }
 
@@ -818,7 +884,12 @@ function buildRealCaseBatchPayload(dom) {
 }
 
 function syncSelectionUi(dom, state) {
-  renderCards(dom.cardsContainer, state.latestAnalysis?.cards || [], state.selectedCardId);
+  renderCards(dom.cardsContainer,
+    state.latestAnalysis?.cards || [],
+    state.selectedCardId,
+    state.latestTitleSelection,
+    state.latestTitleWritebackApply,
+  );
   renderSelectedCardSummary(dom.selectedCardSummary, state.latestAnalysis, state.selectedCardId);
 }
 
@@ -1292,6 +1363,33 @@ export function createApp() {
       setStatus(dom.realCaseBatchStatus, "案例读取失败，请重试");
       focusRealCaseLibraryResult(dom);
     }
+  }
+
+  async function loadCaseIntoMainWorkbench(caseId) {
+    setStatus(dom.realCaseBatchStatus, "正在加载真实案例到主工作台...");
+    const payload = await runAvailableCase(caseId);
+
+    patchFormValues(dom.analyzeForm, payload.analysis.fields);
+    state.latestAnalysis = payload.analysis;
+    state.selectedCardId = null;
+    state.latestTitleSelection = null;
+    state.latestTitleWritebackApply = null;
+    state.selectedWorkspaceId = "";
+    state.latestRefinement = null;
+    state.latestWorkspaceResult = null;
+    state.latestWorkspaceDecisionSave = null;
+    dom.secondRoundResult.innerHTML = "";
+    renderAnalysisOverview(dom.analysisSummary, dom.analysisMeta, state.latestAnalysis);
+    syncWorkspaceUi(dom, state);
+    syncSelectionUi(dom, state);
+    reveal(dom.analysisPanel);
+    reveal(dom.promptPanel);
+    hide(dom.secondRoundPanel);
+    hide(dom.refinePanel);
+    switchProductView("creation");
+    focusDirectionCards(dom);
+    setStatus(dom.firstRoundStatus, "真实案例已加载到主工作台，可选择标题候选并执行写回。");
+    setStatus(dom.realCaseBatchStatus, "真实案例已进入主工作台。");
   }
 
   async function generateBatchReviewDashboardPreview() {
@@ -2633,6 +2731,11 @@ export function createApp() {
     }
 
     try {
+      if (action === "load-workbench") {
+        await loadCaseIntoMainWorkbench(caseId);
+        return;
+      }
+
       if (action === "sync-preview") {
         if (platformCaseId) {
           dom.platformCaseIdInput.value = platformCaseId;
@@ -2723,6 +2826,8 @@ export function createApp() {
       patchFormValues(dom.analyzeForm, payload.analysis.fields);
       state.latestAnalysis = payload.analysis;
       state.selectedCardId = null;
+      state.latestTitleSelection = null;
+      state.latestTitleWritebackApply = null;
       state.selectedWorkspaceId = "";
       state.latestRefinement = null;
       state.latestWorkspaceResult = null;
@@ -2810,6 +2915,8 @@ export function createApp() {
     setStatus(dom.firstRoundStatus, "正在判断点击机制，并生成 3 个封面方向...");
     state.latestAnalysis = null;
     state.selectedCardId = null;
+    state.latestTitleSelection = null;
+    state.latestTitleWritebackApply = null;
     state.selectedWorkspaceId = "";
     state.latestRefinement = null;
     state.latestWorkspaceResult = null;
@@ -2852,7 +2959,107 @@ export function createApp() {
     }
   });
 
-  dom.cardsContainer.addEventListener("click", (event) => {
+  dom.cardsContainer.addEventListener("click", async (event) => {
+    const writebackButton = event.target.closest("button[data-title-writeback-apply-card-id]");
+
+    if (writebackButton) {
+      const cardId = writebackButton.dataset.titleWritebackApplyCardId || "";
+      const confirmationInput = dom.cardsContainer.querySelector(
+        `input[data-title-writeback-confirmation="${CSS.escape(cardId)}"]`,
+      );
+      const confirmationPhrase = String(confirmationInput?.value || "").trim();
+      const caseId = String(state.latestAnalysis?.fields?.caseId || "").trim();
+
+      if (!caseId) {
+        setStatus(dom.firstRoundStatus, "当前结果缺少真实案例 ID，请先从真实案例库运行案例。");
+        return;
+      }
+
+      if (!state.latestTitleSelection?.copyReviewDraft || state.latestTitleSelection.cardId !== cardId) {
+        setStatus(dom.firstRoundStatus, "请先选择需要写回的优选标题。");
+        return;
+      }
+
+      writebackButton.disabled = true;
+      setStatus(dom.firstRoundStatus, "正在执行标题写回并读回校验。");
+
+      try {
+        state.latestTitleWritebackApply = await applyTitleSelectionWriteback({
+          caseId,
+          confirmationPhrase,
+          copyReviewDraft: state.latestTitleSelection.copyReviewDraft,
+        });
+        syncSelectionUi(dom, state);
+        setStatus(dom.firstRoundStatus, "标题写回完成，读回校验已返回。");
+      } catch (error) {
+        const requestError = classifyRequestError(error);
+        setStatus(dom.firstRoundStatus, requestError.message);
+      } finally {
+        writebackButton.disabled = false;
+      }
+
+      return;
+    }
+
+    const titleButton = event.target.closest("button[data-title-card-id]");
+
+    if (titleButton && state.latestAnalysis) {
+      const nextCardId = titleButton.dataset.titleCardId || "";
+      const titleIndex = Number(titleButton.dataset.titleIndex || 0);
+      const selectedCard = state.latestAnalysis.cards?.find((card) => card.cardId === nextCardId);
+      const titleOptions = Array.isArray(selectedCard?.titleOptionDetails) && selectedCard.titleOptionDetails.length
+        ? selectedCard.titleOptionDetails
+        : (selectedCard?.titleOptions || []).map((title) => ({
+            title,
+            sourceLabel: "标题建议",
+            styleLabel: "基础模板",
+          }));
+      const titleOption = titleOptions[titleIndex];
+      const titleSelection = buildTitleSelectionDraft({
+        card: selectedCard,
+        titleOption,
+        currentCopyReview: state.latestAnalysis?.fields?.copyReview || {},
+      });
+
+      if (!titleSelection) {
+        setStatus(dom.firstRoundStatus, "标题候选不可用，请重新生成方向卡。");
+        return;
+      }
+
+      const shouldInvalidateRefinement = shouldInvalidateRefinementForCardChange({
+        currentCardId: state.selectedCardId,
+        nextCardId,
+        latestRefinement: state.latestRefinement,
+      });
+      const shouldInvalidateWorkspace = shouldInvalidateWorkspaceForCardChange({
+        currentCardId: state.selectedCardId,
+        nextCardId,
+        latestWorkspaceResult: state.latestWorkspaceResult,
+        latestWorkspaceDecisionSave: state.latestWorkspaceDecisionSave,
+      });
+
+      state.selectedCardId = nextCardId;
+      state.selectedWorkspaceId = "";
+      state.latestTitleSelection = titleSelection;
+      state.latestTitleWritebackApply = null;
+
+      if (shouldInvalidateRefinement) {
+        state.latestRefinement = null;
+        dom.secondRoundResult.innerHTML = "";
+        hide(dom.secondRoundPanel);
+      }
+
+      if (shouldInvalidateWorkspace) {
+        clearWorkspaceResultState(dom, state);
+      }
+
+      syncSelectionUi(dom, state);
+      syncWorkspaceUi(dom, state);
+      reveal(dom.refinePanel);
+      setStatus(dom.firstRoundStatus, "人工优选标题草稿已生成，可继续填写第二轮反馈。");
+      return;
+    }
+
     const button = event.target.closest("button[data-card-id]");
     if (!button || !state.latestAnalysis) {
       return;
@@ -2873,6 +3080,11 @@ export function createApp() {
 
     state.selectedCardId = nextCardId;
     state.selectedWorkspaceId = "";
+
+    if (state.latestTitleSelection?.cardId !== nextCardId) {
+      state.latestTitleSelection = null;
+      state.latestTitleWritebackApply = null;
+    }
 
     if (shouldInvalidateRefinement) {
       state.latestRefinement = null;

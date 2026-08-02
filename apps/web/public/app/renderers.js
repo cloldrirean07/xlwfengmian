@@ -2382,7 +2382,13 @@ export function renderRefineWorkspaceHint(container, workspaceResult, decisionSa
   `;
 }
 
-export function renderCards(cardsContainer, cards, selectedCardId) {
+export function renderCards(
+  cardsContainer,
+  cards,
+  selectedCardId,
+  titleSelection = null,
+  titleWritebackApply = null,
+) {
   if (!cards || cards.length === 0) {
     cardsContainer.innerHTML = `<p class="empty-state">首轮方向结果生成后，将展示 3 张可比较的方向卡。</p>`;
     return;
@@ -2452,17 +2458,101 @@ export function renderCards(cardsContainer, cards, selectedCardId) {
           }));
       const titleOptionRows = titleOptions
         .map(
-          (option, optionIndex) => `
+          (option, optionIndex) => {
+            const isPreferredTitle =
+              titleSelection?.cardId === card.cardId && titleSelection?.preferredTitle === option.title;
+
+            return `
             <li>
               <div>
                 <strong>${escapeHtml(option.title || "待补充")}</strong>
                 <p>${escapeHtml(option.styleLabel || "基础模板")}</p>
               </div>
-              <span>${escapeHtml(option.sourceLabel || `候选 ${optionIndex + 1}`)}</span>
+              <div class="title-option-actions">
+                <span>${escapeHtml(option.sourceLabel || `候选 ${optionIndex + 1}`)}</span>
+                <button
+                  type="button"
+                  class="title-option-action ${isPreferredTitle ? "title-option-action-selected" : ""}"
+                  data-title-card-id="${escapeHtml(card.cardId)}"
+                  data-title-index="${escapeHtml(optionIndex)}"
+                  aria-pressed="${escapeHtml(isPreferredTitle ? "true" : "false")}"
+                >
+                  ${escapeHtml(isPreferredTitle ? "已设为优选" : "设为优选")}
+                </button>
+              </div>
             </li>
-          `,
+          `;
+          },
         )
         .join("");
+      const titleSelectionDraft =
+        titleSelection?.cardId === card.cardId
+          ? `
+            <div class="title-selection-draft">
+              <span>人工优选草稿</span>
+              <strong>${escapeHtml(titleSelection.copyReviewDraft?.preferredTitle || titleSelection.preferredTitle)}</strong>
+              <p>${escapeHtml(titleSelection.copyReviewDraft?.titleSelectionReason || "已生成标题选择理由。")}</p>
+              ${
+                titleSelection.writebackPreview
+                  ? `
+                    <div class="title-writeback-preview">
+                      <div class="title-writeback-heading">
+                        <span>正式写回预览</span>
+                        <strong>${escapeHtml(titleSelection.writebackPreview.statusLabel || "待确认写入")}</strong>
+                      </div>
+                      <p>${escapeHtml(titleSelection.writebackPreview.safetyNote || "当前仅生成写回预览。")}</p>
+                      <div class="title-writeback-grid">
+                        ${(titleSelection.writebackPreview.patchFields || [])
+                          .map(
+                            (field) => `
+                              <div>
+                                <span>${escapeHtml(field.fieldPath)}</span>
+                                <p><strong>当前</strong>${escapeHtml(field.currentValue || "待补充")}</p>
+                                <p><strong>拟写入</strong>${escapeHtml(field.nextValue || "待补充")}</p>
+                              </div>
+                            `,
+                          )
+                          .join("")}
+                      </div>
+                      <div class="title-writeback-controls">
+                        <label>
+                          <span>确认短语</span>
+                          <input
+                            type="text"
+                            data-title-writeback-confirmation="${escapeHtml(card.cardId)}"
+                            placeholder="确认写入优选标题"
+                            autocomplete="off"
+                          >
+                        </label>
+                        <button
+                          type="button"
+                          class="title-writeback-apply"
+                          data-title-writeback-apply-card-id="${escapeHtml(card.cardId)}"
+                        >
+                          执行写回
+                        </button>
+                      </div>
+                      ${
+                        titleWritebackApply?.caseId
+                          ? `
+                            <div class="title-writeback-result">
+                              <div>
+                                <span>执行结果</span>
+                                <strong>${escapeHtml(titleWritebackApply.statusLabel || "写回完成")}</strong>
+                              </div>
+                              <p>${escapeHtml(titleWritebackApply.itemPath || "目标文件待返回")}</p>
+                              <p>读回状态：${escapeHtml(titleWritebackApply.readback?.ok ? "一致" : "待复核")}</p>
+                            </div>
+                          `
+                          : ""
+                      }
+                    </div>
+                  `
+                  : ""
+              }
+            </div>
+          `
+          : "";
 
       return `
         <article class="card ${isPrimary ? "card-primary" : ""} ${isSelected ? "card-selected" : ""}">
@@ -2496,6 +2586,7 @@ export function renderCards(cardsContainer, cards, selectedCardId) {
             <ol class="title-option-list">
               ${titleOptionRows || "<li><div><strong>待补充</strong><p>基础模板</p></div><span>候选</span></li>"}
             </ol>
+            ${titleSelectionDraft}
           </div>
           <div class="card-summary-grid">
             ${topSummary
@@ -4145,6 +4236,13 @@ export function renderRealCaseLibrary(
           </div>
           <p class="micro-copy">${escapeHtml(item.latestExportStatus?.exportedAt || "当前还没有这条案例的 Obsidian 导出记录")}</p>
           <div class="button-row panel-inner-block">
+            <button
+              type="button"
+              data-real-case-action="load-workbench"
+              data-case-id="${escapeHtml(item.id)}"
+            >
+              加载到主工作台
+            </button>
             <button
               type="button"
               class="ghost-button"

@@ -156,6 +156,7 @@ export function extractInputFields(payload) {
   });
 
   return {
+    caseId: compactText(payload.id || payload.caseId),
     contentTopic,
     contentGoal,
     userAssetType: payload.userAssetType || "截图",

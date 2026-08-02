@@ -14,8 +14,8 @@
   "referencePreference": "小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。",
   "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。",
   "copyReview": {
-    "preferredTitle": "最后一抹霞光",
-    "titleRationale": "人工判断认为该标题更能抓住晚霞素材的时间感和情绪余韵，比直接罗列风景元素更有封面感。"
+    "preferredTitle": "AI把晚霞做成封面大片",
+    "titleRationale": "风格库 / AI风景效果，来自「更让人想点开」方向候选，适合作为人工优选标题继续复跑。"
   },
   "operations": {
     "keyCaseRerunPriority": 7,

@@ -34,6 +34,7 @@ import { applyManualConfirmationSafePreviewWrite } from "../application/applyMan
 import { runManualFormalWriteExecutionPrecheckStatus } from "../application/runManualFormalWriteExecutionPrecheckStatus.js";
 import { runManualFormalWriteExecutionPacketStatus } from "../application/runManualFormalWriteExecutionPacketStatus.js";
 import { runManualFormalWritePostExecutionAcceptanceStatus } from "../application/runManualFormalWritePostExecutionAcceptanceStatus.js";
+import { applyTitleSelectionWriteback } from "../application/applyTitleSelectionWriteback.js";
 import { runPiEngineExecutionPositionAuditStatus } from "../application/runPiEngineExecutionPositionAuditStatus.js";
 import { runFormalWriteFollowUpPlanStatus } from "../application/runFormalWriteFollowUpPlanStatus.js";
 import { exportRealCaseBatchFillWorksheetToObsidian } from "../application/exportRealCaseBatchFillWorksheetToObsidian.js";
@@ -302,6 +303,11 @@ const server = http.createServer(async (req, res) => {
     if (req.method === "POST" && requestUrl.pathname === "/api/batch-review-manual-formal-write-export") {
       const payload = await readJsonBody(req);
       return sendJson(res, 200, await exportBatchReviewManualFormalWriteToObsidian(payload));
+    }
+
+    if (req.method === "POST" && requestUrl.pathname === "/api/title-selection-writeback-apply") {
+      const payload = await readJsonBody(req);
+      return sendJson(res, 200, await applyTitleSelectionWriteback(payload));
     }
 
     if (req.method === "POST" && requestUrl.pathname === "/api/batch-review-suite-export") {

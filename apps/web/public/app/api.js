@@ -255,6 +255,14 @@ export function applyBatchReviewManualConfirmationSafePreviewWrite(confirmationP
   });
 }
 
+export function applyTitleSelectionWriteback(payload = {}) {
+  return requestJson("/api/title-selection-writeback-apply", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+}
+
 export function exportBatchReviewManualFormalWrite(confirmationPhrase = "") {
   return requestJson("/api/batch-review-manual-formal-write-export", {
     method: "POST",
