@@ -454,8 +454,8 @@ test("createAnalysisSession keeps manual preferred title ahead of title style li
 test("runCaseFlow preserves real case manual preferred title in first-round titles", async () => {
   const result = await runCaseFlow("real-003");
 
-  assert.equal(result.analysis.fields.copyReview.preferredTitle, "AI把晚霞做成封面大片");
-  assert.equal(result.analysis.cards[0].titleOptions[0], "AI把晚霞做成封面大片");
+  assert.equal(result.analysis.fields.copyReview.preferredTitle, "最后一抹霞光");
+  assert.equal(result.analysis.cards[0].titleOptions[0], "最后一抹霞光");
   assert.equal(result.analysis.cards[0].titleOptionDetails[0].sourceLabel, "人工优选");
 });
 
@@ -10546,11 +10546,16 @@ test("runPlatformCaseReview returns a structured review for one platform case", 
 test("runPlatformCaseBatchReview returns a batch board across platform cases", async () => {
   const obsidianRoot = await createTemporaryObsidianRoot();
   const result = await runPlatformCaseBatchReview({ obsidianRoot });
+  const missingPlatformNoteRow = result.rows.find((row) => row.platformCaseId === "P-02");
 
   assert.equal(result.summary.totalCases >= 1, true);
   assert.ok(Array.isArray(result.topPriorityRows));
   assert.ok(Array.isArray(result.rows));
   assert.equal(result.rows[0].platformCaseId, "P-01");
+  assert.equal(missingPlatformNoteRow.noteAvailable, false);
+  assert.equal(missingPlatformNoteRow.summary.completenessStatus, "待回填");
+  assert.equal(missingPlatformNoteRow.summary.linkedCaseCount, 1);
+  assert.ok(missingPlatformNoteRow.summary.topPriorityItems.includes("平台原生案例笔记"));
 });
 
 test("buildPlatformCaseBatchReviewMarkdown renders a batch review board", () => {

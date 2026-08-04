@@ -56,6 +56,8 @@
         "planId": "key-case-rerun-default",
         "caseIds": [
           "sample-001",
+          "real-002",
+          "real-003",
           "real-001"
         ],
         "formalWriteCandidateBatches": [
@@ -77,16 +79,16 @@
       },
       "latestRun": {
         "status": "available",
-        "completedCaseCount": 2,
+        "completedCaseCount": 4,
         "changedCaseCount": 0,
         "planId": "key-case-rerun-default"
       },
       "diff": {
         "changedCaseCount": 0,
         "summary": {
-          "comparedCaseCount": 2,
+          "comparedCaseCount": 4,
           "changedCaseCount": 0,
-          "unchangedCaseCount": 2,
+          "unchangedCaseCount": 4,
           "downstreamChangedCount": 0
         }
       },

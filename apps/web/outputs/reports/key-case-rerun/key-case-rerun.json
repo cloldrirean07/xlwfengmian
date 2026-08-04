@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-30 09:01:51",
+    "generatedAt": "2026-08-04 03:10:42",
     "planId": "key-case-rerun-default",
     "description": "规则升级后优先复跑的关键样例清单，用于刷新方向判断、误判样本导出和规则修订任务单。",
     "caseIds": [

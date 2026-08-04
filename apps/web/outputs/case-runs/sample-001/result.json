@@ -7,6 +7,7 @@
   },
   "analysis": {
     "fields": {
+      "caseId": "sample-001",
       "contentTopic": "为什么你总觉得自己很忙但没结果",
       "contentGoal": "让用户意识到忙碌不等于有效产出，并点开后理解问题不在时间而在动作质量",
       "userAssetType": "截图",
@@ -23,6 +24,7 @@
       "userReferencePreference": "更高级一点，但不能太平，要让人想点开",
       "assetDescription": "当前是普通口播截图，人物主体不够强，想补一张更贴内容的辅助图",
       "assetNotes": "当前素材偏普通口播截图，没有强冲突画面",
+      "copyReview": {},
       "assetContext": {
         "origin": "none",
         "hasLocalPreview": false,
@@ -255,6 +257,21 @@
           "为什么你总觉得自己很忙但...为什么总没结果，以及怎么改",
           "看完就能直接用的为什么你总觉得自己很忙但...方法"
         ],
+        "titleOptionDetails": [
+          {
+            "title": "为什么你总觉得自己很忙但...为什么总没结果，以及怎么改",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          },
+          {
+            "title": "看完就能直接用的为什么你总觉得自己很忙但...方法",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          }
+        ],
+        "materialKeywords": [],
         "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
         "imageDirectionCandidates": [
           {
@@ -558,6 +575,21 @@
           "为什么你总在为什么你总觉得自己很忙但...上卡住",
           "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面"
         ],
+        "titleOptionDetails": [
+          {
+            "title": "为什么你总在为什么你总觉得自己很忙但...上卡住",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          },
+          {
+            "title": "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          }
+        ],
+        "materialKeywords": [],
         "imageDirection": "从截图里裁出异常点，不把全部上下文一次讲完。",
         "imageDirectionCandidates": [
           {
@@ -861,6 +893,21 @@
           "为什么你总觉得自己很忙但...最容易忽略的关键点",
           "把为什么你总觉得自己很忙但...讲清楚的最短路径"
         ],
+        "titleOptionDetails": [
+          {
+            "title": "为什么你总觉得自己很忙但...最容易忽略的关键点",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          },
+          {
+            "title": "把为什么你总觉得自己很忙但...讲清楚的最短路径",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          }
+        ],
+        "materialKeywords": [],
         "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
         "imageDirectionCandidates": [
           {
@@ -1214,6 +1261,7 @@
     },
     "analysis": {
       "fields": {
+        "caseId": "sample-001",
         "contentTopic": "为什么你总觉得自己很忙但没结果",
         "contentGoal": "让用户意识到忙碌不等于有效产出，并点开后理解问题不在时间而在动作质量",
         "userAssetType": "截图",
@@ -1230,6 +1278,7 @@
         "userReferencePreference": "更高级一点，但不能太平，要让人想点开",
         "assetDescription": "当前是普通口播截图，人物主体不够强，想补一张更贴内容的辅助图",
         "assetNotes": "当前素材偏普通口播截图，没有强冲突画面",
+        "copyReview": {},
         "assetContext": {
           "origin": "none",
           "hasLocalPreview": false,
@@ -1462,6 +1511,21 @@
             "为什么你总觉得自己很忙但...为什么总没结果，以及怎么改",
             "看完就能直接用的为什么你总觉得自己很忙但...方法"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "为什么你总觉得自己很忙但...为什么总没结果，以及怎么改",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "看完就能直接用的为什么你总觉得自己很忙但...方法",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
           "imageDirectionCandidates": [
             {
@@ -1765,6 +1829,21 @@
             "为什么你总在为什么你总觉得自己很忙但...上卡住",
             "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "为什么你总在为什么你总觉得自己很忙但...上卡住",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "从截图里裁出异常点，不把全部上下文一次讲完。",
           "imageDirectionCandidates": [
             {
@@ -2068,6 +2147,21 @@
             "为什么你总觉得自己很忙但...最容易忽略的关键点",
             "把为什么你总觉得自己很忙但...讲清楚的最短路径"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "为什么你总觉得自己很忙但...最容易忽略的关键点",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "把为什么你总觉得自己很忙但...讲清楚的最短路径",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
           "imageDirectionCandidates": [
             {
@@ -2505,6 +2599,21 @@
         "为什么你总在为什么你总觉得自己很忙但...上卡住",
         "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面"
       ],
+      "titleOptionDetails": [
+        {
+          "title": "为什么你总在为什么你总觉得自己很忙但...上卡住",
+          "sourceType": "material-keyword-fallback",
+          "sourceLabel": "素材词兜底",
+          "styleLabel": "基础模板"
+        },
+        {
+          "title": "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面",
+          "sourceType": "material-keyword-fallback",
+          "sourceLabel": "素材词兜底",
+          "styleLabel": "基础模板"
+        }
+      ],
+      "materialKeywords": [],
       "imageDirection": "从截图里裁出异常点，不把全部上下文一次讲完。",
       "imageDirectionCandidates": [
         {
@@ -2844,6 +2953,7 @@
     },
     "analysis": {
       "fields": {
+        "caseId": "sample-001",
         "contentTopic": "为什么你总觉得自己很忙但没结果",
         "contentGoal": "让用户意识到忙碌不等于有效产出，并点开后理解问题不在时间而在动作质量",
         "userAssetType": "截图",
@@ -2860,6 +2970,7 @@
         "userReferencePreference": "更高级一点，但不能太平，要让人想点开",
         "assetDescription": "当前是普通口播截图，人物主体不够强，想补一张更贴内容的辅助图",
         "assetNotes": "当前素材偏普通口播截图，没有强冲突画面",
+        "copyReview": {},
         "assetContext": {
           "origin": "none",
           "hasLocalPreview": false,
@@ -3092,6 +3203,21 @@
             "为什么你总觉得自己很忙但...为什么总没结果，以及怎么改",
             "看完就能直接用的为什么你总觉得自己很忙但...方法"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "为什么你总觉得自己很忙但...为什么总没结果，以及怎么改",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "看完就能直接用的为什么你总觉得自己很忙但...方法",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
           "imageDirectionCandidates": [
             {
@@ -3395,6 +3521,21 @@
             "为什么你总在为什么你总觉得自己很忙但...上卡住",
             "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "为什么你总在为什么你总觉得自己很忙但...上卡住",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "从截图里裁出异常点，不把全部上下文一次讲完。",
           "imageDirectionCandidates": [
             {
@@ -3698,6 +3839,21 @@
             "为什么你总觉得自己很忙但...最容易忽略的关键点",
             "把为什么你总觉得自己很忙但...讲清楚的最短路径"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "为什么你总觉得自己很忙但...最容易忽略的关键点",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "把为什么你总觉得自己很忙但...讲清楚的最短路径",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
           "imageDirectionCandidates": [
             {
@@ -4101,6 +4257,21 @@
           "为什么你总在为什么你总觉得自己很忙但...上卡住",
           "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面"
         ],
+        "titleOptionDetails": [
+          {
+            "title": "为什么你总在为什么你总觉得自己很忙但...上卡住",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          },
+          {
+            "title": "为什么你总觉得自己很忙但...看起来简单，其实问题不在表面",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          }
+        ],
+        "materialKeywords": [],
         "imageDirection": "从截图里裁出异常点，不把全部上下文一次讲完。",
         "imageDirectionCandidates": [
           {

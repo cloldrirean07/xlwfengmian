@@ -7,6 +7,7 @@
   },
   "analysis": {
     "fields": {
+      "caseId": "real-003",
       "contentTopic": "用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。",
       "contentGoal": "让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。",
       "userAssetType": "截图",
@@ -23,7 +24,10 @@
       "userReferencePreference": "小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。",
       "assetDescription": "当前素材包含三张傍晚图片，画面包含晚霞、云层和落日。用户希望通过这组三张美景图片做出更有吸引力的小红书封面，获得更多点击、认同和赞美，并进一步带来流量。",
       "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。",
-      "copyReview": {},
+      "copyReview": {
+        "preferredTitle": "最后一抹霞光",
+        "titleRationale": "人工判断认为该标题更贴合夏日晚霞素材的情绪记忆点，适合作为人工优选标题继续复跑。"
+      },
       "assetContext": {
         "origin": "none",
         "hasLocalPreview": false,
@@ -254,11 +258,17 @@
         "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
         "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
         "titleOptions": [
+          "最后一抹霞光",
           "一键还原落日余晖感",
-          "AI把晚霞做成封面大片",
-          "适合晚霞封面的朋友圈文案"
+          "AI把晚霞做成封面大片"
         ],
         "titleOptionDetails": [
+          {
+            "title": "最后一抹霞光",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
           {
             "title": "一键还原落日余晖感",
             "sourceType": "style-library",
@@ -272,13 +282,6 @@
             "sourceLabel": "风格库",
             "styleId": "ai-scenery-result",
             "styleLabel": "AI风景效果"
-          },
-          {
-            "title": "适合晚霞封面的朋友圈文案",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "copy-collection",
-            "styleLabel": "文案合集"
           }
         ],
         "materialKeywords": [
@@ -584,11 +587,17 @@
         "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
         "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
         "titleOptions": [
+          "最后一抹霞光",
           "一键还原落日余晖感",
-          "AI把晚霞做成封面大片",
-          "适合晚霞封面的朋友圈文案"
+          "AI把晚霞做成封面大片"
         ],
         "titleOptionDetails": [
+          {
+            "title": "最后一抹霞光",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
           {
             "title": "一键还原落日余晖感",
             "sourceType": "style-library",
@@ -602,13 +611,6 @@
             "sourceLabel": "风格库",
             "styleId": "ai-scenery-result",
             "styleLabel": "AI风景效果"
-          },
-          {
-            "title": "适合晚霞封面的朋友圈文案",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "copy-collection",
-            "styleLabel": "文案合集"
           }
         ],
         "materialKeywords": [
@@ -917,11 +919,17 @@
         "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
         "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
         "titleOptions": [
+          "最后一抹霞光",
           "一键还原落日余晖感",
-          "AI把晚霞做成封面大片",
-          "适合晚霞封面的朋友圈文案"
+          "AI把晚霞做成封面大片"
         ],
         "titleOptionDetails": [
+          {
+            "title": "最后一抹霞光",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
           {
             "title": "一键还原落日余晖感",
             "sourceType": "style-library",
@@ -935,13 +943,6 @@
             "sourceLabel": "风格库",
             "styleId": "ai-scenery-result",
             "styleLabel": "AI风景效果"
-          },
-          {
-            "title": "适合晚霞封面的朋友圈文案",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "copy-collection",
-            "styleLabel": "文案合集"
           }
         ],
         "materialKeywords": [
@@ -1304,6 +1305,7 @@
     },
     "analysis": {
       "fields": {
+        "caseId": "real-003",
         "contentTopic": "用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。",
         "contentGoal": "让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。",
         "userAssetType": "截图",
@@ -1320,7 +1322,10 @@
         "userReferencePreference": "小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。",
         "assetDescription": "当前素材包含三张傍晚图片，画面包含晚霞、云层和落日。用户希望通过这组三张美景图片做出更有吸引力的小红书封面，获得更多点击、认同和赞美，并进一步带来流量。",
         "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。",
-        "copyReview": {},
+        "copyReview": {
+          "preferredTitle": "最后一抹霞光",
+          "titleRationale": "人工判断认为该标题更贴合夏日晚霞素材的情绪记忆点，适合作为人工优选标题继续复跑。"
+        },
         "assetContext": {
           "origin": "none",
           "hasLocalPreview": false,
@@ -1551,11 +1556,17 @@
           "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
           "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
           "titleOptions": [
+            "最后一抹霞光",
             "一键还原落日余晖感",
-            "AI把晚霞做成封面大片",
-            "适合晚霞封面的朋友圈文案"
+            "AI把晚霞做成封面大片"
           ],
           "titleOptionDetails": [
+            {
+              "title": "最后一抹霞光",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "一键还原落日余晖感",
               "sourceType": "style-library",
@@ -1569,13 +1580,6 @@
               "sourceLabel": "风格库",
               "styleId": "ai-scenery-result",
               "styleLabel": "AI风景效果"
-            },
-            {
-              "title": "适合晚霞封面的朋友圈文案",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "copy-collection",
-              "styleLabel": "文案合集"
             }
           ],
           "materialKeywords": [
@@ -1881,11 +1885,17 @@
           "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
           "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
           "titleOptions": [
+            "最后一抹霞光",
             "一键还原落日余晖感",
-            "AI把晚霞做成封面大片",
-            "适合晚霞封面的朋友圈文案"
+            "AI把晚霞做成封面大片"
           ],
           "titleOptionDetails": [
+            {
+              "title": "最后一抹霞光",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "一键还原落日余晖感",
               "sourceType": "style-library",
@@ -1899,13 +1909,6 @@
               "sourceLabel": "风格库",
               "styleId": "ai-scenery-result",
               "styleLabel": "AI风景效果"
-            },
-            {
-              "title": "适合晚霞封面的朋友圈文案",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "copy-collection",
-              "styleLabel": "文案合集"
             }
           ],
           "materialKeywords": [
@@ -2214,11 +2217,17 @@
           "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
           "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
           "titleOptions": [
+            "最后一抹霞光",
             "一键还原落日余晖感",
-            "AI把晚霞做成封面大片",
-            "适合晚霞封面的朋友圈文案"
+            "AI把晚霞做成封面大片"
           ],
           "titleOptionDetails": [
+            {
+              "title": "最后一抹霞光",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "一键还原落日余晖感",
               "sourceType": "style-library",
@@ -2232,13 +2241,6 @@
               "sourceLabel": "风格库",
               "styleId": "ai-scenery-result",
               "styleLabel": "AI风景效果"
-            },
-            {
-              "title": "适合晚霞封面的朋友圈文案",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "copy-collection",
-              "styleLabel": "文案合集"
             }
           ],
           "materialKeywords": [
@@ -2678,11 +2680,17 @@
       "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
       "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
       "titleOptions": [
+        "最后一抹霞光",
         "一键还原落日余晖感",
-        "AI把晚霞做成封面大片",
-        "适合晚霞封面的朋友圈文案"
+        "AI把晚霞做成封面大片"
       ],
       "titleOptionDetails": [
+        {
+          "title": "最后一抹霞光",
+          "sourceType": "manual-review",
+          "sourceLabel": "人工优选",
+          "styleLabel": "人工判断"
+        },
         {
           "title": "一键还原落日余晖感",
           "sourceType": "style-library",
@@ -2696,13 +2704,6 @@
           "sourceLabel": "风格库",
           "styleId": "ai-scenery-result",
           "styleLabel": "AI风景效果"
-        },
-        {
-          "title": "适合晚霞封面的朋友圈文案",
-          "sourceType": "style-library",
-          "sourceLabel": "风格库",
-          "styleId": "copy-collection",
-          "styleLabel": "文案合集"
         }
       ],
       "materialKeywords": [
@@ -3015,9 +3016,9 @@
         "directionDescription": "保留原来的点击逻辑，同时让主题和价值点更快被看懂。",
         "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步 / 先把重点讲明白",
         "titleOptions": [
-          "一键还原落日余晖感，但更贴内容",
-          "AI把晚霞做成封面大片，表达更稳",
-          "适合晚霞封面的朋友圈文案，表达更稳"
+          "最后一抹霞光，但更贴内容",
+          "一键还原落日余晖感，表达更稳",
+          "AI把晚霞做成封面大片，表达更稳"
         ],
         "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；图像和文字都更贴内容本身",
         "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；保留原有主结构",
@@ -3051,6 +3052,7 @@
     },
     "analysis": {
       "fields": {
+        "caseId": "real-003",
         "contentTopic": "用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。",
         "contentGoal": "让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。",
         "userAssetType": "截图",
@@ -3067,7 +3069,10 @@
         "userReferencePreference": "小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。",
         "assetDescription": "当前素材包含三张傍晚图片，画面包含晚霞、云层和落日。用户希望通过这组三张美景图片做出更有吸引力的小红书封面，获得更多点击、认同和赞美，并进一步带来流量。",
         "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。",
-        "copyReview": {},
+        "copyReview": {
+          "preferredTitle": "最后一抹霞光",
+          "titleRationale": "人工判断认为该标题更贴合夏日晚霞素材的情绪记忆点，适合作为人工优选标题继续复跑。"
+        },
         "assetContext": {
           "origin": "none",
           "hasLocalPreview": false,
@@ -3298,11 +3303,17 @@
           "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
           "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
           "titleOptions": [
+            "最后一抹霞光",
             "一键还原落日余晖感",
-            "AI把晚霞做成封面大片",
-            "适合晚霞封面的朋友圈文案"
+            "AI把晚霞做成封面大片"
           ],
           "titleOptionDetails": [
+            {
+              "title": "最后一抹霞光",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "一键还原落日余晖感",
               "sourceType": "style-library",
@@ -3316,13 +3327,6 @@
               "sourceLabel": "风格库",
               "styleId": "ai-scenery-result",
               "styleLabel": "AI风景效果"
-            },
-            {
-              "title": "适合晚霞封面的朋友圈文案",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "copy-collection",
-              "styleLabel": "文案合集"
             }
           ],
           "materialKeywords": [
@@ -3628,11 +3632,17 @@
           "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
           "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
           "titleOptions": [
+            "最后一抹霞光",
             "一键还原落日余晖感",
-            "AI把晚霞做成封面大片",
-            "适合晚霞封面的朋友圈文案"
+            "AI把晚霞做成封面大片"
           ],
           "titleOptionDetails": [
+            {
+              "title": "最后一抹霞光",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "一键还原落日余晖感",
               "sourceType": "style-library",
@@ -3646,13 +3656,6 @@
               "sourceLabel": "风格库",
               "styleId": "ai-scenery-result",
               "styleLabel": "AI风景效果"
-            },
-            {
-              "title": "适合晚霞封面的朋友圈文案",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "copy-collection",
-              "styleLabel": "文案合集"
             }
           ],
           "materialKeywords": [
@@ -3961,11 +3964,17 @@
           "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
           "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
           "titleOptions": [
+            "最后一抹霞光",
             "一键还原落日余晖感",
-            "AI把晚霞做成封面大片",
-            "适合晚霞封面的朋友圈文案"
+            "AI把晚霞做成封面大片"
           ],
           "titleOptionDetails": [
+            {
+              "title": "最后一抹霞光",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "一键还原落日余晖感",
               "sourceType": "style-library",
@@ -3979,13 +3988,6 @@
               "sourceLabel": "风格库",
               "styleId": "ai-scenery-result",
               "styleLabel": "AI风景效果"
-            },
-            {
-              "title": "适合晚霞封面的朋友圈文案",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "copy-collection",
-              "styleLabel": "文案合集"
             }
           ],
           "materialKeywords": [
@@ -4391,11 +4393,17 @@
         "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
         "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
         "titleOptions": [
+          "最后一抹霞光",
           "一键还原落日余晖感",
-          "AI把晚霞做成封面大片",
-          "适合晚霞封面的朋友圈文案"
+          "AI把晚霞做成封面大片"
         ],
         "titleOptionDetails": [
+          {
+            "title": "最后一抹霞光",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
           {
             "title": "一键还原落日余晖感",
             "sourceType": "style-library",
@@ -4409,13 +4417,6 @@
             "sourceLabel": "风格库",
             "styleId": "ai-scenery-result",
             "styleLabel": "AI风景效果"
-          },
-          {
-            "title": "适合晚霞封面的朋友圈文案",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "copy-collection",
-            "styleLabel": "文案合集"
           }
         ],
         "materialKeywords": [
@@ -4728,9 +4729,9 @@
           "directionDescription": "保留原来的点击逻辑，同时让主题和价值点更快被看懂。",
           "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步 / 先把重点讲明白",
           "titleOptions": [
-            "一键还原落日余晖感，但更贴内容",
-            "AI把晚霞做成封面大片，表达更稳",
-            "适合晚霞封面的朋友圈文案，表达更稳"
+            "最后一抹霞光，但更贴内容",
+            "一键还原落日余晖感，表达更稳",
+            "AI把晚霞做成封面大片，表达更稳"
           ],
           "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；图像和文字都更贴内容本身",
           "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；保留原有主结构",

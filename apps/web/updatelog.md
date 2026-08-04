@@ -1,5 +1,31 @@
 # 更新日志
 
+## 2026-08-04 11:08
+
+- 更新文件：[../../.gitignore](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/.gitignore)
+  - 忽略 `apps/web/outputs/obsidian-export-logs/` 时间戳导出日志，避免运行痕迹持续污染 Git 工作区。
+- 更新文件：[data/real-cases/items/real-003.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/real-cases/items/real-003.json)
+  - 将人工优选标题恢复为 `最后一抹霞光`，让人工判断优先于风格库候选。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 补充平台笔记缺失时的批量复核断言，确认缺失案例进入待回填行而不是阻断整批看板。
+- 新增文件：[docs/operations/2026-08-04_工作区未提交产物分流记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-08-04_工作区未提交产物分流记录.md)
+  - 记录本轮未提交产物分流、建议提交范围、暂缓范围和日志忽略策略。
+- 验证结果：
+  - 执行 `npm run validate:cases`
+  - 结果：`ok: true / total: 4 / realCount: 3`
+  - 执行 `npm run generate:key-case-rerun-plan`
+  - 结果：计划样例 `sample-001 / real-002 / real-003 / real-001`
+  - 执行 `npm run rerun:key-cases`
+  - 结果：`rerunCaseCount: 4 / realCaseCount: 3`
+  - 执行 `npm run report:real-case-readiness`
+  - 结果：`readyCount: 2 / pendingCount: 1`
+  - 执行 `npm run report:real-case-maintenance-board`
+  - 结果：`P1: 1 / P2: 2 / readyHighPriorityCount: 2`
+  - 执行 `npm test`
+  - 结果：`295 pass / 0 fail`
+  - 执行 `npm run build`
+  - 结果：构建通过
+
 ## 2026-08-03 17:11
 
 - 更新文件：[public/index.html](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/index.html)

@@ -7,6 +7,7 @@
   },
   "analysis": {
     "fields": {
+      "caseId": "real-002",
       "contentTopic": "用 AI 工具快速做一张小红书封面，从选方向到改标题的完整流程；素材主题为螃蟹和辣炒鱿鱼美食分享。",
       "contentGoal": "让用户一眼知道这是一篇 AI 封面制作教程，并愿意点开学习如何快速做出更专业的小红书封面。",
       "userAssetType": "截图",
@@ -23,7 +24,10 @@
       "userReferencePreference": "小红书美食封面方向，突出食欲、冲击力和清晰标题层级，避免画面信息过散。",
       "assetDescription": "当前素材包含两张美食照片：一张以螃蟹、辣椒、葱段和酱汁为主体，另一张以辣炒鱿鱼、香菜、辣椒和餐桌环境为主体。用户希望基于这些照片快速生成抓人眼球的小红书封面，并配套产出让人愿意继续阅读的标题。",
       "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件线索来自 Finder 预览：IMG_7959.HEIC 与 IMG_7955.HEIC。",
-      "copyReview": {},
+      "copyReview": {
+        "preferredTitle": "辣炒的味蕾",
+        "titleRationale": "人工判断认为该标题更能抓住美食素材的感官体验，比直接罗列食材更有封面感。"
+      },
       "assetContext": {
         "origin": "none",
         "hasLocalPreview": false,
@@ -250,11 +254,17 @@
         "directionDescription": "靠对立、反差、误区纠正和张力拉开与普通内容的距离。 当前内容更靠「冲击」驱动点击。",
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面别再这样做",
         "titleOptions": [
+          "辣炒的味蕾",
           "在家复刻夜市香辣鱿鱼",
-          "香辣蟹做出饭店味道",
-          "香辣蟹新手零失败"
+          "香辣蟹做出饭店味道"
         ],
         "titleOptionDetails": [
+          {
+            "title": "辣炒的味蕾",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
           {
             "title": "在家复刻夜市香辣鱿鱼",
             "sourceType": "style-library",
@@ -268,13 +278,6 @@
             "sourceLabel": "风格库",
             "styleId": "night-market-remake",
             "styleLabel": "夜市复刻"
-          },
-          {
-            "title": "香辣蟹新手零失败",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "low-barrier-recipe",
-            "styleLabel": "低门槛教程"
           }
         ],
         "materialKeywords": [
@@ -576,11 +579,17 @@
         "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
         "titleOptions": [
+          "辣炒的味蕾",
           "在家复刻夜市香辣鱿鱼",
-          "香辣蟹做出饭店味道",
-          "香辣蟹新手零失败"
+          "香辣蟹做出饭店味道"
         ],
         "titleOptionDetails": [
+          {
+            "title": "辣炒的味蕾",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
           {
             "title": "在家复刻夜市香辣鱿鱼",
             "sourceType": "style-library",
@@ -594,13 +603,6 @@
             "sourceLabel": "风格库",
             "styleId": "night-market-remake",
             "styleLabel": "夜市复刻"
-          },
-          {
-            "title": "香辣蟹新手零失败",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "low-barrier-recipe",
-            "styleLabel": "低门槛教程"
           }
         ],
         "materialKeywords": [
@@ -909,11 +911,17 @@
         "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面的结果差在这里",
         "titleOptions": [
+          "辣炒的味蕾",
           "在家复刻夜市香辣鱿鱼",
-          "香辣蟹做出饭店味道",
-          "香辣蟹新手零失败"
+          "香辣蟹做出饭店味道"
         ],
         "titleOptionDetails": [
+          {
+            "title": "辣炒的味蕾",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
           {
             "title": "在家复刻夜市香辣鱿鱼",
             "sourceType": "style-library",
@@ -927,13 +935,6 @@
             "sourceLabel": "风格库",
             "styleId": "night-market-remake",
             "styleLabel": "夜市复刻"
-          },
-          {
-            "title": "香辣蟹新手零失败",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "low-barrier-recipe",
-            "styleLabel": "低门槛教程"
           }
         ],
         "materialKeywords": [
@@ -1296,6 +1297,7 @@
     },
     "analysis": {
       "fields": {
+        "caseId": "real-002",
         "contentTopic": "用 AI 工具快速做一张小红书封面，从选方向到改标题的完整流程；素材主题为螃蟹和辣炒鱿鱼美食分享。",
         "contentGoal": "让用户一眼知道这是一篇 AI 封面制作教程，并愿意点开学习如何快速做出更专业的小红书封面。",
         "userAssetType": "截图",
@@ -1312,7 +1314,10 @@
         "userReferencePreference": "小红书美食封面方向，突出食欲、冲击力和清晰标题层级，避免画面信息过散。",
         "assetDescription": "当前素材包含两张美食照片：一张以螃蟹、辣椒、葱段和酱汁为主体，另一张以辣炒鱿鱼、香菜、辣椒和餐桌环境为主体。用户希望基于这些照片快速生成抓人眼球的小红书封面，并配套产出让人愿意继续阅读的标题。",
         "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件线索来自 Finder 预览：IMG_7959.HEIC 与 IMG_7955.HEIC。",
-        "copyReview": {},
+        "copyReview": {
+          "preferredTitle": "辣炒的味蕾",
+          "titleRationale": "人工判断认为该标题更能抓住美食素材的感官体验，比直接罗列食材更有封面感。"
+        },
         "assetContext": {
           "origin": "none",
           "hasLocalPreview": false,
@@ -1539,11 +1544,17 @@
           "directionDescription": "靠对立、反差、误区纠正和张力拉开与普通内容的距离。 当前内容更靠「冲击」驱动点击。",
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面别再这样做",
           "titleOptions": [
+            "辣炒的味蕾",
             "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道",
-            "香辣蟹新手零失败"
+            "香辣蟹做出饭店味道"
           ],
           "titleOptionDetails": [
+            {
+              "title": "辣炒的味蕾",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "在家复刻夜市香辣鱿鱼",
               "sourceType": "style-library",
@@ -1557,13 +1568,6 @@
               "sourceLabel": "风格库",
               "styleId": "night-market-remake",
               "styleLabel": "夜市复刻"
-            },
-            {
-              "title": "香辣蟹新手零失败",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "low-barrier-recipe",
-              "styleLabel": "低门槛教程"
             }
           ],
           "materialKeywords": [
@@ -1865,11 +1869,17 @@
           "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
           "titleOptions": [
+            "辣炒的味蕾",
             "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道",
-            "香辣蟹新手零失败"
+            "香辣蟹做出饭店味道"
           ],
           "titleOptionDetails": [
+            {
+              "title": "辣炒的味蕾",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "在家复刻夜市香辣鱿鱼",
               "sourceType": "style-library",
@@ -1883,13 +1893,6 @@
               "sourceLabel": "风格库",
               "styleId": "night-market-remake",
               "styleLabel": "夜市复刻"
-            },
-            {
-              "title": "香辣蟹新手零失败",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "low-barrier-recipe",
-              "styleLabel": "低门槛教程"
             }
           ],
           "materialKeywords": [
@@ -2198,11 +2201,17 @@
           "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面的结果差在这里",
           "titleOptions": [
+            "辣炒的味蕾",
             "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道",
-            "香辣蟹新手零失败"
+            "香辣蟹做出饭店味道"
           ],
           "titleOptionDetails": [
+            {
+              "title": "辣炒的味蕾",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "在家复刻夜市香辣鱿鱼",
               "sourceType": "style-library",
@@ -2216,13 +2225,6 @@
               "sourceLabel": "风格库",
               "styleId": "night-market-remake",
               "styleLabel": "夜市复刻"
-            },
-            {
-              "title": "香辣蟹新手零失败",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "low-barrier-recipe",
-              "styleLabel": "低门槛教程"
             }
           ],
           "materialKeywords": [
@@ -2662,11 +2664,17 @@
       "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
       "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
       "titleOptions": [
+        "辣炒的味蕾",
         "在家复刻夜市香辣鱿鱼",
-        "香辣蟹做出饭店味道",
-        "香辣蟹新手零失败"
+        "香辣蟹做出饭店味道"
       ],
       "titleOptionDetails": [
+        {
+          "title": "辣炒的味蕾",
+          "sourceType": "manual-review",
+          "sourceLabel": "人工优选",
+          "styleLabel": "人工判断"
+        },
         {
           "title": "在家复刻夜市香辣鱿鱼",
           "sourceType": "style-library",
@@ -2680,13 +2688,6 @@
           "sourceLabel": "风格库",
           "styleId": "night-market-remake",
           "styleLabel": "夜市复刻"
-        },
-        {
-          "title": "香辣蟹新手零失败",
-          "sourceType": "style-library",
-          "sourceLabel": "风格库",
-          "styleId": "low-barrier-recipe",
-          "styleLabel": "低门槛教程"
         }
       ],
       "materialKeywords": [
@@ -2999,9 +3000,9 @@
         "directionDescription": "保留原来的点击逻辑，同时让主题和价值点更快被看懂。",
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步 / 先把重点讲明白",
         "titleOptions": [
-          "在家复刻夜市香辣鱿鱼，但更贴内容",
-          "香辣蟹做出饭店味道，表达更稳",
-          "香辣蟹新手零失败，表达更稳"
+          "辣炒的味蕾，但更贴内容",
+          "在家复刻夜市香辣鱿鱼，表达更稳",
+          "香辣蟹做出饭店味道，表达更稳"
         ],
         "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；图像和文字都更贴内容本身",
         "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；保留原有主结构",
@@ -3035,6 +3036,7 @@
     },
     "analysis": {
       "fields": {
+        "caseId": "real-002",
         "contentTopic": "用 AI 工具快速做一张小红书封面，从选方向到改标题的完整流程；素材主题为螃蟹和辣炒鱿鱼美食分享。",
         "contentGoal": "让用户一眼知道这是一篇 AI 封面制作教程，并愿意点开学习如何快速做出更专业的小红书封面。",
         "userAssetType": "截图",
@@ -3051,7 +3053,10 @@
         "userReferencePreference": "小红书美食封面方向，突出食欲、冲击力和清晰标题层级，避免画面信息过散。",
         "assetDescription": "当前素材包含两张美食照片：一张以螃蟹、辣椒、葱段和酱汁为主体，另一张以辣炒鱿鱼、香菜、辣椒和餐桌环境为主体。用户希望基于这些照片快速生成抓人眼球的小红书封面，并配套产出让人愿意继续阅读的标题。",
         "assetNotes": "已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件线索来自 Finder 预览：IMG_7959.HEIC 与 IMG_7955.HEIC。",
-        "copyReview": {},
+        "copyReview": {
+          "preferredTitle": "辣炒的味蕾",
+          "titleRationale": "人工判断认为该标题更能抓住美食素材的感官体验，比直接罗列食材更有封面感。"
+        },
         "assetContext": {
           "origin": "none",
           "hasLocalPreview": false,
@@ -3278,11 +3283,17 @@
           "directionDescription": "靠对立、反差、误区纠正和张力拉开与普通内容的距离。 当前内容更靠「冲击」驱动点击。",
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面别再这样做",
           "titleOptions": [
+            "辣炒的味蕾",
             "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道",
-            "香辣蟹新手零失败"
+            "香辣蟹做出饭店味道"
           ],
           "titleOptionDetails": [
+            {
+              "title": "辣炒的味蕾",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "在家复刻夜市香辣鱿鱼",
               "sourceType": "style-library",
@@ -3296,13 +3307,6 @@
               "sourceLabel": "风格库",
               "styleId": "night-market-remake",
               "styleLabel": "夜市复刻"
-            },
-            {
-              "title": "香辣蟹新手零失败",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "low-barrier-recipe",
-              "styleLabel": "低门槛教程"
             }
           ],
           "materialKeywords": [
@@ -3604,11 +3608,17 @@
           "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
           "titleOptions": [
+            "辣炒的味蕾",
             "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道",
-            "香辣蟹新手零失败"
+            "香辣蟹做出饭店味道"
           ],
           "titleOptionDetails": [
+            {
+              "title": "辣炒的味蕾",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "在家复刻夜市香辣鱿鱼",
               "sourceType": "style-library",
@@ -3622,13 +3632,6 @@
               "sourceLabel": "风格库",
               "styleId": "night-market-remake",
               "styleLabel": "夜市复刻"
-            },
-            {
-              "title": "香辣蟹新手零失败",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "low-barrier-recipe",
-              "styleLabel": "低门槛教程"
             }
           ],
           "materialKeywords": [
@@ -3937,11 +3940,17 @@
           "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面的结果差在这里",
           "titleOptions": [
+            "辣炒的味蕾",
             "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道",
-            "香辣蟹新手零失败"
+            "香辣蟹做出饭店味道"
           ],
           "titleOptionDetails": [
+            {
+              "title": "辣炒的味蕾",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
             {
               "title": "在家复刻夜市香辣鱿鱼",
               "sourceType": "style-library",
@@ -3955,13 +3964,6 @@
               "sourceLabel": "风格库",
               "styleId": "night-market-remake",
               "styleLabel": "夜市复刻"
-            },
-            {
-              "title": "香辣蟹新手零失败",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "low-barrier-recipe",
-              "styleLabel": "低门槛教程"
             }
           ],
           "materialKeywords": [
@@ -4367,11 +4369,17 @@
         "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
         "titleOptions": [
+          "辣炒的味蕾",
           "在家复刻夜市香辣鱿鱼",
-          "香辣蟹做出饭店味道",
-          "香辣蟹新手零失败"
+          "香辣蟹做出饭店味道"
         ],
         "titleOptionDetails": [
+          {
+            "title": "辣炒的味蕾",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
           {
             "title": "在家复刻夜市香辣鱿鱼",
             "sourceType": "style-library",
@@ -4385,13 +4393,6 @@
             "sourceLabel": "风格库",
             "styleId": "night-market-remake",
             "styleLabel": "夜市复刻"
-          },
-          {
-            "title": "香辣蟹新手零失败",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "low-barrier-recipe",
-            "styleLabel": "低门槛教程"
           }
         ],
         "materialKeywords": [
@@ -4704,9 +4705,9 @@
           "directionDescription": "保留原来的点击逻辑，同时让主题和价值点更快被看懂。",
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步 / 先把重点讲明白",
           "titleOptions": [
-            "在家复刻夜市香辣鱿鱼，但更贴内容",
-            "香辣蟹做出饭店味道，表达更稳",
-            "香辣蟹新手零失败，表达更稳"
+            "辣炒的味蕾，但更贴内容",
+            "在家复刻夜市香辣鱿鱼，表达更稳",
+            "香辣蟹做出饭店味道，表达更稳"
           ],
           "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；图像和文字都更贴内容本身",
           "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；保留原有主结构",

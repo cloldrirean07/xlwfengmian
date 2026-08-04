@@ -7,6 +7,7 @@
   },
   "analysis": {
     "fields": {
+      "caseId": "real-001",
       "contentTopic": "待补真实内容主题",
       "contentGoal": "待补这条内容想传达的价值或点击目标",
       "userAssetType": "截图",
@@ -23,6 +24,7 @@
       "userReferencePreference": "待补希望的封面风格和质感倾向",
       "assetDescription": "待补当前已有截图/画面/用户想法，以及希望补什么类型的图",
       "assetNotes": "待补当前素材状态、画面特点、限制条件",
+      "copyReview": {},
       "assetContext": {
         "origin": "none",
         "hasLocalPreview": false,
@@ -253,6 +255,21 @@
           "待补真实内容主题最容易忽略的关键点",
           "把待补真实内容主题讲清楚的最短路径"
         ],
+        "titleOptionDetails": [
+          {
+            "title": "待补真实内容主题最容易忽略的关键点",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          },
+          {
+            "title": "把待补真实内容主题讲清楚的最短路径",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          }
+        ],
+        "materialKeywords": [],
         "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
         "imageDirectionCandidates": [
           {
@@ -556,6 +573,21 @@
           "待补真实内容主题里最值得你先建立的判断力",
           "想把待补真实内容主题做得更稳，先看这点"
         ],
+        "titleOptionDetails": [
+          {
+            "title": "待补真实内容主题里最值得你先建立的判断力",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          },
+          {
+            "title": "想把待补真实内容主题做得更稳，先看这点",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          }
+        ],
+        "materialKeywords": [],
         "imageDirection": "减少杂乱界面，只保留最有质感的局部与秩序感。",
         "imageDirectionCandidates": [
           {
@@ -857,6 +889,21 @@
           "待补真实内容主题为什么总没结果，以及怎么改",
           "看完就能直接用的待补真实内容主题方法"
         ],
+        "titleOptionDetails": [
+          {
+            "title": "待补真实内容主题为什么总没结果，以及怎么改",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          },
+          {
+            "title": "看完就能直接用的待补真实内容主题方法",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          }
+        ],
+        "materialKeywords": [],
         "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
         "imageDirectionCandidates": [
           {
@@ -1210,6 +1257,7 @@
     },
     "analysis": {
       "fields": {
+        "caseId": "real-001",
         "contentTopic": "待补真实内容主题",
         "contentGoal": "待补这条内容想传达的价值或点击目标",
         "userAssetType": "截图",
@@ -1226,6 +1274,7 @@
         "userReferencePreference": "待补希望的封面风格和质感倾向",
         "assetDescription": "待补当前已有截图/画面/用户想法，以及希望补什么类型的图",
         "assetNotes": "待补当前素材状态、画面特点、限制条件",
+        "copyReview": {},
         "assetContext": {
           "origin": "none",
           "hasLocalPreview": false,
@@ -1456,6 +1505,21 @@
             "待补真实内容主题最容易忽略的关键点",
             "把待补真实内容主题讲清楚的最短路径"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "待补真实内容主题最容易忽略的关键点",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "把待补真实内容主题讲清楚的最短路径",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
           "imageDirectionCandidates": [
             {
@@ -1759,6 +1823,21 @@
             "待补真实内容主题里最值得你先建立的判断力",
             "想把待补真实内容主题做得更稳，先看这点"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "待补真实内容主题里最值得你先建立的判断力",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "想把待补真实内容主题做得更稳，先看这点",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "减少杂乱界面，只保留最有质感的局部与秩序感。",
           "imageDirectionCandidates": [
             {
@@ -2060,6 +2139,21 @@
             "待补真实内容主题为什么总没结果，以及怎么改",
             "看完就能直接用的待补真实内容主题方法"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "待补真实内容主题为什么总没结果，以及怎么改",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "看完就能直接用的待补真实内容主题方法",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
           "imageDirectionCandidates": [
             {
@@ -2493,6 +2587,21 @@
         "待补真实内容主题里最值得你先建立的判断力",
         "想把待补真实内容主题做得更稳，先看这点"
       ],
+      "titleOptionDetails": [
+        {
+          "title": "待补真实内容主题里最值得你先建立的判断力",
+          "sourceType": "material-keyword-fallback",
+          "sourceLabel": "素材词兜底",
+          "styleLabel": "基础模板"
+        },
+        {
+          "title": "想把待补真实内容主题做得更稳，先看这点",
+          "sourceType": "material-keyword-fallback",
+          "sourceLabel": "素材词兜底",
+          "styleLabel": "基础模板"
+        }
+      ],
+      "materialKeywords": [],
       "imageDirection": "减少杂乱界面，只保留最有质感的局部与秩序感。",
       "imageDirectionCandidates": [
         {
@@ -2830,6 +2939,7 @@
     },
     "analysis": {
       "fields": {
+        "caseId": "real-001",
         "contentTopic": "待补真实内容主题",
         "contentGoal": "待补这条内容想传达的价值或点击目标",
         "userAssetType": "截图",
@@ -2846,6 +2956,7 @@
         "userReferencePreference": "待补希望的封面风格和质感倾向",
         "assetDescription": "待补当前已有截图/画面/用户想法，以及希望补什么类型的图",
         "assetNotes": "待补当前素材状态、画面特点、限制条件",
+        "copyReview": {},
         "assetContext": {
           "origin": "none",
           "hasLocalPreview": false,
@@ -3076,6 +3187,21 @@
             "待补真实内容主题最容易忽略的关键点",
             "把待补真实内容主题讲清楚的最短路径"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "待补真实内容主题最容易忽略的关键点",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "把待补真实内容主题讲清楚的最短路径",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
           "imageDirectionCandidates": [
             {
@@ -3379,6 +3505,21 @@
             "待补真实内容主题里最值得你先建立的判断力",
             "想把待补真实内容主题做得更稳，先看这点"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "待补真实内容主题里最值得你先建立的判断力",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "想把待补真实内容主题做得更稳，先看这点",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "减少杂乱界面，只保留最有质感的局部与秩序感。",
           "imageDirectionCandidates": [
             {
@@ -3680,6 +3821,21 @@
             "待补真实内容主题为什么总没结果，以及怎么改",
             "看完就能直接用的待补真实内容主题方法"
           ],
+          "titleOptionDetails": [
+            {
+              "title": "待补真实内容主题为什么总没结果，以及怎么改",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            },
+            {
+              "title": "看完就能直接用的待补真实内容主题方法",
+              "sourceType": "material-keyword-fallback",
+              "sourceLabel": "素材词兜底",
+              "styleLabel": "基础模板"
+            }
+          ],
+          "materialKeywords": [],
           "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
           "imageDirectionCandidates": [
             {
@@ -4079,6 +4235,21 @@
           "待补真实内容主题里最值得你先建立的判断力",
           "想把待补真实内容主题做得更稳，先看这点"
         ],
+        "titleOptionDetails": [
+          {
+            "title": "待补真实内容主题里最值得你先建立的判断力",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          },
+          {
+            "title": "想把待补真实内容主题做得更稳，先看这点",
+            "sourceType": "material-keyword-fallback",
+            "sourceLabel": "素材词兜底",
+            "styleLabel": "基础模板"
+          }
+        ],
+        "materialKeywords": [],
         "imageDirection": "减少杂乱界面，只保留最有质感的局部与秩序感。",
         "imageDirectionCandidates": [
           {

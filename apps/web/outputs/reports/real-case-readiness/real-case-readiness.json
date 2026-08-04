@@ -1,7 +1,7 @@
 {
   "summary": {
-    "totalRealCases": 1,
-    "readyCount": 0,
+    "totalRealCases": 3,
+    "readyCount": 2,
     "partialCount": 0,
     "pendingCount": 1
   },
@@ -60,6 +60,100 @@
         {
           "label": "来源链接或截图路径",
           "complete": false
+        }
+      ]
+    },
+    {
+      "caseId": "real-002",
+      "title": "P-02 美食封面制作真实案例",
+      "platformCaseId": "P-02",
+      "status": "可进入手动验证",
+      "totalChecks": 9,
+      "completedChecks": 9,
+      "missingFields": [],
+      "checks": [
+        {
+          "label": "内容主题",
+          "complete": true
+        },
+        {
+          "label": "内容目标",
+          "complete": true
+        },
+        {
+          "label": "素材描述",
+          "complete": true
+        },
+        {
+          "label": "封面偏好",
+          "complete": true
+        },
+        {
+          "label": "素材备注",
+          "complete": true
+        },
+        {
+          "label": "证据说明",
+          "complete": true
+        },
+        {
+          "label": "保留项反馈",
+          "complete": true
+        },
+        {
+          "label": "第二轮反馈",
+          "complete": true
+        },
+        {
+          "label": "来源链接或截图路径",
+          "complete": true
+        }
+      ]
+    },
+    {
+      "caseId": "real-003",
+      "title": "P-03 夏日晚霞封面制作真实案例",
+      "platformCaseId": "P-03",
+      "status": "可进入手动验证",
+      "totalChecks": 9,
+      "completedChecks": 9,
+      "missingFields": [],
+      "checks": [
+        {
+          "label": "内容主题",
+          "complete": true
+        },
+        {
+          "label": "内容目标",
+          "complete": true
+        },
+        {
+          "label": "素材描述",
+          "complete": true
+        },
+        {
+          "label": "封面偏好",
+          "complete": true
+        },
+        {
+          "label": "素材备注",
+          "complete": true
+        },
+        {
+          "label": "证据说明",
+          "complete": true
+        },
+        {
+          "label": "保留项反馈",
+          "complete": true
+        },
+        {
+          "label": "第二轮反馈",
+          "complete": true
+        },
+        {
+          "label": "来源链接或截图路径",
+          "complete": true
         }
       ]
     }

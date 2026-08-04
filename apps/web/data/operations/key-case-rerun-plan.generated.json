@@ -3,6 +3,8 @@
   "description": "规则升级后优先复跑的关键样例清单，用于刷新方向判断、误判样本导出和规则修订任务单。",
   "caseIds": [
     "sample-001",
+    "real-002",
+    "real-003",
     "real-001"
   ],
   "downstreamRefreshTargets": [
@@ -31,6 +33,32 @@
         "sample",
         "baseline",
         "misclassified-seed"
+      ]
+    },
+    {
+      "caseId": "real-002",
+      "title": "P-02 美食封面制作真实案例",
+      "sourceType": "real",
+      "keyCaseRerunPriority": 8,
+      "maintenanceTags": [
+        "real-case",
+        "formal-write-candidate",
+        "real-002_to_real-003",
+        "input-preparation-gap",
+        "high-priority-candidate"
+      ]
+    },
+    {
+      "caseId": "real-003",
+      "title": "P-03 夏日晚霞封面制作真实案例",
+      "sourceType": "real",
+      "keyCaseRerunPriority": 7,
+      "maintenanceTags": [
+        "real-case",
+        "formal-write-candidate",
+        "real-002_to_real-003",
+        "input-preparation-gap",
+        "high-priority-candidate"
       ]
     },
     {

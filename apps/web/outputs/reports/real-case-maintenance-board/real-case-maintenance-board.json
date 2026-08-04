@@ -1,13 +1,63 @@
 {
   "summary": {
-    "totalRealCases": 1,
-    "p1Count": 0,
-    "p2Count": 1,
+    "totalRealCases": 3,
+    "p1Count": 1,
+    "p2Count": 2,
     "p3Count": 0,
     "backlogCount": 0,
-    "readyHighPriorityCount": 0
+    "readyHighPriorityCount": 2
   },
   "rows": [
+    {
+      "caseId": "real-002",
+      "title": "P-02 美食封面制作真实案例",
+      "platform": "抖音",
+      "platformCaseId": "P-02",
+      "rerunPriority": 8,
+      "priorityBand": "P1",
+      "maintenanceTags": [
+        "real-case",
+        "formal-write-candidate",
+        "real-002_to_real-003",
+        "input-preparation-gap",
+        "high-priority-candidate"
+      ],
+      "readinessStatus": "可进入手动验证",
+      "completedChecks": 9,
+      "totalChecks": 9,
+      "missingFields": [],
+      "reasonNotes": [
+        "关键复跑优先级高",
+        "已标为高优先候选",
+        "字段已具备手动验证条件"
+      ],
+      "actionRecommendation": "优先进入手动验证与复跑"
+    },
+    {
+      "caseId": "real-003",
+      "title": "P-03 夏日晚霞封面制作真实案例",
+      "platform": "抖音",
+      "platformCaseId": "P-03",
+      "rerunPriority": 7,
+      "priorityBand": "P2",
+      "maintenanceTags": [
+        "real-case",
+        "formal-write-candidate",
+        "real-002_to_real-003",
+        "input-preparation-gap",
+        "high-priority-candidate"
+      ],
+      "readinessStatus": "可进入手动验证",
+      "completedChecks": 9,
+      "totalChecks": 9,
+      "missingFields": [],
+      "reasonNotes": [
+        "已进入关键复跑池",
+        "已标为高优先候选",
+        "字段已具备手动验证条件"
+      ],
+      "actionRecommendation": "可作为下一批重点维护案例"
+    },
     {
       "caseId": "real-001",
       "title": "P-01 待补真实案例",

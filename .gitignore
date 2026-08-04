@@ -4,6 +4,7 @@ apps/*/dist/
 
 .DS_Store
 *.log
+apps/web/outputs/obsidian-export-logs/
 
 .env
 .env.*
