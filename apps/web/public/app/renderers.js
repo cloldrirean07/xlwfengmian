@@ -4313,6 +4313,60 @@ export function renderRealCaseLibrary(
   `;
 }
 
+export function renderRealCaseQuickStart(container, cases = []) {
+  const realCases = (cases || []).filter((item) => item.sourceType === "real");
+
+  if (!realCases.length) {
+    container.innerHTML = `<p class="empty-state">当前还没有可直接运行的真实案例。</p>`;
+    return;
+  }
+
+  const priorityIds = ["real-002", "real-003"];
+  const priorityCases = priorityIds
+    .map((caseId) => realCases.find((item) => item.id === caseId))
+    .filter(Boolean);
+  const fallbackCases = realCases
+    .filter((item) => !priorityIds.includes(item.id))
+    .filter((item) => item.overviewMeta?.isActionable)
+    .slice(0, Math.max(0, 2 - priorityCases.length));
+  const quickCases = [...priorityCases, ...fallbackCases].slice(0, 2);
+
+  if (!quickCases.length) {
+    container.innerHTML = `<p class="empty-state">真实案例已载入，当前没有适合快跑的案例。</p>`;
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="real-case-quick-grid">
+      ${quickCases
+        .map(
+          (item) => `
+            <article class="real-case-quick-card">
+              <div>
+                <p class="micro-copy">${escapeHtml(item.platformCaseId || "Real Case")}</p>
+                <h3>${escapeHtml(item.title || item.id)}</h3>
+              </div>
+              <div class="tag-row">
+                <span class="tag">${escapeHtml(item.id)}</span>
+                <span class="tag">${escapeHtml(item.platform || "待补平台")}</span>
+                <span class="tag">${escapeHtml(item.readinessStatus || "待补充")}</span>
+              </div>
+              <p>${escapeHtml(item.contentTopic || item.referencePreference || item.title || "素材背景已补齐，可进入主链路验证。")}</p>
+              <button
+                type="button"
+                data-real-case-action="load-workbench"
+                data-case-id="${escapeHtml(item.id)}"
+              >
+                加载到主工作台
+              </button>
+            </article>
+          `,
+        )
+        .join("")}
+    </div>
+  `;
+}
+
 export function renderRealCaseMaintenancePreview(container, result) {
   if (!result) {
     container.innerHTML = `<p class="empty-state">从真实案例概览选择一条案例后，结果区会显示当前最该先补的字段。</p>`;

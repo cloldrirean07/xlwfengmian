@@ -85,6 +85,7 @@ import {
   renderRealCaseLibrary,
   renderRealCaseMaintenancePreview,
   renderRealCasePreview,
+  renderRealCaseQuickStart,
   renderRefinementResult,
   renderRefineWorkspaceHint,
   renderSampleRun,
@@ -1388,7 +1389,7 @@ export function createApp() {
     hide(dom.refinePanel);
     switchProductView("creation");
     focusDirectionCards(dom);
-    setStatus(dom.firstRoundStatus, "真实案例已加载到主工作台，可选择标题候选并执行写回。");
+    setStatus(dom.firstRoundStatus, "真实案例已加载到主工作台，可选择方向卡并进入工作区或第二轮。");
     setStatus(dom.realCaseBatchStatus, "真实案例已进入主工作台。");
   }
 
@@ -1548,6 +1549,9 @@ export function createApp() {
   syncWorkspaceGroupToggle("cases", true);
   syncWorkspaceGroupToggle("validation", false);
   restoreProductViewFromHash();
+  void refreshRealCaseQuickStart().catch(() => {
+    renderRealCaseQuickStart(dom.realCaseQuickStartResult, []);
+  });
 
   dom.analyzeForm.addEventListener("input", () => {
     clearAnalyzeValidation(dom.analyzeForm);
@@ -1585,6 +1589,11 @@ export function createApp() {
       state.latestRealCaseCommit?.id || "",
       state.realCaseLaneFilter,
     );
+  }
+
+  async function refreshRealCaseQuickStart() {
+    const cases = await ensureAvailableCases();
+    renderRealCaseQuickStart(dom.realCaseQuickStartResult, cases);
   }
 
   dom.loadRealCaseTemplateButton.addEventListener("click", () => {
@@ -2680,9 +2689,46 @@ export function createApp() {
     try {
       state.availableCases = [];
       await refreshRealCaseLibrary();
+      await refreshRealCaseQuickStart();
     } catch {
       setStatus(dom.realCaseBatchStatus, "案例读取失败，请重试");
       focusRealCaseLibraryResult(dom);
+    }
+  });
+
+  dom.realCaseQuickStartResult.addEventListener("click", async (event) => {
+    const button = event.target.closest('button[data-real-case-action="load-workbench"]');
+
+    if (!button) {
+      return;
+    }
+
+    const caseId = button.dataset.caseId || "";
+    let cases = [];
+
+    try {
+      cases = await ensureAvailableCases();
+    } catch {
+      setStatus(dom.firstRoundStatus, "案例读取失败，请重试");
+      dom.realCaseQuickStartResult.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    const selection = validateExistingCaseSelection({ caseId, cases, sourceType: "real" });
+
+    if (!selection.ok) {
+      setStatus(dom.firstRoundStatus, selection.message);
+      return;
+    }
+
+    try {
+      await loadCaseIntoMainWorkbench(caseId);
+    } catch (error) {
+      setStatus(
+        dom.firstRoundStatus,
+        error instanceof Error ? error.message : "案例加载失败，请重试",
+      );
+      dom.realCaseQuickStartResult.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 

@@ -20,7 +20,7 @@ function buildOptimizeCurrentSuggestion({ analysis, workspace, inputs }) {
     ],
     draftPromptLine: `请基于当前已有图片，保留 ${keepSubject || "主主体"}，弱化 ${removeNoise || "背景杂讯"}，优先解决 ${currentProblem || "画面不聚焦"}。`,
     recommendedFollowUp: "完成一次裁切和标题区重排后，再进入二轮反馈会更有效。",
-    linkedDirection: analysis.cards?.[0]?.directionLabelUserFacing || workspace.linkedCardDirection,
+    linkedDirection: workspace.linkedCardDirection || analysis.cards?.[0]?.directionLabelUserFacing,
   };
 }
 
@@ -40,7 +40,7 @@ function buildSearchMatchedSuggestion({ analysis, workspace, inputs }) {
     ],
     draftPromptLine: `请优先补一张能体现 ${desiredSubject || "主题主体"} 的图片，避免 ${avoidStyle || "廉价感"}，重点强化 ${strengthenClickPoint || "点击点"}。`,
     recommendedFollowUp: "补到候选图后，再回到方向卡选择文字摆放和构图。",
-    linkedDirection: analysis.cards?.[0]?.directionLabelUserFacing || workspace.linkedCardDirection,
+    linkedDirection: workspace.linkedCardDirection || analysis.cards?.[0]?.directionLabelUserFacing,
   };
 }
 
@@ -60,7 +60,7 @@ function buildConceptFirstSuggestion({ analysis, workspace, inputs }) {
     ],
     draftPromptLine: `请先构思一个主体为 ${firstGlanceSubject || "单一主体"} 的概念封面，重点体现 ${emotionOrConflict || "核心冲突"}，避免 ${avoidCheapness || "廉价感"}。`,
     recommendedFollowUp: "当概念主体稳定后，再决定是补真实图还是进入生成图方向。",
-    linkedDirection: analysis.cards?.[0]?.directionLabelUserFacing || workspace.linkedCardDirection,
+    linkedDirection: workspace.linkedCardDirection || analysis.cards?.[0]?.directionLabelUserFacing,
   };
 }
 

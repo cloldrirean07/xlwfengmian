@@ -790,6 +790,46 @@ h1 {
   line-height: 1.7;
 }
 
+.real-case-quick-panel {
+  margin-bottom: 18px;
+  border-color: rgba(178, 78, 44, 0.2);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 247, 238, 0.92)),
+    rgba(255, 255, 255, 0.94);
+}
+
+.real-case-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.real-case-quick-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid rgba(178, 78, 44, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 252, 246, 0.86);
+}
+
+.real-case-quick-card h3 {
+  margin: 4px 0 0;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.real-case-quick-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.real-case-quick-card button {
+  min-height: 46px;
+}
+
 .panel-inner-block {
   margin-top: 18px;
 }
@@ -4130,6 +4170,7 @@ pre {
   .field-row,
   .asset-preview-card,
   .workspace-path-options,
+  .real-case-quick-grid,
   .hero-metrics,
   .workbench-intro-grid,
   .case-pipeline-strip,

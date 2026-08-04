@@ -1,5 +1,48 @@
 # 更新日志
 
+## 2026-08-03 17:11
+
+- 更新文件：[public/index.html](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/index.html)
+  - 在创作主线顶部新增「真实案例快跑」入口区，让 `real-002` 与 `real-003` 可以直接进入主工作台。
+- 更新文件：[public/app/dom.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/dom.js)
+  - 新增 `realCaseQuickStartResult` DOM 引用。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 新增 `renderRealCaseQuickStart`，优先展示 `real-002` 与 `real-003`。
+  - 快跑卡展示真实案例方向摘要，不再出现主题占位文案。
+- 更新文件：[public/app/createApp.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/createApp.js)
+  - 初始化时读取可用真实案例并渲染快跑入口。
+  - 快跑按钮复用 `loadCaseIntoMainWorkbench(caseId)`，直接进入首轮方向卡。
+  - 调整真实案例加载成功状态，强调进入方向卡、工作区和第二轮。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 新增真实案例快跑卡片布局，并补充移动端单列展示。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 新增创作主线真实案例快跑入口源码结构测试。
+- 新增文件：[docs/operations/2026-08-03_真实案例快跑入口接入记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-08-03_真实案例快跑入口接入记录.md)
+  - 记录本轮入口前移、受控边界、验证结果和当前阶段结论。
+- 验证结果：
+  - 执行 `npm test`
+  - 结果：`295 pass / 0 fail`
+  - 执行 `npm run build`
+  - 结果：构建通过
+  - 浏览器复跑 `真实案例快跑 -> real-002 -> 加载到主工作台`
+  - 结果：快跑入口展示 `real-002 / real-003`，点击后直接进入 3 张首轮方向卡。
+
+## 2026-08-02 22:47
+
+- 更新文件：[src/domain/workspace/buildActionWorkspaceSuggestion.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/workspace/buildActionWorkspaceSuggestion.js)
+  - 修复工作区建议方向串扰问题，优先使用当前选中方向的 `linkedCardDirection`，避免非首卡路径被覆盖成首卡方向。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 新增非首卡工作区建议方向断言，确认 `suggestion.linkedDirection` 跟随当前选中方向卡。
+- 新增文件：[docs/operations/2026-08-02_第一阶段主链路走查与工作区方向修复记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-08-02_第一阶段主链路走查与工作区方向修复记录.md)
+  - 记录第一阶段主链路走查路径、发现的问题、修复范围和浏览器复跑结论。
+- 验证结果：
+  - 执行 `npm test`
+  - 结果：`294 pass / 0 fail`
+  - 执行 `npm run build`
+  - 结果：构建通过
+  - 浏览器复跑 `real-002 -> B 更清楚重点 -> 工作区建议 -> 采纳 -> 第二轮优化`
+  - 结果：工作区建议和第二轮结果均保持「更清楚重点」方向，工作区上下文已接入二轮。
+
 ## 2026-08-02 12:05
 
 - 更新文件：[src/domain/cases/validateCaseRecord.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cases/validateCaseRecord.js)

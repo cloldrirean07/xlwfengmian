@@ -1599,6 +1599,22 @@ test("real case library can load a case into the main workbench", async () => {
   assert.ok(actionFlow.includes("await loadCaseIntoMainWorkbench(caseId);"));
 });
 
+test("creation view exposes real case quick start for the main workflow", async () => {
+  const indexSource = await readFile(new URL("../public/index.html", import.meta.url), "utf-8");
+  const domSource = await readFile(new URL("../public/app/dom.js", import.meta.url), "utf-8");
+  const createAppSource = await readFile(new URL("../public/app/createApp.js", import.meta.url), "utf-8");
+  const renderersSource = await readFile(new URL("../public/app/renderers.js", import.meta.url), "utf-8");
+
+  assert.ok(indexSource.includes('id="real-case-quick-start"'));
+  assert.ok(indexSource.includes('id="real-case-quick-start-result"'));
+  assert.ok(domSource.includes("realCaseQuickStartResult"));
+  assert.ok(renderersSource.includes("export function renderRealCaseQuickStart"));
+  assert.ok(renderersSource.includes('data-real-case-action="load-workbench"'));
+  assert.ok(createAppSource.includes("void refreshRealCaseQuickStart()"));
+  assert.ok(createAppSource.includes("dom.realCaseQuickStartResult.addEventListener"));
+  assert.ok(createAppSource.includes("await loadCaseIntoMainWorkbench(caseId);"));
+});
+
 test("validateFormalWriteReadiness requires confirmed safe write preview", () => {
   assert.deepEqual(validateFormalWriteReadiness(null), {
     ok: false,
@@ -2918,6 +2934,7 @@ test("createActionWorkspaceSession returns path-specific workspace suggestion", 
 
   assert.equal(result.workspace.workspaceId, "optimize-current");
   assert.equal(result.workspace.linkedCardDirection, analysis.cards[1].directionLabelUserFacing);
+  assert.equal(result.suggestion.linkedDirection, analysis.cards[1].directionLabelUserFacing);
   assert.ok(result.workspace.inputSchema.length >= 3);
   assert.ok(result.suggestion.summary.length > 0);
   assert.ok(result.suggestion.draftPromptLine.includes("人物表情"));

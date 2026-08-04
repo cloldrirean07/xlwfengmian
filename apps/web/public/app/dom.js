@@ -24,6 +24,7 @@ export function getDomRefs() {
     refineForm: query("#refine-form"),
     loadSampleButton: query("#load-sample-button"),
     runSampleButton: query("#run-sample-button"),
+    realCaseQuickStartResult: query("#real-case-quick-start-result"),
     analysisPanel: query("#analysis-panel"),
     refinePanel: query("#refine-panel"),
     secondRoundPanel: query("#second-round-panel"),
