@@ -641,7 +641,7 @@ function setAnalyzeFormSubmitting(form, isSubmitting) {
   }
 
   submitButton.disabled = isSubmitting;
-  submitButton.textContent = isSubmitting ? "正在生成 3 张方向卡片..." : "生成 3 张方向卡片";
+  submitButton.textContent = isSubmitting ? "正在生成封面方案..." : "生成封面方案";
 }
 
 function clearRefineValidation(form) {

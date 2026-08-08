@@ -1,5 +1,27 @@
 # 更新日志
 
+## 2026-08-08 10:18
+
+- 更新文件：[public/index.html](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/index.html)
+  - 将首页第一屏从内部流程工作台改为创作者体验 MVP 首页，突出“上传素材 -> 生成封面方案 -> 筛选优化”的主链路。
+  - 将复盘、写回、规则维护等低频能力降级为“案例验证”和“高级维护”入口，保留后台支撑但降低首屏干扰。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 调整整体色彩系统，从单一米色工作台改为白色底、暖橙主行动、青绿案例验证、蓝紫高级维护的分层视觉。
+  - 收紧卡片圆角、阴影和字距，让首页更像创作者工具而不是内部后台。
+- 更新文件：[public/app/createApp.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/createApp.js)
+  - 将首轮提交按钮状态文案调整为“生成封面方案”，与新的首页定位一致。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 同步输入表单占位符断言，继续约束产品化 UI 文案。
+- 新增文件：[../../docs/operations/2026-08-08_创作者体验MVP首页收束记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/operations/2026-08-08_创作者体验MVP首页收束记录.md)
+  - 记录本轮首页收束目标、改动范围、后台支撑降级方式和验证结果。
+- 验证结果：
+  - 执行 `PATH=/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH npm test`
+  - 结果：`295 pass / 0 fail`
+  - 执行 `PATH=/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH npm run build`
+  - 结果：构建通过
+  - 启动本地服务 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node src/server/server.js`
+  - 结果：`http://127.0.0.1:3080` 可访问，首页返回新版主标题“上传素材，快速生成更容易被点开的封面方案”
+
 ## 2026-08-04 11:08
 
 - 更新文件：[../../.gitignore](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/.gitignore)

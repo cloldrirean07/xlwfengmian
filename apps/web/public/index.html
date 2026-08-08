@@ -12,72 +12,72 @@
         <div class="hero-grid">
           <div class="hero-content">
             <p class="eyebrow">AI Cover Creative Assistant</p>
-            <h1>封面方向从输入到二轮修订的完整工作台</h1>
+            <h1>上传素材，快速生成更容易被点开的封面方案</h1>
             <p class="hero-copy">
-              围绕内容主题、素材状态与发布目标，先完成点击机制判断，再输出方向卡、路径建议、采纳反馈与二轮修订承接，让封面创意从想法进入可复盘的产品流程。
+              面向小红书、抖音等内容发布场景，把内容主题、目标平台和参考图转成 3 个可比较的封面方向，并同步给出标题、配图和构图建议。
             </p>
             <div class="hero-badges">
-              <span>首轮：3 个方向卡</span>
-              <span>中段：工作区建议确认</span>
-              <span>二轮：采纳后承接修订</span>
-              <span>支持：Prompt / LLM Draft</span>
+              <span>素材理解</span>
+              <span>3 个封面方案</span>
+              <span>标题候选</span>
+              <span>二轮优化</span>
             </div>
           </div>
 
           <aside class="hero-side">
             <article class="hero-side-card hero-side-primary">
-              <p class="section-kicker">Product Line Scope</p>
-              <h2>先打通主路径第一段闭环</h2>
+              <p class="section-kicker">Creator MVP</p>
+              <h2>从素材到可选方案</h2>
               <p>
-                当前版本不追求一次生成终稿，而是把输入准备、方向判断、工作区建议、采纳反馈和二轮承接串成稳定主链路。
+                当前版本优先跑顺发布前的封面决策：先看内容和素材，再给出差异化方向，最后支持选择与继续优化。
               </p>
               <div class="hero-metrics">
                 <div>
-                  <span>首轮输出</span>
-                  <strong>3 个封面方向</strong>
+                  <span>选题效率</span>
+                  <strong>减少方向试错</strong>
                 </div>
                 <div>
-                  <span>中间决策</span>
-                  <strong>采纳 / 不采纳</strong>
+                  <span>创意效率</span>
+                  <strong>一次生成多案</strong>
                 </div>
                 <div>
-                  <span>二轮承接</span>
-                  <strong>仅采纳后接入</strong>
+                  <span>筛选效率</span>
+                  <strong>对比后再优化</strong>
                 </div>
               </div>
             </article>
 
             <article class="hero-side-card hero-side-secondary">
-              <strong>维护模式边界</strong>
+              <strong>后台支撑已后移</strong>
               <ul class="hero-side-list">
-                <li>保留现有案例、规则与导出资产</li>
-                <li>不新建第二套前端项目</li>
-                <li>不引入新的运行时依赖</li>
+                <li>规则判断在后台完成</li>
+                <li>案例复盘用于验证效果</li>
+                <li>写回工具放入高级维护</li>
               </ul>
             </article>
           </aside>
         </div>
 
         <nav class="jump-nav" aria-label="页面跳转">
-          <a href="#first-round-workbench" data-product-view-link="creation">进入主路径</a>
-          <a href="#action-workspace-panel" data-product-view-link="creation">确认工作区建议</a>
-          <a href="#real-case-form" data-workspace-group-link="cases">进入复盘态</a>
-          <a href="#review-dashboard-section" data-workspace-group-link="validation">进入写回态</a>
+          <a href="#first-round-workbench" data-product-view-link="creation">开始生成封面方案</a>
+          <a href="#real-case-quick-start" data-product-view-link="creation">加载真实案例示范</a>
+          <a href="#analysis-panel" data-product-view-link="creation">查看方案结果</a>
+          <a href="#review-dashboard-section" data-workspace-group-link="validation">高级维护入口</a>
         </nav>
       </section>
 
       <nav class="product-view-switch" id="product-view-switch" aria-label="产品工作视图切换">
         <button type="button" class="product-view-button active" data-product-view-target="creation" data-view-tone="creation" aria-pressed="true" aria-controls="product-view-creation">
-          <span class="product-view-meta"><span class="product-view-index">01</span><span>创作主线</span></span>
-          <strong>输入到二轮</strong>
+          <span class="product-view-meta"><span class="product-view-index">01</span><span>封面生成</span></span>
+          <strong>创作者模式</strong>
         </button>
         <button type="button" class="product-view-button" data-product-view-target="review" data-view-tone="review" aria-pressed="false" aria-controls="product-view-review">
-          <span class="product-view-meta"><span class="product-view-index">02</span><span>复盘态</span></span>
-          <strong>案例与批次证据</strong>
+          <span class="product-view-meta"><span class="product-view-index">02</span><span>案例验证</span></span>
+          <strong>效果证据</strong>
         </button>
         <button type="button" class="product-view-button" data-product-view-target="writeback" data-view-tone="writeback" aria-pressed="false" aria-controls="product-view-writeback">
-          <span class="product-view-meta"><span class="product-view-index">03</span><span>写回态</span></span>
-          <strong>门禁与正式写回</strong>
+          <span class="product-view-meta"><span class="product-view-index">03</span><span>高级维护</span></span>
+          <strong>规则与写回</strong>
         </button>
       </nav>
 
@@ -85,9 +85,9 @@
         <section class="view-stage-panel" data-view-tone="creation" aria-label="创作主线视图说明">
           <div>
             <p class="section-kicker">Creation Line</p>
-            <h2>创作主线</h2>
+            <h2>封面方案生成器</h2>
             <p>
-              从内容主题、素材状态和平台目标开始，完成首轮方向判断、工作区建议确认与二轮修订承接。
+              从内容主题、素材状态和平台目标开始，生成可比较的封面方向，并在选择后继续细化标题、画面和构图。
             </p>
           </div>
           <div class="view-stage-meta">
@@ -100,18 +100,18 @@
         <section class="workflow-strip">
           <article>
             <span>01</span>
-            <h2>输入准备</h2>
-            <p>收集内容主题、内容目标、素材状态与风格偏好，形成可判断的首轮输入。</p>
+            <h2>上传素材</h2>
+            <p>整理主题、目标、参考图和素材描述，让系统获得足够的封面判断依据。</p>
           </article>
           <article>
             <span>02</span>
-            <h2>方向判断</h2>
-            <p>先判断看懂、收益、好奇、冲击或信任机制，再输出差异化方向卡。</p>
+            <h2>生成方案</h2>
+            <p>输出 3 个差异化封面方向，每个方向包含标题、配图、构图和风险提醒。</p>
           </article>
           <article>
             <span>03</span>
-            <h2>建议确认与二轮承接</h2>
-            <p>工作区建议必须经过采纳确认，才会进入第二轮修订与后续生成。</p>
+            <h2>筛选优化</h2>
+            <p>选定更合适的方向后，继续生成第二轮优化结果，并记录优选理由。</p>
           </article>
         </section>
 
@@ -119,12 +119,12 @@
           <div class="panel-header">
             <div>
               <p class="section-kicker">Real Case Flow</p>
-              <h2>真实案例快跑</h2>
+              <h2>案例示范快跑</h2>
             </div>
-            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">查看案例库</a>
+            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">打开案例验证</a>
           </div>
           <p class="panel-note">
-            选择一条已补齐素材背景的真实案例，直接进入首轮方向卡、工作区建议与第二轮优化。
+            选择一条已补齐素材背景的案例，直接观察从真实素材到封面方向卡的生成结果。
           </p>
           <div id="real-case-quick-start-result">
             <p class="empty-state">正在读取可用真实案例。</p>
@@ -136,7 +136,7 @@
           <div class="panel-header">
             <div>
               <p class="section-kicker">Main Workflow</p>
-              <h2>输入准备</h2>
+              <h2>生成封面方案</h2>
             </div>
             <div class="button-row">
               <button type="button" id="load-sample-button">加载结构化样例</button>
@@ -144,16 +144,16 @@
             </div>
           </div>
           <p class="panel-note">
-            主路径围绕「内容主题 + 内容目标 + 素材状态 + 风格偏好」完成首轮方向判断，先收束判断逻辑，再进入工作区建议。
+            填写内容主题、发布目标和素材描述后，系统会生成 3 个封面方向，帮助快速比较哪种标题和画面更值得优先尝试。
           </p>
           <div class="workbench-intro-grid">
             <article class="workbench-callout workbench-callout-primary">
               <strong>输入范围</strong>
-              <p>内容主题、目标、素材状态与风格偏好会共同决定封面方向的点击机制。</p>
+              <p>内容主题、目标、素材状态与风格偏好会共同影响封面方向和标题语气。</p>
             </article>
             <article class="workbench-callout">
               <strong>最小链路</strong>
-              <p>主题、目标与一段素材描述即可启动首轮判断；参考图用于提升路径建议的贴合度。</p>
+              <p>主题、目标与一段素材描述即可启动首轮生成；参考图用于提升方案贴合度。</p>
             </article>
           </div>
           <form id="analyze-form" novalidate>
@@ -163,7 +163,7 @@
             </label>
             <label>
               内容目标
-              <input name="contentGoal" placeholder="例如：让用户意识到忙碌不等于有效产出" maxlength="120" required />
+              <input name="contentGoal" placeholder="例如：让读者意识到忙碌不等于有效产出" maxlength="120" required />
             </label>
             <div class="field-row">
               <label>
@@ -194,7 +194,7 @@
                 <button type="button" id="clear-asset-button" class="ghost-button hidden">清除预览</button>
               </div>
               <label>
-                上传图片
+                上传参考图
                 <input id="asset-upload-input" type="file" accept="image/*" />
               </label>
               <div id="asset-preview-panel" class="asset-preview-shell">
@@ -219,8 +219,8 @@
               <textarea name="assetNotes" rows="3" maxlength="300" placeholder="例如：想更像热门内容，但不要太营销化"></textarea>
             </label>
             <div class="submit-row">
-              <button type="submit">生成 3 张方向卡片</button>
-              <span id="first-round-status" class="micro-copy">提交后将先判断点击机制，再输出方向卡。</span>
+              <button type="submit">生成封面方案</button>
+              <span id="first-round-status" class="micro-copy">提交后将生成 3 个封面方向与标题候选。</span>
             </div>
           </form>
         </section>
@@ -229,25 +229,25 @@
           <div class="panel-header">
             <div>
               <p class="section-kicker">Decision Frame</p>
-              <h2>系统当前怎么判断</h2>
+              <h2>推荐逻辑</h2>
             </div>
           </div>
           <div class="guide-highlight">
-            <strong>这不是一句 Prompt 换写法。</strong>
-            <p>当前系统会先缩小“哪种点击机制更值得优先尝试”，再决定用什么图、什么文案和什么构图去承接。</p>
+            <strong>先判断点击理由，再生成封面方案。</strong>
+            <p>系统会先判断内容更适合看懂、收益、好奇、冲击或信任机制，再决定标题、画面和构图的组合方式。</p>
           </div>
           <div class="guide-list">
             <article>
               <strong>先看内容任务</strong>
-              <p>这条内容更需要被“看懂”、被“相信”，还是先让人“停住并点开”。</p>
+              <p>判断内容更需要被快速看懂、建立信任，还是先制造停顿和点击欲。</p>
             </article>
             <article>
               <strong>再看现有素材</strong>
-              <p>用户是只有截图、有人像、有场景，还是根本没有可用图，这决定先改现有图还是先补贴内容的图。</p>
+              <p>根据截图、人像、场景图、商品图或纯想法，决定优先改图还是补充更贴合内容的画面。</p>
             </article>
             <article>
               <strong>最后给 3 个有差异的方向</strong>
-              <p>不是换同义词，而是让每张卡的主变量不同，便于用户真的做选择和迭代。</p>
+              <p>每张方向卡突出不同主变量，便于比较、筛选和继续迭代。</p>
             </article>
           </div>
           <div class="direction-pills">
@@ -330,15 +330,15 @@
         <div class="panel-header">
           <div>
             <p class="section-kicker">Review Loop</p>
-            <h2>案例复盘承接</h2>
+            <h2>保存与复盘</h2>
           </div>
           <div class="button-row">
-            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">查看复盘态</a>
-            <a class="link-button" href="#review-dashboard-section" data-workspace-group-link="validation">进入写回态</a>
+            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">查看案例验证</a>
+            <a class="link-button" href="#review-dashboard-section" data-workspace-group-link="validation">打开高级维护</a>
           </div>
         </div>
         <p class="panel-note">
-          二轮结果确认后，可进入案例维护与复盘看板，把真实案例缺口、人工复盘结论和后续规则修订任务继续沉淀到项目资产中。
+          二轮结果确认后，可进入后台区域沉淀真实案例、人工判断和规则修订线索，用于持续提升后续生成质量。
         </p>
         <div class="case-bridge-grid">
           <article>
@@ -368,7 +368,7 @@
           <div class="group-intro-head">
             <div>
               <p class="section-kicker">Developer Aids</p>
-              <h2>主链路辅助验证工具</h2>
+              <h2>后台辅助工具</h2>
             </div>
             <button
               type="button"
@@ -376,14 +376,14 @@
               data-workspace-group-toggle="tools"
               aria-expanded="false"
             >
-              展开这组工具
+              展开高级工具
             </button>
           </div>
-          <p>这组能力不直接属于用户首轮体验，主要用于快速检查 Prompt 层和固定样例链路是否稳定。</p>
+          <p>该区域用于检查 Prompt 层和固定样例链路稳定性，默认折叠，避免干扰创作者首轮生成。</p>
           <div class="group-meta-row">
-            <span class="group-meta-chip">用途：Prompt 与样例验证</span>
-            <span class="group-meta-chip">触发：检查模型层输出</span>
-            <span class="group-meta-chip">默认：按需展开</span>
+            <span class="group-meta-chip">后台：Prompt 验证</span>
+            <span class="group-meta-chip">后台：固定样例检查</span>
+            <span class="group-meta-chip">默认折叠</span>
           </div>
         </div>
         <div class="group-body">
@@ -419,15 +419,15 @@
         <section class="view-stage-panel" data-view-tone="review" aria-label="复盘态视图说明">
           <div>
             <p class="section-kicker">Review State</p>
-            <h2>复盘态</h2>
+            <h2>案例验证</h2>
             <p>
-              将真实案例、批量回填、试跑记录与平台复核集中维护，为规则判断、批次复盘和写回门禁提供稳定证据。
+              将真实案例、批量回填、试跑记录与平台复核集中维护，为后续规则判断和效果验证提供证据。
             </p>
           </div>
           <div class="view-stage-meta">
             <span>输入：真实案例与平台笔记</span>
             <span>产出：工作单、批次记录与复盘证据</span>
-            <span>去向：写回态与规则任务</span>
+            <span>去向：高级维护与规则任务</span>
           </div>
         </section>
 
@@ -435,7 +435,7 @@
           <div class="group-intro-head">
             <div>
               <p class="section-kicker">Evidence Pipeline</p>
-              <h2>复盘证据工作台</h2>
+              <h2>案例证据工作台</h2>
             </div>
             <button
               type="button"
@@ -443,13 +443,13 @@
               data-workspace-group-toggle="cases"
               aria-expanded="true"
             >
-              收起这组工具
+              收起案例工具
             </button>
           </div>
-          <p>将真实案例从录入、回填、批次试跑到平台复核串成同一条证据链，为后续规则修订、写回判断和主路径优化提供依据。</p>
+          <p>将真实案例从录入、回填、批次试跑到平台复核串成同一条证据链，为后续规则修订和主路径优化提供依据。</p>
           <div class="group-meta-row">
-            <span class="group-meta-chip">用途：案例资产沉淀</span>
-            <span class="group-meta-chip">触发：二轮结果需要进入复盘</span>
+            <span class="group-meta-chip">后台：案例资产沉淀</span>
+            <span class="group-meta-chip">触发：结果需要验证</span>
             <span class="group-meta-chip">产出：案例、工作单、批次记录</span>
           </div>
           <nav class="group-shortcut-row" aria-label="案例维护组内快捷入口">
@@ -696,9 +696,9 @@
         <section class="view-stage-panel" data-view-tone="writeback" aria-label="写回态视图说明">
           <div>
             <p class="section-kicker">Writeback State</p>
-            <h2>写回态</h2>
+            <h2>高级维护</h2>
             <p>
-              汇总 UI 就绪度、跨批次摩擦点、人工结论和安全写回状态，确认门禁完整后再进入正式写回。
+              汇总 UI 就绪度、跨批次摩擦点、人工结论和安全写回状态，作为后台规则维护与数据写回入口。
             </p>
           </div>
           <div class="view-stage-meta">
@@ -712,7 +712,7 @@
           <div class="group-intro-head">
             <div>
               <p class="section-kicker">Formal Write Gate</p>
-              <h2>写回门禁工作台</h2>
+              <h2>规则复盘与写回维护</h2>
             </div>
             <button
               type="button"
@@ -720,13 +720,13 @@
               data-workspace-group-toggle="validation"
               aria-expanded="false"
             >
-              展开这组工具
+              展开维护工具
             </button>
           </div>
           <p>基于多批次证据判断是否进入 UI 讨论、是否沉淀规则修订任务，并确认正式写回前的安全预览与人工结论。</p>
           <div class="group-meta-row">
-            <span class="group-meta-chip">用途：写回门禁与规则沉淀</span>
-            <span class="group-meta-chip">触发：安全预览进入人工确认</span>
+            <span class="group-meta-chip">后台：写回门禁</span>
+            <span class="group-meta-chip">后台：规则沉淀</span>
             <span class="group-meta-chip">产出：写回状态与承接任务</span>
           </div>
           <nav class="group-shortcut-row" aria-label="验证与复盘组内快捷入口">

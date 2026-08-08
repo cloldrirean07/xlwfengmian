@@ -824,7 +824,7 @@ test("input preparation form uses PRD field labels and placeholders", async () =
   const indexHtml = await readFile(new URL("../public/index.html", import.meta.url), "utf-8");
 
   assert.match(indexHtml, /内容主题\s*<input name="contentTopic" placeholder="例如：为什么总觉得很忙却没有结果"/);
-  assert.match(indexHtml, /内容目标\s*<input name="contentGoal" placeholder="例如：让用户意识到忙碌不等于有效产出"/);
+  assert.match(indexHtml, /内容目标\s*<input name="contentGoal" placeholder="例如：让读者意识到忙碌不等于有效产出"/);
   assert.match(indexHtml, /目标平台\s*<select name="platform">/);
   assert.match(indexHtml, /素材描述\s*<textarea[\s\S]*name="assetDescription"[\s\S]*placeholder="例如：口播截图，人物在左侧，背景比较空"/);
   assert.match(indexHtml, /封面倾向\s*<input name="referencePreference" placeholder="例如：更高级一点，但不要太平"/);
@@ -2471,7 +2471,7 @@ test("renderWritebackGateOverviewStatus shows empty and readiness states", () =>
   assert.ok(container.innerHTML.includes('aria-label="人工确认补齐提示"'));
   assert.ok(container.innerHTML.includes("待补人工确认"));
   assert.ok(container.innerHTML.includes("/tmp/safe-write-preview.md"));
-  assert.ok(container.innerHTML.includes("在安全预览底部填写人工复盘结论后，重新检查写回状态。"));
+  assert.ok(container.innerHTML.includes("在安全预览底部补齐确认块后，重新检查写回状态。"));
   assert.ok(container.innerHTML.includes('data-review-followup-action="check-manual-review-formal-write-readiness"'));
   assert.ok(container.innerHTML.includes('aria-label="人工确认草稿门禁验证"'));
   assert.ok(container.innerHTML.includes("人工确认草稿验证"));

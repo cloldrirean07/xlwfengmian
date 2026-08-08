@@ -276,18 +276,68 @@ function hasWritebackActionProgress(followUpProgress = {}) {
   ].some((actionId) => Boolean(followUpProgress[actionId]));
 }
 
+function buildManualConfirmationMissingItems(safeWriteStatus) {
+  const parsed =
+    safeWriteStatus?.parsed?.parsed ||
+    safeWriteStatus?.parsed ||
+    {};
+
+  const items = [
+    {
+      label: "人工结论",
+      value:
+        safeWriteStatus?.manualReviewConclusion ||
+        parsed.manualReviewConclusion ||
+        "",
+    },
+    {
+      label: "确认写回行",
+      value: parsed.confirmedLines || "",
+    },
+    {
+      label: "仍需手改",
+      value: parsed.stillNeedsEdit || "",
+    },
+    {
+      label: "进入正式写回",
+      value: parsed.readyDecision || "",
+    },
+  ];
+
+  return items.filter((item) => !String(item.value || "").trim());
+}
+
 function renderWritebackManualConfirmationGuidance(safeWriteStatus, hasManualConfirmation) {
   if (!safeWriteStatus || hasManualConfirmation) {
     return "";
   }
 
   const safeWritePath = safeWriteStatus.targetPath || "";
+  const missingItems = buildManualConfirmationMissingItems(safeWriteStatus);
 
   return `
     <div class="writeback-confirmation-guidance" aria-label="人工确认补齐提示">
       <strong>待补人工确认</strong>
       <span>${escapeHtml(safeWritePath || "先导出安全预览，再补齐人工确认。")}</span>
-      <small>在安全预览底部填写人工复盘结论后，重新检查写回状态。</small>
+      ${
+        missingItems.length
+          ? `
+            <ul>
+              ${missingItems
+                .map(
+                  (item) => `
+                    <li>
+                      <span>${escapeHtml(item.label)}</span>
+                      <small>当前未填写</small>
+                    </li>
+                  `,
+                )
+                .join("")}
+            </ul>
+          `
+          : ""
+      }
+      <small>在安全预览底部补齐确认块后，重新检查写回状态。</small>
       <button type="button" class="ghost-button" data-review-followup-action="check-manual-review-formal-write-readiness">重新检查写回状态</button>
     </div>
   `;
