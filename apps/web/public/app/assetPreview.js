@@ -51,8 +51,23 @@ export async function buildAssetPreview(file) {
   }
 }
 
+export async function buildAssetPreviews(files) {
+  const fileList = Array.from(files || []);
+  if (fileList.length === 0) {
+    return [];
+  }
+
+  return Promise.all(fileList.map((file) => buildAssetPreview(file)));
+}
+
 export function revokeAssetPreview(preview) {
   if (preview?.objectUrl) {
     URL.revokeObjectURL(preview.objectUrl);
+  }
+}
+
+export function revokeAssetPreviews(previews) {
+  for (const preview of previews || []) {
+    revokeAssetPreview(preview);
   }
 }

@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产品实现方案确认（待确认）</title>
+  <style>
+    :root {
+      --page: #f6f7fb;
+      --panel: #ffffff;
+      --line: #e5e7eb;
+      --line-soft: #eef2f7;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --soft: #8a94a6;
+      --primary: #246bfe;
+      --primary-soft: #eef5ff;
+      --success: #168a4a;
+      --success-soft: #edf8f1;
+      --warning: #b96b00;
+      --warning-soft: #fff7e6;
+      --danger: #c9372c;
+      --danger-soft: #fff1f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 20px 52px;
+    }
+
+    .hero,
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .hero {
+      padding: 28px 30px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.32;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 20px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 18px 0 10px;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 18px;
+      padding: 24px 26px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 12px 13px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f3f5f8;
+      color: var(--text);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    td.group {
+      min-width: 128px;
+      color: var(--text);
+      font-weight: 700;
+      background: #fbfcff;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .meta-card,
+    .note-box,
+    .state-card {
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      background: #fbfcff;
+    }
+
+    .meta-card {
+      padding: 14px 16px;
+    }
+
+    .meta-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--soft);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .meta-card span {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .note-box {
+      padding: 14px 16px;
+    }
+
+    .note-box h3 {
+      margin-top: 0;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .tag.warning {
+      background: var(--warning-soft);
+      color: var(--warning);
+    }
+
+    .tag.success {
+      background: var(--success-soft);
+      color: var(--success);
+    }
+
+    .flowchart {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 8px 0 2px;
+    }
+
+    .flow-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .flow-node {
+      min-width: 176px;
+      max-width: min(360px, 92%);
+      padding: 10px 15px;
+      border: 2px solid #b79cff;
+      border-radius: 2px;
+      background: #f3efff;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.45;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .flow-node.decision {
+      border-color: #f6b94f;
+      background: var(--warning-soft);
+    }
+
+    .flow-node.success {
+      border-color: #89d6a5;
+      background: var(--success-soft);
+    }
+
+    .flow-node.danger {
+      border-color: #ff9c96;
+      background: var(--danger-soft);
+    }
+
+    .flow-arrow {
+      position: relative;
+      width: 0;
+      height: 34px;
+      border-left: 3px solid #333333;
+    }
+
+    .flow-arrow::after {
+      content: "";
+      position: absolute;
+      left: -7px;
+      bottom: -1px;
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 11px solid #333333;
+    }
+
+    .state-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .state-card {
+      flex: 1 1 180px;
+      padding: 13px 14px;
+    }
+
+    .state-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .state-card span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .confirm-box {
+      border-color: #d7e5ff;
+      background: #f7fbff;
+    }
+
+    .confirm-box strong {
+      color: var(--primary);
+    }
+
+    .footer-note {
+      margin-top: 10px;
+      color: var(--soft);
+      font-size: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .meta-grid,
+      .scope-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding: 18px 12px 36px;
+      }
+
+      .hero,
+      section {
+        padding: 20px 16px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">产品实现方案确认（待确认）</p>
+      <h1>封面创意素材匹配模块</h1>
+      <p class="subtitle">把创作者已有图片、截图或内容想法，转化为 3 个可比较、可选择、可继续微调的封面创意方案。</p>
+      <div class="meta-grid">
+        <div class="meta-card"><strong>需求等级</strong><span>L2</span></div>
+<div class="meta-card"><strong>产品阶段</strong><span>创作者体验 MVP</span></div>
+<div class="meta-card"><strong>实现方式</strong><span>现有项目维护模式</span></div>
+<div class="meta-card"><strong>确认后下一步</strong><span>Requirement Spec</span></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>需求目标</h2>
+      <p>让创作者在发布内容前，通过上传素材或输入内容想法，快速获得 3 个围绕点击心理、图像题材、标题方向和构图建议组成的封面创意方案；同时把内部规则、复盘和写回能力收束为后台支撑，不再作为主工作台的第一入口。</p>
+    </section>
+
+    <section>
+      <h2>本次范围</h2>
+      <ul>
+        <li>在创作者主工作台前置封面创意素材匹配入口，支持内容主题、目标平台、内容目标、素材类型、素材说明和本地参考图输入。</li>
+<li>支持多张本地参考图或截图作为内容理解素材，并明确区分可直接做封面的图片与仅用于理解内容的参考素材。</li>
+<li>基于内容主题、素材特征和目标平台，输出 3 个封面创意方案，每个方案包含方案名、推荐图像题材、标题方向、构图建议、点击理由和风险提醒。</li>
+<li>对每个方案给出当前素材适用判断：可直接使用、建议裁切优化、建议补图、仅作内容参考。</li>
+<li>用户可选择一个方案进入二轮微调，并通过一句反馈调整标题风格、图像方向或构图重点。</li>
+<li>真实案例 real-002、real-003 作为本轮验证样例，用于检查输出是否比通用建议更具体、更贴合素材。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>页面与功能拆解</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>页面/区块</th>
+            <th>入口</th>
+            <th>功能</th>
+            <th>核心交互</th>
+            <th>输出结果</th>
+            <th>状态/边界</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="group" rowspan="2">创作者主工作台</td><td rowspan="2">首页主入口</td><td>封面创意开始区</td><td>用户输入内容主题、选择目标平台、填写内容目标，并上传一张或多张本地参考图。</td><td>形成一次封面创意任务，进入素材理解和方案生成流程。</td><td>内容主题或素材至少提供一项；缺少内容目标时使用默认目标：提升点击意愿。</td></tr>
+<tr><td>素材理解提示</td><td>系统根据素材类型展示当前图片用途判断，提示图片可作为封面候选、内容参考或需要补充说明。</td><td>用户在生成前知道当前素材是否足以支持封面方案。</td><td>当前阶段只做浏览器本地预览，不上传服务器；无法识别图片内容时要求用户补充素材描述。</td></tr>
+<tr><td class="group" rowspan="2">首轮方案结果区</td><td rowspan="2">生成封面创意方案</td><td>三方案输出</td><td>系统一次输出 3 个差异化方向，分别对应不同点击心理和图像题材。</td><td>展示 3 张方向卡，方便用户比较、选择和继续微调。</td><td>每轮固定 3 个方案；不在本轮直接生成最终图片，不承诺真实点击率提升数值。</td></tr>
+<tr><td>方案内容结构</td><td>每个方案展示方案名、适合的封面图、素材适用判断、标题方向、构图建议、点击理由和风险提醒。</td><td>用户可以判断哪个方案更适合当前内容，而不是只看到泛化标题。</td><td>标题是方向建议，不作为最终发布文案强制写死；风险提醒需要避免夸大和与内容不符。</td></tr>
+<tr><td class="group" rowspan="1">二轮微调区</td><td rowspan="1">选择方案后继续调整</td><td>一句反馈微调</td><td>用户选择一个方案，并输入一句反馈，例如更高级、更有食欲、更像教程、更突出晚霞情绪。</td><td>系统围绕已选方案调整标题风格、图像题材或构图重点。</td><td>二轮微调只基于已选方案进行收束，不重新生成完全无关的三套方向。</td></tr>
+<tr><td class="group" rowspan="1">真实案例区</td><td rowspan="1">加载真实案例</td><td>案例载入验证</td><td>用户可加载 real-002 或 real-003，将案例字段带入主工作台复跑。</td><td>验证模块是否能从真实素材中生成更具体的封面创意方案。</td><td>真实案例用于验证产品链路，不作为普通用户必须理解的后台流程。</td></tr>
+<tr><td class="group" rowspan="1">后台支撑区</td><td rowspan="1">低频维护入口</td><td>规则与复盘沉淀</td><td>保留规则复跑、优选标题写回和案例记录能力，但从主体验中弱化。</td><td>产品前台保持简单，后台继续支持规则迭代和样例沉淀。</td><td>后台支撑不作为新用户第一屏核心内容；不新增复杂运营后台。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>产品实现流程</h2>
+      <div class="flowchart">
+        <div class="flow-unit"><div class="flow-node">输入内容</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">上传素材</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">理解素材</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node decision">匹配题材</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">生成三案</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">选择方向</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node">反馈微调</div><div class="flow-arrow"></div></div>
+<div class="flow-unit"><div class="flow-node success">沉淀案例</div></div>
+      </div>
+      <p class="footer-note">流程图只表达主链路；判断分支、失败/回退路径在下方“关键分支说明”中确认。</p>
+    </section>
+
+    <section>
+      <h2>关键状态流转</h2>
+      <div class="state-strip">
+        <div class="state-card"><strong>创意任务状态</strong><span>待输入 -&gt; 可生成 -&gt; 已生成三案 -&gt; 已选择方案 -&gt; 二轮微调完成</span></div>
+<div class="state-card"><strong>素材适用状态</strong><span>未上传 -&gt; 已预览 -&gt; 可做封面 / 需补图 / 仅作参考 -&gt; 已进入方案判断</span></div>
+<div class="state-card"><strong>方案选择状态</strong><span>未选择 -&gt; 已选择 -&gt; 已反馈 -&gt; 已生成调整建议</span></div>
+<div class="state-card"><strong>案例沉淀状态</strong><span>未载入 -&gt; 已载入 -&gt; 已复跑 -&gt; 已记录优选或待复盘</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>关键分支说明</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>分支/场景</th>
+            <th>触发条件</th>
+            <th>页面反馈</th>
+            <th>用户可执行动作</th>
+            <th>数据/状态变化</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>缺少输入</td><td>内容主题、素材图片、素材描述均为空。</td><td>提示至少补充一个内容线索。</td><td>补充主题、上传素材或填写素材描述后再生成。</td><td>停留在待输入状态。</td></tr>
+<tr><td>图片仅作参考</td><td>上传图片能说明内容，但不适合作为封面主图。</td><td>提示当前素材更适合理解内容，并给出建议补图方向。</td><td>继续生成方案，或补充更适合封面的图片。</td><td>进入可生成状态。</td></tr>
+<tr><td>多图输入</td><td>用户上传多张图片或截图。</td><td>展示多图预览和素材用途判断。</td><td>选择主参考图或让系统综合理解。</td><td>进入素材理解状态。</td></tr>
+<tr><td>方案不满意</td><td>用户认为三案不贴合内容或不够吸引。</td><td>提供一句反馈入口，引导补充风格、情绪、题材或标题偏好。</td><td>围绕已选或最接近的方案进行二轮微调。</td><td>从已生成三案进入二轮微调。</td></tr>
+<tr><td>案例复跑偏差</td><td>real-002 或 real-003 输出仍然泛化，无法体现美食、晚霞等真实素材关键词。</td><td>标记为待复盘样例。</td><td>回到规则和样例库修订，不在前台暴露技术细节。</td><td>进入已记录优选或待复盘状态。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="confirm-box">
+      <h2>成文前需确认</h2>
+      <p>请确认当前方案；确认后可继续回复：原型，生成正式 Requirement Spec 并交给 PI Engine 进入维护模式实现；如需调整，请回复：补充。</p>
+      <div class="tag-list">
+        <span class="tag success">请回复：确认</span>
+        <span class="tag success">确认后选：原型 / PRD</span>
+        <span class="tag warning">或：补充</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

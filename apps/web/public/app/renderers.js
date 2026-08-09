@@ -2049,33 +2049,61 @@ export function patchFormValues(form, data) {
 }
 
 export function renderAssetPreview(panel, content, clearButton, preview) {
-  if (!preview) {
+  const previews = Array.isArray(preview) ? preview : preview ? [preview] : [];
+
+  if (previews.length === 0) {
     panel.innerHTML = `
       <div class="asset-empty-state">
         <p class="micro-copy">当前还没有本地参考图。</p>
-        <p>上传一张截图、参考封面或内容相关图片后，上传区域会先显示本地预览。当前阶段只做浏览器本地预览，不上传服务器。</p>
+        <p>上传截图、参考封面或内容相关图片后，上传区域会先显示本地预览。当前阶段只做浏览器本地预览，不上传服务器。</p>
       </div>
     `;
     hide(clearButton);
     return;
   }
 
-  content.innerHTML = `
+  const primaryPreview = previews[0];
+  const secondaryPreviews = previews.slice(1);
+
+  panel.innerHTML = `
     <div class="asset-preview-card">
       <div class="asset-preview-media">
-        <img src="${escapeHtml(preview.objectUrl)}" alt="${escapeHtml(preview.fileName)}" />
+        <img src="${escapeHtml(primaryPreview.objectUrl)}" alt="${escapeHtml(primaryPreview.fileName)}" />
       </div>
       <div class="asset-preview-meta">
-        <p class="micro-copy">本地素材预览</p>
-        <h3>${escapeHtml(preview.fileName)}</h3>
+        <p class="micro-copy">本地参考图预览</p>
+        <h3>${escapeHtml(
+          previews.length === 1 ? primaryPreview.fileName : `${primaryPreview.fileName} 等 ${previews.length} 张`,
+        )}</h3>
         <div class="tag-row">
-          <span class="tag">${escapeHtml(preview.sizeLabel)}</span>
-          <span class="tag">${escapeHtml(preview.dimensionsLabel)}</span>
-          <span class="tag">${escapeHtml(preview.mimeType)}</span>
+          <span class="tag">${escapeHtml(previews.length)} 张参考图</span>
+          <span class="tag">${escapeHtml(primaryPreview.dimensionsLabel)}</span>
+          <span class="tag">${escapeHtml(primaryPreview.mimeType)}</span>
         </div>
-        <p>这张图现在只作为首轮输入时的素材上下文参考。后续接入图片理解、找图推荐或生图时，会沿用这块结构继续扩。</p>
+        <p>这些图片会作为首轮输入时的素材上下文参考。系统会判断它们更适合直接做封面、裁切优化，还是仅用于理解内容。</p>
       </div>
     </div>
+    ${
+      secondaryPreviews.length
+        ? `
+          <div class="asset-preview-list" aria-label="其余参考图">
+            ${secondaryPreviews
+              .map(
+                (item) => `
+                  <article>
+                    <img src="${escapeHtml(item.objectUrl)}" alt="${escapeHtml(item.fileName)}" />
+                    <div>
+                      <strong>${escapeHtml(item.fileName)}</strong>
+                      <span>${escapeHtml(item.dimensionsLabel)} · ${escapeHtml(item.sizeLabel)}</span>
+                    </div>
+                  </article>
+                `,
+              )
+              .join("")}
+          </div>
+        `
+        : ""
+    }
   `;
   reveal(clearButton);
 }
@@ -2653,6 +2681,11 @@ export function renderCards(
           <div class="split-block card-top-blocks">
             <div class="sub-block">
               <strong>素材与执行路径</strong>
+              <div class="asset-usage-panel">
+                <span>${escapeHtml(card.assetUsageStatus || "建议补图")}</span>
+                <p>${escapeHtml(card.assetUsageReason || "当前素材需要结合内容目标继续判断。")}</p>
+                <small>${escapeHtml(card.assetUsageNextAction || "按方案继续补充或优化素材。")}</small>
+              </div>
               <div class="data-list compact-list card-mini-grid">
                 <div><span>素材类型建议</span><strong>${escapeHtml(card.suggestedAssetType || "待补充")}</strong></div>
                 <div><span>配图主策略</span><strong>${escapeHtml(card.imageDirection)}</strong></div>

@@ -7,6 +7,8 @@ function normalizeAssetText(fields) {
       fields.assetDescription,
       fields.assetNotes,
       fields.assetContext?.fileName,
+      fields.assetContext?.summaryLabel,
+      ...(fields.assetContext?.items || []).map((item) => item.fileName),
       fields.assetContext?.dimensionsLabel,
     ]
       .filter(Boolean)

@@ -70,11 +70,14 @@ function inferStrength(condition) {
 
 function buildAssetContext(assetContext) {
   const hasLocalPreview = Boolean(assetContext?.hasLocalPreview);
+  const items = Array.isArray(assetContext?.items) ? assetContext.items : [];
   const fileName = compactText(assetContext?.fileName);
   const mimeType = compactText(assetContext?.mimeType);
   const sizeLabel = compactText(assetContext?.sizeLabel);
   const dimensionsLabel = compactText(assetContext?.dimensionsLabel);
   const origin = compactText(assetContext?.origin) || "none";
+  const fileCount = Number(assetContext?.fileCount || items.length || (hasLocalPreview ? 1 : 0));
+  const summaryLabel = compactText(assetContext?.summaryLabel) || fileName;
 
   const visualDensityHint = hasLocalPreview
     ? includesAny(dimensionsLabel, ["1080", "1170", "1280", "1920"])
@@ -109,8 +112,64 @@ function buildAssetContext(assetContext) {
     mimeType,
     sizeLabel,
     dimensionsLabel,
+    fileCount,
+    summaryLabel,
+    items,
     visualDensityHint,
     likelyOrientation,
+  };
+}
+
+function inferAssetUsage(fields) {
+  const assetPool = compactText(
+    [
+      fields.userAssetType,
+      fields.assetDescription,
+      fields.assetNotes,
+      fields.assetContext?.summaryLabel,
+      fields.assetContext?.fileName,
+    ].join(" "),
+  );
+
+  if (!fields.assetContext?.hasLocalPreview && fields.userAssetType === "无图只有想法") {
+    return {
+      status: "建议补图",
+      reason: "当前没有本地图片，首轮方案会先给出更适合内容的封面图题材。",
+      nextAction: "优先补一张能承载点击机制的主图。",
+    };
+  }
+
+  if (includesAny(assetPool, ["不适合", "只是参考", "内容参考", "模糊", "随手拍"])) {
+    return {
+      status: "仅作内容参考",
+      reason: "当前素材更适合帮助理解内容，不宜直接作为最终封面主图。",
+      nextAction: "按方案中的图像题材重新补图或找图。",
+    };
+  }
+
+  if (includesAny(assetPool, ["封面", "主图", "成片", "可直接", "已经选好"])) {
+    return {
+      status: "可直接使用",
+      reason: "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
+      nextAction: "先用当前图做封面草稿，再按方向卡调整标题和构图。",
+    };
+  }
+
+  if (fields.assetContext?.hasLocalPreview) {
+    return {
+      status: "建议裁切优化",
+      reason:
+        fields.assetContext.fileCount > 1
+          ? "当前有多张参考图，可先选主图，再围绕主体、标题区和点击重点裁切优化。"
+          : "当前已有本地参考图，可先围绕主体、标题区和点击重点裁切优化。",
+      nextAction: "先选出最能代表内容的一张，再按方案调整画面重心。",
+    };
+  }
+
+  return {
+    status: "建议补图",
+    reason: "当前素材线索主要来自文字描述，需要补充更贴合内容的封面图题材。",
+    nextAction: "按方案中的推荐图像题材补充素材。",
   };
 }
 
@@ -154,6 +213,12 @@ export function extractInputFields(payload) {
     contentTopic,
     assetContext,
   });
+  const assetUsage = inferAssetUsage({
+    userAssetType: payload.userAssetType || "截图",
+    assetDescription,
+    assetNotes,
+    assetContext,
+  });
 
   return {
     caseId: compactText(payload.id || payload.caseId),
@@ -182,6 +247,9 @@ export function extractInputFields(payload) {
     copyReview: payload.copyReview || {},
     assetContext,
     hasLocalAssetContext: assetContext.hasLocalPreview ? "是" : "否",
+    assetUsageStatus: assetUsage.status,
+    assetUsageReason: assetUsage.reason,
+    assetUsageNextAction: assetUsage.nextAction,
     suggestedAssetType: assetSuggestion.suggestedAssetType,
     suggestedAssetReason: assetSuggestion.suggestedAssetReason,
     primaryAssetActionId: assetSuggestion.primaryAction.actionId,

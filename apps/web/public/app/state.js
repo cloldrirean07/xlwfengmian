@@ -14,6 +14,7 @@ export function createState() {
     isActionWorkspaceSubmitting: false,
     isWorkspaceDecisionSubmitting: false,
     assetPreview: null,
+    assetPreviews: [],
     latestWorkspaceResult: null,
     latestWorkspaceDecisionSave: null,
     latestRealCasePreview: null,

@@ -1,6 +1,7 @@
 import {
-  buildAssetPreview,
+  buildAssetPreviews,
   revokeAssetPreview,
+  revokeAssetPreviews,
 } from "./assetPreview.js";
 import {
   analyzeCoverDirection,
@@ -100,29 +101,51 @@ import {
 import { createState } from "./state.js";
 
 function clearLocalAsset(dom, state) {
-  revokeAssetPreview(state.assetPreview);
+  if (state.assetPreviews?.length) {
+    revokeAssetPreviews(state.assetPreviews);
+  } else {
+    revokeAssetPreview(state.assetPreview);
+  }
   state.assetPreview = null;
+  state.assetPreviews = [];
   dom.assetUploadInput.value = "";
-  renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, null);
+  renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, []);
 }
 
 function buildAnalyzePayload(dom, state) {
   const payload = serializeForm(dom.analyzeForm);
 
-  if (!state.assetPreview) {
-    return payload;
-  }
+  const assetPreviews = state.assetPreviews?.length
+    ? state.assetPreviews
+    : state.assetPreview
+      ? [state.assetPreview]
+      : [];
 
   return {
     ...payload,
-    assetContext: {
-      origin: "local-preview",
-      fileName: state.assetPreview.fileName,
-      mimeType: state.assetPreview.mimeType,
-      sizeLabel: state.assetPreview.sizeLabel,
-      dimensionsLabel: state.assetPreview.dimensionsLabel,
-      hasLocalPreview: true,
-    },
+    contentGoal: payload.contentGoal || "提升点击意愿",
+    assetContext:
+      assetPreviews.length === 0
+        ? null
+        : {
+            origin: "local-preview",
+            fileName: assetPreviews[0].fileName,
+            mimeType: assetPreviews[0].mimeType,
+            sizeLabel: assetPreviews[0].sizeLabel,
+            dimensionsLabel: assetPreviews[0].dimensionsLabel,
+            hasLocalPreview: true,
+            fileCount: assetPreviews.length,
+            summaryLabel:
+              assetPreviews.length === 1
+                ? assetPreviews[0].fileName
+                : `${assetPreviews[0].fileName} 等 ${assetPreviews.length} 张参考图`,
+            items: assetPreviews.map((preview) => ({
+              fileName: preview.fileName,
+              mimeType: preview.mimeType,
+              sizeLabel: preview.sizeLabel,
+              dimensionsLabel: preview.dimensionsLabel,
+            })),
+          },
   };
 }
 
@@ -130,13 +153,11 @@ const analyzeFieldRules = [
   {
     name: "contentTopic",
     label: "内容主题",
-    requiredMessage: "请输入内容主题",
     maxLength: 80,
   },
   {
     name: "contentGoal",
     label: "内容目标",
-    requiredMessage: "请输入内容目标",
     maxLength: 120,
   },
   {
@@ -209,6 +230,19 @@ export function validateAnalyzePayloadFields(payload) {
         message: `${rule.label}最多输入 ${rule.maxLength} 个字符`,
       };
     }
+  }
+
+  const hasMinimumInput =
+    hasNonEmptyText(payload.contentTopic) ||
+    hasNonEmptyText(payload.assetDescription) ||
+    Boolean(payload.assetContext?.hasLocalPreview);
+
+  if (!hasMinimumInput) {
+    return {
+      ok: false,
+      fieldName: "contentTopic",
+      message: "请补充内容主题、素材描述或上传参考图",
+    };
   }
 
   return {
@@ -2893,24 +2927,34 @@ export function createApp() {
   });
 
   dom.assetUploadInput.addEventListener("change", async () => {
-    const file = dom.assetUploadInput.files?.[0];
+    const files = Array.from(dom.assetUploadInput.files || []);
 
-    if (!file) {
+    if (files.length === 0) {
       clearLocalAsset(dom, state);
       return;
     }
 
-    setStatus(dom.firstRoundStatus, "正在生成本地图片预览...");
+    setStatus(dom.firstRoundStatus, "正在生成本地参考图预览...");
 
     try {
-      const nextPreview = await buildAssetPreview(file);
-      revokeAssetPreview(state.assetPreview);
-      state.assetPreview = nextPreview;
-      renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, state.assetPreview);
-      setStatus(dom.firstRoundStatus, "本地素材已预览，可继续填写内容并生成方向卡。");
+      const nextPreviews = await buildAssetPreviews(files);
+      if (state.assetPreviews?.length) {
+        revokeAssetPreviews(state.assetPreviews);
+      } else {
+        revokeAssetPreview(state.assetPreview);
+      }
+      state.assetPreviews = nextPreviews;
+      state.assetPreview = nextPreviews[0] || null;
+      renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, state.assetPreviews);
+      setStatus(
+        dom.firstRoundStatus,
+        nextPreviews.length === 1
+          ? "本地素材已预览，可继续填写内容并生成方向卡。"
+          : `已预览 ${nextPreviews.length} 张本地参考图，可继续填写内容并生成方向卡。`,
+      );
     } catch (error) {
       dom.assetUploadInput.value = "";
-      renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, state.assetPreview);
+      renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, state.assetPreviews);
       setStatus(dom.firstRoundStatus, error instanceof Error ? error.message : "图片预览失败。");
     }
   });
@@ -3418,7 +3462,7 @@ export function createApp() {
   });
 
   renderSelectedCardSummary(dom.selectedCardSummary, null, null);
-  renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, null);
+  renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, []);
   renderActionWorkspaceForm(dom.actionWorkspaceFields, dom.actionWorkspaceRunButton, null);
   renderActionWorkspaceResult(dom.actionWorkspaceResult, null);
   renderRefineWorkspaceHint(dom.refineWorkspaceHint, null, null);
@@ -3435,5 +3479,11 @@ export function createApp() {
   renderBatchReviewDashboardResult(dom.batchReviewDashboardResult, null);
   renderRealCaseLibrary(dom.realCaseLibraryResult, [], "");
   renderRealCaseMaintenancePreview(dom.realCaseMaintenanceResult, null);
-  window.addEventListener("beforeunload", () => revokeAssetPreview(state.assetPreview));
+  window.addEventListener("beforeunload", () => {
+    if (state.assetPreviews?.length) {
+      revokeAssetPreviews(state.assetPreviews);
+    } else {
+      revokeAssetPreview(state.assetPreview);
+    }
+  });
 }

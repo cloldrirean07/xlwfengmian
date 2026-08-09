@@ -683,30 +683,15 @@ test("renderCards adds first-round comparison rhythm before card details", () =>
 test("validateAnalyzePayloadFields enforces first-round required fields and limits", () => {
   assert.deepEqual(validateAnalyzePayloadFields({}), {
     ok: false,
-    fieldName: "contentTopic",
-    message: "请输入内容主题",
+    fieldName: "platform",
+    message: "请选择目标平台",
   });
 
   assert.deepEqual(
     validateAnalyzePayloadFields({
-      contentTopic: "有效主题",
-      contentGoal: "",
-      platform: "抖音",
-      userAssetType: "截图",
-    }),
-    {
-      ok: false,
-      fieldName: "contentGoal",
-      message: "请输入内容目标",
-    },
-  );
-
-  assert.deepEqual(
-    validateAnalyzePayloadFields({
-      contentTopic: "有效主题",
-      contentGoal: "有效目标",
       platform: "未知平台",
       userAssetType: "截图",
+      assetDescription: "有效素材描述",
     }),
     {
       ok: false,
@@ -717,15 +702,26 @@ test("validateAnalyzePayloadFields enforces first-round required fields and limi
 
   assert.deepEqual(
     validateAnalyzePayloadFields({
-      contentTopic: "有效主题",
-      contentGoal: "有效目标",
       platform: "抖音",
       userAssetType: "未知素材",
+      assetDescription: "有效素材描述",
     }),
     {
       ok: false,
       fieldName: "userAssetType",
       message: "素材类型不可用，请重新选择",
+    },
+  );
+
+  assert.deepEqual(
+    validateAnalyzePayloadFields({
+      platform: "抖音",
+      userAssetType: "截图",
+    }),
+    {
+      ok: false,
+      fieldName: "contentTopic",
+      message: "请补充内容主题、素材描述或上传参考图",
     },
   );
 
@@ -804,13 +800,27 @@ test("validateAnalyzePayloadFields enforces first-round required fields and limi
 
   assert.deepEqual(
     validateAnalyzePayloadFields({
-      contentTopic: "有效主题",
-      contentGoal: "有效目标",
       platform: "抖音",
       userAssetType: "截图",
       assetDescription: "图".repeat(300),
       referencePreference: "高级但克制",
       assetNotes: "备注",
+    }),
+    {
+      ok: true,
+      fieldName: "",
+      message: "",
+    },
+  );
+
+  assert.deepEqual(
+    validateAnalyzePayloadFields({
+      contentGoal: "有效目标",
+      platform: "抖音",
+      userAssetType: "截图",
+      assetContext: {
+        hasLocalPreview: true,
+      },
     }),
     {
       ok: true,
@@ -903,16 +913,17 @@ test("asset upload failure preserves existing local preview per PRD", async () =
   const assetUploadStart = createAppSource.indexOf("dom.assetUploadInput.addEventListener");
   const clearAssetStart = createAppSource.indexOf("dom.clearAssetButton.addEventListener", assetUploadStart);
   const assetUploadFlow = createAppSource.slice(assetUploadStart, clearAssetStart);
-  const successStart = assetUploadFlow.indexOf("const nextPreview = await buildAssetPreview(file);");
+  const successStart = assetUploadFlow.indexOf("const nextPreviews = await buildAssetPreviews(files);");
   const catchStart = assetUploadFlow.indexOf("} catch (error) {");
   const successFlow = assetUploadFlow.slice(successStart, catchStart);
   const failureFlow = assetUploadFlow.slice(catchStart);
 
-  assert.ok(successFlow.includes("revokeAssetPreview(state.assetPreview);"));
-  assert.ok(successFlow.includes("state.assetPreview = nextPreview;"));
+  assert.ok(successFlow.includes("revokeAssetPreviews(state.assetPreviews);"));
+  assert.ok(successFlow.includes("state.assetPreviews = nextPreviews;"));
+  assert.ok(successFlow.includes("state.assetPreview = nextPreviews[0] || null;"));
   assert.ok(!failureFlow.includes("clearLocalAsset(dom, state);"));
   assert.ok(failureFlow.includes('dom.assetUploadInput.value = "";'));
-  assert.ok(failureFlow.includes("renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, state.assetPreview);"));
+  assert.ok(failureFlow.includes("renderAssetPreview(dom.assetPreviewPanel, dom.assetPreviewContent, dom.clearAssetButton, state.assetPreviews);"));
 });
 
 test("classifyRequestError separates network and server failures", () => {

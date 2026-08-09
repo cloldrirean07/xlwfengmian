@@ -1,5 +1,42 @@
 # 更新日志
 
+## 2026-08-09 20:28
+
+- 新增文件：[../../docs/.requirement-preview/封面创意素材匹配模块_方案确认_latest.html](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/.requirement-preview/封面创意素材匹配模块_方案确认_latest.html)
+  - 按 `requirement-spec-architect` 生成产品实现方案确认页，确认本轮聚焦“封面创意素材匹配模块”。
+- 新增文件：[../../docs/prd/AI封面创意助手_封面创意素材匹配模块_需求规格_v1.0.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/prd/AI封面创意助手_封面创意素材匹配模块_需求规格_v1.0.md)
+  - 按旧版 `# 页面交互说明` 格式保存正式 Requirement Spec，作为 PI Engine 维护模式实现依据。
+- 更新文件：[public/index.html](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/index.html)
+  - 将内容主题和内容目标从硬必填调整为柔性输入，支持“主题 / 素材描述 / 本地参考图”三选一启动首轮生成。
+  - 上传控件支持一次选择多张参考图。
+- 更新文件：[public/app/assetPreview.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/assetPreview.js)
+  - 新增多图预览构建和批量资源释放能力。
+- 更新文件：[public/app/state.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/state.js)
+  - 新增 `assetPreviews` 状态，保留单图兼容字段。
+- 更新文件：[public/app/createApp.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/createApp.js)
+  - 首轮提交 payload 增加多图素材上下文，内容目标为空时默认使用“提升点击意愿”。
+  - 图片上传流程改为多图预览，失败时保留已有预览。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 本地素材预览改为多图展示。
+  - 首轮方向卡新增素材适用判断，展示“可直接使用 / 建议裁切优化 / 建议补图 / 仅作内容参考”。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 补充多图缩略图列表和素材适用判断区样式，兼容窄屏展示。
+- 更新文件：[src/domain/analysis/extractInputFields.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/analysis/extractInputFields.js)
+  - 解析多图素材上下文，并推断素材适用状态、判断理由和下一步动作。
+- 更新文件：[src/domain/analysis/inferAssetSuggestion.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/analysis/inferAssetSuggestion.js)
+  - 素材建议判断纳入多图文件名和多图摘要。
+- 更新文件：[src/domain/cards/buildFirstRoundCards.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildFirstRoundCards.js)
+  - 将素材适用判断写入首轮方向卡数据。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 更新最小输入校验和多图上传失败保留预览的测试断言。
+- 验证结果：
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test`
+  - 结果：`295 pass / 0 fail`
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/build-static.mjs`
+  - 结果：构建通过，`public -> dist` 已同步
+  - 启动本地服务 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node src/server/server.js`
+  - 结果：`http://127.0.0.1:3080/` 返回 `200`，`/app/createApp.js` 返回 `200`
+
 ## 2026-08-08 10:18
 
 - 更新文件：[public/index.html](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/index.html)
