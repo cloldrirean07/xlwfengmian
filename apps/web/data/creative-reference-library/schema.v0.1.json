@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "0.1",
+  "description": "MVP 创意参考素材样本标注表结构。用于训练封面方向判断、素材动作判断和参考来源类型判断。",
+  "collectionStatusEnum": [
+    "seeded-existing-case",
+    "to-collect",
+    "collected",
+    "rejected"
+  ],
+  "referenceSourceTypeEnum": [
+    {
+      "value": "current-asset",
+      "label": "当前素材优化"
+    },
+    {
+      "value": "platform-sample",
+      "label": "平台样本借鉴"
+    },
+    {
+      "value": "creative-reference",
+      "label": "创意参考素材库"
+    },
+    {
+      "value": "ad-creative-case",
+      "label": "广告创意拆解"
+    }
+  ],
+  "coverDirectionFitEnum": [
+    "更清楚重点",
+    "更有收获感",
+    "更让人想点开",
+    "更有冲击力",
+    "更高级专业"
+  ],
+  "assetActionFitEnum": [
+    "可直接使用",
+    "建议裁切优化",
+    "建议补图",
+    "仅作内容参考",
+    "做创意概念图"
+  ],
+  "priorityEnum": [
+    "P0",
+    "P1",
+    "P2",
+    "P3"
+  ],
+  "textDensityEnum": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "visualDensityEnum": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "requiredFields": [
+    "sampleId",
+    "collectionStatus",
+    "referenceSourceType",
+    "sourceLabel",
+    "sourceTraceNote",
+    "platformFit",
+    "contentScene",
+    "visualSubject",
+    "compositionPattern",
+    "titleZone",
+    "emotionMood",
+    "coverDirectionFit",
+    "assetActionFit",
+    "borrowablePoints",
+    "doNotCopyBoundary",
+    "suitableUserInput",
+    "labelPriority"
+  ],
+  "recommendedFields": [
+    "sourceUrlOrPath",
+    "subScene",
+    "dominantColors",
+    "textDensity",
+    "visualDensity",
+    "clickMechanism",
+    "riskNotes",
+    "matchedRealCaseIds",
+    "referenceTags",
+    "reviewOwner",
+    "reviewNotes"
+  ]
+}

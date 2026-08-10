@@ -8,92 +8,93 @@
   </head>
   <body>
     <main class="page-shell">
-      <section class="hero">
+      <section class="hero creator-hero">
         <div class="hero-grid">
           <div class="hero-content">
-            <p class="eyebrow">AI Cover Creative Assistant</p>
-            <h1>上传素材，快速生成更容易被点开的封面方案</h1>
+            <p class="eyebrow">AI 封面创意助手</p>
+            <h1>把素材变成更容易被点开的封面方案</h1>
             <p class="hero-copy">
-              面向小红书、抖音等内容发布场景，把内容主题、目标平台和参考图转成 3 个可比较的封面方向，并同步给出标题、配图和构图建议。
+              面向小红书、抖音等内容发布场景，输入内容主题和参考图，即可获得 3 个可比较的封面方向、标题候选和素材处理建议。
             </p>
+            <div class="hero-action-row">
+              <a class="hero-primary-action" href="#first-round-workbench" data-product-view-link="creation">开始生成封面方案</a>
+              <a class="hero-secondary-action" href="#real-case-quick-start" data-product-view-link="creation">查看真实示例</a>
+            </div>
             <div class="hero-badges">
-              <span>素材理解</span>
-              <span>3 个封面方案</span>
+              <span>方向判断</span>
               <span>标题候选</span>
-              <span>二轮优化</span>
+              <span>素材动作</span>
             </div>
           </div>
 
           <aside class="hero-side">
             <article class="hero-side-card hero-side-primary">
-              <p class="section-kicker">Creator MVP</p>
-              <h2>从素材到可选方案</h2>
+              <p class="section-kicker">Creator Flow</p>
+              <h2>一次生成 3 个可选方向</h2>
               <p>
-                当前版本优先跑顺发布前的封面决策：先看内容和素材，再给出差异化方向，最后支持选择与继续优化。
+                先判断内容的点击理由，再组合封面大字、标题候选、配图方式和构图建议。
               </p>
               <div class="hero-metrics">
                 <div>
-                  <span>选题效率</span>
-                  <strong>减少方向试错</strong>
+                  <span>方向</span>
+                  <strong>快速比较</strong>
                 </div>
                 <div>
-                  <span>创意效率</span>
-                  <strong>一次生成多案</strong>
+                  <span>标题</span>
+                  <strong>同步生成</strong>
                 </div>
                 <div>
-                  <span>筛选效率</span>
-                  <strong>对比后再优化</strong>
+                  <span>素材</span>
+                  <strong>明确动作</strong>
                 </div>
               </div>
             </article>
 
-            <article class="hero-side-card hero-side-secondary">
-              <strong>后台支撑已后移</strong>
-              <ul class="hero-side-list">
-                <li>规则判断在后台完成</li>
-                <li>案例复盘用于验证效果</li>
-                <li>写回工具放入高级维护</li>
-              </ul>
+            <article class="hero-side-card hero-side-secondary hero-example-card">
+              <p class="section-kicker">Live Example</p>
+              <strong>真实示例可直接加载</strong>
+              <p>美食封面和晚霞封面案例已接入主工作台，可用于观察完整生成结果。</p>
+              <a class="link-button ghost-button" href="#real-case-quick-start" data-product-view-link="creation">加载示例</a>
             </article>
           </aside>
         </div>
 
         <nav class="jump-nav" aria-label="页面跳转">
-          <a href="#first-round-workbench" data-product-view-link="creation">开始生成封面方案</a>
-          <a href="#real-case-quick-start" data-product-view-link="creation">加载真实案例示范</a>
-          <a href="#analysis-panel" data-product-view-link="creation">查看方案结果</a>
-          <a href="#review-dashboard-section" data-workspace-group-link="validation">高级维护入口</a>
+          <a href="#first-round-workbench" data-product-view-link="creation">填写内容与素材</a>
+          <a href="#analysis-panel" data-product-view-link="creation">查看生成结果</a>
+          <a href="#refine-panel" data-product-view-link="creation">继续优化方向</a>
+          <a href="#review-dashboard-section" data-workspace-group-link="validation">高级维护</a>
         </nav>
       </section>
 
       <nav class="product-view-switch" id="product-view-switch" aria-label="产品工作视图切换">
         <button type="button" class="product-view-button active" data-product-view-target="creation" data-view-tone="creation" aria-pressed="true" aria-controls="product-view-creation">
-          <span class="product-view-meta"><span class="product-view-index">01</span><span>封面生成</span></span>
-          <strong>创作者模式</strong>
+          <span class="product-view-meta"><span class="product-view-index">01</span><span>开始创作</span></span>
+          <strong>生成封面方案</strong>
         </button>
         <button type="button" class="product-view-button" data-product-view-target="review" data-view-tone="review" aria-pressed="false" aria-controls="product-view-review">
-          <span class="product-view-meta"><span class="product-view-index">02</span><span>案例验证</span></span>
-          <strong>效果证据</strong>
+          <span class="product-view-meta"><span class="product-view-index">02</span><span>真实示例</span></span>
+          <strong>案例与验证</strong>
         </button>
         <button type="button" class="product-view-button" data-product-view-target="writeback" data-view-tone="writeback" aria-pressed="false" aria-controls="product-view-writeback">
           <span class="product-view-meta"><span class="product-view-index">03</span><span>高级维护</span></span>
-          <strong>规则与写回</strong>
+          <strong>复盘与写回</strong>
         </button>
       </nav>
 
       <section class="product-view product-view-active" id="product-view-creation" data-product-view="creation">
         <section class="view-stage-panel" data-view-tone="creation" aria-label="创作主线视图说明">
           <div>
-            <p class="section-kicker">Creation Line</p>
-            <h2>封面方案生成器</h2>
+            <p class="section-kicker">Creation</p>
+            <h2>创作者封面方案生成器</h2>
             <p>
-              从内容主题、素材状态和平台目标开始，生成可比较的封面方向，并在选择后继续细化标题、画面和构图。
+              从内容主题、素材状态和平台目标开始，生成可比较的封面方向；选定方向后继续细化标题、画面和构图。
             </p>
           </div>
           <div class="view-stage-meta">
-            <span>输入：内容与素材信息</span>
-            <span>产出：方向卡与修订结果</span>
-            <span>去向：案例记录或继续调整</span>
+            <span>输入内容与素材</span>
+            <span>获得 3 个方向卡</span>
+            <span>选择后继续优化</span>
           </div>
         </section>
 
@@ -101,30 +102,30 @@
           <article>
             <span>01</span>
             <h2>上传素材</h2>
-            <p>整理主题、目标、参考图和素材描述，让系统获得足够的封面判断依据。</p>
+            <p>上传参考图，补充主题、目标和素材描述，让封面建议贴近内容本身。</p>
           </article>
           <article>
             <span>02</span>
             <h2>生成方案</h2>
-            <p>输出 3 个差异化封面方向，每个方向包含标题、配图、构图和风险提醒。</p>
+            <p>输出 3 个差异化封面方向，每个方向包含标题、配图、构图和素材动作。</p>
           </article>
           <article>
             <span>03</span>
             <h2>筛选优化</h2>
-            <p>选定更合适的方向后，继续生成第二轮优化结果，并记录优选理由。</p>
+            <p>选定更合适的方向后，继续调整保留点、标题语气和画面重点。</p>
           </article>
         </section>
 
         <section class="panel real-case-quick-panel" id="real-case-quick-start">
           <div class="panel-header">
             <div>
-              <p class="section-kicker">Real Case Flow</p>
-              <h2>案例示范快跑</h2>
+              <p class="section-kicker">Examples</p>
+              <h2>真实示例</h2>
             </div>
-            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">打开案例验证</a>
+            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">管理案例库</a>
           </div>
           <p class="panel-note">
-            选择一条已补齐素材背景的案例，直接观察从真实素材到封面方向卡的生成结果。
+            选择一条已补齐素材背景的案例，直接载入主工作台，观察从真实素材到方向卡的生成结果。
           </p>
           <div id="real-case-quick-start-result">
             <p class="empty-state">正在读取可用真实案例。</p>
@@ -135,25 +136,25 @@
           <section class="panel form-panel" id="first-round-workbench">
           <div class="panel-header">
             <div>
-              <p class="section-kicker">Main Workflow</p>
-              <h2>生成封面方案</h2>
+              <p class="section-kicker">Cover Brief</p>
+              <h2>输入内容与素材</h2>
             </div>
             <div class="button-row">
-              <button type="button" id="load-sample-button">加载结构化样例</button>
-              <button type="button" id="run-sample-button" class="ghost-button">运行完整样例</button>
+              <button type="button" id="load-sample-button" class="ghost-button">填入示例内容</button>
+              <button type="button" id="run-sample-button" class="ghost-button">查看完整样例</button>
             </div>
           </div>
           <p class="panel-note">
-            填写内容主题、发布目标和素材描述后，系统会生成 3 个封面方向，帮助快速比较哪种标题和画面更值得优先尝试。
+            填写内容主题、发布目标和素材描述后，将生成 3 个可比较的封面方向，帮助判断哪种标题和画面更值得优先尝试。
           </p>
           <div class="workbench-intro-grid">
             <article class="workbench-callout workbench-callout-primary">
-              <strong>输入范围</strong>
-              <p>内容主题、目标、素材状态与风格偏好会共同影响封面方向和标题语气。</p>
+              <strong>最少输入</strong>
+              <p>内容主题、素材描述或参考图满足其一即可启动首轮生成。</p>
             </article>
             <article class="workbench-callout">
-              <strong>最小链路</strong>
-              <p>主题、目标与一段素材描述即可启动首轮生成；参考图用于提升方案贴合度。</p>
+              <strong>推荐补充</strong>
+              <p>补充目标平台、内容目标和封面倾向，可以让标题语气与画面动作更稳定。</p>
             </article>
           </div>
           <form id="analyze-form" novalidate>
@@ -188,8 +189,8 @@
             <div class="asset-upload-block">
               <div class="asset-upload-header">
                 <div>
-                  <p class="section-kicker">Asset Context</p>
-                  <h3>本地参考图 / 截图预览</h3>
+                  <p class="section-kicker">Asset</p>
+                  <h3>参考图预览</h3>
                 </div>
                 <button type="button" id="clear-asset-button" class="ghost-button hidden">清除预览</button>
               </div>
@@ -220,7 +221,7 @@
             </label>
             <div class="submit-row">
               <button type="submit">生成封面方案</button>
-              <span id="first-round-status" class="micro-copy">提交后将生成 3 个封面方向与标题候选。</span>
+              <span id="first-round-status" class="micro-copy">生成后将展示 3 个封面方向、标题候选和素材动作。</span>
             </div>
           </form>
         </section>
@@ -228,26 +229,26 @@
           <section class="panel guide-panel">
           <div class="panel-header">
             <div>
-              <p class="section-kicker">Decision Frame</p>
-              <h2>推荐逻辑</h2>
+              <p class="section-kicker">Decision Guide</p>
+              <h2>生成结果会包含什么</h2>
             </div>
           </div>
           <div class="guide-highlight">
-            <strong>先判断点击理由，再生成封面方案。</strong>
-            <p>系统会先判断内容更适合看懂、收益、好奇、冲击或信任机制，再决定标题、画面和构图的组合方式。</p>
+            <strong>先判断点击理由，再组合封面方案。</strong>
+            <p>结果会围绕看懂、收益、好奇、冲击或信任机制，给出不同标题、画面和构图组合。</p>
           </div>
           <div class="guide-list">
             <article>
-              <strong>先看内容任务</strong>
-              <p>判断内容更需要被快速看懂、建立信任，还是先制造停顿和点击欲。</p>
+              <strong>方向标签</strong>
+              <p>标明这张封面主要靠清晰、收益、好奇、冲击或质感来吸引点击。</p>
             </article>
             <article>
-              <strong>再看现有素材</strong>
-              <p>根据截图、人像、场景图、商品图或纯想法，决定优先改图还是补充更贴合内容的画面。</p>
+              <strong>标题与大字</strong>
+              <p>同步给出标题候选和封面大字，让文案与画面保持同一个点击理由。</p>
             </article>
             <article>
-              <strong>最后给 3 个有差异的方向</strong>
-              <p>每张方向卡突出不同主变量，便于比较、筛选和继续迭代。</p>
+              <strong>素材动作</strong>
+              <p>判断现有素材适合直接使用、裁切优化，还是需要补充更贴内容的图片。</p>
             </article>
           </div>
           <div class="direction-pills">
@@ -263,8 +264,8 @@
         <section class="panel hidden" id="analysis-panel">
         <div class="panel-header">
           <div>
-            <p class="section-kicker">First Round</p>
-            <h2>第一轮方向结果</h2>
+              <p class="section-kicker">Direction Cards</p>
+              <h2>封面方向结果</h2>
           </div>
         </div>
         <div id="analysis-summary"></div>
@@ -272,8 +273,8 @@
         <div class="panel-inner-block" id="action-workspace-panel">
           <div class="panel-header">
             <div>
-              <p class="section-kicker">Branch Workspace</p>
-              <h2>工作区建议确认</h2>
+              <p class="section-kicker">Next Step</p>
+              <h2>继续细化方案</h2>
             </div>
           </div>
           <div id="action-workspace-content"></div>
@@ -329,16 +330,16 @@
         <section class="panel case-bridge-panel" id="case-review-entry">
         <div class="panel-header">
           <div>
-            <p class="section-kicker">Review Loop</p>
-            <h2>保存与复盘</h2>
+            <p class="section-kicker">Advanced</p>
+            <h2>高级维护入口</h2>
           </div>
           <div class="button-row">
-            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">查看案例验证</a>
-            <a class="link-button" href="#review-dashboard-section" data-workspace-group-link="validation">打开高级维护</a>
+            <a class="link-button ghost-button" href="#real-case-form" data-workspace-group-link="cases">进入案例库</a>
+            <a class="link-button ghost-button" href="#review-dashboard-section" data-workspace-group-link="validation">进入复盘工具</a>
           </div>
         </div>
         <p class="panel-note">
-          二轮结果确认后，可进入后台区域沉淀真实案例、人工判断和规则修订线索，用于持续提升后续生成质量。
+          结果需要长期验证时，可进入案例库、复盘看板和写回工具，沉淀真实案例与规则修订线索。
         </p>
         <div class="case-bridge-grid">
           <article>

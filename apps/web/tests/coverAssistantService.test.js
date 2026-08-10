@@ -425,10 +425,59 @@ test("createAnalysisSession promotes title style library options from real mater
   const foodTitles = food.cards.flatMap((card) => card.titleOptions);
   const sunsetTitles = sunset.cards.flatMap((card) => card.titleOptions);
 
+  assert.ok(foodTitles.includes("辣炒海鲜封面，先抓住这一口"));
   assert.ok(foodTitles.includes("在家复刻夜市香辣鱿鱼"));
-  assert.ok(foodTitles.includes("香辣蟹新手零失败"));
-  assert.ok(sunsetTitles.includes("AI把晚霞做成封面大片"));
-  assert.ok(sunsetTitles.includes("适合晚霞封面的朋友圈文案"));
+  assert.ok(sunsetTitles.includes("最后一抹霞光，适合这样做封面"));
+  assert.ok(sunsetTitles.includes("一张天空图也能做出封面感"));
+  assert.ok(sunsetTitles.includes("一键还原落日余晖感"));
+});
+
+test("createRefinementSession keeps material scenario driver in second-round titles", () => {
+  const foodAnalysis = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作教程",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含螃蟹、辣炒鱿鱼、红油和香菜。",
+    referencePreference: "小红书美食封面方向，突出食欲和冲击力。",
+    copyReview: {
+      preferredTitle: "辣炒的味蕾",
+    },
+  });
+  const foodRefined = createRefinementSession({
+    analysis: foodAnalysis,
+    selectedCardId: foodAnalysis.cards[1].cardId,
+    preserveElement: "保留螃蟹、辣炒鱿鱼、红油辣椒和香菜形成的食欲冲击点。",
+    feedback: "标题需要更直接地呈现美食吸引力，同时让读者理解封面制作流程的学习价值。",
+  });
+
+  assert.ok(foodRefined.secondRound.refinedCard.titleOptions.includes("辣炒的味蕾，封面先抓住这一口"));
+  assert.ok(foodRefined.secondRound.refinedCard.coverCopyMain.includes("食欲冲击别丢"));
+  assert.ok(foodRefined.secondRound.refinedCard.imageDirection.includes("红油"));
+  assert.equal(foodRefined.secondRound.refinedCard.titleOptions.some((title) => title.includes("但更贴内容")), false);
+
+  const sunsetAnalysis = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作教程",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含夏日晚霞、云层和落日。",
+    referencePreference: "小红书风景封面方向，突出氛围感。",
+    copyReview: {
+      preferredTitle: "最后一抹霞光",
+    },
+  });
+  const sunsetRefined = createRefinementSession({
+    analysis: sunsetAnalysis,
+    selectedCardId: sunsetAnalysis.cards[1].cardId,
+    preserveElement: "保留晚霞、云层和落日带来的夏日氛围感。",
+    feedback: "标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。",
+  });
+
+  assert.ok(sunsetRefined.secondRound.refinedCard.titleOptions.includes("最后一抹霞光，适合这样做封面"));
+  assert.ok(sunsetRefined.secondRound.refinedCard.coverCopyMain.includes("天空情绪别丢"));
+  assert.ok(sunsetRefined.secondRound.refinedCard.imageDirection.includes("天空留白"));
+  assert.equal(sunsetRefined.secondRound.refinedCard.titleOptions.some((title) => title.includes("但更贴内容")), false);
 });
 
 test("createAnalysisSession keeps manual preferred title ahead of title style library", () => {
@@ -445,10 +494,10 @@ test("createAnalysisSession keeps manual preferred title ahead of title style li
   });
 
   assert.equal(food.cards[0].titleOptions[0], "辣炒的味蕾");
-  assert.equal(food.cards[0].titleOptions[1], "在家复刻夜市香辣鱿鱼");
+  assert.equal(food.cards[0].titleOptions[1], "辣炒海鲜封面，先抓住这一口");
   assert.equal(food.cards[0].titleOptionDetails[0].sourceLabel, "人工优选");
   assert.equal(food.cards[0].titleOptionDetails[1].sourceLabel, "风格库");
-  assert.equal(food.cards[0].titleOptionDetails[1].styleLabel, "夜市复刻");
+  assert.equal(food.cards[0].titleOptionDetails[1].styleLabel, "食欲冲击封面");
 });
 
 test("runCaseFlow preserves real case manual preferred title in first-round titles", async () => {
@@ -474,8 +523,8 @@ test("renderCards shows title style source labels", () => {
 
   assert.ok(container.innerHTML.includes("标题风格来源"));
   assert.ok(container.innerHTML.includes("风格库"));
-  assert.ok(container.innerHTML.includes("AI风景效果"));
-  assert.ok(container.innerHTML.includes("AI把晚霞做成封面大片"));
+  assert.ok(container.innerHTML.includes("晚霞封面任务"));
+  assert.ok(container.innerHTML.includes("最后一抹霞光，适合这样做封面"));
 });
 
 test("buildTitleSelectionDraft creates copyReview preferred title draft", () => {
@@ -493,13 +542,13 @@ test("buildTitleSelectionDraft creates copyReview preferred title draft", () => 
     titleOption: card.titleOptionDetails[0],
   });
 
-  assert.equal(draft.preferredTitle, "在家复刻夜市香辣鱿鱼");
-  assert.equal(draft.copyReviewDraft.preferredTitle, "在家复刻夜市香辣鱿鱼");
+  assert.equal(draft.preferredTitle, "辣炒海鲜封面，先抓住这一口");
+  assert.equal(draft.copyReviewDraft.preferredTitle, "辣炒海鲜封面，先抓住这一口");
   assert.equal(draft.sourceLabel, "风格库");
-  assert.equal(draft.styleLabel, "夜市复刻");
+  assert.equal(draft.styleLabel, "食欲冲击封面");
   assert.ok(draft.copyReviewDraft.titleSelectionReason.includes(card.directionLabelUserFacing));
   assert.equal(draft.writebackPreview.patchFields[0].fieldPath, "copyReview.preferredTitle");
-  assert.equal(draft.writebackPreview.patchFields[0].nextValue, "在家复刻夜市香辣鱿鱼");
+  assert.equal(draft.writebackPreview.patchFields[0].nextValue, "辣炒海鲜封面，先抓住这一口");
 });
 
 test("buildTitleWritebackPreview compares current and next copyReview fields", () => {
@@ -548,7 +597,7 @@ test("renderCards exposes preferred title selection draft", () => {
   assert.ok(container.innerHTML.includes("执行写回"));
   assert.ok(container.innerHTML.includes("copyReview.preferredTitle"));
   assert.ok(container.innerHTML.includes("拟写入"));
-  assert.ok(container.innerHTML.includes("AI把晚霞做成封面大片"));
+  assert.ok(container.innerHTML.includes("一张天空图也能做出封面感"));
 });
 
 test("buildTitleSelectionWritebackPatch merges preferred title into copyReview", () => {
@@ -2049,7 +2098,9 @@ test("case review bridge links expand their target workspace groups", async () =
   assert.ok(indexSource.includes('aria-label="创作主线视图说明"'));
   assert.ok(indexSource.includes('aria-label="复盘态视图说明"'));
   assert.ok(indexSource.includes('aria-label="写回态视图说明"'));
-  assert.ok(indexSource.includes("产出：方向卡与修订结果"));
+  assert.ok(indexSource.includes("获得 3 个方向卡"));
+  assert.ok(indexSource.includes("把素材变成更容易被点开的封面方案"));
+  assert.ok(indexSource.includes("开始生成封面方案"));
   assert.ok(indexSource.includes("产出：工作单、批次记录与复盘证据"));
   assert.ok(indexSource.includes("产出：复盘看板、安全预览与写回状态"));
   assert.ok(indexSource.includes('id="writeback-gate-overview"'));
@@ -2101,7 +2152,7 @@ test("case review bridge links expand their target workspace groups", async () =
   assert.ok(createAppSource.includes("focusDashboardNextStep(dom);"));
   assert.ok(createAppSource.includes('window.addEventListener("hashchange"'));
   assert.ok(createAppSource.includes("restoreProductViewFromHash();"));
-  assert.ok(indexSource.includes("第一轮方向结果"));
+  assert.ok(indexSource.includes("封面方向结果"));
   assert.ok(createAppSource.includes("renderCards(dom.cardsContainer"));
   assert.ok(createAppSource.includes("renderAnalysisOverview(dom.analysisSummary"));
   assert.ok(styleSource.includes(".direction-result-rhythm"));

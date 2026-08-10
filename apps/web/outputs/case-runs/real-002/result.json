@@ -261,8 +261,8 @@
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面别再这样做",
         "titleOptions": [
           "辣炒的味蕾",
-          "在家复刻夜市香辣鱿鱼",
-          "香辣蟹做出饭店味道"
+          "辣炒海鲜封面，先抓住这一口",
+          "红油和海鲜，是这张封面的点击点"
         ],
         "titleOptionDetails": [
           {
@@ -272,18 +272,18 @@
             "styleLabel": "人工判断"
           },
           {
-            "title": "在家复刻夜市香辣鱿鱼",
+            "title": "辣炒海鲜封面，先抓住这一口",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "night-market-remake",
-            "styleLabel": "夜市复刻"
+            "styleId": "food-impact-cover-task",
+            "styleLabel": "食欲冲击封面"
           },
           {
-            "title": "香辣蟹做出饭店味道",
+            "title": "红油和海鲜，是这张封面的点击点",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "night-market-remake",
-            "styleLabel": "夜市复刻"
+            "styleId": "food-impact-cover-task",
+            "styleLabel": "食欲冲击封面"
           }
         ],
         "materialKeywords": [
@@ -589,8 +589,8 @@
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
         "titleOptions": [
           "辣炒的味蕾",
-          "在家复刻夜市香辣鱿鱼",
-          "香辣蟹做出饭店味道"
+          "辣炒海鲜封面，先抓住这一口",
+          "红油和海鲜，是这张封面的点击点"
         ],
         "titleOptionDetails": [
           {
@@ -600,18 +600,18 @@
             "styleLabel": "人工判断"
           },
           {
-            "title": "在家复刻夜市香辣鱿鱼",
+            "title": "辣炒海鲜封面，先抓住这一口",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "night-market-remake",
-            "styleLabel": "夜市复刻"
+            "styleId": "food-impact-cover-task",
+            "styleLabel": "食欲冲击封面"
           },
           {
-            "title": "香辣蟹做出饭店味道",
+            "title": "红油和海鲜，是这张封面的点击点",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "night-market-remake",
-            "styleLabel": "夜市复刻"
+            "styleId": "food-impact-cover-task",
+            "styleLabel": "食欲冲击封面"
           }
         ],
         "materialKeywords": [
@@ -924,8 +924,8 @@
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面的结果差在这里",
         "titleOptions": [
           "辣炒的味蕾",
-          "在家复刻夜市香辣鱿鱼",
-          "香辣蟹做出饭店味道"
+          "辣炒海鲜封面，先抓住这一口",
+          "红油和海鲜，是这张封面的点击点"
         ],
         "titleOptionDetails": [
           {
@@ -935,18 +935,18 @@
             "styleLabel": "人工判断"
           },
           {
-            "title": "在家复刻夜市香辣鱿鱼",
+            "title": "辣炒海鲜封面，先抓住这一口",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "night-market-remake",
-            "styleLabel": "夜市复刻"
+            "styleId": "food-impact-cover-task",
+            "styleLabel": "食欲冲击封面"
           },
           {
-            "title": "香辣蟹做出饭店味道",
+            "title": "红油和海鲜，是这张封面的点击点",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "night-market-remake",
-            "styleLabel": "夜市复刻"
+            "styleId": "food-impact-cover-task",
+            "styleLabel": "食欲冲击封面"
           }
         ],
         "materialKeywords": [
@@ -1566,8 +1566,8 @@
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面别再这样做",
           "titleOptions": [
             "辣炒的味蕾",
-            "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道"
+            "辣炒海鲜封面，先抓住这一口",
+            "红油和海鲜，是这张封面的点击点"
           ],
           "titleOptionDetails": [
             {
@@ -1577,18 +1577,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "在家复刻夜市香辣鱿鱼",
+              "title": "辣炒海鲜封面，先抓住这一口",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             },
             {
-              "title": "香辣蟹做出饭店味道",
+              "title": "红油和海鲜，是这张封面的点击点",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             }
           ],
           "materialKeywords": [
@@ -1894,8 +1894,8 @@
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
           "titleOptions": [
             "辣炒的味蕾",
-            "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道"
+            "辣炒海鲜封面，先抓住这一口",
+            "红油和海鲜，是这张封面的点击点"
           ],
           "titleOptionDetails": [
             {
@@ -1905,18 +1905,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "在家复刻夜市香辣鱿鱼",
+              "title": "辣炒海鲜封面，先抓住这一口",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             },
             {
-              "title": "香辣蟹做出饭店味道",
+              "title": "红油和海鲜，是这张封面的点击点",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             }
           ],
           "materialKeywords": [
@@ -2229,8 +2229,8 @@
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面的结果差在这里",
           "titleOptions": [
             "辣炒的味蕾",
-            "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道"
+            "辣炒海鲜封面，先抓住这一口",
+            "红油和海鲜，是这张封面的点击点"
           ],
           "titleOptionDetails": [
             {
@@ -2240,18 +2240,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "在家复刻夜市香辣鱿鱼",
+              "title": "辣炒海鲜封面，先抓住这一口",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             },
             {
-              "title": "香辣蟹做出饭店味道",
+              "title": "红油和海鲜，是这张封面的点击点",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             }
           ],
           "materialKeywords": [
@@ -2695,8 +2695,8 @@
       "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
       "titleOptions": [
         "辣炒的味蕾",
-        "在家复刻夜市香辣鱿鱼",
-        "香辣蟹做出饭店味道"
+        "辣炒海鲜封面，先抓住这一口",
+        "红油和海鲜，是这张封面的点击点"
       ],
       "titleOptionDetails": [
         {
@@ -2706,18 +2706,18 @@
           "styleLabel": "人工判断"
         },
         {
-          "title": "在家复刻夜市香辣鱿鱼",
+          "title": "辣炒海鲜封面，先抓住这一口",
           "sourceType": "style-library",
           "sourceLabel": "风格库",
-          "styleId": "night-market-remake",
-          "styleLabel": "夜市复刻"
+          "styleId": "food-impact-cover-task",
+          "styleLabel": "食欲冲击封面"
         },
         {
-          "title": "香辣蟹做出饭店味道",
+          "title": "红油和海鲜，是这张封面的点击点",
           "sourceType": "style-library",
           "sourceLabel": "风格库",
-          "styleId": "night-market-remake",
-          "styleLabel": "夜市复刻"
+          "styleId": "food-impact-cover-task",
+          "styleLabel": "食欲冲击封面"
         }
       ],
       "materialKeywords": [
@@ -3030,15 +3030,15 @@
       "nextRoundGoal": "保留「更清楚重点」的长处，但让结果更接近「更清楚重点」",
       "refinedCard": {
         "cardTitle": "更清楚重点 · 第二轮优化",
-        "directionDescription": "保留原来的点击逻辑，同时让主题和价值点更快被看懂。",
-        "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步 / 先把重点讲明白",
+        "directionDescription": "保留清楚重点，同时把食物主体、食欲冲击和教程任务一起放到前面。",
+        "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步 / 重点更清楚，食欲冲击别丢",
         "titleOptions": [
-          "辣炒的味蕾，但更贴内容",
-          "在家复刻夜市香辣鱿鱼，表达更稳",
-          "香辣蟹做出饭店味道，表达更稳"
+          "辣炒的味蕾，封面先抓住这一口",
+          "辣炒海鲜封面，先抓住这一口",
+          "红油和海鲜，是这张封面的点击点"
         ],
-        "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；图像和文字都更贴内容本身",
-        "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；保留原有主结构",
+        "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；裁切时优先放大红油、海鲜、辣椒和食物近景，保留一眼有食欲的冲击点。",
+        "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；标题服务食物主体，避免遮挡红油、蟹壳、鱿鱼和辣椒。",
         "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。 这轮重点解决「离内容太远」。",
         "riskNote": "容易太平"
       },
@@ -3323,8 +3323,8 @@
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面别再这样做",
           "titleOptions": [
             "辣炒的味蕾",
-            "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道"
+            "辣炒海鲜封面，先抓住这一口",
+            "红油和海鲜，是这张封面的点击点"
           ],
           "titleOptionDetails": [
             {
@@ -3334,18 +3334,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "在家复刻夜市香辣鱿鱼",
+              "title": "辣炒海鲜封面，先抓住这一口",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             },
             {
-              "title": "香辣蟹做出饭店味道",
+              "title": "红油和海鲜，是这张封面的点击点",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             }
           ],
           "materialKeywords": [
@@ -3651,8 +3651,8 @@
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
           "titleOptions": [
             "辣炒的味蕾",
-            "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道"
+            "辣炒海鲜封面，先抓住这一口",
+            "红油和海鲜，是这张封面的点击点"
           ],
           "titleOptionDetails": [
             {
@@ -3662,18 +3662,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "在家复刻夜市香辣鱿鱼",
+              "title": "辣炒海鲜封面，先抓住这一口",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             },
             {
-              "title": "香辣蟹做出饭店味道",
+              "title": "红油和海鲜，是这张封面的点击点",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             }
           ],
           "materialKeywords": [
@@ -3986,8 +3986,8 @@
           "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面的结果差在这里",
           "titleOptions": [
             "辣炒的味蕾",
-            "在家复刻夜市香辣鱿鱼",
-            "香辣蟹做出饭店味道"
+            "辣炒海鲜封面，先抓住这一口",
+            "红油和海鲜，是这张封面的点击点"
           ],
           "titleOptionDetails": [
             {
@@ -3997,18 +3997,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "在家复刻夜市香辣鱿鱼",
+              "title": "辣炒海鲜封面，先抓住这一口",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             },
             {
-              "title": "香辣蟹做出饭店味道",
+              "title": "红油和海鲜，是这张封面的点击点",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "night-market-remake",
-              "styleLabel": "夜市复刻"
+              "styleId": "food-impact-cover-task",
+              "styleLabel": "食欲冲击封面"
             }
           ],
           "materialKeywords": [
@@ -4418,8 +4418,8 @@
         "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步",
         "titleOptions": [
           "辣炒的味蕾",
-          "在家复刻夜市香辣鱿鱼",
-          "香辣蟹做出饭店味道"
+          "辣炒海鲜封面，先抓住这一口",
+          "红油和海鲜，是这张封面的点击点"
         ],
         "titleOptionDetails": [
           {
@@ -4429,18 +4429,18 @@
             "styleLabel": "人工判断"
           },
           {
-            "title": "在家复刻夜市香辣鱿鱼",
+            "title": "辣炒海鲜封面，先抓住这一口",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "night-market-remake",
-            "styleLabel": "夜市复刻"
+            "styleId": "food-impact-cover-task",
+            "styleLabel": "食欲冲击封面"
           },
           {
-            "title": "香辣蟹做出饭店味道",
+            "title": "红油和海鲜，是这张封面的点击点",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "night-market-remake",
-            "styleLabel": "夜市复刻"
+            "styleId": "food-impact-cover-task",
+            "styleLabel": "食欲冲击封面"
           }
         ],
         "materialKeywords": [
@@ -4753,15 +4753,15 @@
         "nextRoundGoal": "保留「更清楚重点」的长处，但让结果更接近「更清楚重点」",
         "refinedCard": {
           "cardTitle": "更清楚重点 · 第二轮优化",
-          "directionDescription": "保留原来的点击逻辑，同时让主题和价值点更快被看懂。",
-          "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步 / 先把重点讲明白",
+          "directionDescription": "保留清楚重点，同时把食物主体、食欲冲击和教程任务一起放到前面。",
+          "coverCopyMain": "辣炒鱿鱼、螃蟹、香菜封面先看这一步 / 重点更清楚，食欲冲击别丢",
           "titleOptions": [
-            "辣炒的味蕾，但更贴内容",
-            "在家复刻夜市香辣鱿鱼，表达更稳",
-            "香辣蟹做出饭店味道，表达更稳"
+            "辣炒的味蕾，封面先抓住这一口",
+            "辣炒海鲜封面，先抓住这一口",
+            "红油和海鲜，是这张封面的点击点"
           ],
-          "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；图像和文字都更贴内容本身",
-          "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；保留原有主结构",
+          "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；裁切时优先放大红油、海鲜、辣椒和食物近景，保留一眼有食欲的冲击点。",
+          "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；标题服务食物主体，避免遮挡红油、蟹壳、鱿鱼和辣椒。",
           "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。 这轮重点解决「离内容太远」。",
           "riskNote": "容易太平"
         },
@@ -4785,7 +4785,7 @@
       ],
       "refinedDirection": "更清楚重点 · 第二轮优化",
       "changeFocus": "信息",
-      "refinedCopy": "辣炒鱿鱼、螃蟹、香菜封面先看这一步 / 先把重点讲明白"
+      "refinedCopy": "辣炒鱿鱼、螃蟹、香菜封面先看这一步 / 重点更清楚，食欲冲击别丢"
     }
   }
 }

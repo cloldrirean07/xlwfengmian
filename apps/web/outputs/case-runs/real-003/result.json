@@ -265,8 +265,8 @@
         "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
         "titleOptions": [
           "最后一抹霞光",
-          "一键还原落日余晖感",
-          "AI把晚霞做成封面大片"
+          "最后一抹霞光，适合这样做封面",
+          "一张天空图也能做出封面感"
         ],
         "titleOptionDetails": [
           {
@@ -276,18 +276,18 @@
             "styleLabel": "人工判断"
           },
           {
-            "title": "一键还原落日余晖感",
+            "title": "最后一抹霞光，适合这样做封面",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "phone-editing-proof",
-            "styleLabel": "手机调色证明"
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
           },
           {
-            "title": "AI把晚霞做成封面大片",
+            "title": "一张天空图也能做出封面感",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "ai-scenery-result",
-            "styleLabel": "AI风景效果"
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
           }
         ],
         "materialKeywords": [
@@ -597,8 +597,8 @@
         "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
         "titleOptions": [
           "最后一抹霞光",
-          "一键还原落日余晖感",
-          "AI把晚霞做成封面大片"
+          "最后一抹霞光，适合这样做封面",
+          "一张天空图也能做出封面感"
         ],
         "titleOptionDetails": [
           {
@@ -608,18 +608,18 @@
             "styleLabel": "人工判断"
           },
           {
-            "title": "一键还原落日余晖感",
+            "title": "最后一抹霞光，适合这样做封面",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "phone-editing-proof",
-            "styleLabel": "手机调色证明"
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
           },
           {
-            "title": "AI把晚霞做成封面大片",
+            "title": "一张天空图也能做出封面感",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "ai-scenery-result",
-            "styleLabel": "AI风景效果"
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
           }
         ],
         "materialKeywords": [
@@ -932,8 +932,8 @@
         "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
         "titleOptions": [
           "最后一抹霞光",
-          "一键还原落日余晖感",
-          "AI把晚霞做成封面大片"
+          "最后一抹霞光，适合这样做封面",
+          "一张天空图也能做出封面感"
         ],
         "titleOptionDetails": [
           {
@@ -943,18 +943,18 @@
             "styleLabel": "人工判断"
           },
           {
-            "title": "一键还原落日余晖感",
+            "title": "最后一抹霞光，适合这样做封面",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "phone-editing-proof",
-            "styleLabel": "手机调色证明"
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
           },
           {
-            "title": "AI把晚霞做成封面大片",
+            "title": "一张天空图也能做出封面感",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "ai-scenery-result",
-            "styleLabel": "AI风景效果"
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
           }
         ],
         "materialKeywords": [
@@ -1578,8 +1578,8 @@
           "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
           "titleOptions": [
             "最后一抹霞光",
-            "一键还原落日余晖感",
-            "AI把晚霞做成封面大片"
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感"
           ],
           "titleOptionDetails": [
             {
@@ -1589,18 +1589,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "一键还原落日余晖感",
+              "title": "最后一抹霞光，适合这样做封面",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "phone-editing-proof",
-              "styleLabel": "手机调色证明"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             },
             {
-              "title": "AI把晚霞做成封面大片",
+              "title": "一张天空图也能做出封面感",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "ai-scenery-result",
-              "styleLabel": "AI风景效果"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             }
           ],
           "materialKeywords": [
@@ -1910,8 +1910,8 @@
           "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
           "titleOptions": [
             "最后一抹霞光",
-            "一键还原落日余晖感",
-            "AI把晚霞做成封面大片"
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感"
           ],
           "titleOptionDetails": [
             {
@@ -1921,18 +1921,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "一键还原落日余晖感",
+              "title": "最后一抹霞光，适合这样做封面",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "phone-editing-proof",
-              "styleLabel": "手机调色证明"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             },
             {
-              "title": "AI把晚霞做成封面大片",
+              "title": "一张天空图也能做出封面感",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "ai-scenery-result",
-              "styleLabel": "AI风景效果"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             }
           ],
           "materialKeywords": [
@@ -2245,8 +2245,8 @@
           "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
           "titleOptions": [
             "最后一抹霞光",
-            "一键还原落日余晖感",
-            "AI把晚霞做成封面大片"
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感"
           ],
           "titleOptionDetails": [
             {
@@ -2256,18 +2256,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "一键还原落日余晖感",
+              "title": "最后一抹霞光，适合这样做封面",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "phone-editing-proof",
-              "styleLabel": "手机调色证明"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             },
             {
-              "title": "AI把晚霞做成封面大片",
+              "title": "一张天空图也能做出封面感",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "ai-scenery-result",
-              "styleLabel": "AI风景效果"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             }
           ],
           "materialKeywords": [
@@ -2711,8 +2711,8 @@
       "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
       "titleOptions": [
         "最后一抹霞光",
-        "一键还原落日余晖感",
-        "AI把晚霞做成封面大片"
+        "最后一抹霞光，适合这样做封面",
+        "一张天空图也能做出封面感"
       ],
       "titleOptionDetails": [
         {
@@ -2722,18 +2722,18 @@
           "styleLabel": "人工判断"
         },
         {
-          "title": "一键还原落日余晖感",
+          "title": "最后一抹霞光，适合这样做封面",
           "sourceType": "style-library",
           "sourceLabel": "风格库",
-          "styleId": "phone-editing-proof",
-          "styleLabel": "手机调色证明"
+          "styleId": "sunset-cover-task",
+          "styleLabel": "晚霞封面任务"
         },
         {
-          "title": "AI把晚霞做成封面大片",
+          "title": "一张天空图也能做出封面感",
           "sourceType": "style-library",
           "sourceLabel": "风格库",
-          "styleId": "ai-scenery-result",
-          "styleLabel": "AI风景效果"
+          "styleId": "sunset-cover-task",
+          "styleLabel": "晚霞封面任务"
         }
       ],
       "materialKeywords": [
@@ -3046,15 +3046,15 @@
       "nextRoundGoal": "保留「更清楚重点」的长处，但让结果更接近「更清楚重点」",
       "refinedCard": {
         "cardTitle": "更清楚重点 · 第二轮优化",
-        "directionDescription": "保留原来的点击逻辑，同时让主题和价值点更快被看懂。",
-        "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步 / 先把重点讲明白",
+        "directionDescription": "保留清楚重点，同时让天空留白、晚霞情绪和封面教程任务一起成立。",
+        "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步 / 重点更清楚，天空情绪别丢",
         "titleOptions": [
-          "最后一抹霞光，但更贴内容",
-          "一键还原落日余晖感，表达更稳",
-          "AI把晚霞做成封面大片，表达更稳"
+          "最后一抹霞光，适合这样做封面",
+          "一张天空图也能做出封面感",
+          "夏日晚霞照别只发原图"
         ],
-        "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；图像和文字都更贴内容本身",
-        "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；保留原有主结构",
+        "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；裁切时保留天空留白、云层方向和落日色彩，把标题放在低干扰区域。",
+        "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；用天空留白承接短标题，地平线或暗部区域负责稳定画面。",
         "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。 这轮重点解决「离内容太远」。",
         "riskNote": "容易太平"
       },
@@ -3343,8 +3343,8 @@
           "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
           "titleOptions": [
             "最后一抹霞光",
-            "一键还原落日余晖感",
-            "AI把晚霞做成封面大片"
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感"
           ],
           "titleOptionDetails": [
             {
@@ -3354,18 +3354,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "一键还原落日余晖感",
+              "title": "最后一抹霞光，适合这样做封面",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "phone-editing-proof",
-              "styleLabel": "手机调色证明"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             },
             {
-              "title": "AI把晚霞做成封面大片",
+              "title": "一张天空图也能做出封面感",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "ai-scenery-result",
-              "styleLabel": "AI风景效果"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             }
           ],
           "materialKeywords": [
@@ -3675,8 +3675,8 @@
           "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
           "titleOptions": [
             "最后一抹霞光",
-            "一键还原落日余晖感",
-            "AI把晚霞做成封面大片"
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感"
           ],
           "titleOptionDetails": [
             {
@@ -3686,18 +3686,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "一键还原落日余晖感",
+              "title": "最后一抹霞光，适合这样做封面",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "phone-editing-proof",
-              "styleLabel": "手机调色证明"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             },
             {
-              "title": "AI把晚霞做成封面大片",
+              "title": "一张天空图也能做出封面感",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "ai-scenery-result",
-              "styleLabel": "AI风景效果"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             }
           ],
           "materialKeywords": [
@@ -4010,8 +4010,8 @@
           "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
           "titleOptions": [
             "最后一抹霞光",
-            "一键还原落日余晖感",
-            "AI把晚霞做成封面大片"
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感"
           ],
           "titleOptionDetails": [
             {
@@ -4021,18 +4021,18 @@
               "styleLabel": "人工判断"
             },
             {
-              "title": "一键还原落日余晖感",
+              "title": "最后一抹霞光，适合这样做封面",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "phone-editing-proof",
-              "styleLabel": "手机调色证明"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             },
             {
-              "title": "AI把晚霞做成封面大片",
+              "title": "一张天空图也能做出封面感",
               "sourceType": "style-library",
               "sourceLabel": "风格库",
-              "styleId": "ai-scenery-result",
-              "styleLabel": "AI风景效果"
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
             }
           ],
           "materialKeywords": [
@@ -4442,8 +4442,8 @@
         "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
         "titleOptions": [
           "最后一抹霞光",
-          "一键还原落日余晖感",
-          "AI把晚霞做成封面大片"
+          "最后一抹霞光，适合这样做封面",
+          "一张天空图也能做出封面感"
         ],
         "titleOptionDetails": [
           {
@@ -4453,18 +4453,18 @@
             "styleLabel": "人工判断"
           },
           {
-            "title": "一键还原落日余晖感",
+            "title": "最后一抹霞光，适合这样做封面",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "phone-editing-proof",
-            "styleLabel": "手机调色证明"
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
           },
           {
-            "title": "AI把晚霞做成封面大片",
+            "title": "一张天空图也能做出封面感",
             "sourceType": "style-library",
             "sourceLabel": "风格库",
-            "styleId": "ai-scenery-result",
-            "styleLabel": "AI风景效果"
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
           }
         ],
         "materialKeywords": [
@@ -4777,15 +4777,15 @@
         "nextRoundGoal": "保留「更清楚重点」的长处，但让结果更接近「更清楚重点」",
         "refinedCard": {
           "cardTitle": "更清楚重点 · 第二轮优化",
-          "directionDescription": "保留原来的点击逻辑，同时让主题和价值点更快被看懂。",
-          "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步 / 先把重点讲明白",
+          "directionDescription": "保留清楚重点，同时让天空留白、晚霞情绪和封面教程任务一起成立。",
+          "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步 / 重点更清楚，天空情绪别丢",
           "titleOptions": [
-            "最后一抹霞光，但更贴内容",
-            "一键还原落日余晖感，表达更稳",
-            "AI把晚霞做成封面大片，表达更稳"
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感",
+            "夏日晚霞照别只发原图"
           ],
-          "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；图像和文字都更贴内容本身",
-          "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；保留原有主结构",
+          "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；裁切时保留天空留白、云层方向和落日色彩，把标题放在低干扰区域。",
+          "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；用天空留白承接短标题，地平线或暗部区域负责稳定画面。",
           "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。 这轮重点解决「离内容太远」。",
           "riskNote": "容易太平"
         },
@@ -4809,7 +4809,7 @@
       ],
       "refinedDirection": "更清楚重点 · 第二轮优化",
       "changeFocus": "信息",
-      "refinedCopy": "夏日晚霞、云层、落日封面先看这一步 / 先把重点讲明白"
+      "refinedCopy": "夏日晚霞、云层、落日封面先看这一步 / 重点更清楚，天空情绪别丢"
     }
   }
 }

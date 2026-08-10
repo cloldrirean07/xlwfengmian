@@ -1,5 +1,113 @@
 # 更新日志
 
+## 2026-08-10 19:55
+
+- 新增文件：[../../docs/validation/2026-08-10_第一轮规则修订任务单.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-10_第一轮规则修订任务单.md)
+  - 根据第一批 MVP 素材样本对照验证结果，定义美食标题机制、晚霞标题机制和二轮方向融合三项修订任务。
+- 更新文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)
+  - 补充海鲜、下饭、夜宵、天空等素材关键词，让真实素材词能进入标题和封面文案判断。
+- 更新文件：[src/domain/copy/titleStyleLibrary.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/titleStyleLibrary.js)
+  - 新增“食欲冲击封面”和“晚霞封面任务”标题风格，分别支持 `real-002` 与 `real-003` 的标准答案。
+- 更新文件：[src/domain/refinement/buildSecondRoundCard.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/refinement/buildSecondRoundCard.js)
+  - 增加美食冲击和晚霞天空两类场景化二轮融合规则。
+  - 去除命中场景时机械追加“但更贴内容 / 表达更稳”的标题表达，改为自然标题和具体构图建议。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 补充标题机制和二轮场景融合测试，覆盖食欲冲击、晚霞封面任务、自然二轮标题和素材细节建议。
+- 新增文件：[../../docs/validation/2026-08-10_第一轮规则修订后复跑记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-10_第一轮规则修订后复跑记录.md)
+  - 记录 `real-002` / `real-003` 复跑结果：两条案例从 B 级提升到 A-，剩余问题进入下一轮规则修订。
+- 验证结果：
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test`
+  - 结果：`296 pass / 0 fail`
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/build-static.mjs`
+  - 结果：构建通过，`public -> dist` 已同步
+  - 执行 `run-case` 复跑 `real-002` / `real-003`
+  - 结果：两条真实案例均成功生成 `result.json` 与 `summary.md`
+
+## 2026-08-10 18:54
+
+- 新增文件：[../../docs/product/AI封面创意助手_第一批MVP素材样本标准答案总表_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/product/AI封面创意助手_第一批MVP素材样本标准答案总表_v0.1.md)
+  - 汇总 `mvp-ref-003`、`mvp-ref-004`、`mvp-ref-005`、`mvp-ref-008`、`mvp-ref-014` 五个精标样本，形成第一批素材样本标准答案。
+  - 明确 `real-002` 和 `real-003` 的人工标准答案、关联样本、推荐方向、素材动作和标题机制。
+- 新增文件：[../../docs/validation/2026-08-10_real-002_real-003_第一批MVP素材样本对照验证记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-10_real-002_real-003_第一批MVP素材样本对照验证记录.md)
+  - 记录使用当前 MVP 跑 `real-002` / `real-003` 的对照验证结果。
+  - 判定两条真实案例当前均为 B 级：主链路可用，但美食、晚霞场景的标题机制、构图建议和二轮方向融合仍需规则修订。
+- 更新文件：[outputs/case-runs/real-002/](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-002/)
+  - 重新运行 `real-002`，生成 `result.json` 与 `summary.md`。
+- 更新文件：[outputs/case-runs/real-003/](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/outputs/case-runs/real-003/)
+  - 重新运行 `real-003`，生成 `result.json` 与 `summary.md`。
+
+## 2026-08-10 18:31
+
+- 新增文件：[data/creative-reference-library/assets/mvp-ref-008/](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/assets/mvp-ref-008/)
+  - 归档用户提供的 3 张抖音美食 / 美食冲击感搜索结果截图，作为 `mvp-ref-008` 的真实平台样本。
+- 更新文件：[data/creative-reference-library/mvp-seed-batch.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/mvp-seed-batch.v0.1.json)
+  - 将 `mvp-ref-008` 从 `to-collect` 改为 `collected`。
+  - 补充食物主体放大、红橙高饱和、烟雾火光、粗大标题、强观看理由和与 `real-002` 的验证关系。
+- 新增文件：[../../docs/product/samples/mvp-ref-008_抖音美食强冲击封面_人工精标_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/product/samples/mvp-ref-008_抖音美食强冲击封面_人工精标_v0.1.md)
+  - 形成 `mvp-ref-008` 的人工精标标准答案，提炼“食物主体极大 + 红橙高饱和 + 烟雾火光油光 + 粗大高对比标题 + 强观看理由”的短视频美食封面判断范式。
+
+## 2026-08-10 18:20
+
+- 新增文件：[data/creative-reference-library/assets/mvp-ref-014/](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/assets/mvp-ref-014/)
+  - 归档用户提供的 7 张晚霞、天空、云层、落日与天空调色参考截图，作为 `mvp-ref-014` 的真实创意参考样本。
+- 更新文件：[data/creative-reference-library/mvp-seed-batch.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/mvp-seed-batch.v0.1.json)
+  - 将 `mvp-ref-014` 从 `to-collect` 改为 `collected`。
+  - 补充天空留白、色彩渐变、云层张力、地平线压底、情绪标题空间和与 `real-003` 的验证关系。
+- 新增文件：[../../docs/product/samples/mvp-ref-014_晚霞天空摄影参考_人工精标_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/product/samples/mvp-ref-014_晚霞天空摄影参考_人工精标_v0.1.md)
+  - 形成 `mvp-ref-014` 的人工精标标准答案，提炼“天空留白 + 色彩渐变 + 云层方向感 + 情绪标题 + 内容任务”的风景封面判断范式。
+
+## 2026-08-10 17:10
+
+- 新增文件：[data/creative-reference-library/assets/mvp-ref-004/](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/assets/mvp-ref-004/)
+  - 归档用户提供的 8 张生活方式随手拍 / 日常拼图 / 人像氛围截图，作为 `mvp-ref-004` 的真实样本。
+- 更新文件：[data/creative-reference-library/mvp-seed-batch.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/mvp-seed-batch.v0.1.json)
+  - 将 `mvp-ref-004` 从 `to-collect` 改为 `collected`。
+  - 将样本定义从“低适配用户素材”修正为“生活方式随手拍样本：氛围强但主题需要绑定”，补充日常素材的主题绑定、标题任务、补图判断和不可复制边界。
+- 新增文件：[../../docs/product/samples/mvp-ref-004_生活方式随手拍样本_人工精标_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/product/samples/mvp-ref-004_生活方式随手拍样本_人工精标_v0.1.md)
+  - 形成 `mvp-ref-004` 的人工精标标准答案，提炼“素材有氛围，但内容任务不一定清楚，需要标题和主题把它拉成封面”的生活方式素材判断范式。
+
+## 2026-08-10 16:59
+
+- 新增文件：[data/creative-reference-library/assets/mvp-ref-003/](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/assets/mvp-ref-003/)
+  - 归档用户提供的 3 张口播类封面截图，作为 `mvp-ref-003` 的真实样本。
+- 更新文件：[data/creative-reference-library/mvp-seed-batch.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/mvp-seed-batch.v0.1.json)
+  - 将 `mvp-ref-003` 从 `to-collect` 改为 `collected`。
+  - 将样本定义从“低适配口播截图”修正为“口播类封面样本：人物主体与大字标题”，补充人物主体、标题区、构图方式、点击机制和不可复制边界。
+- 新增文件：[../../docs/product/samples/mvp-ref-003_口播类封面样本_人工精标_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/product/samples/mvp-ref-003_口播类封面样本_人工精标_v0.1.md)
+  - 形成 `mvp-ref-003` 的人工精标标准答案，提炼“人物主体 + 高对比大字关键词 + 明确结果承诺 + 行动提示 + 前后对比”的口播封面范式。
+
+## 2026-08-10 16:50
+
+- 新增文件：[data/creative-reference-library/assets/mvp-ref-005/](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/assets/mvp-ref-005/)
+  - 归档用户提供的 9 张小红书美食教程 / 家常菜合集封面截图，作为 `mvp-ref-005` 的真实平台样本。
+- 更新文件：[data/creative-reference-library/mvp-seed-batch.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/mvp-seed-batch.v0.1.json)
+  - 将 `mvp-ref-005` 从 `to-collect` 改为 `collected`。
+  - 补充归档路径、视觉主体、构图方式、标题区、情绪氛围、可借鉴点、点击机制和风险说明。
+- 新增文件：[../../docs/product/samples/mvp-ref-005_小红书美食教程热门封面_人工精标_v0.1.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/product/samples/mvp-ref-005_小红书美食教程热门封面_人工精标_v0.1.md)
+  - 形成 `mvp-ref-005` 的人工精标标准答案，提炼“多图食物主体 + 高密度食欲画面 + 大字利益点标题 + 数量或结果承诺 + 强收藏理由”的平台封面范式。
+
+## 2026-08-10 15:20
+
+- 新增文件：[data/creative-reference-library/schema.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/schema.v0.1.json)
+  - 定义 MVP 创意参考素材样本的机器可读标注结构，包含来源类型、采集状态、内容场景、视觉主体、构图方式、标题区、情绪氛围、封面方向适配、素材动作建议和不可复制边界。
+- 新增文件：[data/creative-reference-library/mvp-seed-batch.v0.1.json](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/data/creative-reference-library/mvp-seed-batch.v0.1.json)
+  - 建立第一批 24 条 MVP 素材样本位，其中 2 条来自 real-002 / real-003 真实案例，22 条作为后续待采集目标。
+  - 按当前素材优化、平台样本借鉴、创意参考素材库、广告创意拆解四类素材来源分层，服务后续封面方向判断训练。
+
+## 2026-08-10 14:20
+
+- 更新文件：[public/index.html](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/index.html)
+  - 按《创作者体验 MVP 首页改造计划 v0.1》收束首页第一屏，将主表达调整为“把素材变成更容易被点开的封面方案”。
+  - 新增第一屏主行动按钮和真实示例轻入口，把“案例验证 / 规则与写回”等后台表达从首屏主路径中降权。
+  - 将主工作台文案调整为创作者输入链路，突出内容主题、素材描述、参考图、目标平台和生成结果。
+  - 将方向结果、继续细化和高级维护入口改成更贴近创作者决策的表达。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 新增第一屏主 CTA、次级示例入口和真实示例卡样式。
+  - 调整工作流、主工作台、真实示例和右侧说明区的视觉权重，使首页更像“封面方案生成器”而不是内部后台。
+  - 将高级维护入口改为更轻的虚线面板，降低对主链路的干扰。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 同步首页结构断言，改为约束新的创作者首页主标题、主行动和方向卡入口文案。
+
 ## 2026-08-09 20:28
 
 - 新增文件：[../../docs/.requirement-preview/封面创意素材匹配模块_方案确认_latest.html](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/.requirement-preview/封面创意素材匹配模块_方案确认_latest.html)

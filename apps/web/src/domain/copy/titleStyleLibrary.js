@@ -1,5 +1,22 @@
 export const titleStyleLibrary = [
   {
+    styleId: "food-impact-cover-task",
+    styleLabel: "食欲冲击封面",
+    requiredAny: ["辣炒鱿鱼", "鱿鱼", "香辣蟹", "螃蟹", "海鲜", "红油"],
+    templates: [
+      {
+        requiredAny: ["辣炒鱿鱼", "鱿鱼", "海鲜"],
+        requiredTextAny: ["AI", "封面", "教程"],
+        title: "辣炒海鲜封面，先抓住这一口",
+      },
+      {
+        requiredAny: ["红油", "螃蟹", "香辣蟹", "海鲜"],
+        requiredTextAny: ["AI", "封面", "教程"],
+        title: "红油和海鲜，是这张封面的点击点",
+      },
+    ],
+  },
+  {
     styleId: "night-market-remake",
     styleLabel: "夜市复刻",
     requiredAny: ["辣炒鱿鱼", "鱿鱼", "香辣蟹", "螃蟹"],
@@ -41,6 +58,23 @@ export const titleStyleLibrary = [
       {
         requiredAny: ["香辣蟹", "螃蟹"],
         title: "记住这几步，香辣蟹也能做",
+      },
+    ],
+  },
+  {
+    styleId: "sunset-cover-task",
+    styleLabel: "晚霞封面任务",
+    requiredAny: ["夏日晚霞", "晚霞", "霞光", "天空", "云层", "落日"],
+    templates: [
+      {
+        requiredAny: ["霞光", "夏日晚霞", "晚霞", "落日"],
+        requiredTextAny: ["AI", "封面", "教程"],
+        title: "最后一抹霞光，适合这样做封面",
+      },
+      {
+        requiredAny: ["天空", "云层", "晚霞", "落日"],
+        requiredTextAny: ["AI", "封面", "教程"],
+        title: "一张天空图也能做出封面感",
       },
     ],
   },
