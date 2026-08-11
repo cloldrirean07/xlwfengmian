@@ -1,3 +1,40 @@
+function buildScenarioPool(fields) {
+  return [
+    fields.contentTopic,
+    fields.contentGoal,
+    fields.assetDescription,
+    fields.assetNotes,
+    fields.desiredCoverFeel,
+    fields.userReferencePreference,
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
+function includesAny(text, keywords) {
+  return keywords.some((keyword) => text.includes(keyword));
+}
+
+function detectMaterialScenario(fields) {
+  const pool = buildScenarioPool(fields);
+
+  if (
+    includesAny(pool, ["螃蟹", "鱿鱼", "海鲜", "红油", "辣椒", "美食", "夜宵", "下饭"]) &&
+    includesAny(pool, ["冲击", "食欲", "抓人眼球", "封面", "小红书"])
+  ) {
+    return "food-impact";
+  }
+
+  if (
+    includesAny(pool, ["晚霞", "霞光", "落日", "云层", "天空", "风景"]) &&
+    includesAny(pool, ["高级", "专业", "氛围", "治愈", "封面"])
+  ) {
+    return "sunset-sky";
+  }
+
+  return "";
+}
+
 function scoreCurrentAsset(fields) {
   let score = 2;
 
@@ -49,7 +86,16 @@ function scoreCreativeConcept(fields, effectConfig) {
 }
 
 function buildPriorityReason(candidateId, fields, effectConfig) {
+  const materialScenario = detectMaterialScenario(fields);
+
   if (candidateId === "current-asset-optimize") {
+    if (materialScenario === "food-impact") {
+      return "当前美食素材已经有红油、海鲜、辣椒和近景主体，优先放大食欲冲击点，比重做对照结构更快。";
+    }
+    if (materialScenario === "sunset-sky") {
+      return "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。";
+    }
+
     return fields.userAssetType === "无图只有想法"
       ? "当前没有现成素材，该方向可做但优先级不应最高。"
       : "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。";

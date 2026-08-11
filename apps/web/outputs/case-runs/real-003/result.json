@@ -61,13 +61,79 @@
     },
     "rankedDirections": [
       {
+        "directionId": "texture",
+        "directionType": "强质感感",
+        "directionRole": "primary",
+        "fitScoreContent": 5,
+        "fitScoreAsset": 3,
+        "fitScorePlatform": 5,
+        "fitScoreTotal": 13,
+        "directionFitReason": "当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度",
+        "directionRisk": "容易太平",
+        "directionBoundary": "高级但不够点开",
+        "signalMatches": [
+          "晚霞、云层和天空留白适合建立更专业的封面质感",
+          "内容需要可信度和专业感支撑",
+          "用户偏好更靠近「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」的克制表达"
+        ],
+        "directionSignalChecklist": {
+          "signalGroups": [
+            {
+              "groupId": "content-goal",
+              "groupLabel": "内容目标信号",
+              "signals": [
+                "用户更在意高级感、专业感和可信度",
+                "内容需要建立判断力或可信表达",
+                "长期表达比一次性刺激点击更重要"
+              ]
+            },
+            {
+              "groupId": "asset-fit",
+              "groupLabel": "素材适配信号",
+              "signals": [
+                "现有素材可通过裁切、减噪、统一氛围来变稳",
+                "画面适合强调秩序感、留白、完成度",
+                "如果补图，优先找质感完整的主体而不是花哨元素"
+              ]
+            },
+            {
+              "groupId": "copy-shape",
+              "groupLabel": "文案与构图信号",
+              "signals": [
+                "文案应克制但有分量，不要太油",
+                "构图要稳，主体与背景关系要干净",
+                "画面完成度比刺激元素更重要"
+              ]
+            }
+          ],
+          "feedbackTriggers": [
+            "更高级",
+            "更专业",
+            "别像营销号",
+            "更稳一点"
+          ],
+          "boundaryRules": [
+            "高级感不能把点击欲降得太低",
+            "克制表达也要保留一个可点开的钩子"
+          ],
+          "matchedSignals": [
+            "内容需要更强可信度和专业感",
+            "用户明确提到了更稳、更高级一类偏好"
+          ]
+        },
+        "visualStrategy": "保留天空留白、云层方向和落日色彩",
+        "copyStrategy": "情绪记忆点 + 封面构思任务",
+        "compositionStrategy": "标题放在低干扰天空区，地平线和暗部稳定画面",
+        "cardId": "A"
+      },
+      {
         "directionId": "suspense",
         "directionType": "强悬念感",
-        "directionRole": "primary",
-        "fitScoreContent": 4,
+        "directionRole": "secondary",
+        "fitScoreContent": 5,
         "fitScoreAsset": 2,
         "fitScorePlatform": 4,
-        "fitScoreTotal": 10,
+        "fitScoreTotal": 11,
         "directionFitReason": "当前内容更靠「好奇」驱动点击",
         "directionRisk": "容易标题党",
         "directionBoundary": "过虚会让人看不懂",
@@ -121,7 +187,7 @@
         "visualStrategy": "保留异常点，不把答案说满",
         "copyStrategy": "半揭示表达",
         "compositionStrategy": "单焦点 + 适度留白",
-        "cardId": "A"
+        "cardId": "B"
       },
       {
         "directionId": "information",
@@ -187,82 +253,17 @@
         "visualStrategy": "突出信息块和清晰主体",
         "copyStrategy": "主题词前置，直接点题",
         "compositionStrategy": "中心信息区稳定布局",
-        "cardId": "B"
-      },
-      {
-        "directionId": "result",
-        "directionType": "强结果感",
-        "directionRole": "secondary",
-        "fitScoreContent": 2,
-        "fitScoreAsset": 3,
-        "fitScorePlatform": 4,
-        "fitScoreTotal": 9,
-        "directionFitReason": "当前内容更靠「收益」驱动点击，内容里有明确收获或结果",
-        "directionRisk": "容易像承诺过猛",
-        "directionBoundary": "内容承接不住会显空",
-        "signalMatches": [
-          "内容本身存在明确收益或变化",
-          "目标表达里已经带有结果导向"
-        ],
-        "directionSignalChecklist": {
-          "signalGroups": [
-            {
-              "groupId": "content-goal",
-              "groupLabel": "内容目标信号",
-              "signals": [
-                "用户更关心点开后能获得什么结果",
-                "内容存在明确收益、变化、完成态",
-                "主题适合强调结果而不是问题本身"
-              ]
-            },
-            {
-              "groupId": "asset-fit",
-              "groupLabel": "素材适配信号",
-              "signals": [
-                "素材里能提炼结果页、完成态、前后变化",
-                "即使没有现成结果图，也能想象明确收获画面",
-                "适合把收益放到第一视觉中心"
-              ]
-            },
-            {
-              "groupId": "copy-shape",
-              "groupLabel": "文案与构图信号",
-              "signals": [
-                "文案适合使用收益词、结果词、变化词",
-                "构图适合突出结果区域或前后差异",
-                "用户需要感到这条内容值得花时间"
-              ]
-            }
-          ],
-          "feedbackTriggers": [
-            "没收获感",
-            "价值点不明显",
-            "不值得点",
-            "没结果"
-          ],
-          "boundaryRules": [
-            "收益表达不能承诺过猛",
-            "结果感必须和内容承接得住"
-          ],
-          "matchedSignals": [
-            "内容目标里已经带明确结果导向",
-            "用户描述了希望用户获得什么收获"
-          ]
-        },
-        "visualStrategy": "放大结果状态或变化感",
-        "copyStrategy": "收益词前置",
-        "compositionStrategy": "让结果成为视觉中心",
         "cardId": "C"
       }
     ],
     "cards": [
       {
         "cardId": "A",
-        "effectId": "suspense",
-        "directionTypeInternal": "强悬念感",
-        "directionLabelUserFacing": "更让人想点开",
-        "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
-        "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
+        "effectId": "texture",
+        "directionTypeInternal": "强质感感",
+        "directionLabelUserFacing": "更高级专业",
+        "directionDescription": "用克制、秩序感和完成度建立可信度，而不是单纯刺激点击。 当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度。",
+        "coverCopyMain": "真正拉开夏日晚霞、云层、落日封面差距的是这点",
         "titleOptions": [
           "最后一抹霞光",
           "最后一抹霞光，适合这样做封面",
@@ -295,7 +296,346 @@
           "云层",
           "落日"
         ],
-        "imageDirection": "从截图里裁出异常点，不把全部上下文一次讲完。",
+        "imageDirection": "优先保留天空留白、云层方向和落日色彩，把标题放进低干扰区域。",
+        "imageDirectionCandidates": [
+          {
+            "candidateId": "current-asset-optimize",
+            "label": "优化现有素材",
+            "assetSource": "截图",
+            "description": "减少杂乱界面，只保留最有质感的局部与秩序感。",
+            "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
+          },
+          {
+            "candidateId": "content-matched-search",
+            "label": "补内容贴合图",
+            "assetSource": "补充图库",
+            "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更高级专业 方式排版。",
+            "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
+          },
+          {
+            "candidateId": "creative-concept-asset",
+            "label": "做创意概念图",
+            "assetSource": "概念化方向",
+            "description": "先确定一个能承载「信任」点击机制的主体，再把内容信息补进去。",
+            "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
+          }
+        ],
+        "rankedImageStrategies": [
+          {
+            "candidateId": "current-asset-optimize",
+            "label": "优化现有素材",
+            "assetSource": "截图",
+            "description": "减少杂乱界面，只保留最有质感的局部与秩序感。",
+            "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
+            "priorityScore": 4,
+            "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+            "executionTag": "先优化现有图"
+          },
+          {
+            "candidateId": "content-matched-search",
+            "label": "补内容贴合图",
+            "assetSource": "补充图库",
+            "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更高级专业 方式排版。",
+            "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
+            "priorityScore": 3,
+            "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
+            "executionTag": "先补贴内容的图"
+          },
+          {
+            "candidateId": "creative-concept-asset",
+            "label": "做创意概念图",
+            "assetSource": "概念化方向",
+            "description": "先确定一个能承载「信任」点击机制的主体，再把内容信息补进去。",
+            "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
+            "priorityScore": 2,
+            "priorityReason": "当前方向更靠「信任」驱动点击，创意概念图更适合拉开与普通封面的差距。",
+            "executionTag": "先做概念图"
+          }
+        ],
+        "suggestedAssetType": "截图",
+        "suggestedAssetReason": "当前素材类型与输入状态基本一致，可直接沿用这条路径继续判断。",
+        "assetUsageStatus": "可直接使用",
+        "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
+        "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
+        "primaryAssetActionLabel": "先优化现有图",
+        "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+        "recommendationReason": "素材里已经有「夏日晚霞、云层、落日」这类情绪画面，适合用留白、色彩和标题区做得更专业，避免只像普通风景分享。",
+        "visualStrategy": "保留天空留白、云层方向和落日色彩",
+        "copyStrategy": "情绪记忆点 + 封面构思任务",
+        "compositionStrategy": "标题放在低干扰天空区，地平线和暗部稳定画面",
+        "compositionDirection": "标题放在低干扰天空区，地平线和暗部稳定画面",
+        "colorMoodDirection": "减少浮夸元素，让画面像被认真设计过。",
+        "clickReason": "更高级专业，更贴合这条内容当前的点击机制。",
+        "fitReason": "当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度",
+        "riskNote": "容易太平",
+        "boundaryRule": "高级但不够点开",
+        "bestFor": [
+          "专业判断",
+          "审美导向内容",
+          "成熟表达"
+        ],
+        "signalMatches": [
+          "晚霞、云层和天空留白适合建立更专业的封面质感",
+          "内容需要可信度和专业感支撑",
+          "用户偏好更靠近「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」的克制表达"
+        ],
+        "directionSignalChecklist": {
+          "signalGroups": [
+            {
+              "groupId": "content-goal",
+              "groupLabel": "内容目标信号",
+              "signals": [
+                "用户更在意高级感、专业感和可信度",
+                "内容需要建立判断力或可信表达",
+                "长期表达比一次性刺激点击更重要"
+              ]
+            },
+            {
+              "groupId": "asset-fit",
+              "groupLabel": "素材适配信号",
+              "signals": [
+                "现有素材可通过裁切、减噪、统一氛围来变稳",
+                "画面适合强调秩序感、留白、完成度",
+                "如果补图，优先找质感完整的主体而不是花哨元素"
+              ]
+            },
+            {
+              "groupId": "copy-shape",
+              "groupLabel": "文案与构图信号",
+              "signals": [
+                "文案应克制但有分量，不要太油",
+                "构图要稳，主体与背景关系要干净",
+                "画面完成度比刺激元素更重要"
+              ]
+            }
+          ],
+          "feedbackTriggers": [
+            "更高级",
+            "更专业",
+            "别像营销号",
+            "更稳一点"
+          ],
+          "boundaryRules": [
+            "高级感不能把点击欲降得太低",
+            "克制表达也要保留一个可点开的钩子"
+          ],
+          "matchedSignals": [
+            "内容需要更强可信度和专业感",
+            "用户明确提到了更稳、更高级一类偏好"
+          ]
+        },
+        "role": "primary",
+        "actionWorkspace": {
+          "workspaceId": "optimize-current",
+          "workspaceTitle": "优化现有素材",
+          "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
+          "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "nextSteps": [
+            "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
+            "优先裁掉和主题无关、只会分散注意力的边角信息。",
+            "让封面大字和主体形成明确主次，不要平均分配注意力。"
+          ],
+          "checkpoints": [
+            "第一眼焦点是否单一",
+            "现有图里最值得保留的主体是否明确",
+            "标题区是否压住了无关背景噪音"
+          ],
+          "suggestedInputs": [
+            "描述需要保留的主体区域",
+            "描述需要裁掉或弱化的部分",
+            "说明当前图最不满意的地方"
+          ],
+          "inputSchema": [
+            {
+              "fieldId": "keep_subject",
+              "label": "想保留的主体",
+              "inputType": "text",
+              "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
+            },
+            {
+              "fieldId": "remove_noise",
+              "label": "想弱化或裁掉的部分",
+              "inputType": "textarea",
+              "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
+            },
+            {
+              "fieldId": "current_problem",
+              "label": "当前图最不满意的地方",
+              "inputType": "textarea",
+              "placeholder": "例如：太平、不聚焦、不够像热门封面"
+            }
+          ],
+          "linkedCardDirection": "更高级专业"
+        },
+        "actionWorkspaces": [
+          {
+            "workspaceId": "optimize-current",
+            "workspaceTitle": "优化现有素材",
+            "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+            "nextSteps": [
+              "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
+              "优先裁掉和主题无关、只会分散注意力的边角信息。",
+              "让封面大字和主体形成明确主次，不要平均分配注意力。"
+            ],
+            "checkpoints": [
+              "第一眼焦点是否单一",
+              "现有图里最值得保留的主体是否明确",
+              "标题区是否压住了无关背景噪音"
+            ],
+            "suggestedInputs": [
+              "描述需要保留的主体区域",
+              "描述需要裁掉或弱化的部分",
+              "说明当前图最不满意的地方"
+            ],
+            "inputSchema": [
+              {
+                "fieldId": "keep_subject",
+                "label": "想保留的主体",
+                "inputType": "text",
+                "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
+              },
+              {
+                "fieldId": "remove_noise",
+                "label": "想弱化或裁掉的部分",
+                "inputType": "textarea",
+                "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
+              },
+              {
+                "fieldId": "current_problem",
+                "label": "当前图最不满意的地方",
+                "inputType": "textarea",
+                "placeholder": "例如：太平、不聚焦、不够像热门封面"
+              }
+            ],
+            "linkedCardDirection": "更高级专业"
+          },
+          {
+            "workspaceId": "search-matched",
+            "workspaceTitle": "补内容贴合图",
+            "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+            "nextSteps": [
+              "先把内容主题拆成一个最容易被看懂的主体或场景。",
+              "优先找能直接解释主题的图，而不是只好看但不说事的图。",
+              "找到图后再决定文字放哪一侧，避免先排版再硬找图。"
+            ],
+            "checkpoints": [
+              "补的图是否比当前图更贴内容",
+              "新图是否更容易承载当前点击机制",
+              "是否能明显降低“普通、太平、不贴内容”的问题"
+            ],
+            "suggestedInputs": [
+              "写出这条内容最适合出现的人物/物体/场景",
+              "写出需要避免的图像风格",
+              "写出补图后需要强化的点击点"
+            ],
+            "inputSchema": [
+              {
+                "fieldId": "desired_subject",
+                "label": "最适合补什么主体/场景",
+                "inputType": "text",
+                "placeholder": "例如：疲惫的人、待办清单、时间被占满的桌面场景"
+              },
+              {
+                "fieldId": "avoid_style",
+                "label": "需要避免的图像风格",
+                "inputType": "textarea",
+                "placeholder": "例如：太廉价、太鸡汤、太营销号、太像素材库海报"
+              },
+              {
+                "fieldId": "strengthen_click_point",
+                "label": "补图后最想强化的点击点",
+                "inputType": "textarea",
+                "placeholder": "例如：让人更想知道为什么忙却没结果"
+              }
+            ],
+            "linkedCardDirection": "更高级专业"
+          },
+          {
+            "workspaceId": "concept-first",
+            "workspaceTitle": "做创意概念图",
+            "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+            "nextSteps": [
+              "先决定这条内容的主点击点更适合被哪个主体承载。",
+              "先想单一主体和单一冲突，不要一开始堆太多元素。",
+              "先把概念方向跑通，再决定要不要补真实图或走生图。"
+            ],
+            "checkpoints": [
+              "主体是否足够单一",
+              "概念是否和内容真实相关",
+              "是否比普通截图更有记忆点"
+            ],
+            "suggestedInputs": [
+              "写出第一眼需要呈现的主体",
+              "写出主体需要传达的情绪或冲突",
+              "写出需要避免的廉价感或营销号感"
+            ],
+            "inputSchema": [
+              {
+                "fieldId": "first_glance_subject",
+                "label": "第一眼最想让用户看到的主体",
+                "inputType": "text",
+                "placeholder": "例如：被时间追着跑的人、写满叉号的计划表、夸张的忙碌动作"
+              },
+              {
+                "fieldId": "emotion_or_conflict",
+                "label": "主体要传达的情绪或冲突",
+                "inputType": "textarea",
+                "placeholder": "例如：越忙越没结果、表面努力和真实低效之间的反差"
+              },
+              {
+                "fieldId": "avoid_cheapness",
+                "label": "最想避免的廉价感",
+                "inputType": "textarea",
+                "placeholder": "例如：太标题党、太油腻、太像拼贴营销图"
+              }
+            ],
+            "linkedCardDirection": "更高级专业"
+          }
+        ]
+      },
+      {
+        "cardId": "B",
+        "effectId": "suspense",
+        "directionTypeInternal": "强悬念感",
+        "directionLabelUserFacing": "更让人想点开",
+        "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
+        "coverCopyMain": "你以为是夏日晚霞、云层、落日封面的问题？",
+        "titleOptions": [
+          "最后一抹霞光",
+          "最后一抹霞光，适合这样做封面",
+          "一张天空图也能做出封面感"
+        ],
+        "titleOptionDetails": [
+          {
+            "title": "最后一抹霞光",
+            "sourceType": "manual-review",
+            "sourceLabel": "人工优选",
+            "styleLabel": "人工判断"
+          },
+          {
+            "title": "最后一抹霞光，适合这样做封面",
+            "sourceType": "style-library",
+            "sourceLabel": "风格库",
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
+          },
+          {
+            "title": "一张天空图也能做出封面感",
+            "sourceType": "style-library",
+            "sourceLabel": "风格库",
+            "styleId": "sunset-cover-task",
+            "styleLabel": "晚霞封面任务"
+          }
+        ],
+        "materialKeywords": [
+          "夏日晚霞",
+          "云层",
+          "落日"
+        ],
+        "imageDirection": "保留异常点，不把答案说满",
         "imageDirectionCandidates": [
           {
             "candidateId": "current-asset-optimize",
@@ -327,7 +667,7 @@
             "description": "从截图里裁出异常点，不把全部上下文一次讲完。",
             "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
             "priorityScore": 4,
-            "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "executionTag": "先优化现有图"
           },
           {
@@ -357,8 +697,12 @@
         "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
         "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
         "primaryAssetActionLabel": "先优化现有图",
-        "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-        "compositionDirection": "单焦点 + 适度留白，先让人停住再说。",
+        "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+        "recommendationReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+        "visualStrategy": "保留异常点，不把答案说满",
+        "copyStrategy": "半揭示表达",
+        "compositionStrategy": "单焦点 + 适度留白",
+        "compositionDirection": "单焦点 + 适度留白",
         "colorMoodDirection": "不要一次把答案讲满，保留异常点的张力。",
         "clickReason": "更让人想点开，更贴合这条内容当前的点击机制。",
         "fitReason": "当前内容更靠「好奇」驱动点击",
@@ -416,12 +760,12 @@
             "用户偏好里已有「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」这类抓眼诉求"
           ]
         },
-        "role": "primary",
+        "role": "secondary",
         "actionWorkspace": {
           "workspaceId": "optimize-current",
           "workspaceTitle": "优化现有素材",
           "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-          "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+          "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
           "nextSteps": [
             "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
             "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -464,7 +808,7 @@
             "workspaceId": "optimize-current",
             "workspaceTitle": "优化现有素材",
             "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
               "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -506,7 +850,7 @@
             "workspaceId": "search-matched",
             "workspaceTitle": "补内容贴合图",
             "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先把内容主题拆成一个最容易被看懂的主体或场景。",
               "优先找能直接解释主题的图，而不是只好看但不说事的图。",
@@ -548,7 +892,7 @@
             "workspaceId": "concept-first",
             "workspaceTitle": "做创意概念图",
             "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先决定这条内容的主点击点更适合被哪个主体承载。",
               "先想单一主体和单一冲突，不要一开始堆太多元素。",
@@ -589,12 +933,12 @@
         ]
       },
       {
-        "cardId": "B",
+        "cardId": "C",
         "effectId": "information",
         "directionTypeInternal": "强信息感",
         "directionLabelUserFacing": "更清楚重点",
         "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
-        "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
+        "coverCopyMain": "夏日晚霞、云层、落日封面别再做错了",
         "titleOptions": [
           "最后一抹霞光",
           "最后一抹霞光，适合这样做封面",
@@ -627,7 +971,7 @@
           "云层",
           "落日"
         ],
-        "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
+        "imageDirection": "突出信息块和清晰主体",
         "imageDirectionCandidates": [
           {
             "candidateId": "current-asset-optimize",
@@ -659,7 +1003,7 @@
             "description": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
             "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
             "priorityScore": 4,
-            "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "executionTag": "先优化现有图"
           },
           {
@@ -689,8 +1033,12 @@
         "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
         "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
         "primaryAssetActionLabel": "先优化现有图",
-        "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-        "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。",
+        "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+        "recommendationReason": "这张卡优先解决看不清主题的问题，适合把教程任务、封面大字和素材主体先讲明白。",
+        "visualStrategy": "突出信息块和清晰主体",
+        "copyStrategy": "主题词前置，直接点题",
+        "compositionStrategy": "中心信息区稳定布局",
+        "compositionDirection": "中心信息区稳定布局",
         "colorMoodDirection": "允许一定文字量，但必须先让第一眼看到主题词。",
         "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。",
         "fitReason": "当前内容更靠「看懂」驱动点击，内容需要更快讲明白",
@@ -756,7 +1104,7 @@
           "workspaceId": "optimize-current",
           "workspaceTitle": "优化现有素材",
           "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-          "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+          "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
           "nextSteps": [
             "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
             "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -799,7 +1147,7 @@
             "workspaceId": "optimize-current",
             "workspaceTitle": "优化现有素材",
             "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
               "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -841,7 +1189,7 @@
             "workspaceId": "search-matched",
             "workspaceTitle": "补内容贴合图",
             "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先把内容主题拆成一个最容易被看懂的主体或场景。",
               "优先找能直接解释主题的图，而不是只好看但不说事的图。",
@@ -883,7 +1231,7 @@
             "workspaceId": "concept-first",
             "workspaceTitle": "做创意概念图",
             "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先决定这条内容的主点击点更适合被哪个主体承载。",
               "先想单一主体和单一冲突，不要一开始堆太多元素。",
@@ -920,340 +1268,6 @@
               }
             ],
             "linkedCardDirection": "更清楚重点"
-          }
-        ]
-      },
-      {
-        "cardId": "C",
-        "effectId": "result",
-        "directionTypeInternal": "强结果感",
-        "directionLabelUserFacing": "更有收获感",
-        "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
-        "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
-        "titleOptions": [
-          "最后一抹霞光",
-          "最后一抹霞光，适合这样做封面",
-          "一张天空图也能做出封面感"
-        ],
-        "titleOptionDetails": [
-          {
-            "title": "最后一抹霞光",
-            "sourceType": "manual-review",
-            "sourceLabel": "人工优选",
-            "styleLabel": "人工判断"
-          },
-          {
-            "title": "最后一抹霞光，适合这样做封面",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "sunset-cover-task",
-            "styleLabel": "晚霞封面任务"
-          },
-          {
-            "title": "一张天空图也能做出封面感",
-            "sourceType": "style-library",
-            "sourceLabel": "风格库",
-            "styleId": "sunset-cover-task",
-            "styleLabel": "晚霞封面任务"
-          }
-        ],
-        "materialKeywords": [
-          "夏日晚霞",
-          "云层",
-          "落日"
-        ],
-        "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-        "imageDirectionCandidates": [
-          {
-            "candidateId": "current-asset-optimize",
-            "label": "优化现有素材",
-            "assetSource": "截图",
-            "description": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-            "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
-          },
-          {
-            "candidateId": "content-matched-search",
-            "label": "补内容贴合图",
-            "assetSource": "补充图库",
-            "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更有收获感 方式排版。",
-            "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
-          },
-          {
-            "candidateId": "creative-concept-asset",
-            "label": "做创意概念图",
-            "assetSource": "概念化方向",
-            "description": "先确定一个能承载「收益」点击机制的主体，再把内容信息补进去。",
-            "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
-          }
-        ],
-        "rankedImageStrategies": [
-          {
-            "candidateId": "current-asset-optimize",
-            "label": "优化现有素材",
-            "assetSource": "截图",
-            "description": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-            "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
-            "priorityScore": 4,
-            "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-            "executionTag": "先优化现有图"
-          },
-          {
-            "candidateId": "content-matched-search",
-            "label": "补内容贴合图",
-            "assetSource": "补充图库",
-            "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更有收获感 方式排版。",
-            "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
-            "priorityScore": 3,
-            "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
-            "executionTag": "先补贴内容的图"
-          },
-          {
-            "candidateId": "creative-concept-asset",
-            "label": "做创意概念图",
-            "assetSource": "概念化方向",
-            "description": "先确定一个能承载「收益」点击机制的主体，再把内容信息补进去。",
-            "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
-            "priorityScore": 2,
-            "priorityReason": "当前方向更靠「收益」驱动点击，创意概念图更适合拉开与普通封面的差距。",
-            "executionTag": "先做概念图"
-          }
-        ],
-        "suggestedAssetType": "截图",
-        "suggestedAssetReason": "当前素材类型与输入状态基本一致，可直接沿用这条路径继续判断。",
-        "assetUsageStatus": "可直接使用",
-        "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
-        "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
-        "primaryAssetActionLabel": "先优化现有图",
-        "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-        "compositionDirection": "结果画面或收益词必须站在第一视觉中心。",
-        "colorMoodDirection": "适合前后对照、成果放大、完成态聚焦。",
-        "clickReason": "更有收获感，更贴合这条内容当前的点击机制。",
-        "fitReason": "当前内容更靠「收益」驱动点击，内容里有明确收获或结果",
-        "riskNote": "容易像承诺过猛",
-        "boundaryRule": "内容承接不住会显空",
-        "bestFor": [
-          "提效技巧",
-          "学习方法",
-          "错误纠正"
-        ],
-        "signalMatches": [
-          "内容本身存在明确收益或变化",
-          "目标表达里已经带有结果导向"
-        ],
-        "directionSignalChecklist": {
-          "signalGroups": [
-            {
-              "groupId": "content-goal",
-              "groupLabel": "内容目标信号",
-              "signals": [
-                "用户更关心点开后能获得什么结果",
-                "内容存在明确收益、变化、完成态",
-                "主题适合强调结果而不是问题本身"
-              ]
-            },
-            {
-              "groupId": "asset-fit",
-              "groupLabel": "素材适配信号",
-              "signals": [
-                "素材里能提炼结果页、完成态、前后变化",
-                "即使没有现成结果图，也能想象明确收获画面",
-                "适合把收益放到第一视觉中心"
-              ]
-            },
-            {
-              "groupId": "copy-shape",
-              "groupLabel": "文案与构图信号",
-              "signals": [
-                "文案适合使用收益词、结果词、变化词",
-                "构图适合突出结果区域或前后差异",
-                "用户需要感到这条内容值得花时间"
-              ]
-            }
-          ],
-          "feedbackTriggers": [
-            "没收获感",
-            "价值点不明显",
-            "不值得点",
-            "没结果"
-          ],
-          "boundaryRules": [
-            "收益表达不能承诺过猛",
-            "结果感必须和内容承接得住"
-          ],
-          "matchedSignals": [
-            "内容目标里已经带明确结果导向",
-            "用户描述了希望用户获得什么收获"
-          ]
-        },
-        "role": "secondary",
-        "actionWorkspace": {
-          "workspaceId": "optimize-current",
-          "workspaceTitle": "优化现有素材",
-          "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-          "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-          "nextSteps": [
-            "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
-            "优先裁掉和主题无关、只会分散注意力的边角信息。",
-            "让封面大字和主体形成明确主次，不要平均分配注意力。"
-          ],
-          "checkpoints": [
-            "第一眼焦点是否单一",
-            "现有图里最值得保留的主体是否明确",
-            "标题区是否压住了无关背景噪音"
-          ],
-          "suggestedInputs": [
-            "描述需要保留的主体区域",
-            "描述需要裁掉或弱化的部分",
-            "说明当前图最不满意的地方"
-          ],
-          "inputSchema": [
-            {
-              "fieldId": "keep_subject",
-              "label": "想保留的主体",
-              "inputType": "text",
-              "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
-            },
-            {
-              "fieldId": "remove_noise",
-              "label": "想弱化或裁掉的部分",
-              "inputType": "textarea",
-              "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
-            },
-            {
-              "fieldId": "current_problem",
-              "label": "当前图最不满意的地方",
-              "inputType": "textarea",
-              "placeholder": "例如：太平、不聚焦、不够像热门封面"
-            }
-          ],
-          "linkedCardDirection": "更有收获感"
-        },
-        "actionWorkspaces": [
-          {
-            "workspaceId": "optimize-current",
-            "workspaceTitle": "优化现有素材",
-            "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-            "nextSteps": [
-              "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
-              "优先裁掉和主题无关、只会分散注意力的边角信息。",
-              "让封面大字和主体形成明确主次，不要平均分配注意力。"
-            ],
-            "checkpoints": [
-              "第一眼焦点是否单一",
-              "现有图里最值得保留的主体是否明确",
-              "标题区是否压住了无关背景噪音"
-            ],
-            "suggestedInputs": [
-              "描述需要保留的主体区域",
-              "描述需要裁掉或弱化的部分",
-              "说明当前图最不满意的地方"
-            ],
-            "inputSchema": [
-              {
-                "fieldId": "keep_subject",
-                "label": "想保留的主体",
-                "inputType": "text",
-                "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
-              },
-              {
-                "fieldId": "remove_noise",
-                "label": "想弱化或裁掉的部分",
-                "inputType": "textarea",
-                "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
-              },
-              {
-                "fieldId": "current_problem",
-                "label": "当前图最不满意的地方",
-                "inputType": "textarea",
-                "placeholder": "例如：太平、不聚焦、不够像热门封面"
-              }
-            ],
-            "linkedCardDirection": "更有收获感"
-          },
-          {
-            "workspaceId": "search-matched",
-            "workspaceTitle": "补内容贴合图",
-            "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-            "nextSteps": [
-              "先把内容主题拆成一个最容易被看懂的主体或场景。",
-              "优先找能直接解释主题的图，而不是只好看但不说事的图。",
-              "找到图后再决定文字放哪一侧，避免先排版再硬找图。"
-            ],
-            "checkpoints": [
-              "补的图是否比当前图更贴内容",
-              "新图是否更容易承载当前点击机制",
-              "是否能明显降低“普通、太平、不贴内容”的问题"
-            ],
-            "suggestedInputs": [
-              "写出这条内容最适合出现的人物/物体/场景",
-              "写出需要避免的图像风格",
-              "写出补图后需要强化的点击点"
-            ],
-            "inputSchema": [
-              {
-                "fieldId": "desired_subject",
-                "label": "最适合补什么主体/场景",
-                "inputType": "text",
-                "placeholder": "例如：疲惫的人、待办清单、时间被占满的桌面场景"
-              },
-              {
-                "fieldId": "avoid_style",
-                "label": "需要避免的图像风格",
-                "inputType": "textarea",
-                "placeholder": "例如：太廉价、太鸡汤、太营销号、太像素材库海报"
-              },
-              {
-                "fieldId": "strengthen_click_point",
-                "label": "补图后最想强化的点击点",
-                "inputType": "textarea",
-                "placeholder": "例如：让人更想知道为什么忙却没结果"
-              }
-            ],
-            "linkedCardDirection": "更有收获感"
-          },
-          {
-            "workspaceId": "concept-first",
-            "workspaceTitle": "做创意概念图",
-            "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-            "nextSteps": [
-              "先决定这条内容的主点击点更适合被哪个主体承载。",
-              "先想单一主体和单一冲突，不要一开始堆太多元素。",
-              "先把概念方向跑通，再决定要不要补真实图或走生图。"
-            ],
-            "checkpoints": [
-              "主体是否足够单一",
-              "概念是否和内容真实相关",
-              "是否比普通截图更有记忆点"
-            ],
-            "suggestedInputs": [
-              "写出第一眼需要呈现的主体",
-              "写出主体需要传达的情绪或冲突",
-              "写出需要避免的廉价感或营销号感"
-            ],
-            "inputSchema": [
-              {
-                "fieldId": "first_glance_subject",
-                "label": "第一眼最想让用户看到的主体",
-                "inputType": "text",
-                "placeholder": "例如：被时间追着跑的人、写满叉号的计划表、夸张的忙碌动作"
-              },
-              {
-                "fieldId": "emotion_or_conflict",
-                "label": "主体要传达的情绪或冲突",
-                "inputType": "textarea",
-                "placeholder": "例如：越忙越没结果、表面努力和真实低效之间的反差"
-              },
-              {
-                "fieldId": "avoid_cheapness",
-                "label": "最想避免的廉价感",
-                "inputType": "textarea",
-                "placeholder": "例如：太标题党、太油腻、太像拼贴营销图"
-              }
-            ],
-            "linkedCardDirection": "更有收获感"
           }
         ]
       }
@@ -1262,7 +1276,7 @@
       "workspaceId": "optimize-current",
       "workspaceTitle": "优化现有素材",
       "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-      "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+      "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
       "nextSteps": [
         "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
         "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -1298,12 +1312,12 @@
           "placeholder": "例如：太平、不聚焦、不够像热门封面"
         }
       ],
-      "linkedCardDirection": "更让人想点开"
+      "linkedCardDirection": "更高级专业"
     }
   },
   "promptPreviewFirstRound": {
     "mode": "first-round",
-    "firstRoundPrompt": "你现在不是通用设计工具，而是内容平台封面方向助手。\n第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。\n必须先判断点击机制，再输出方向卡片。\n3 张卡片必须分别体现不同主变量，不允许只是换措辞。\n\n【输入字段】\n- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。\n- 内容目标：让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。\n- 素材类型：截图\n- 平台：抖音\n- 内容类型：教程\n- 主点击机制：好奇\n- 是否有明确结果：中\n- 是否有明显反差：弱\n- 是否有悬念空间：弱\n- 是否需要清晰讲明白：中\n- 是否需要专业可信感：中\n- 用户偏好：小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。\n- 素材备注：已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。\n\n【已排序方向】\n1. 强悬念感｜内容分=4｜素材分=2｜平台分=4｜适配理由=当前内容更靠「好奇」驱动点击｜风险=容易标题党\n2. 强信息感｜内容分=2｜素材分=4｜平台分=3｜适配理由=当前内容更靠「看懂」驱动点击，内容需要更快讲明白｜风险=容易太平\n3. 强结果感｜内容分=2｜素材分=3｜平台分=4｜适配理由=当前内容更靠「收益」驱动点击，内容里有明确收获或结果｜风险=容易像承诺过猛\n\n【第一轮输出格式】\n请输出 3 张方向卡片，每张卡片都必须包含：\n- 方向标签\n- 一句话为什么适合\n- 封面大字建议\n- 1-2 个标题建议\n- 配图方向\n- 构图建议\n- 点击逻辑\n- 风险提醒"
+    "firstRoundPrompt": "你现在不是通用设计工具，而是内容平台封面方向助手。\n第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。\n必须先判断点击机制，再输出方向卡片。\n3 张卡片必须分别体现不同主变量，不允许只是换措辞。\n\n【输入字段】\n- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。\n- 内容目标：让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。\n- 素材类型：截图\n- 平台：抖音\n- 内容类型：教程\n- 主点击机制：好奇\n- 是否有明确结果：中\n- 是否有明显反差：弱\n- 是否有悬念空间：弱\n- 是否需要清晰讲明白：中\n- 是否需要专业可信感：中\n- 用户偏好：小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。\n- 素材备注：已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。\n\n【已排序方向】\n1. 强质感感｜内容分=5｜素材分=3｜平台分=5｜适配理由=当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度｜风险=容易太平\n2. 强悬念感｜内容分=5｜素材分=2｜平台分=4｜适配理由=当前内容更靠「好奇」驱动点击｜风险=容易标题党\n3. 强信息感｜内容分=2｜素材分=4｜平台分=3｜适配理由=当前内容更靠「看懂」驱动点击，内容需要更快讲明白｜风险=容易太平\n\n【第一轮输出格式】\n请输出 3 张方向卡片，每张卡片都必须包含：\n- 方向标签\n- 一句话为什么适合\n- 封面大字建议\n- 1-2 个标题建议\n- 配图方向\n- 构图建议\n- 点击逻辑\n- 风险提醒"
   },
   "llmDraftFirstRound": {
     "provider": "mock",
@@ -1316,7 +1330,7 @@
     },
     "promptPreview": {
       "mode": "first-round",
-      "firstRoundPrompt": "你现在不是通用设计工具，而是内容平台封面方向助手。\n第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。\n必须先判断点击机制，再输出方向卡片。\n3 张卡片必须分别体现不同主变量，不允许只是换措辞。\n\n【输入字段】\n- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。\n- 内容目标：让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。\n- 素材类型：截图\n- 平台：抖音\n- 内容类型：教程\n- 主点击机制：好奇\n- 是否有明确结果：中\n- 是否有明显反差：弱\n- 是否有悬念空间：弱\n- 是否需要清晰讲明白：中\n- 是否需要专业可信感：中\n- 用户偏好：小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。\n- 素材备注：已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。\n\n【已排序方向】\n1. 强悬念感｜内容分=4｜素材分=2｜平台分=4｜适配理由=当前内容更靠「好奇」驱动点击｜风险=容易标题党\n2. 强信息感｜内容分=2｜素材分=4｜平台分=3｜适配理由=当前内容更靠「看懂」驱动点击，内容需要更快讲明白｜风险=容易太平\n3. 强结果感｜内容分=2｜素材分=3｜平台分=4｜适配理由=当前内容更靠「收益」驱动点击，内容里有明确收获或结果｜风险=容易像承诺过猛\n\n【第一轮输出格式】\n请输出 3 张方向卡片，每张卡片都必须包含：\n- 方向标签\n- 一句话为什么适合\n- 封面大字建议\n- 1-2 个标题建议\n- 配图方向\n- 构图建议\n- 点击逻辑\n- 风险提醒"
+      "firstRoundPrompt": "你现在不是通用设计工具，而是内容平台封面方向助手。\n第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。\n必须先判断点击机制，再输出方向卡片。\n3 张卡片必须分别体现不同主变量，不允许只是换措辞。\n\n【输入字段】\n- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。\n- 内容目标：让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。\n- 素材类型：截图\n- 平台：抖音\n- 内容类型：教程\n- 主点击机制：好奇\n- 是否有明确结果：中\n- 是否有明显反差：弱\n- 是否有悬念空间：弱\n- 是否需要清晰讲明白：中\n- 是否需要专业可信感：中\n- 用户偏好：小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。\n- 素材备注：已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。\n\n【已排序方向】\n1. 强质感感｜内容分=5｜素材分=3｜平台分=5｜适配理由=当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度｜风险=容易太平\n2. 强悬念感｜内容分=5｜素材分=2｜平台分=4｜适配理由=当前内容更靠「好奇」驱动点击｜风险=容易标题党\n3. 强信息感｜内容分=2｜素材分=4｜平台分=3｜适配理由=当前内容更靠「看懂」驱动点击，内容需要更快讲明白｜风险=容易太平\n\n【第一轮输出格式】\n请输出 3 张方向卡片，每张卡片都必须包含：\n- 方向标签\n- 一句话为什么适合\n- 封面大字建议\n- 1-2 个标题建议\n- 配图方向\n- 构图建议\n- 点击逻辑\n- 风险提醒"
     },
     "analysis": {
       "fields": {
@@ -1374,13 +1388,79 @@
       },
       "rankedDirections": [
         {
+          "directionId": "texture",
+          "directionType": "强质感感",
+          "directionRole": "primary",
+          "fitScoreContent": 5,
+          "fitScoreAsset": 3,
+          "fitScorePlatform": 5,
+          "fitScoreTotal": 13,
+          "directionFitReason": "当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度",
+          "directionRisk": "容易太平",
+          "directionBoundary": "高级但不够点开",
+          "signalMatches": [
+            "晚霞、云层和天空留白适合建立更专业的封面质感",
+            "内容需要可信度和专业感支撑",
+            "用户偏好更靠近「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」的克制表达"
+          ],
+          "directionSignalChecklist": {
+            "signalGroups": [
+              {
+                "groupId": "content-goal",
+                "groupLabel": "内容目标信号",
+                "signals": [
+                  "用户更在意高级感、专业感和可信度",
+                  "内容需要建立判断力或可信表达",
+                  "长期表达比一次性刺激点击更重要"
+                ]
+              },
+              {
+                "groupId": "asset-fit",
+                "groupLabel": "素材适配信号",
+                "signals": [
+                  "现有素材可通过裁切、减噪、统一氛围来变稳",
+                  "画面适合强调秩序感、留白、完成度",
+                  "如果补图，优先找质感完整的主体而不是花哨元素"
+                ]
+              },
+              {
+                "groupId": "copy-shape",
+                "groupLabel": "文案与构图信号",
+                "signals": [
+                  "文案应克制但有分量，不要太油",
+                  "构图要稳，主体与背景关系要干净",
+                  "画面完成度比刺激元素更重要"
+                ]
+              }
+            ],
+            "feedbackTriggers": [
+              "更高级",
+              "更专业",
+              "别像营销号",
+              "更稳一点"
+            ],
+            "boundaryRules": [
+              "高级感不能把点击欲降得太低",
+              "克制表达也要保留一个可点开的钩子"
+            ],
+            "matchedSignals": [
+              "内容需要更强可信度和专业感",
+              "用户明确提到了更稳、更高级一类偏好"
+            ]
+          },
+          "visualStrategy": "保留天空留白、云层方向和落日色彩",
+          "copyStrategy": "情绪记忆点 + 封面构思任务",
+          "compositionStrategy": "标题放在低干扰天空区，地平线和暗部稳定画面",
+          "cardId": "A"
+        },
+        {
           "directionId": "suspense",
           "directionType": "强悬念感",
-          "directionRole": "primary",
-          "fitScoreContent": 4,
+          "directionRole": "secondary",
+          "fitScoreContent": 5,
           "fitScoreAsset": 2,
           "fitScorePlatform": 4,
-          "fitScoreTotal": 10,
+          "fitScoreTotal": 11,
           "directionFitReason": "当前内容更靠「好奇」驱动点击",
           "directionRisk": "容易标题党",
           "directionBoundary": "过虚会让人看不懂",
@@ -1434,7 +1514,7 @@
           "visualStrategy": "保留异常点，不把答案说满",
           "copyStrategy": "半揭示表达",
           "compositionStrategy": "单焦点 + 适度留白",
-          "cardId": "A"
+          "cardId": "B"
         },
         {
           "directionId": "information",
@@ -1500,82 +1580,17 @@
           "visualStrategy": "突出信息块和清晰主体",
           "copyStrategy": "主题词前置，直接点题",
           "compositionStrategy": "中心信息区稳定布局",
-          "cardId": "B"
-        },
-        {
-          "directionId": "result",
-          "directionType": "强结果感",
-          "directionRole": "secondary",
-          "fitScoreContent": 2,
-          "fitScoreAsset": 3,
-          "fitScorePlatform": 4,
-          "fitScoreTotal": 9,
-          "directionFitReason": "当前内容更靠「收益」驱动点击，内容里有明确收获或结果",
-          "directionRisk": "容易像承诺过猛",
-          "directionBoundary": "内容承接不住会显空",
-          "signalMatches": [
-            "内容本身存在明确收益或变化",
-            "目标表达里已经带有结果导向"
-          ],
-          "directionSignalChecklist": {
-            "signalGroups": [
-              {
-                "groupId": "content-goal",
-                "groupLabel": "内容目标信号",
-                "signals": [
-                  "用户更关心点开后能获得什么结果",
-                  "内容存在明确收益、变化、完成态",
-                  "主题适合强调结果而不是问题本身"
-                ]
-              },
-              {
-                "groupId": "asset-fit",
-                "groupLabel": "素材适配信号",
-                "signals": [
-                  "素材里能提炼结果页、完成态、前后变化",
-                  "即使没有现成结果图，也能想象明确收获画面",
-                  "适合把收益放到第一视觉中心"
-                ]
-              },
-              {
-                "groupId": "copy-shape",
-                "groupLabel": "文案与构图信号",
-                "signals": [
-                  "文案适合使用收益词、结果词、变化词",
-                  "构图适合突出结果区域或前后差异",
-                  "用户需要感到这条内容值得花时间"
-                ]
-              }
-            ],
-            "feedbackTriggers": [
-              "没收获感",
-              "价值点不明显",
-              "不值得点",
-              "没结果"
-            ],
-            "boundaryRules": [
-              "收益表达不能承诺过猛",
-              "结果感必须和内容承接得住"
-            ],
-            "matchedSignals": [
-              "内容目标里已经带明确结果导向",
-              "用户描述了希望用户获得什么收获"
-            ]
-          },
-          "visualStrategy": "放大结果状态或变化感",
-          "copyStrategy": "收益词前置",
-          "compositionStrategy": "让结果成为视觉中心",
           "cardId": "C"
         }
       ],
       "cards": [
         {
           "cardId": "A",
-          "effectId": "suspense",
-          "directionTypeInternal": "强悬念感",
-          "directionLabelUserFacing": "更让人想点开",
-          "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
-          "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
+          "effectId": "texture",
+          "directionTypeInternal": "强质感感",
+          "directionLabelUserFacing": "更高级专业",
+          "directionDescription": "用克制、秩序感和完成度建立可信度，而不是单纯刺激点击。 当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度。",
+          "coverCopyMain": "真正拉开夏日晚霞、云层、落日封面差距的是这点",
           "titleOptions": [
             "最后一抹霞光",
             "最后一抹霞光，适合这样做封面",
@@ -1608,7 +1623,346 @@
             "云层",
             "落日"
           ],
-          "imageDirection": "从截图里裁出异常点，不把全部上下文一次讲完。",
+          "imageDirection": "优先保留天空留白、云层方向和落日色彩，把标题放进低干扰区域。",
+          "imageDirectionCandidates": [
+            {
+              "candidateId": "current-asset-optimize",
+              "label": "优化现有素材",
+              "assetSource": "截图",
+              "description": "减少杂乱界面，只保留最有质感的局部与秩序感。",
+              "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
+            },
+            {
+              "candidateId": "content-matched-search",
+              "label": "补内容贴合图",
+              "assetSource": "补充图库",
+              "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更高级专业 方式排版。",
+              "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
+            },
+            {
+              "candidateId": "creative-concept-asset",
+              "label": "做创意概念图",
+              "assetSource": "概念化方向",
+              "description": "先确定一个能承载「信任」点击机制的主体，再把内容信息补进去。",
+              "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
+            }
+          ],
+          "rankedImageStrategies": [
+            {
+              "candidateId": "current-asset-optimize",
+              "label": "优化现有素材",
+              "assetSource": "截图",
+              "description": "减少杂乱界面，只保留最有质感的局部与秩序感。",
+              "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
+              "priorityScore": 4,
+              "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+              "executionTag": "先优化现有图"
+            },
+            {
+              "candidateId": "content-matched-search",
+              "label": "补内容贴合图",
+              "assetSource": "补充图库",
+              "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更高级专业 方式排版。",
+              "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
+              "priorityScore": 3,
+              "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
+              "executionTag": "先补贴内容的图"
+            },
+            {
+              "candidateId": "creative-concept-asset",
+              "label": "做创意概念图",
+              "assetSource": "概念化方向",
+              "description": "先确定一个能承载「信任」点击机制的主体，再把内容信息补进去。",
+              "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
+              "priorityScore": 2,
+              "priorityReason": "当前方向更靠「信任」驱动点击，创意概念图更适合拉开与普通封面的差距。",
+              "executionTag": "先做概念图"
+            }
+          ],
+          "suggestedAssetType": "截图",
+          "suggestedAssetReason": "当前素材类型与输入状态基本一致，可直接沿用这条路径继续判断。",
+          "assetUsageStatus": "可直接使用",
+          "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
+          "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
+          "primaryAssetActionLabel": "先优化现有图",
+          "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "recommendationReason": "素材里已经有「夏日晚霞、云层、落日」这类情绪画面，适合用留白、色彩和标题区做得更专业，避免只像普通风景分享。",
+          "visualStrategy": "保留天空留白、云层方向和落日色彩",
+          "copyStrategy": "情绪记忆点 + 封面构思任务",
+          "compositionStrategy": "标题放在低干扰天空区，地平线和暗部稳定画面",
+          "compositionDirection": "标题放在低干扰天空区，地平线和暗部稳定画面",
+          "colorMoodDirection": "减少浮夸元素，让画面像被认真设计过。",
+          "clickReason": "更高级专业，更贴合这条内容当前的点击机制。",
+          "fitReason": "当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度",
+          "riskNote": "容易太平",
+          "boundaryRule": "高级但不够点开",
+          "bestFor": [
+            "专业判断",
+            "审美导向内容",
+            "成熟表达"
+          ],
+          "signalMatches": [
+            "晚霞、云层和天空留白适合建立更专业的封面质感",
+            "内容需要可信度和专业感支撑",
+            "用户偏好更靠近「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」的克制表达"
+          ],
+          "directionSignalChecklist": {
+            "signalGroups": [
+              {
+                "groupId": "content-goal",
+                "groupLabel": "内容目标信号",
+                "signals": [
+                  "用户更在意高级感、专业感和可信度",
+                  "内容需要建立判断力或可信表达",
+                  "长期表达比一次性刺激点击更重要"
+                ]
+              },
+              {
+                "groupId": "asset-fit",
+                "groupLabel": "素材适配信号",
+                "signals": [
+                  "现有素材可通过裁切、减噪、统一氛围来变稳",
+                  "画面适合强调秩序感、留白、完成度",
+                  "如果补图，优先找质感完整的主体而不是花哨元素"
+                ]
+              },
+              {
+                "groupId": "copy-shape",
+                "groupLabel": "文案与构图信号",
+                "signals": [
+                  "文案应克制但有分量，不要太油",
+                  "构图要稳，主体与背景关系要干净",
+                  "画面完成度比刺激元素更重要"
+                ]
+              }
+            ],
+            "feedbackTriggers": [
+              "更高级",
+              "更专业",
+              "别像营销号",
+              "更稳一点"
+            ],
+            "boundaryRules": [
+              "高级感不能把点击欲降得太低",
+              "克制表达也要保留一个可点开的钩子"
+            ],
+            "matchedSignals": [
+              "内容需要更强可信度和专业感",
+              "用户明确提到了更稳、更高级一类偏好"
+            ]
+          },
+          "role": "primary",
+          "actionWorkspace": {
+            "workspaceId": "optimize-current",
+            "workspaceTitle": "优化现有素材",
+            "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+            "nextSteps": [
+              "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
+              "优先裁掉和主题无关、只会分散注意力的边角信息。",
+              "让封面大字和主体形成明确主次，不要平均分配注意力。"
+            ],
+            "checkpoints": [
+              "第一眼焦点是否单一",
+              "现有图里最值得保留的主体是否明确",
+              "标题区是否压住了无关背景噪音"
+            ],
+            "suggestedInputs": [
+              "描述需要保留的主体区域",
+              "描述需要裁掉或弱化的部分",
+              "说明当前图最不满意的地方"
+            ],
+            "inputSchema": [
+              {
+                "fieldId": "keep_subject",
+                "label": "想保留的主体",
+                "inputType": "text",
+                "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
+              },
+              {
+                "fieldId": "remove_noise",
+                "label": "想弱化或裁掉的部分",
+                "inputType": "textarea",
+                "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
+              },
+              {
+                "fieldId": "current_problem",
+                "label": "当前图最不满意的地方",
+                "inputType": "textarea",
+                "placeholder": "例如：太平、不聚焦、不够像热门封面"
+              }
+            ],
+            "linkedCardDirection": "更高级专业"
+          },
+          "actionWorkspaces": [
+            {
+              "workspaceId": "optimize-current",
+              "workspaceTitle": "优化现有素材",
+              "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+              "nextSteps": [
+                "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
+                "优先裁掉和主题无关、只会分散注意力的边角信息。",
+                "让封面大字和主体形成明确主次，不要平均分配注意力。"
+              ],
+              "checkpoints": [
+                "第一眼焦点是否单一",
+                "现有图里最值得保留的主体是否明确",
+                "标题区是否压住了无关背景噪音"
+              ],
+              "suggestedInputs": [
+                "描述需要保留的主体区域",
+                "描述需要裁掉或弱化的部分",
+                "说明当前图最不满意的地方"
+              ],
+              "inputSchema": [
+                {
+                  "fieldId": "keep_subject",
+                  "label": "想保留的主体",
+                  "inputType": "text",
+                  "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
+                },
+                {
+                  "fieldId": "remove_noise",
+                  "label": "想弱化或裁掉的部分",
+                  "inputType": "textarea",
+                  "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
+                },
+                {
+                  "fieldId": "current_problem",
+                  "label": "当前图最不满意的地方",
+                  "inputType": "textarea",
+                  "placeholder": "例如：太平、不聚焦、不够像热门封面"
+                }
+              ],
+              "linkedCardDirection": "更高级专业"
+            },
+            {
+              "workspaceId": "search-matched",
+              "workspaceTitle": "补内容贴合图",
+              "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+              "nextSteps": [
+                "先把内容主题拆成一个最容易被看懂的主体或场景。",
+                "优先找能直接解释主题的图，而不是只好看但不说事的图。",
+                "找到图后再决定文字放哪一侧，避免先排版再硬找图。"
+              ],
+              "checkpoints": [
+                "补的图是否比当前图更贴内容",
+                "新图是否更容易承载当前点击机制",
+                "是否能明显降低“普通、太平、不贴内容”的问题"
+              ],
+              "suggestedInputs": [
+                "写出这条内容最适合出现的人物/物体/场景",
+                "写出需要避免的图像风格",
+                "写出补图后需要强化的点击点"
+              ],
+              "inputSchema": [
+                {
+                  "fieldId": "desired_subject",
+                  "label": "最适合补什么主体/场景",
+                  "inputType": "text",
+                  "placeholder": "例如：疲惫的人、待办清单、时间被占满的桌面场景"
+                },
+                {
+                  "fieldId": "avoid_style",
+                  "label": "需要避免的图像风格",
+                  "inputType": "textarea",
+                  "placeholder": "例如：太廉价、太鸡汤、太营销号、太像素材库海报"
+                },
+                {
+                  "fieldId": "strengthen_click_point",
+                  "label": "补图后最想强化的点击点",
+                  "inputType": "textarea",
+                  "placeholder": "例如：让人更想知道为什么忙却没结果"
+                }
+              ],
+              "linkedCardDirection": "更高级专业"
+            },
+            {
+              "workspaceId": "concept-first",
+              "workspaceTitle": "做创意概念图",
+              "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+              "nextSteps": [
+                "先决定这条内容的主点击点更适合被哪个主体承载。",
+                "先想单一主体和单一冲突，不要一开始堆太多元素。",
+                "先把概念方向跑通，再决定要不要补真实图或走生图。"
+              ],
+              "checkpoints": [
+                "主体是否足够单一",
+                "概念是否和内容真实相关",
+                "是否比普通截图更有记忆点"
+              ],
+              "suggestedInputs": [
+                "写出第一眼需要呈现的主体",
+                "写出主体需要传达的情绪或冲突",
+                "写出需要避免的廉价感或营销号感"
+              ],
+              "inputSchema": [
+                {
+                  "fieldId": "first_glance_subject",
+                  "label": "第一眼最想让用户看到的主体",
+                  "inputType": "text",
+                  "placeholder": "例如：被时间追着跑的人、写满叉号的计划表、夸张的忙碌动作"
+                },
+                {
+                  "fieldId": "emotion_or_conflict",
+                  "label": "主体要传达的情绪或冲突",
+                  "inputType": "textarea",
+                  "placeholder": "例如：越忙越没结果、表面努力和真实低效之间的反差"
+                },
+                {
+                  "fieldId": "avoid_cheapness",
+                  "label": "最想避免的廉价感",
+                  "inputType": "textarea",
+                  "placeholder": "例如：太标题党、太油腻、太像拼贴营销图"
+                }
+              ],
+              "linkedCardDirection": "更高级专业"
+            }
+          ]
+        },
+        {
+          "cardId": "B",
+          "effectId": "suspense",
+          "directionTypeInternal": "强悬念感",
+          "directionLabelUserFacing": "更让人想点开",
+          "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
+          "coverCopyMain": "你以为是夏日晚霞、云层、落日封面的问题？",
+          "titleOptions": [
+            "最后一抹霞光",
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感"
+          ],
+          "titleOptionDetails": [
+            {
+              "title": "最后一抹霞光",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
+            {
+              "title": "最后一抹霞光，适合这样做封面",
+              "sourceType": "style-library",
+              "sourceLabel": "风格库",
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
+            },
+            {
+              "title": "一张天空图也能做出封面感",
+              "sourceType": "style-library",
+              "sourceLabel": "风格库",
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
+            }
+          ],
+          "materialKeywords": [
+            "夏日晚霞",
+            "云层",
+            "落日"
+          ],
+          "imageDirection": "保留异常点，不把答案说满",
           "imageDirectionCandidates": [
             {
               "candidateId": "current-asset-optimize",
@@ -1640,7 +1994,7 @@
               "description": "从截图里裁出异常点，不把全部上下文一次讲完。",
               "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
               "priorityScore": 4,
-              "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "executionTag": "先优化现有图"
             },
             {
@@ -1670,8 +2024,12 @@
           "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
           "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
           "primaryAssetActionLabel": "先优化现有图",
-          "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-          "compositionDirection": "单焦点 + 适度留白，先让人停住再说。",
+          "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "recommendationReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "visualStrategy": "保留异常点，不把答案说满",
+          "copyStrategy": "半揭示表达",
+          "compositionStrategy": "单焦点 + 适度留白",
+          "compositionDirection": "单焦点 + 适度留白",
           "colorMoodDirection": "不要一次把答案讲满，保留异常点的张力。",
           "clickReason": "更让人想点开，更贴合这条内容当前的点击机制。",
           "fitReason": "当前内容更靠「好奇」驱动点击",
@@ -1729,12 +2087,12 @@
               "用户偏好里已有「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」这类抓眼诉求"
             ]
           },
-          "role": "primary",
+          "role": "secondary",
           "actionWorkspace": {
             "workspaceId": "optimize-current",
             "workspaceTitle": "优化现有素材",
             "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
               "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -1777,7 +2135,7 @@
               "workspaceId": "optimize-current",
               "workspaceTitle": "优化现有素材",
               "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
                 "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -1819,7 +2177,7 @@
               "workspaceId": "search-matched",
               "workspaceTitle": "补内容贴合图",
               "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先把内容主题拆成一个最容易被看懂的主体或场景。",
                 "优先找能直接解释主题的图，而不是只好看但不说事的图。",
@@ -1861,7 +2219,7 @@
               "workspaceId": "concept-first",
               "workspaceTitle": "做创意概念图",
               "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先决定这条内容的主点击点更适合被哪个主体承载。",
                 "先想单一主体和单一冲突，不要一开始堆太多元素。",
@@ -1902,12 +2260,12 @@
           ]
         },
         {
-          "cardId": "B",
+          "cardId": "C",
           "effectId": "information",
           "directionTypeInternal": "强信息感",
           "directionLabelUserFacing": "更清楚重点",
           "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
-          "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
+          "coverCopyMain": "夏日晚霞、云层、落日封面别再做错了",
           "titleOptions": [
             "最后一抹霞光",
             "最后一抹霞光，适合这样做封面",
@@ -1940,7 +2298,7 @@
             "云层",
             "落日"
           ],
-          "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
+          "imageDirection": "突出信息块和清晰主体",
           "imageDirectionCandidates": [
             {
               "candidateId": "current-asset-optimize",
@@ -1972,7 +2330,7 @@
               "description": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
               "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
               "priorityScore": 4,
-              "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "executionTag": "先优化现有图"
             },
             {
@@ -2002,8 +2360,12 @@
           "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
           "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
           "primaryAssetActionLabel": "先优化现有图",
-          "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-          "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。",
+          "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "recommendationReason": "这张卡优先解决看不清主题的问题，适合把教程任务、封面大字和素材主体先讲明白。",
+          "visualStrategy": "突出信息块和清晰主体",
+          "copyStrategy": "主题词前置，直接点题",
+          "compositionStrategy": "中心信息区稳定布局",
+          "compositionDirection": "中心信息区稳定布局",
           "colorMoodDirection": "允许一定文字量，但必须先让第一眼看到主题词。",
           "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。",
           "fitReason": "当前内容更靠「看懂」驱动点击，内容需要更快讲明白",
@@ -2069,7 +2431,7 @@
             "workspaceId": "optimize-current",
             "workspaceTitle": "优化现有素材",
             "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
               "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -2112,7 +2474,7 @@
               "workspaceId": "optimize-current",
               "workspaceTitle": "优化现有素材",
               "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
                 "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -2154,7 +2516,7 @@
               "workspaceId": "search-matched",
               "workspaceTitle": "补内容贴合图",
               "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先把内容主题拆成一个最容易被看懂的主体或场景。",
                 "优先找能直接解释主题的图，而不是只好看但不说事的图。",
@@ -2196,7 +2558,7 @@
               "workspaceId": "concept-first",
               "workspaceTitle": "做创意概念图",
               "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先决定这条内容的主点击点更适合被哪个主体承载。",
                 "先想单一主体和单一冲突，不要一开始堆太多元素。",
@@ -2233,340 +2595,6 @@
                 }
               ],
               "linkedCardDirection": "更清楚重点"
-            }
-          ]
-        },
-        {
-          "cardId": "C",
-          "effectId": "result",
-          "directionTypeInternal": "强结果感",
-          "directionLabelUserFacing": "更有收获感",
-          "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
-          "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
-          "titleOptions": [
-            "最后一抹霞光",
-            "最后一抹霞光，适合这样做封面",
-            "一张天空图也能做出封面感"
-          ],
-          "titleOptionDetails": [
-            {
-              "title": "最后一抹霞光",
-              "sourceType": "manual-review",
-              "sourceLabel": "人工优选",
-              "styleLabel": "人工判断"
-            },
-            {
-              "title": "最后一抹霞光，适合这样做封面",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "sunset-cover-task",
-              "styleLabel": "晚霞封面任务"
-            },
-            {
-              "title": "一张天空图也能做出封面感",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "sunset-cover-task",
-              "styleLabel": "晚霞封面任务"
-            }
-          ],
-          "materialKeywords": [
-            "夏日晚霞",
-            "云层",
-            "落日"
-          ],
-          "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-          "imageDirectionCandidates": [
-            {
-              "candidateId": "current-asset-optimize",
-              "label": "优化现有素材",
-              "assetSource": "截图",
-              "description": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-              "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
-            },
-            {
-              "candidateId": "content-matched-search",
-              "label": "补内容贴合图",
-              "assetSource": "补充图库",
-              "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更有收获感 方式排版。",
-              "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
-            },
-            {
-              "candidateId": "creative-concept-asset",
-              "label": "做创意概念图",
-              "assetSource": "概念化方向",
-              "description": "先确定一个能承载「收益」点击机制的主体，再把内容信息补进去。",
-              "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
-            }
-          ],
-          "rankedImageStrategies": [
-            {
-              "candidateId": "current-asset-optimize",
-              "label": "优化现有素材",
-              "assetSource": "截图",
-              "description": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-              "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
-              "priorityScore": 4,
-              "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-              "executionTag": "先优化现有图"
-            },
-            {
-              "candidateId": "content-matched-search",
-              "label": "补内容贴合图",
-              "assetSource": "补充图库",
-              "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更有收获感 方式排版。",
-              "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
-              "priorityScore": 3,
-              "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
-              "executionTag": "先补贴内容的图"
-            },
-            {
-              "candidateId": "creative-concept-asset",
-              "label": "做创意概念图",
-              "assetSource": "概念化方向",
-              "description": "先确定一个能承载「收益」点击机制的主体，再把内容信息补进去。",
-              "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
-              "priorityScore": 2,
-              "priorityReason": "当前方向更靠「收益」驱动点击，创意概念图更适合拉开与普通封面的差距。",
-              "executionTag": "先做概念图"
-            }
-          ],
-          "suggestedAssetType": "截图",
-          "suggestedAssetReason": "当前素材类型与输入状态基本一致，可直接沿用这条路径继续判断。",
-          "assetUsageStatus": "可直接使用",
-          "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
-          "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
-          "primaryAssetActionLabel": "先优化现有图",
-          "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-          "compositionDirection": "结果画面或收益词必须站在第一视觉中心。",
-          "colorMoodDirection": "适合前后对照、成果放大、完成态聚焦。",
-          "clickReason": "更有收获感，更贴合这条内容当前的点击机制。",
-          "fitReason": "当前内容更靠「收益」驱动点击，内容里有明确收获或结果",
-          "riskNote": "容易像承诺过猛",
-          "boundaryRule": "内容承接不住会显空",
-          "bestFor": [
-            "提效技巧",
-            "学习方法",
-            "错误纠正"
-          ],
-          "signalMatches": [
-            "内容本身存在明确收益或变化",
-            "目标表达里已经带有结果导向"
-          ],
-          "directionSignalChecklist": {
-            "signalGroups": [
-              {
-                "groupId": "content-goal",
-                "groupLabel": "内容目标信号",
-                "signals": [
-                  "用户更关心点开后能获得什么结果",
-                  "内容存在明确收益、变化、完成态",
-                  "主题适合强调结果而不是问题本身"
-                ]
-              },
-              {
-                "groupId": "asset-fit",
-                "groupLabel": "素材适配信号",
-                "signals": [
-                  "素材里能提炼结果页、完成态、前后变化",
-                  "即使没有现成结果图，也能想象明确收获画面",
-                  "适合把收益放到第一视觉中心"
-                ]
-              },
-              {
-                "groupId": "copy-shape",
-                "groupLabel": "文案与构图信号",
-                "signals": [
-                  "文案适合使用收益词、结果词、变化词",
-                  "构图适合突出结果区域或前后差异",
-                  "用户需要感到这条内容值得花时间"
-                ]
-              }
-            ],
-            "feedbackTriggers": [
-              "没收获感",
-              "价值点不明显",
-              "不值得点",
-              "没结果"
-            ],
-            "boundaryRules": [
-              "收益表达不能承诺过猛",
-              "结果感必须和内容承接得住"
-            ],
-            "matchedSignals": [
-              "内容目标里已经带明确结果导向",
-              "用户描述了希望用户获得什么收获"
-            ]
-          },
-          "role": "secondary",
-          "actionWorkspace": {
-            "workspaceId": "optimize-current",
-            "workspaceTitle": "优化现有素材",
-            "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-            "nextSteps": [
-              "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
-              "优先裁掉和主题无关、只会分散注意力的边角信息。",
-              "让封面大字和主体形成明确主次，不要平均分配注意力。"
-            ],
-            "checkpoints": [
-              "第一眼焦点是否单一",
-              "现有图里最值得保留的主体是否明确",
-              "标题区是否压住了无关背景噪音"
-            ],
-            "suggestedInputs": [
-              "描述需要保留的主体区域",
-              "描述需要裁掉或弱化的部分",
-              "说明当前图最不满意的地方"
-            ],
-            "inputSchema": [
-              {
-                "fieldId": "keep_subject",
-                "label": "想保留的主体",
-                "inputType": "text",
-                "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
-              },
-              {
-                "fieldId": "remove_noise",
-                "label": "想弱化或裁掉的部分",
-                "inputType": "textarea",
-                "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
-              },
-              {
-                "fieldId": "current_problem",
-                "label": "当前图最不满意的地方",
-                "inputType": "textarea",
-                "placeholder": "例如：太平、不聚焦、不够像热门封面"
-              }
-            ],
-            "linkedCardDirection": "更有收获感"
-          },
-          "actionWorkspaces": [
-            {
-              "workspaceId": "optimize-current",
-              "workspaceTitle": "优化现有素材",
-              "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-              "nextSteps": [
-                "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
-                "优先裁掉和主题无关、只会分散注意力的边角信息。",
-                "让封面大字和主体形成明确主次，不要平均分配注意力。"
-              ],
-              "checkpoints": [
-                "第一眼焦点是否单一",
-                "现有图里最值得保留的主体是否明确",
-                "标题区是否压住了无关背景噪音"
-              ],
-              "suggestedInputs": [
-                "描述需要保留的主体区域",
-                "描述需要裁掉或弱化的部分",
-                "说明当前图最不满意的地方"
-              ],
-              "inputSchema": [
-                {
-                  "fieldId": "keep_subject",
-                  "label": "想保留的主体",
-                  "inputType": "text",
-                  "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
-                },
-                {
-                  "fieldId": "remove_noise",
-                  "label": "想弱化或裁掉的部分",
-                  "inputType": "textarea",
-                  "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
-                },
-                {
-                  "fieldId": "current_problem",
-                  "label": "当前图最不满意的地方",
-                  "inputType": "textarea",
-                  "placeholder": "例如：太平、不聚焦、不够像热门封面"
-                }
-              ],
-              "linkedCardDirection": "更有收获感"
-            },
-            {
-              "workspaceId": "search-matched",
-              "workspaceTitle": "补内容贴合图",
-              "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-              "nextSteps": [
-                "先把内容主题拆成一个最容易被看懂的主体或场景。",
-                "优先找能直接解释主题的图，而不是只好看但不说事的图。",
-                "找到图后再决定文字放哪一侧，避免先排版再硬找图。"
-              ],
-              "checkpoints": [
-                "补的图是否比当前图更贴内容",
-                "新图是否更容易承载当前点击机制",
-                "是否能明显降低“普通、太平、不贴内容”的问题"
-              ],
-              "suggestedInputs": [
-                "写出这条内容最适合出现的人物/物体/场景",
-                "写出需要避免的图像风格",
-                "写出补图后需要强化的点击点"
-              ],
-              "inputSchema": [
-                {
-                  "fieldId": "desired_subject",
-                  "label": "最适合补什么主体/场景",
-                  "inputType": "text",
-                  "placeholder": "例如：疲惫的人、待办清单、时间被占满的桌面场景"
-                },
-                {
-                  "fieldId": "avoid_style",
-                  "label": "需要避免的图像风格",
-                  "inputType": "textarea",
-                  "placeholder": "例如：太廉价、太鸡汤、太营销号、太像素材库海报"
-                },
-                {
-                  "fieldId": "strengthen_click_point",
-                  "label": "补图后最想强化的点击点",
-                  "inputType": "textarea",
-                  "placeholder": "例如：让人更想知道为什么忙却没结果"
-                }
-              ],
-              "linkedCardDirection": "更有收获感"
-            },
-            {
-              "workspaceId": "concept-first",
-              "workspaceTitle": "做创意概念图",
-              "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-              "nextSteps": [
-                "先决定这条内容的主点击点更适合被哪个主体承载。",
-                "先想单一主体和单一冲突，不要一开始堆太多元素。",
-                "先把概念方向跑通，再决定要不要补真实图或走生图。"
-              ],
-              "checkpoints": [
-                "主体是否足够单一",
-                "概念是否和内容真实相关",
-                "是否比普通截图更有记忆点"
-              ],
-              "suggestedInputs": [
-                "写出第一眼需要呈现的主体",
-                "写出主体需要传达的情绪或冲突",
-                "写出需要避免的廉价感或营销号感"
-              ],
-              "inputSchema": [
-                {
-                  "fieldId": "first_glance_subject",
-                  "label": "第一眼最想让用户看到的主体",
-                  "inputType": "text",
-                  "placeholder": "例如：被时间追着跑的人、写满叉号的计划表、夸张的忙碌动作"
-                },
-                {
-                  "fieldId": "emotion_or_conflict",
-                  "label": "主体要传达的情绪或冲突",
-                  "inputType": "textarea",
-                  "placeholder": "例如：越忙越没结果、表面努力和真实低效之间的反差"
-                },
-                {
-                  "fieldId": "avoid_cheapness",
-                  "label": "最想避免的廉价感",
-                  "inputType": "textarea",
-                  "placeholder": "例如：太标题党、太油腻、太像拼贴营销图"
-                }
-              ],
-              "linkedCardDirection": "更有收获感"
             }
           ]
         }
@@ -2575,7 +2603,303 @@
         "workspaceId": "optimize-current",
         "workspaceTitle": "优化现有素材",
         "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-        "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+        "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+        "nextSteps": [
+          "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
+          "优先裁掉和主题无关、只会分散注意力的边角信息。",
+          "让封面大字和主体形成明确主次，不要平均分配注意力。"
+        ],
+        "checkpoints": [
+          "第一眼焦点是否单一",
+          "现有图里最值得保留的主体是否明确",
+          "标题区是否压住了无关背景噪音"
+        ],
+        "suggestedInputs": [
+          "描述需要保留的主体区域",
+          "描述需要裁掉或弱化的部分",
+          "说明当前图最不满意的地方"
+        ],
+        "inputSchema": [
+          {
+            "fieldId": "keep_subject",
+            "label": "想保留的主体",
+            "inputType": "text",
+            "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
+          },
+          {
+            "fieldId": "remove_noise",
+            "label": "想弱化或裁掉的部分",
+            "inputType": "textarea",
+            "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
+          },
+          {
+            "fieldId": "current_problem",
+            "label": "当前图最不满意的地方",
+            "inputType": "textarea",
+            "placeholder": "例如：太平、不聚焦、不够像热门封面"
+          }
+        ],
+        "linkedCardDirection": "更高级专业"
+      }
+    },
+    "llmDraft": {
+      "provider": "mock",
+      "mode": "first-round",
+      "summary": "这是基于当前规则系统和 Prompt Builder 生成的模拟首轮模型输出。",
+      "highlights": [
+        "你现在不是通用设计工具，而是内容平台封面方向助手。",
+        "第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。",
+        "必须先判断点击机制，再输出方向卡片。",
+        "3 张卡片必须分别体现不同主变量，不允许只是换措辞。",
+        "【输入字段】",
+        "- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。"
+      ],
+      "draftCards": [
+        {
+          "cardId": "A",
+          "label": "更高级专业",
+          "copy": "真正拉开夏日晚霞、云层、落日封面差距的是这点",
+          "reason": "更高级专业，更贴合这条内容当前的点击机制。"
+        },
+        {
+          "cardId": "B",
+          "label": "更让人想点开",
+          "copy": "你以为是夏日晚霞、云层、落日封面的问题？",
+          "reason": "更让人想点开，更贴合这条内容当前的点击机制。"
+        },
+        {
+          "cardId": "C",
+          "label": "更清楚重点",
+          "copy": "夏日晚霞、云层、落日封面别再做错了",
+          "reason": "更清楚重点，更贴合这条内容当前的点击机制。"
+        }
+      ]
+    }
+  },
+  "refinement": {
+    "ruleMeta": {
+      "source": "local-json",
+      "version": "c18a3eda29",
+      "effectCount": 5,
+      "negativeMappingCount": 5,
+      "positiveMappingCount": 4,
+      "directionSignalCount": 5
+    },
+    "adjustment": {
+      "selectedCardId": "B",
+      "selectedDirectionType": "强悬念感",
+      "userFeedbackRaw": "标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。",
+      "preserveElement": "保留晚霞、云层和落日带来的夏日氛围感。",
+      "preserveElementSource": "field",
+      "changeRequest": "表达美景吸引力和封面构思教程价值，避免只像普通风景分享",
+      "changeRequestSource": "feedback",
+      "feedbackPreservedSignal": "更让人想点开",
+      "preservedVariable": "悬念",
+      "feedbackMappingId": "neg-content-distance",
+      "feedbackPositiveMappingId": null,
+      "feedbackMappedIssuePrimary": "离内容太远",
+      "feedbackMappedIssueSecondary": "无",
+      "feedbackTargetVariable": "信息",
+      "feedbackSupportVariable": "结果",
+      "feedbackMatchedKeywords": [],
+      "feedbackUsedFallback": true,
+      "feedbackAction": "增强主题词和内容相关图像线索",
+      "nextRoundGoal": "保留「更让人想点开」的长处，但让结果更接近「更清楚重点」",
+      "workspaceContext": null
+    },
+    "mappingExplanation": {
+      "ruleVersion": "c18a3eda29",
+      "negativeMappingId": "neg-content-distance",
+      "positiveMappingId": null,
+      "negativeIssue": "离内容太远",
+      "targetVariableLabel": "更清楚重点",
+      "supportVariableLabel": "更有收获感",
+      "preservedVariableLabel": "更让人想点开",
+      "preservedSignal": "更让人想点开",
+      "matchedKeywords": [],
+      "usedFallback": true,
+      "workspaceInjected": false,
+      "summary": "规则 c18a3eda29 将当前反馈归因为「离内容太远」，因此优先把方向往「更清楚重点」修正。",
+      "explanationLines": [
+        "负向问题映射到「离内容太远」",
+        "这轮主改变量是「更清楚重点」",
+        "辅助变量参考「更有收获感」",
+        "修改请求识别为：表达美景吸引力和封面构思教程价值，避免只像普通风景分享",
+        "保留项来自「保留项字段」：保留晚霞、云层和落日带来的夏日氛围感。",
+        "保留信号优先保住「更让人想点开」",
+        "未命中明确关键词，使用默认规则兜底。"
+      ]
+    },
+    "sourceCard": {
+      "cardId": "B",
+      "effectId": "suspense",
+      "directionTypeInternal": "强悬念感",
+      "directionLabelUserFacing": "更让人想点开",
+      "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
+      "coverCopyMain": "你以为是夏日晚霞、云层、落日封面的问题？",
+      "titleOptions": [
+        "最后一抹霞光",
+        "最后一抹霞光，适合这样做封面",
+        "一张天空图也能做出封面感"
+      ],
+      "titleOptionDetails": [
+        {
+          "title": "最后一抹霞光",
+          "sourceType": "manual-review",
+          "sourceLabel": "人工优选",
+          "styleLabel": "人工判断"
+        },
+        {
+          "title": "最后一抹霞光，适合这样做封面",
+          "sourceType": "style-library",
+          "sourceLabel": "风格库",
+          "styleId": "sunset-cover-task",
+          "styleLabel": "晚霞封面任务"
+        },
+        {
+          "title": "一张天空图也能做出封面感",
+          "sourceType": "style-library",
+          "sourceLabel": "风格库",
+          "styleId": "sunset-cover-task",
+          "styleLabel": "晚霞封面任务"
+        }
+      ],
+      "materialKeywords": [
+        "夏日晚霞",
+        "云层",
+        "落日"
+      ],
+      "imageDirection": "保留异常点，不把答案说满",
+      "imageDirectionCandidates": [
+        {
+          "candidateId": "current-asset-optimize",
+          "label": "优化现有素材",
+          "assetSource": "截图",
+          "description": "从截图里裁出异常点，不把全部上下文一次讲完。",
+          "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
+        },
+        {
+          "candidateId": "content-matched-search",
+          "label": "补内容贴合图",
+          "assetSource": "补充图库",
+          "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更让人想点开 方式排版。",
+          "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
+        },
+        {
+          "candidateId": "creative-concept-asset",
+          "label": "做创意概念图",
+          "assetSource": "概念化方向",
+          "description": "先确定一个能承载「好奇」点击机制的主体，再把内容信息补进去。",
+          "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
+        }
+      ],
+      "rankedImageStrategies": [
+        {
+          "candidateId": "current-asset-optimize",
+          "label": "优化现有素材",
+          "assetSource": "截图",
+          "description": "从截图里裁出异常点，不把全部上下文一次讲完。",
+          "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
+          "priorityScore": 4,
+          "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "executionTag": "先优化现有图"
+        },
+        {
+          "candidateId": "creative-concept-asset",
+          "label": "做创意概念图",
+          "assetSource": "概念化方向",
+          "description": "先确定一个能承载「好奇」点击机制的主体，再把内容信息补进去。",
+          "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
+          "priorityScore": 4,
+          "priorityReason": "当前方向更靠「好奇」驱动点击，创意概念图更适合拉开与普通封面的差距。",
+          "executionTag": "先做概念图"
+        },
+        {
+          "candidateId": "content-matched-search",
+          "label": "补内容贴合图",
+          "assetSource": "补充图库",
+          "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更让人想点开 方式排版。",
+          "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
+          "priorityScore": 3,
+          "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
+          "executionTag": "先补贴内容的图"
+        }
+      ],
+      "suggestedAssetType": "截图",
+      "suggestedAssetReason": "当前素材类型与输入状态基本一致，可直接沿用这条路径继续判断。",
+      "assetUsageStatus": "可直接使用",
+      "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
+      "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
+      "primaryAssetActionLabel": "先优化现有图",
+      "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+      "recommendationReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+      "visualStrategy": "保留异常点，不把答案说满",
+      "copyStrategy": "半揭示表达",
+      "compositionStrategy": "单焦点 + 适度留白",
+      "compositionDirection": "单焦点 + 适度留白",
+      "colorMoodDirection": "不要一次把答案讲满，保留异常点的张力。",
+      "clickReason": "更让人想点开，更贴合这条内容当前的点击机制。",
+      "fitReason": "当前内容更靠「好奇」驱动点击",
+      "riskNote": "容易标题党",
+      "boundaryRule": "过虚会让人看不懂",
+      "bestFor": [
+        "反常识内容",
+        "观点型内容",
+        "冷知识"
+      ],
+      "signalMatches": [
+        "偏好里带有「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」这类抓眼诉求"
+      ],
+      "directionSignalChecklist": {
+        "signalGroups": [
+          {
+            "groupId": "content-goal",
+            "groupLabel": "内容目标信号",
+            "signals": [
+              "用户更想先让人停下来点开",
+              "主题存在异常点、未说完空间或反常识角度",
+              "点击前最强驱动力是好奇而不是收益"
+            ]
+          },
+          {
+            "groupId": "asset-fit",
+            "groupLabel": "素材适配信号",
+            "signals": [
+              "现有画面能裁出一个异常点或留白点",
+              "画面不需要讲全，只要先制造停顿",
+              "适合从截图或画面局部里找单焦点"
+            ]
+          },
+          {
+            "groupId": "copy-shape",
+            "groupLabel": "文案与构图信号",
+            "signals": [
+              "文案适合半揭示、反问、留白式表达",
+              "构图适合单焦点和适度留白",
+              "不能第一眼把答案讲满"
+            ]
+          }
+        ],
+        "feedbackTriggers": [
+          "太平",
+          "不够抓眼",
+          "太普通",
+          "想更有好奇心"
+        ],
+        "boundaryRules": [
+          "悬念不能变成标题党",
+          "留白必须贴内容，不是单纯故弄玄虚"
+        ],
+        "matchedSignals": [
+          "用户偏好里已有「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」这类抓眼诉求"
+        ]
+      },
+      "role": "secondary",
+      "actionWorkspace": {
+        "workspaceId": "optimize-current",
+        "workspaceTitle": "优化现有素材",
+        "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
+        "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
         "nextSteps": [
           "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
           "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -2612,308 +2936,13 @@
           }
         ],
         "linkedCardDirection": "更让人想点开"
-      }
-    },
-    "llmDraft": {
-      "provider": "mock",
-      "mode": "first-round",
-      "summary": "这是基于当前规则系统和 Prompt Builder 生成的模拟首轮模型输出。",
-      "highlights": [
-        "你现在不是通用设计工具，而是内容平台封面方向助手。",
-        "第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。",
-        "必须先判断点击机制，再输出方向卡片。",
-        "3 张卡片必须分别体现不同主变量，不允许只是换措辞。",
-        "【输入字段】",
-        "- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。"
-      ],
-      "draftCards": [
-        {
-          "cardId": "A",
-          "label": "更让人想点开",
-          "copy": "夏日晚霞、云层、落日封面真正卡住你的是什么",
-          "reason": "更让人想点开，更贴合这条内容当前的点击机制。"
-        },
-        {
-          "cardId": "B",
-          "label": "更清楚重点",
-          "copy": "夏日晚霞、云层、落日封面先看这一步",
-          "reason": "更清楚重点，更贴合这条内容当前的点击机制。"
-        },
-        {
-          "cardId": "C",
-          "label": "更有收获感",
-          "copy": "夏日晚霞、云层、落日封面的结果差在这里",
-          "reason": "更有收获感，更贴合这条内容当前的点击机制。"
-        }
-      ]
-    }
-  },
-  "refinement": {
-    "ruleMeta": {
-      "source": "local-json",
-      "version": "c18a3eda29",
-      "effectCount": 5,
-      "negativeMappingCount": 5,
-      "positiveMappingCount": 4,
-      "directionSignalCount": 5
-    },
-    "adjustment": {
-      "selectedCardId": "B",
-      "selectedDirectionType": "强信息感",
-      "userFeedbackRaw": "标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。",
-      "preserveElement": "保留晚霞、云层和落日带来的夏日氛围感。",
-      "preserveElementSource": "field",
-      "changeRequest": "表达美景吸引力和封面构思教程价值，避免只像普通风景分享",
-      "changeRequestSource": "feedback",
-      "feedbackPreservedSignal": "更清楚重点",
-      "preservedVariable": "信息",
-      "feedbackMappingId": "neg-content-distance",
-      "feedbackPositiveMappingId": null,
-      "feedbackMappedIssuePrimary": "离内容太远",
-      "feedbackMappedIssueSecondary": "无",
-      "feedbackTargetVariable": "信息",
-      "feedbackSupportVariable": "结果",
-      "feedbackMatchedKeywords": [],
-      "feedbackUsedFallback": true,
-      "feedbackAction": "增强主题词和内容相关图像线索",
-      "nextRoundGoal": "保留「更清楚重点」的长处，但让结果更接近「更清楚重点」",
-      "workspaceContext": null
-    },
-    "mappingExplanation": {
-      "ruleVersion": "c18a3eda29",
-      "negativeMappingId": "neg-content-distance",
-      "positiveMappingId": null,
-      "negativeIssue": "离内容太远",
-      "targetVariableLabel": "更清楚重点",
-      "supportVariableLabel": "更有收获感",
-      "preservedVariableLabel": "更清楚重点",
-      "preservedSignal": "更清楚重点",
-      "matchedKeywords": [],
-      "usedFallback": true,
-      "workspaceInjected": false,
-      "summary": "规则 c18a3eda29 将当前反馈归因为「离内容太远」，因此优先把方向往「更清楚重点」修正。",
-      "explanationLines": [
-        "负向问题映射到「离内容太远」",
-        "这轮主改变量是「更清楚重点」",
-        "辅助变量参考「更有收获感」",
-        "修改请求识别为：表达美景吸引力和封面构思教程价值，避免只像普通风景分享",
-        "保留项来自「保留项字段」：保留晚霞、云层和落日带来的夏日氛围感。",
-        "保留信号优先保住「更清楚重点」",
-        "未命中明确关键词，使用默认规则兜底。"
-      ]
-    },
-    "sourceCard": {
-      "cardId": "B",
-      "effectId": "information",
-      "directionTypeInternal": "强信息感",
-      "directionLabelUserFacing": "更清楚重点",
-      "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
-      "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
-      "titleOptions": [
-        "最后一抹霞光",
-        "最后一抹霞光，适合这样做封面",
-        "一张天空图也能做出封面感"
-      ],
-      "titleOptionDetails": [
-        {
-          "title": "最后一抹霞光",
-          "sourceType": "manual-review",
-          "sourceLabel": "人工优选",
-          "styleLabel": "人工判断"
-        },
-        {
-          "title": "最后一抹霞光，适合这样做封面",
-          "sourceType": "style-library",
-          "sourceLabel": "风格库",
-          "styleId": "sunset-cover-task",
-          "styleLabel": "晚霞封面任务"
-        },
-        {
-          "title": "一张天空图也能做出封面感",
-          "sourceType": "style-library",
-          "sourceLabel": "风格库",
-          "styleId": "sunset-cover-task",
-          "styleLabel": "晚霞封面任务"
-        }
-      ],
-      "materialKeywords": [
-        "夏日晚霞",
-        "云层",
-        "落日"
-      ],
-      "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
-      "imageDirectionCandidates": [
-        {
-          "candidateId": "current-asset-optimize",
-          "label": "优化现有素材",
-          "assetSource": "截图",
-          "description": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
-          "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
-        },
-        {
-          "candidateId": "content-matched-search",
-          "label": "补内容贴合图",
-          "assetSource": "补充图库",
-          "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更清楚重点 方式排版。",
-          "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
-        },
-        {
-          "candidateId": "creative-concept-asset",
-          "label": "做创意概念图",
-          "assetSource": "概念化方向",
-          "description": "先确定一个能承载「看懂」点击机制的主体，再把内容信息补进去。",
-          "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
-        }
-      ],
-      "rankedImageStrategies": [
-        {
-          "candidateId": "current-asset-optimize",
-          "label": "优化现有素材",
-          "assetSource": "截图",
-          "description": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
-          "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
-          "priorityScore": 4,
-          "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-          "executionTag": "先优化现有图"
-        },
-        {
-          "candidateId": "content-matched-search",
-          "label": "补内容贴合图",
-          "assetSource": "补充图库",
-          "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更清楚重点 方式排版。",
-          "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
-          "priorityScore": 3,
-          "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
-          "executionTag": "先补贴内容的图"
-        },
-        {
-          "candidateId": "creative-concept-asset",
-          "label": "做创意概念图",
-          "assetSource": "概念化方向",
-          "description": "先确定一个能承载「看懂」点击机制的主体，再把内容信息补进去。",
-          "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
-          "priorityScore": 2,
-          "priorityReason": "当前方向更靠「看懂」驱动点击，创意概念图更适合拉开与普通封面的差距。",
-          "executionTag": "先做概念图"
-        }
-      ],
-      "suggestedAssetType": "截图",
-      "suggestedAssetReason": "当前素材类型与输入状态基本一致，可直接沿用这条路径继续判断。",
-      "assetUsageStatus": "可直接使用",
-      "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
-      "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
-      "primaryAssetActionLabel": "先优化现有图",
-      "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-      "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。",
-      "colorMoodDirection": "允许一定文字量，但必须先让第一眼看到主题词。",
-      "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。",
-      "fitReason": "当前内容更靠「看懂」驱动点击，内容需要更快讲明白",
-      "riskNote": "容易太平",
-      "boundaryRule": "信息太多会像海报",
-      "bestFor": [
-        "干货总结",
-        "教程步骤",
-        "方法论拆解"
-      ],
-      "signalMatches": [
-        "主题需要更快被看懂",
-        "现有素材适合做清晰信息提炼"
-      ],
-      "directionSignalChecklist": {
-        "signalGroups": [
-          {
-            "groupId": "content-goal",
-            "groupLabel": "内容目标信号",
-            "signals": [
-              "用户更想让人一眼看懂内容讲什么",
-              "内容本身偏方法、清单、步骤、避坑",
-              "点击前最重要的是降低理解门槛"
-            ]
-          },
-          {
-            "groupId": "asset-fit",
-            "groupLabel": "素材适配信号",
-            "signals": [
-              "现有素材是截图或可裁切的信息画面",
-              "画面里已经有可提炼的重点区域",
-              "适合通过放大信息区而不是补氛围图解决问题"
-            ]
-          },
-          {
-            "groupId": "copy-shape",
-            "groupLabel": "文案与构图信号",
-            "signals": [
-              "封面文案应直接点题而不是绕",
-              "标题和封面要一起承担解释作用",
-              "构图优先稳定、清晰、分层明显"
-            ]
-          }
-        ],
-        "feedbackTriggers": [
-          "看不懂",
-          "太抽象",
-          "离内容太远",
-          "重点不清楚"
-        ],
-        "boundaryRules": [
-          "不能为了信息完整把字堆得像海报",
-          "清楚重点不等于把所有信息一次讲完"
-        ],
-        "matchedSignals": [
-          "当前内容需要更快讲明白",
-          "现有素材是截图，更适合先做信息提炼",
-          "内容类型偏教程/清单，更适合强信息方向"
-        ]
-      },
-      "role": "secondary",
-      "actionWorkspace": {
-        "workspaceId": "optimize-current",
-        "workspaceTitle": "优化现有素材",
-        "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-        "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-        "nextSteps": [
-          "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
-          "优先裁掉和主题无关、只会分散注意力的边角信息。",
-          "让封面大字和主体形成明确主次，不要平均分配注意力。"
-        ],
-        "checkpoints": [
-          "第一眼焦点是否单一",
-          "现有图里最值得保留的主体是否明确",
-          "标题区是否压住了无关背景噪音"
-        ],
-        "suggestedInputs": [
-          "描述需要保留的主体区域",
-          "描述需要裁掉或弱化的部分",
-          "说明当前图最不满意的地方"
-        ],
-        "inputSchema": [
-          {
-            "fieldId": "keep_subject",
-            "label": "想保留的主体",
-            "inputType": "text",
-            "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
-          },
-          {
-            "fieldId": "remove_noise",
-            "label": "想弱化或裁掉的部分",
-            "inputType": "textarea",
-            "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
-          },
-          {
-            "fieldId": "current_problem",
-            "label": "当前图最不满意的地方",
-            "inputType": "textarea",
-            "placeholder": "例如：太平、不聚焦、不够像热门封面"
-          }
-        ],
-        "linkedCardDirection": "更清楚重点"
       },
       "actionWorkspaces": [
         {
           "workspaceId": "optimize-current",
           "workspaceTitle": "优化现有素材",
           "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-          "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+          "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
           "nextSteps": [
             "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
             "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -2949,13 +2978,13 @@
               "placeholder": "例如：太平、不聚焦、不够像热门封面"
             }
           ],
-          "linkedCardDirection": "更清楚重点"
+          "linkedCardDirection": "更让人想点开"
         },
         {
           "workspaceId": "search-matched",
           "workspaceTitle": "补内容贴合图",
           "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-          "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+          "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
           "nextSteps": [
             "先把内容主题拆成一个最容易被看懂的主体或场景。",
             "优先找能直接解释主题的图，而不是只好看但不说事的图。",
@@ -2991,13 +3020,13 @@
               "placeholder": "例如：让人更想知道为什么忙却没结果"
             }
           ],
-          "linkedCardDirection": "更清楚重点"
+          "linkedCardDirection": "更让人想点开"
         },
         {
           "workspaceId": "concept-first",
           "workspaceTitle": "做创意概念图",
           "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-          "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+          "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
           "nextSteps": [
             "先决定这条内容的主点击点更适合被哪个主体承载。",
             "先想单一主体和单一冲突，不要一开始堆太多元素。",
@@ -3033,30 +3062,30 @@
               "placeholder": "例如：太标题党、太油腻、太像拼贴营销图"
             }
           ],
-          "linkedCardDirection": "更清楚重点"
+          "linkedCardDirection": "更让人想点开"
         }
       ]
     },
     "secondRound": {
       "basedOnCardId": "B",
       "preservedElement": "保留晚霞、云层和落日带来的夏日氛围感。",
-      "preservedVariable": "信息",
+      "preservedVariable": "悬念",
       "changedVariable": "信息",
       "changedAction": "增强主题词和内容相关图像线索",
-      "nextRoundGoal": "保留「更清楚重点」的长处，但让结果更接近「更清楚重点」",
+      "nextRoundGoal": "保留「更让人想点开」的长处，但让结果更接近「更清楚重点」",
       "refinedCard": {
-        "cardTitle": "更清楚重点 · 第二轮优化",
+        "cardTitle": "更让人想点开 · 第二轮优化",
         "directionDescription": "保留清楚重点，同时让天空留白、晚霞情绪和封面教程任务一起成立。",
-        "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步 / 重点更清楚，天空情绪别丢",
+        "coverCopyMain": "你以为是夏日晚霞、云层、落日封面的问题？ / 重点更清楚，天空情绪别丢",
         "titleOptions": [
           "最后一抹霞光，适合这样做封面",
           "一张天空图也能做出封面感",
           "夏日晚霞照别只发原图"
         ],
-        "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；裁切时保留天空留白、云层方向和落日色彩，把标题放在低干扰区域。",
-        "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；用天空留白承接短标题，地平线或暗部区域负责稳定画面。",
-        "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。 这轮重点解决「离内容太远」。",
-        "riskNote": "容易太平"
+        "imageDirection": "保留异常点，不把答案说满；裁切时保留天空留白、云层方向和落日色彩，把标题放在低干扰区域。",
+        "compositionDirection": "单焦点 + 适度留白；用天空留白承接短标题，地平线或暗部区域负责稳定画面。",
+        "clickReason": "更让人想点开，更贴合这条内容当前的点击机制。 这轮重点解决「离内容太远」。",
+        "riskNote": "容易标题党"
       },
       "optionalTweaks": [
         "如果还想更抓眼，可以再提高异常点的集中度。",
@@ -3066,8 +3095,8 @@
   },
   "promptPreviewSecondRound": {
     "mode": "full",
-    "firstRoundPrompt": "你现在不是通用设计工具，而是内容平台封面方向助手。\n第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。\n必须先判断点击机制，再输出方向卡片。\n3 张卡片必须分别体现不同主变量，不允许只是换措辞。\n\n【输入字段】\n- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。\n- 内容目标：让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。\n- 素材类型：截图\n- 平台：抖音\n- 内容类型：教程\n- 主点击机制：好奇\n- 是否有明确结果：中\n- 是否有明显反差：弱\n- 是否有悬念空间：弱\n- 是否需要清晰讲明白：中\n- 是否需要专业可信感：中\n- 用户偏好：小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。\n- 素材备注：已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。\n\n【已排序方向】\n1. 强悬念感｜内容分=4｜素材分=2｜平台分=4｜适配理由=当前内容更靠「好奇」驱动点击｜风险=容易标题党\n2. 强信息感｜内容分=2｜素材分=4｜平台分=3｜适配理由=当前内容更靠「看懂」驱动点击，内容需要更快讲明白｜风险=容易太平\n3. 强结果感｜内容分=2｜素材分=3｜平台分=4｜适配理由=当前内容更靠「收益」驱动点击，内容里有明确收获或结果｜风险=容易像承诺过猛\n\n【第一轮输出格式】\n请输出 3 张方向卡片，每张卡片都必须包含：\n- 方向标签\n- 一句话为什么适合\n- 封面大字建议\n- 1-2 个标题建议\n- 配图方向\n- 构图建议\n- 点击逻辑\n- 风险提醒",
-    "secondRoundPrompt": "你现在进入第二轮优化，不要重新发散成 3 个方向。\n只保留用户已经认可的主方向，只调整 1 个主变量。\n用户当前选中：强信息感\n用户原话反馈：标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。\n这轮必须保留：保留晚霞、云层和落日带来的夏日氛围感。\n用户修改请求：表达美景吸引力和封面构思教程价值，避免只像普通风景分享\n主问题映射：离内容太远\n目标变量：信息\n改单动作：增强主题词和内容相关图像线索\n下一轮目标：保留「更清楚重点」的长处，但让结果更接近「更清楚重点」\n\n\n\n【第二轮输出格式】\n请只输出 1 张优化后的主卡，并包含：\n- 这次保留了什么\n- 这次重点改了什么\n- 新的方向描述\n- 新的封面大字建议\n- 新的标题建议\n- 新的配图方向\n- 新的构图建议\n- 为什么现在更贴需求\n- 1 个可选微调方向"
+    "firstRoundPrompt": "你现在不是通用设计工具，而是内容平台封面方向助手。\n第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。\n必须先判断点击机制，再输出方向卡片。\n3 张卡片必须分别体现不同主变量，不允许只是换措辞。\n\n【输入字段】\n- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。\n- 内容目标：让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。\n- 素材类型：截图\n- 平台：抖音\n- 内容类型：教程\n- 主点击机制：好奇\n- 是否有明确结果：中\n- 是否有明显反差：弱\n- 是否有悬念空间：弱\n- 是否需要清晰讲明白：中\n- 是否需要专业可信感：中\n- 用户偏好：小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。\n- 素材备注：已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。\n\n【已排序方向】\n1. 强质感感｜内容分=5｜素材分=3｜平台分=5｜适配理由=当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度｜风险=容易太平\n2. 强悬念感｜内容分=5｜素材分=2｜平台分=4｜适配理由=当前内容更靠「好奇」驱动点击｜风险=容易标题党\n3. 强信息感｜内容分=2｜素材分=4｜平台分=3｜适配理由=当前内容更靠「看懂」驱动点击，内容需要更快讲明白｜风险=容易太平\n\n【第一轮输出格式】\n请输出 3 张方向卡片，每张卡片都必须包含：\n- 方向标签\n- 一句话为什么适合\n- 封面大字建议\n- 1-2 个标题建议\n- 配图方向\n- 构图建议\n- 点击逻辑\n- 风险提醒",
+    "secondRoundPrompt": "你现在进入第二轮优化，不要重新发散成 3 个方向。\n只保留用户已经认可的主方向，只调整 1 个主变量。\n用户当前选中：强悬念感\n用户原话反馈：标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。\n这轮必须保留：保留晚霞、云层和落日带来的夏日氛围感。\n用户修改请求：表达美景吸引力和封面构思教程价值，避免只像普通风景分享\n主问题映射：离内容太远\n目标变量：信息\n改单动作：增强主题词和内容相关图像线索\n下一轮目标：保留「更让人想点开」的长处，但让结果更接近「更清楚重点」\n\n\n\n【第二轮输出格式】\n请只输出 1 张优化后的主卡，并包含：\n- 这次保留了什么\n- 这次重点改了什么\n- 新的方向描述\n- 新的封面大字建议\n- 新的标题建议\n- 新的配图方向\n- 新的构图建议\n- 为什么现在更贴需求\n- 1 个可选微调方向"
   },
   "llmDraftSecondRound": {
     "provider": "mock",
@@ -3080,8 +3109,8 @@
     },
     "promptPreview": {
       "mode": "full",
-      "firstRoundPrompt": "你现在不是通用设计工具，而是内容平台封面方向助手。\n第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。\n必须先判断点击机制，再输出方向卡片。\n3 张卡片必须分别体现不同主变量，不允许只是换措辞。\n\n【输入字段】\n- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。\n- 内容目标：让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。\n- 素材类型：截图\n- 平台：抖音\n- 内容类型：教程\n- 主点击机制：好奇\n- 是否有明确结果：中\n- 是否有明显反差：弱\n- 是否有悬念空间：弱\n- 是否需要清晰讲明白：中\n- 是否需要专业可信感：中\n- 用户偏好：小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。\n- 素材备注：已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。\n\n【已排序方向】\n1. 强悬念感｜内容分=4｜素材分=2｜平台分=4｜适配理由=当前内容更靠「好奇」驱动点击｜风险=容易标题党\n2. 强信息感｜内容分=2｜素材分=4｜平台分=3｜适配理由=当前内容更靠「看懂」驱动点击，内容需要更快讲明白｜风险=容易太平\n3. 强结果感｜内容分=2｜素材分=3｜平台分=4｜适配理由=当前内容更靠「收益」驱动点击，内容里有明确收获或结果｜风险=容易像承诺过猛\n\n【第一轮输出格式】\n请输出 3 张方向卡片，每张卡片都必须包含：\n- 方向标签\n- 一句话为什么适合\n- 封面大字建议\n- 1-2 个标题建议\n- 配图方向\n- 构图建议\n- 点击逻辑\n- 风险提醒",
-      "secondRoundPrompt": "你现在进入第二轮优化，不要重新发散成 3 个方向。\n只保留用户已经认可的主方向，只调整 1 个主变量。\n用户当前选中：强信息感\n用户原话反馈：标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。\n这轮必须保留：保留晚霞、云层和落日带来的夏日氛围感。\n用户修改请求：表达美景吸引力和封面构思教程价值，避免只像普通风景分享\n主问题映射：离内容太远\n目标变量：信息\n改单动作：增强主题词和内容相关图像线索\n下一轮目标：保留「更清楚重点」的长处，但让结果更接近「更清楚重点」\n\n\n\n【第二轮输出格式】\n请只输出 1 张优化后的主卡，并包含：\n- 这次保留了什么\n- 这次重点改了什么\n- 新的方向描述\n- 新的封面大字建议\n- 新的标题建议\n- 新的配图方向\n- 新的构图建议\n- 为什么现在更贴需求\n- 1 个可选微调方向"
+      "firstRoundPrompt": "你现在不是通用设计工具，而是内容平台封面方向助手。\n第一轮目标不是直接生成最终封面，而是输出 3 张有明显差异的方向卡片。\n必须先判断点击机制，再输出方向卡片。\n3 张卡片必须分别体现不同主变量，不允许只是换措辞。\n\n【输入字段】\n- 内容主题：用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。\n- 内容目标：让用户一眼知道这是一篇 AI 封面制作教程，并跟着工具快速做出更专业的小红书封面。\n- 素材类型：截图\n- 平台：抖音\n- 内容类型：教程\n- 主点击机制：好奇\n- 是否有明确结果：中\n- 是否有明显反差：弱\n- 是否有悬念空间：弱\n- 是否需要清晰讲明白：中\n- 是否需要专业可信感：中\n- 用户偏好：小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。\n- 素材备注：已补齐 P0 输入字段：来源截图路径、内容主题、素材描述、内容目标。原始文件来自用户提供的 IMG_0486.HEIC、IMG_0487.HEIC 与 IMG_0488.HEIC。\n\n【已排序方向】\n1. 强质感感｜内容分=5｜素材分=3｜平台分=5｜适配理由=当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度｜风险=容易太平\n2. 强悬念感｜内容分=5｜素材分=2｜平台分=4｜适配理由=当前内容更靠「好奇」驱动点击｜风险=容易标题党\n3. 强信息感｜内容分=2｜素材分=4｜平台分=3｜适配理由=当前内容更靠「看懂」驱动点击，内容需要更快讲明白｜风险=容易太平\n\n【第一轮输出格式】\n请输出 3 张方向卡片，每张卡片都必须包含：\n- 方向标签\n- 一句话为什么适合\n- 封面大字建议\n- 1-2 个标题建议\n- 配图方向\n- 构图建议\n- 点击逻辑\n- 风险提醒",
+      "secondRoundPrompt": "你现在进入第二轮优化，不要重新发散成 3 个方向。\n只保留用户已经认可的主方向，只调整 1 个主变量。\n用户当前选中：强悬念感\n用户原话反馈：标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。\n这轮必须保留：保留晚霞、云层和落日带来的夏日氛围感。\n用户修改请求：表达美景吸引力和封面构思教程价值，避免只像普通风景分享\n主问题映射：离内容太远\n目标变量：信息\n改单动作：增强主题词和内容相关图像线索\n下一轮目标：保留「更让人想点开」的长处，但让结果更接近「更清楚重点」\n\n\n\n【第二轮输出格式】\n请只输出 1 张优化后的主卡，并包含：\n- 这次保留了什么\n- 这次重点改了什么\n- 新的方向描述\n- 新的封面大字建议\n- 新的标题建议\n- 新的配图方向\n- 新的构图建议\n- 为什么现在更贴需求\n- 1 个可选微调方向"
     },
     "analysis": {
       "fields": {
@@ -3139,13 +3168,79 @@
       },
       "rankedDirections": [
         {
+          "directionId": "texture",
+          "directionType": "强质感感",
+          "directionRole": "primary",
+          "fitScoreContent": 5,
+          "fitScoreAsset": 3,
+          "fitScorePlatform": 5,
+          "fitScoreTotal": 13,
+          "directionFitReason": "当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度",
+          "directionRisk": "容易太平",
+          "directionBoundary": "高级但不够点开",
+          "signalMatches": [
+            "晚霞、云层和天空留白适合建立更专业的封面质感",
+            "内容需要可信度和专业感支撑",
+            "用户偏好更靠近「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」的克制表达"
+          ],
+          "directionSignalChecklist": {
+            "signalGroups": [
+              {
+                "groupId": "content-goal",
+                "groupLabel": "内容目标信号",
+                "signals": [
+                  "用户更在意高级感、专业感和可信度",
+                  "内容需要建立判断力或可信表达",
+                  "长期表达比一次性刺激点击更重要"
+                ]
+              },
+              {
+                "groupId": "asset-fit",
+                "groupLabel": "素材适配信号",
+                "signals": [
+                  "现有素材可通过裁切、减噪、统一氛围来变稳",
+                  "画面适合强调秩序感、留白、完成度",
+                  "如果补图，优先找质感完整的主体而不是花哨元素"
+                ]
+              },
+              {
+                "groupId": "copy-shape",
+                "groupLabel": "文案与构图信号",
+                "signals": [
+                  "文案应克制但有分量，不要太油",
+                  "构图要稳，主体与背景关系要干净",
+                  "画面完成度比刺激元素更重要"
+                ]
+              }
+            ],
+            "feedbackTriggers": [
+              "更高级",
+              "更专业",
+              "别像营销号",
+              "更稳一点"
+            ],
+            "boundaryRules": [
+              "高级感不能把点击欲降得太低",
+              "克制表达也要保留一个可点开的钩子"
+            ],
+            "matchedSignals": [
+              "内容需要更强可信度和专业感",
+              "用户明确提到了更稳、更高级一类偏好"
+            ]
+          },
+          "visualStrategy": "保留天空留白、云层方向和落日色彩",
+          "copyStrategy": "情绪记忆点 + 封面构思任务",
+          "compositionStrategy": "标题放在低干扰天空区，地平线和暗部稳定画面",
+          "cardId": "A"
+        },
+        {
           "directionId": "suspense",
           "directionType": "强悬念感",
-          "directionRole": "primary",
-          "fitScoreContent": 4,
+          "directionRole": "secondary",
+          "fitScoreContent": 5,
           "fitScoreAsset": 2,
           "fitScorePlatform": 4,
-          "fitScoreTotal": 10,
+          "fitScoreTotal": 11,
           "directionFitReason": "当前内容更靠「好奇」驱动点击",
           "directionRisk": "容易标题党",
           "directionBoundary": "过虚会让人看不懂",
@@ -3199,7 +3294,7 @@
           "visualStrategy": "保留异常点，不把答案说满",
           "copyStrategy": "半揭示表达",
           "compositionStrategy": "单焦点 + 适度留白",
-          "cardId": "A"
+          "cardId": "B"
         },
         {
           "directionId": "information",
@@ -3265,82 +3360,17 @@
           "visualStrategy": "突出信息块和清晰主体",
           "copyStrategy": "主题词前置，直接点题",
           "compositionStrategy": "中心信息区稳定布局",
-          "cardId": "B"
-        },
-        {
-          "directionId": "result",
-          "directionType": "强结果感",
-          "directionRole": "secondary",
-          "fitScoreContent": 2,
-          "fitScoreAsset": 3,
-          "fitScorePlatform": 4,
-          "fitScoreTotal": 9,
-          "directionFitReason": "当前内容更靠「收益」驱动点击，内容里有明确收获或结果",
-          "directionRisk": "容易像承诺过猛",
-          "directionBoundary": "内容承接不住会显空",
-          "signalMatches": [
-            "内容本身存在明确收益或变化",
-            "目标表达里已经带有结果导向"
-          ],
-          "directionSignalChecklist": {
-            "signalGroups": [
-              {
-                "groupId": "content-goal",
-                "groupLabel": "内容目标信号",
-                "signals": [
-                  "用户更关心点开后能获得什么结果",
-                  "内容存在明确收益、变化、完成态",
-                  "主题适合强调结果而不是问题本身"
-                ]
-              },
-              {
-                "groupId": "asset-fit",
-                "groupLabel": "素材适配信号",
-                "signals": [
-                  "素材里能提炼结果页、完成态、前后变化",
-                  "即使没有现成结果图，也能想象明确收获画面",
-                  "适合把收益放到第一视觉中心"
-                ]
-              },
-              {
-                "groupId": "copy-shape",
-                "groupLabel": "文案与构图信号",
-                "signals": [
-                  "文案适合使用收益词、结果词、变化词",
-                  "构图适合突出结果区域或前后差异",
-                  "用户需要感到这条内容值得花时间"
-                ]
-              }
-            ],
-            "feedbackTriggers": [
-              "没收获感",
-              "价值点不明显",
-              "不值得点",
-              "没结果"
-            ],
-            "boundaryRules": [
-              "收益表达不能承诺过猛",
-              "结果感必须和内容承接得住"
-            ],
-            "matchedSignals": [
-              "内容目标里已经带明确结果导向",
-              "用户描述了希望用户获得什么收获"
-            ]
-          },
-          "visualStrategy": "放大结果状态或变化感",
-          "copyStrategy": "收益词前置",
-          "compositionStrategy": "让结果成为视觉中心",
           "cardId": "C"
         }
       ],
       "cards": [
         {
           "cardId": "A",
-          "effectId": "suspense",
-          "directionTypeInternal": "强悬念感",
-          "directionLabelUserFacing": "更让人想点开",
-          "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
-          "coverCopyMain": "夏日晚霞、云层、落日封面真正卡住你的是什么",
+          "effectId": "texture",
+          "directionTypeInternal": "强质感感",
+          "directionLabelUserFacing": "更高级专业",
+          "directionDescription": "用克制、秩序感和完成度建立可信度，而不是单纯刺激点击。 当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度。",
+          "coverCopyMain": "真正拉开夏日晚霞、云层、落日封面差距的是这点",
           "titleOptions": [
             "最后一抹霞光",
             "最后一抹霞光，适合这样做封面",
@@ -3373,7 +3403,346 @@
             "云层",
             "落日"
           ],
-          "imageDirection": "从截图里裁出异常点，不把全部上下文一次讲完。",
+          "imageDirection": "优先保留天空留白、云层方向和落日色彩，把标题放进低干扰区域。",
+          "imageDirectionCandidates": [
+            {
+              "candidateId": "current-asset-optimize",
+              "label": "优化现有素材",
+              "assetSource": "截图",
+              "description": "减少杂乱界面，只保留最有质感的局部与秩序感。",
+              "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
+            },
+            {
+              "candidateId": "content-matched-search",
+              "label": "补内容贴合图",
+              "assetSource": "补充图库",
+              "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更高级专业 方式排版。",
+              "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
+            },
+            {
+              "candidateId": "creative-concept-asset",
+              "label": "做创意概念图",
+              "assetSource": "概念化方向",
+              "description": "先确定一个能承载「信任」点击机制的主体，再把内容信息补进去。",
+              "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
+            }
+          ],
+          "rankedImageStrategies": [
+            {
+              "candidateId": "current-asset-optimize",
+              "label": "优化现有素材",
+              "assetSource": "截图",
+              "description": "减少杂乱界面，只保留最有质感的局部与秩序感。",
+              "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
+              "priorityScore": 4,
+              "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+              "executionTag": "先优化现有图"
+            },
+            {
+              "candidateId": "content-matched-search",
+              "label": "补内容贴合图",
+              "assetSource": "补充图库",
+              "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更高级专业 方式排版。",
+              "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
+              "priorityScore": 3,
+              "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
+              "executionTag": "先补贴内容的图"
+            },
+            {
+              "candidateId": "creative-concept-asset",
+              "label": "做创意概念图",
+              "assetSource": "概念化方向",
+              "description": "先确定一个能承载「信任」点击机制的主体，再把内容信息补进去。",
+              "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
+              "priorityScore": 2,
+              "priorityReason": "当前方向更靠「信任」驱动点击，创意概念图更适合拉开与普通封面的差距。",
+              "executionTag": "先做概念图"
+            }
+          ],
+          "suggestedAssetType": "截图",
+          "suggestedAssetReason": "当前素材类型与输入状态基本一致，可直接沿用这条路径继续判断。",
+          "assetUsageStatus": "可直接使用",
+          "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
+          "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
+          "primaryAssetActionLabel": "先优化现有图",
+          "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "recommendationReason": "素材里已经有「夏日晚霞、云层、落日」这类情绪画面，适合用留白、色彩和标题区做得更专业，避免只像普通风景分享。",
+          "visualStrategy": "保留天空留白、云层方向和落日色彩",
+          "copyStrategy": "情绪记忆点 + 封面构思任务",
+          "compositionStrategy": "标题放在低干扰天空区，地平线和暗部稳定画面",
+          "compositionDirection": "标题放在低干扰天空区，地平线和暗部稳定画面",
+          "colorMoodDirection": "减少浮夸元素，让画面像被认真设计过。",
+          "clickReason": "更高级专业，更贴合这条内容当前的点击机制。",
+          "fitReason": "当前内容更靠「信任」驱动点击，晚霞和天空素材更依赖留白、色彩和完成度建立专业感，用户更在意专业感和可信度",
+          "riskNote": "容易太平",
+          "boundaryRule": "高级但不够点开",
+          "bestFor": [
+            "专业判断",
+            "审美导向内容",
+            "成熟表达"
+          ],
+          "signalMatches": [
+            "晚霞、云层和天空留白适合建立更专业的封面质感",
+            "内容需要可信度和专业感支撑",
+            "用户偏好更靠近「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」的克制表达"
+          ],
+          "directionSignalChecklist": {
+            "signalGroups": [
+              {
+                "groupId": "content-goal",
+                "groupLabel": "内容目标信号",
+                "signals": [
+                  "用户更在意高级感、专业感和可信度",
+                  "内容需要建立判断力或可信表达",
+                  "长期表达比一次性刺激点击更重要"
+                ]
+              },
+              {
+                "groupId": "asset-fit",
+                "groupLabel": "素材适配信号",
+                "signals": [
+                  "现有素材可通过裁切、减噪、统一氛围来变稳",
+                  "画面适合强调秩序感、留白、完成度",
+                  "如果补图，优先找质感完整的主体而不是花哨元素"
+                ]
+              },
+              {
+                "groupId": "copy-shape",
+                "groupLabel": "文案与构图信号",
+                "signals": [
+                  "文案应克制但有分量，不要太油",
+                  "构图要稳，主体与背景关系要干净",
+                  "画面完成度比刺激元素更重要"
+                ]
+              }
+            ],
+            "feedbackTriggers": [
+              "更高级",
+              "更专业",
+              "别像营销号",
+              "更稳一点"
+            ],
+            "boundaryRules": [
+              "高级感不能把点击欲降得太低",
+              "克制表达也要保留一个可点开的钩子"
+            ],
+            "matchedSignals": [
+              "内容需要更强可信度和专业感",
+              "用户明确提到了更稳、更高级一类偏好"
+            ]
+          },
+          "role": "primary",
+          "actionWorkspace": {
+            "workspaceId": "optimize-current",
+            "workspaceTitle": "优化现有素材",
+            "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+            "nextSteps": [
+              "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
+              "优先裁掉和主题无关、只会分散注意力的边角信息。",
+              "让封面大字和主体形成明确主次，不要平均分配注意力。"
+            ],
+            "checkpoints": [
+              "第一眼焦点是否单一",
+              "现有图里最值得保留的主体是否明确",
+              "标题区是否压住了无关背景噪音"
+            ],
+            "suggestedInputs": [
+              "描述需要保留的主体区域",
+              "描述需要裁掉或弱化的部分",
+              "说明当前图最不满意的地方"
+            ],
+            "inputSchema": [
+              {
+                "fieldId": "keep_subject",
+                "label": "想保留的主体",
+                "inputType": "text",
+                "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
+              },
+              {
+                "fieldId": "remove_noise",
+                "label": "想弱化或裁掉的部分",
+                "inputType": "textarea",
+                "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
+              },
+              {
+                "fieldId": "current_problem",
+                "label": "当前图最不满意的地方",
+                "inputType": "textarea",
+                "placeholder": "例如：太平、不聚焦、不够像热门封面"
+              }
+            ],
+            "linkedCardDirection": "更高级专业"
+          },
+          "actionWorkspaces": [
+            {
+              "workspaceId": "optimize-current",
+              "workspaceTitle": "优化现有素材",
+              "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+              "nextSteps": [
+                "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
+                "优先裁掉和主题无关、只会分散注意力的边角信息。",
+                "让封面大字和主体形成明确主次，不要平均分配注意力。"
+              ],
+              "checkpoints": [
+                "第一眼焦点是否单一",
+                "现有图里最值得保留的主体是否明确",
+                "标题区是否压住了无关背景噪音"
+              ],
+              "suggestedInputs": [
+                "描述需要保留的主体区域",
+                "描述需要裁掉或弱化的部分",
+                "说明当前图最不满意的地方"
+              ],
+              "inputSchema": [
+                {
+                  "fieldId": "keep_subject",
+                  "label": "想保留的主体",
+                  "inputType": "text",
+                  "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
+                },
+                {
+                  "fieldId": "remove_noise",
+                  "label": "想弱化或裁掉的部分",
+                  "inputType": "textarea",
+                  "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
+                },
+                {
+                  "fieldId": "current_problem",
+                  "label": "当前图最不满意的地方",
+                  "inputType": "textarea",
+                  "placeholder": "例如：太平、不聚焦、不够像热门封面"
+                }
+              ],
+              "linkedCardDirection": "更高级专业"
+            },
+            {
+              "workspaceId": "search-matched",
+              "workspaceTitle": "补内容贴合图",
+              "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+              "nextSteps": [
+                "先把内容主题拆成一个最容易被看懂的主体或场景。",
+                "优先找能直接解释主题的图，而不是只好看但不说事的图。",
+                "找到图后再决定文字放哪一侧，避免先排版再硬找图。"
+              ],
+              "checkpoints": [
+                "补的图是否比当前图更贴内容",
+                "新图是否更容易承载当前点击机制",
+                "是否能明显降低“普通、太平、不贴内容”的问题"
+              ],
+              "suggestedInputs": [
+                "写出这条内容最适合出现的人物/物体/场景",
+                "写出需要避免的图像风格",
+                "写出补图后需要强化的点击点"
+              ],
+              "inputSchema": [
+                {
+                  "fieldId": "desired_subject",
+                  "label": "最适合补什么主体/场景",
+                  "inputType": "text",
+                  "placeholder": "例如：疲惫的人、待办清单、时间被占满的桌面场景"
+                },
+                {
+                  "fieldId": "avoid_style",
+                  "label": "需要避免的图像风格",
+                  "inputType": "textarea",
+                  "placeholder": "例如：太廉价、太鸡汤、太营销号、太像素材库海报"
+                },
+                {
+                  "fieldId": "strengthen_click_point",
+                  "label": "补图后最想强化的点击点",
+                  "inputType": "textarea",
+                  "placeholder": "例如：让人更想知道为什么忙却没结果"
+                }
+              ],
+              "linkedCardDirection": "更高级专业"
+            },
+            {
+              "workspaceId": "concept-first",
+              "workspaceTitle": "做创意概念图",
+              "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+              "nextSteps": [
+                "先决定这条内容的主点击点更适合被哪个主体承载。",
+                "先想单一主体和单一冲突，不要一开始堆太多元素。",
+                "先把概念方向跑通，再决定要不要补真实图或走生图。"
+              ],
+              "checkpoints": [
+                "主体是否足够单一",
+                "概念是否和内容真实相关",
+                "是否比普通截图更有记忆点"
+              ],
+              "suggestedInputs": [
+                "写出第一眼需要呈现的主体",
+                "写出主体需要传达的情绪或冲突",
+                "写出需要避免的廉价感或营销号感"
+              ],
+              "inputSchema": [
+                {
+                  "fieldId": "first_glance_subject",
+                  "label": "第一眼最想让用户看到的主体",
+                  "inputType": "text",
+                  "placeholder": "例如：被时间追着跑的人、写满叉号的计划表、夸张的忙碌动作"
+                },
+                {
+                  "fieldId": "emotion_or_conflict",
+                  "label": "主体要传达的情绪或冲突",
+                  "inputType": "textarea",
+                  "placeholder": "例如：越忙越没结果、表面努力和真实低效之间的反差"
+                },
+                {
+                  "fieldId": "avoid_cheapness",
+                  "label": "最想避免的廉价感",
+                  "inputType": "textarea",
+                  "placeholder": "例如：太标题党、太油腻、太像拼贴营销图"
+                }
+              ],
+              "linkedCardDirection": "更高级专业"
+            }
+          ]
+        },
+        {
+          "cardId": "B",
+          "effectId": "suspense",
+          "directionTypeInternal": "强悬念感",
+          "directionLabelUserFacing": "更让人想点开",
+          "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
+          "coverCopyMain": "你以为是夏日晚霞、云层、落日封面的问题？",
+          "titleOptions": [
+            "最后一抹霞光",
+            "最后一抹霞光，适合这样做封面",
+            "一张天空图也能做出封面感"
+          ],
+          "titleOptionDetails": [
+            {
+              "title": "最后一抹霞光",
+              "sourceType": "manual-review",
+              "sourceLabel": "人工优选",
+              "styleLabel": "人工判断"
+            },
+            {
+              "title": "最后一抹霞光，适合这样做封面",
+              "sourceType": "style-library",
+              "sourceLabel": "风格库",
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
+            },
+            {
+              "title": "一张天空图也能做出封面感",
+              "sourceType": "style-library",
+              "sourceLabel": "风格库",
+              "styleId": "sunset-cover-task",
+              "styleLabel": "晚霞封面任务"
+            }
+          ],
+          "materialKeywords": [
+            "夏日晚霞",
+            "云层",
+            "落日"
+          ],
+          "imageDirection": "保留异常点，不把答案说满",
           "imageDirectionCandidates": [
             {
               "candidateId": "current-asset-optimize",
@@ -3405,7 +3774,7 @@
               "description": "从截图里裁出异常点，不把全部上下文一次讲完。",
               "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
               "priorityScore": 4,
-              "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "executionTag": "先优化现有图"
             },
             {
@@ -3435,8 +3804,12 @@
           "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
           "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
           "primaryAssetActionLabel": "先优化现有图",
-          "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-          "compositionDirection": "单焦点 + 适度留白，先让人停住再说。",
+          "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "recommendationReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "visualStrategy": "保留异常点，不把答案说满",
+          "copyStrategy": "半揭示表达",
+          "compositionStrategy": "单焦点 + 适度留白",
+          "compositionDirection": "单焦点 + 适度留白",
           "colorMoodDirection": "不要一次把答案讲满，保留异常点的张力。",
           "clickReason": "更让人想点开，更贴合这条内容当前的点击机制。",
           "fitReason": "当前内容更靠「好奇」驱动点击",
@@ -3494,12 +3867,12 @@
               "用户偏好里已有「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」这类抓眼诉求"
             ]
           },
-          "role": "primary",
+          "role": "secondary",
           "actionWorkspace": {
             "workspaceId": "optimize-current",
             "workspaceTitle": "优化现有素材",
             "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
               "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -3542,7 +3915,7 @@
               "workspaceId": "optimize-current",
               "workspaceTitle": "优化现有素材",
               "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
                 "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -3584,7 +3957,7 @@
               "workspaceId": "search-matched",
               "workspaceTitle": "补内容贴合图",
               "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先把内容主题拆成一个最容易被看懂的主体或场景。",
                 "优先找能直接解释主题的图，而不是只好看但不说事的图。",
@@ -3626,7 +3999,7 @@
               "workspaceId": "concept-first",
               "workspaceTitle": "做创意概念图",
               "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先决定这条内容的主点击点更适合被哪个主体承载。",
                 "先想单一主体和单一冲突，不要一开始堆太多元素。",
@@ -3667,12 +4040,12 @@
           ]
         },
         {
-          "cardId": "B",
+          "cardId": "C",
           "effectId": "information",
           "directionTypeInternal": "强信息感",
           "directionLabelUserFacing": "更清楚重点",
           "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
-          "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
+          "coverCopyMain": "夏日晚霞、云层、落日封面别再做错了",
           "titleOptions": [
             "最后一抹霞光",
             "最后一抹霞光，适合这样做封面",
@@ -3705,7 +4078,7 @@
             "云层",
             "落日"
           ],
-          "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
+          "imageDirection": "突出信息块和清晰主体",
           "imageDirectionCandidates": [
             {
               "candidateId": "current-asset-optimize",
@@ -3737,7 +4110,7 @@
               "description": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
               "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
               "priorityScore": 4,
-              "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "executionTag": "先优化现有图"
             },
             {
@@ -3767,8 +4140,12 @@
           "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
           "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
           "primaryAssetActionLabel": "先优化现有图",
-          "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-          "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。",
+          "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+          "recommendationReason": "这张卡优先解决看不清主题的问题，适合把教程任务、封面大字和素材主体先讲明白。",
+          "visualStrategy": "突出信息块和清晰主体",
+          "copyStrategy": "主题词前置，直接点题",
+          "compositionStrategy": "中心信息区稳定布局",
+          "compositionDirection": "中心信息区稳定布局",
           "colorMoodDirection": "允许一定文字量，但必须先让第一眼看到主题词。",
           "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。",
           "fitReason": "当前内容更靠「看懂」驱动点击，内容需要更快讲明白",
@@ -3834,7 +4211,7 @@
             "workspaceId": "optimize-current",
             "workspaceTitle": "优化现有素材",
             "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
               "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -3877,7 +4254,7 @@
               "workspaceId": "optimize-current",
               "workspaceTitle": "优化现有素材",
               "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
                 "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -3919,7 +4296,7 @@
               "workspaceId": "search-matched",
               "workspaceTitle": "补内容贴合图",
               "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先把内容主题拆成一个最容易被看懂的主体或场景。",
                 "优先找能直接解释主题的图，而不是只好看但不说事的图。",
@@ -3961,7 +4338,7 @@
               "workspaceId": "concept-first",
               "workspaceTitle": "做创意概念图",
               "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+              "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
               "nextSteps": [
                 "先决定这条内容的主点击点更适合被哪个主体承载。",
                 "先想单一主体和单一冲突，不要一开始堆太多元素。",
@@ -3998,340 +4375,6 @@
                 }
               ],
               "linkedCardDirection": "更清楚重点"
-            }
-          ]
-        },
-        {
-          "cardId": "C",
-          "effectId": "result",
-          "directionTypeInternal": "强结果感",
-          "directionLabelUserFacing": "更有收获感",
-          "directionDescription": "让用户觉得点进去能获得明确收益、变化或立刻可用的收获。 当前内容更靠「收益」驱动点击，内容里有明确收获或结果。",
-          "coverCopyMain": "夏日晚霞、云层、落日封面的结果差在这里",
-          "titleOptions": [
-            "最后一抹霞光",
-            "最后一抹霞光，适合这样做封面",
-            "一张天空图也能做出封面感"
-          ],
-          "titleOptionDetails": [
-            {
-              "title": "最后一抹霞光",
-              "sourceType": "manual-review",
-              "sourceLabel": "人工优选",
-              "styleLabel": "人工判断"
-            },
-            {
-              "title": "最后一抹霞光，适合这样做封面",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "sunset-cover-task",
-              "styleLabel": "晚霞封面任务"
-            },
-            {
-              "title": "一张天空图也能做出封面感",
-              "sourceType": "style-library",
-              "sourceLabel": "风格库",
-              "styleId": "sunset-cover-task",
-              "styleLabel": "晚霞封面任务"
-            }
-          ],
-          "materialKeywords": [
-            "夏日晚霞",
-            "云层",
-            "落日"
-          ],
-          "imageDirection": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-          "imageDirectionCandidates": [
-            {
-              "candidateId": "current-asset-optimize",
-              "label": "优化现有素材",
-              "assetSource": "截图",
-              "description": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-              "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
-            },
-            {
-              "candidateId": "content-matched-search",
-              "label": "补内容贴合图",
-              "assetSource": "补充图库",
-              "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更有收获感 方式排版。",
-              "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
-            },
-            {
-              "candidateId": "creative-concept-asset",
-              "label": "做创意概念图",
-              "assetSource": "概念化方向",
-              "description": "先确定一个能承载「收益」点击机制的主体，再把内容信息补进去。",
-              "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
-            }
-          ],
-          "rankedImageStrategies": [
-            {
-              "candidateId": "current-asset-optimize",
-              "label": "优化现有素材",
-              "assetSource": "截图",
-              "description": "把结果页、变化点或完成态截图放大，不平均铺满过程。",
-              "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
-              "priorityScore": 4,
-              "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-              "executionTag": "先优化现有图"
-            },
-            {
-              "candidateId": "content-matched-search",
-              "label": "补内容贴合图",
-              "assetSource": "补充图库",
-              "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更有收获感 方式排版。",
-              "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
-              "priorityScore": 3,
-              "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
-              "executionTag": "先补贴内容的图"
-            },
-            {
-              "candidateId": "creative-concept-asset",
-              "label": "做创意概念图",
-              "assetSource": "概念化方向",
-              "description": "先确定一个能承载「收益」点击机制的主体，再把内容信息补进去。",
-              "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
-              "priorityScore": 2,
-              "priorityReason": "当前方向更靠「收益」驱动点击，创意概念图更适合拉开与普通封面的差距。",
-              "executionTag": "先做概念图"
-            }
-          ],
-          "suggestedAssetType": "截图",
-          "suggestedAssetReason": "当前素材类型与输入状态基本一致，可直接沿用这条路径继续判断。",
-          "assetUsageStatus": "可直接使用",
-          "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
-          "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
-          "primaryAssetActionLabel": "先优化现有图",
-          "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-          "compositionDirection": "结果画面或收益词必须站在第一视觉中心。",
-          "colorMoodDirection": "适合前后对照、成果放大、完成态聚焦。",
-          "clickReason": "更有收获感，更贴合这条内容当前的点击机制。",
-          "fitReason": "当前内容更靠「收益」驱动点击，内容里有明确收获或结果",
-          "riskNote": "容易像承诺过猛",
-          "boundaryRule": "内容承接不住会显空",
-          "bestFor": [
-            "提效技巧",
-            "学习方法",
-            "错误纠正"
-          ],
-          "signalMatches": [
-            "内容本身存在明确收益或变化",
-            "目标表达里已经带有结果导向"
-          ],
-          "directionSignalChecklist": {
-            "signalGroups": [
-              {
-                "groupId": "content-goal",
-                "groupLabel": "内容目标信号",
-                "signals": [
-                  "用户更关心点开后能获得什么结果",
-                  "内容存在明确收益、变化、完成态",
-                  "主题适合强调结果而不是问题本身"
-                ]
-              },
-              {
-                "groupId": "asset-fit",
-                "groupLabel": "素材适配信号",
-                "signals": [
-                  "素材里能提炼结果页、完成态、前后变化",
-                  "即使没有现成结果图，也能想象明确收获画面",
-                  "适合把收益放到第一视觉中心"
-                ]
-              },
-              {
-                "groupId": "copy-shape",
-                "groupLabel": "文案与构图信号",
-                "signals": [
-                  "文案适合使用收益词、结果词、变化词",
-                  "构图适合突出结果区域或前后差异",
-                  "用户需要感到这条内容值得花时间"
-                ]
-              }
-            ],
-            "feedbackTriggers": [
-              "没收获感",
-              "价值点不明显",
-              "不值得点",
-              "没结果"
-            ],
-            "boundaryRules": [
-              "收益表达不能承诺过猛",
-              "结果感必须和内容承接得住"
-            ],
-            "matchedSignals": [
-              "内容目标里已经带明确结果导向",
-              "用户描述了希望用户获得什么收获"
-            ]
-          },
-          "role": "secondary",
-          "actionWorkspace": {
-            "workspaceId": "optimize-current",
-            "workspaceTitle": "优化现有素材",
-            "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-            "nextSteps": [
-              "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
-              "优先裁掉和主题无关、只会分散注意力的边角信息。",
-              "让封面大字和主体形成明确主次，不要平均分配注意力。"
-            ],
-            "checkpoints": [
-              "第一眼焦点是否单一",
-              "现有图里最值得保留的主体是否明确",
-              "标题区是否压住了无关背景噪音"
-            ],
-            "suggestedInputs": [
-              "描述需要保留的主体区域",
-              "描述需要裁掉或弱化的部分",
-              "说明当前图最不满意的地方"
-            ],
-            "inputSchema": [
-              {
-                "fieldId": "keep_subject",
-                "label": "想保留的主体",
-                "inputType": "text",
-                "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
-              },
-              {
-                "fieldId": "remove_noise",
-                "label": "想弱化或裁掉的部分",
-                "inputType": "textarea",
-                "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
-              },
-              {
-                "fieldId": "current_problem",
-                "label": "当前图最不满意的地方",
-                "inputType": "textarea",
-                "placeholder": "例如：太平、不聚焦、不够像热门封面"
-              }
-            ],
-            "linkedCardDirection": "更有收获感"
-          },
-          "actionWorkspaces": [
-            {
-              "workspaceId": "optimize-current",
-              "workspaceTitle": "优化现有素材",
-              "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-              "nextSteps": [
-                "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
-                "优先裁掉和主题无关、只会分散注意力的边角信息。",
-                "让封面大字和主体形成明确主次，不要平均分配注意力。"
-              ],
-              "checkpoints": [
-                "第一眼焦点是否单一",
-                "现有图里最值得保留的主体是否明确",
-                "标题区是否压住了无关背景噪音"
-              ],
-              "suggestedInputs": [
-                "描述需要保留的主体区域",
-                "描述需要裁掉或弱化的部分",
-                "说明当前图最不满意的地方"
-              ],
-              "inputSchema": [
-                {
-                  "fieldId": "keep_subject",
-                  "label": "想保留的主体",
-                  "inputType": "text",
-                  "placeholder": "例如：人物表情、手势、产品主体、截图里的关键区域"
-                },
-                {
-                  "fieldId": "remove_noise",
-                  "label": "想弱化或裁掉的部分",
-                  "inputType": "textarea",
-                  "placeholder": "例如：背景太杂、字幕太多、边角信息太分散注意力"
-                },
-                {
-                  "fieldId": "current_problem",
-                  "label": "当前图最不满意的地方",
-                  "inputType": "textarea",
-                  "placeholder": "例如：太平、不聚焦、不够像热门封面"
-                }
-              ],
-              "linkedCardDirection": "更有收获感"
-            },
-            {
-              "workspaceId": "search-matched",
-              "workspaceTitle": "补内容贴合图",
-              "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-              "nextSteps": [
-                "先把内容主题拆成一个最容易被看懂的主体或场景。",
-                "优先找能直接解释主题的图，而不是只好看但不说事的图。",
-                "找到图后再决定文字放哪一侧，避免先排版再硬找图。"
-              ],
-              "checkpoints": [
-                "补的图是否比当前图更贴内容",
-                "新图是否更容易承载当前点击机制",
-                "是否能明显降低“普通、太平、不贴内容”的问题"
-              ],
-              "suggestedInputs": [
-                "写出这条内容最适合出现的人物/物体/场景",
-                "写出需要避免的图像风格",
-                "写出补图后需要强化的点击点"
-              ],
-              "inputSchema": [
-                {
-                  "fieldId": "desired_subject",
-                  "label": "最适合补什么主体/场景",
-                  "inputType": "text",
-                  "placeholder": "例如：疲惫的人、待办清单、时间被占满的桌面场景"
-                },
-                {
-                  "fieldId": "avoid_style",
-                  "label": "需要避免的图像风格",
-                  "inputType": "textarea",
-                  "placeholder": "例如：太廉价、太鸡汤、太营销号、太像素材库海报"
-                },
-                {
-                  "fieldId": "strengthen_click_point",
-                  "label": "补图后最想强化的点击点",
-                  "inputType": "textarea",
-                  "placeholder": "例如：让人更想知道为什么忙却没结果"
-                }
-              ],
-              "linkedCardDirection": "更有收获感"
-            },
-            {
-              "workspaceId": "concept-first",
-              "workspaceTitle": "做创意概念图",
-              "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-              "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-              "nextSteps": [
-                "先决定这条内容的主点击点更适合被哪个主体承载。",
-                "先想单一主体和单一冲突，不要一开始堆太多元素。",
-                "先把概念方向跑通，再决定要不要补真实图或走生图。"
-              ],
-              "checkpoints": [
-                "主体是否足够单一",
-                "概念是否和内容真实相关",
-                "是否比普通截图更有记忆点"
-              ],
-              "suggestedInputs": [
-                "写出第一眼需要呈现的主体",
-                "写出主体需要传达的情绪或冲突",
-                "写出需要避免的廉价感或营销号感"
-              ],
-              "inputSchema": [
-                {
-                  "fieldId": "first_glance_subject",
-                  "label": "第一眼最想让用户看到的主体",
-                  "inputType": "text",
-                  "placeholder": "例如：被时间追着跑的人、写满叉号的计划表、夸张的忙碌动作"
-                },
-                {
-                  "fieldId": "emotion_or_conflict",
-                  "label": "主体要传达的情绪或冲突",
-                  "inputType": "textarea",
-                  "placeholder": "例如：越忙越没结果、表面努力和真实低效之间的反差"
-                },
-                {
-                  "fieldId": "avoid_cheapness",
-                  "label": "最想避免的廉价感",
-                  "inputType": "textarea",
-                  "placeholder": "例如：太标题党、太油腻、太像拼贴营销图"
-                }
-              ],
-              "linkedCardDirection": "更有收获感"
             }
           ]
         }
@@ -4340,7 +4383,7 @@
         "workspaceId": "optimize-current",
         "workspaceTitle": "优化现有素材",
         "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-        "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+        "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
         "nextSteps": [
           "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
           "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -4376,7 +4419,7 @@
             "placeholder": "例如：太平、不聚焦、不够像热门封面"
           }
         ],
-        "linkedCardDirection": "更让人想点开"
+        "linkedCardDirection": "更高级专业"
       }
     },
     "refinement": {
@@ -4390,14 +4433,14 @@
       },
       "adjustment": {
         "selectedCardId": "B",
-        "selectedDirectionType": "强信息感",
+        "selectedDirectionType": "强悬念感",
         "userFeedbackRaw": "标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。",
         "preserveElement": "保留晚霞、云层和落日带来的夏日氛围感。",
         "preserveElementSource": "field",
         "changeRequest": "表达美景吸引力和封面构思教程价值，避免只像普通风景分享",
         "changeRequestSource": "feedback",
-        "feedbackPreservedSignal": "更清楚重点",
-        "preservedVariable": "信息",
+        "feedbackPreservedSignal": "更让人想点开",
+        "preservedVariable": "悬念",
         "feedbackMappingId": "neg-content-distance",
         "feedbackPositiveMappingId": null,
         "feedbackMappedIssuePrimary": "离内容太远",
@@ -4407,7 +4450,7 @@
         "feedbackMatchedKeywords": [],
         "feedbackUsedFallback": true,
         "feedbackAction": "增强主题词和内容相关图像线索",
-        "nextRoundGoal": "保留「更清楚重点」的长处，但让结果更接近「更清楚重点」",
+        "nextRoundGoal": "保留「更让人想点开」的长处，但让结果更接近「更清楚重点」",
         "workspaceContext": null
       },
       "mappingExplanation": {
@@ -4417,8 +4460,8 @@
         "negativeIssue": "离内容太远",
         "targetVariableLabel": "更清楚重点",
         "supportVariableLabel": "更有收获感",
-        "preservedVariableLabel": "更清楚重点",
-        "preservedSignal": "更清楚重点",
+        "preservedVariableLabel": "更让人想点开",
+        "preservedSignal": "更让人想点开",
         "matchedKeywords": [],
         "usedFallback": true,
         "workspaceInjected": false,
@@ -4429,17 +4472,17 @@
           "辅助变量参考「更有收获感」",
           "修改请求识别为：表达美景吸引力和封面构思教程价值，避免只像普通风景分享",
           "保留项来自「保留项字段」：保留晚霞、云层和落日带来的夏日氛围感。",
-          "保留信号优先保住「更清楚重点」",
+          "保留信号优先保住「更让人想点开」",
           "未命中明确关键词，使用默认规则兜底。"
         ]
       },
       "sourceCard": {
         "cardId": "B",
-        "effectId": "information",
-        "directionTypeInternal": "强信息感",
-        "directionLabelUserFacing": "更清楚重点",
-        "directionDescription": "一眼看懂内容讲什么、对谁有用、点进去能获得什么。 当前内容更靠「看懂」驱动点击，内容需要更快讲明白。",
-        "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步",
+        "effectId": "suspense",
+        "directionTypeInternal": "强悬念感",
+        "directionLabelUserFacing": "更让人想点开",
+        "directionDescription": "利用未知感和信息留白，让用户因为想知道原因而点开。 当前内容更靠「好奇」驱动点击。",
+        "coverCopyMain": "你以为是夏日晚霞、云层、落日封面的问题？",
         "titleOptions": [
           "最后一抹霞光",
           "最后一抹霞光，适合这样做封面",
@@ -4472,27 +4515,27 @@
           "云层",
           "落日"
         ],
-        "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
+        "imageDirection": "保留异常点，不把答案说满",
         "imageDirectionCandidates": [
           {
             "candidateId": "current-asset-optimize",
             "label": "优化现有素材",
             "assetSource": "截图",
-            "description": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
+            "description": "从截图里裁出异常点，不把全部上下文一次讲完。",
             "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。"
           },
           {
             "candidateId": "content-matched-search",
             "label": "补内容贴合图",
             "assetSource": "补充图库",
-            "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更清楚重点 方式排版。",
+            "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更让人想点开 方式排版。",
             "usageCondition": "适合现有素材不够强，但内容主题已经明确时。"
           },
           {
             "candidateId": "creative-concept-asset",
             "label": "做创意概念图",
             "assetSource": "概念化方向",
-            "description": "先确定一个能承载「看懂」点击机制的主体，再把内容信息补进去。",
+            "description": "先确定一个能承载「好奇」点击机制的主体，再把内容信息补进去。",
             "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。"
           }
         ],
@@ -4501,31 +4544,31 @@
             "candidateId": "current-asset-optimize",
             "label": "优化现有素材",
             "assetSource": "截图",
-            "description": "从截图里只保留最能说明主题的一块，再配清晰重点词。",
+            "description": "从截图里裁出异常点，不把全部上下文一次讲完。",
             "usageCondition": "适合用户已经有截图、口播画面或基础素材时先做提炼。",
             "priorityScore": 4,
-            "priorityReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "priorityReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "executionTag": "先优化现有图"
-          },
-          {
-            "candidateId": "content-matched-search",
-            "label": "补内容贴合图",
-            "assetSource": "补充图库",
-            "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更清楚重点 方式排版。",
-            "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
-            "priorityScore": 3,
-            "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
-            "executionTag": "先补贴内容的图"
           },
           {
             "candidateId": "creative-concept-asset",
             "label": "做创意概念图",
             "assetSource": "概念化方向",
-            "description": "先确定一个能承载「看懂」点击机制的主体，再把内容信息补进去。",
+            "description": "先确定一个能承载「好奇」点击机制的主体，再把内容信息补进去。",
             "usageCondition": "适合用户只有内容想法，或想要明显拉开和普通封面的差距时。",
-            "priorityScore": 2,
-            "priorityReason": "当前方向更靠「看懂」驱动点击，创意概念图更适合拉开与普通封面的差距。",
+            "priorityScore": 4,
+            "priorityReason": "当前方向更靠「好奇」驱动点击，创意概念图更适合拉开与普通封面的差距。",
             "executionTag": "先做概念图"
+          },
+          {
+            "candidateId": "content-matched-search",
+            "label": "补内容贴合图",
+            "assetSource": "补充图库",
+            "description": "围绕「用 AI 工具快速做一张小红书封面，从标题到封面的构思选择；素材主题为夏日晚霞分享。」去补一张更贴内容的辅助图，再按 更让人想点开 方式排版。",
+            "usageCondition": "适合现有素材不够强，但内容主题已经明确时。",
+            "priorityScore": 3,
+            "priorityReason": "现有素材不一定足够强时，补一张更贴内容的图最容易提升贴合度。",
+            "executionTag": "先补贴内容的图"
           }
         ],
         "suggestedAssetType": "截图",
@@ -4534,21 +4577,24 @@
         "assetUsageReason": "当前素材已经接近封面候选，可优先围绕标题区、主体突出和裁切做优化。",
         "assetUsageNextAction": "先用当前图做封面草稿，再按方向卡调整标题和构图。",
         "primaryAssetActionLabel": "先优化现有图",
-        "primaryAssetActionReason": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
-        "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。",
-        "colorMoodDirection": "允许一定文字量，但必须先让第一眼看到主题词。",
-        "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。",
-        "fitReason": "当前内容更靠「看懂」驱动点击，内容需要更快讲明白",
-        "riskNote": "容易太平",
-        "boundaryRule": "信息太多会像海报",
+        "primaryAssetActionReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+        "recommendationReason": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
+        "visualStrategy": "保留异常点，不把答案说满",
+        "copyStrategy": "半揭示表达",
+        "compositionStrategy": "单焦点 + 适度留白",
+        "compositionDirection": "单焦点 + 适度留白",
+        "colorMoodDirection": "不要一次把答案讲满，保留异常点的张力。",
+        "clickReason": "更让人想点开，更贴合这条内容当前的点击机制。",
+        "fitReason": "当前内容更靠「好奇」驱动点击",
+        "riskNote": "容易标题党",
+        "boundaryRule": "过虚会让人看不懂",
         "bestFor": [
-          "干货总结",
-          "教程步骤",
-          "方法论拆解"
+          "反常识内容",
+          "观点型内容",
+          "冷知识"
         ],
         "signalMatches": [
-          "主题需要更快被看懂",
-          "现有素材适合做清晰信息提炼"
+          "偏好里带有「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」这类抓眼诉求"
         ],
         "directionSignalChecklist": {
           "signalGroups": [
@@ -4556,44 +4602,42 @@
               "groupId": "content-goal",
               "groupLabel": "内容目标信号",
               "signals": [
-                "用户更想让人一眼看懂内容讲什么",
-                "内容本身偏方法、清单、步骤、避坑",
-                "点击前最重要的是降低理解门槛"
+                "用户更想先让人停下来点开",
+                "主题存在异常点、未说完空间或反常识角度",
+                "点击前最强驱动力是好奇而不是收益"
               ]
             },
             {
               "groupId": "asset-fit",
               "groupLabel": "素材适配信号",
               "signals": [
-                "现有素材是截图或可裁切的信息画面",
-                "画面里已经有可提炼的重点区域",
-                "适合通过放大信息区而不是补氛围图解决问题"
+                "现有画面能裁出一个异常点或留白点",
+                "画面不需要讲全，只要先制造停顿",
+                "适合从截图或画面局部里找单焦点"
               ]
             },
             {
               "groupId": "copy-shape",
               "groupLabel": "文案与构图信号",
               "signals": [
-                "封面文案应直接点题而不是绕",
-                "标题和封面要一起承担解释作用",
-                "构图优先稳定、清晰、分层明显"
+                "文案适合半揭示、反问、留白式表达",
+                "构图适合单焦点和适度留白",
+                "不能第一眼把答案讲满"
               ]
             }
           ],
           "feedbackTriggers": [
-            "看不懂",
-            "太抽象",
-            "离内容太远",
-            "重点不清楚"
+            "太平",
+            "不够抓眼",
+            "太普通",
+            "想更有好奇心"
           ],
           "boundaryRules": [
-            "不能为了信息完整把字堆得像海报",
-            "清楚重点不等于把所有信息一次讲完"
+            "悬念不能变成标题党",
+            "留白必须贴内容，不是单纯故弄玄虚"
           ],
           "matchedSignals": [
-            "当前内容需要更快讲明白",
-            "现有素材是截图，更适合先做信息提炼",
-            "内容类型偏教程/清单，更适合强信息方向"
+            "用户偏好里已有「小红书风景封面方向，突出夏日晚霞的氛围感、治愈感和标题辨识度，避免只有风景但缺少点击理由。」这类抓眼诉求"
           ]
         },
         "role": "secondary",
@@ -4601,7 +4645,7 @@
           "workspaceId": "optimize-current",
           "workspaceTitle": "优化现有素材",
           "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-          "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+          "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
           "nextSteps": [
             "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
             "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -4637,14 +4681,14 @@
               "placeholder": "例如：太平、不聚焦、不够像热门封面"
             }
           ],
-          "linkedCardDirection": "更清楚重点"
+          "linkedCardDirection": "更让人想点开"
         },
         "actionWorkspaces": [
           {
             "workspaceId": "optimize-current",
             "workspaceTitle": "优化现有素材",
             "workspaceGoal": "先围绕当前已有的截图或基础画面，提炼出更能承担点击任务的主体、标题区和视觉主次。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先确认画面里第一眼最显眼的区域是不是内容真正的点击点。",
               "优先裁掉和主题无关、只会分散注意力的边角信息。",
@@ -4680,13 +4724,13 @@
                 "placeholder": "例如：太平、不聚焦、不够像热门封面"
               }
             ],
-            "linkedCardDirection": "更清楚重点"
+            "linkedCardDirection": "更让人想点开"
           },
           {
             "workspaceId": "search-matched",
             "workspaceTitle": "补内容贴合图",
             "workspaceGoal": "先补一张更贴内容的辅助图，再决定标题区和构图，不急着直接做最终封面。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先把内容主题拆成一个最容易被看懂的主体或场景。",
               "优先找能直接解释主题的图，而不是只好看但不说事的图。",
@@ -4722,13 +4766,13 @@
                 "placeholder": "例如：让人更想知道为什么忙却没结果"
               }
             ],
-            "linkedCardDirection": "更清楚重点"
+            "linkedCardDirection": "更让人想点开"
           },
           {
             "workspaceId": "concept-first",
             "workspaceTitle": "做创意概念图",
             "workspaceGoal": "当前先不要被现成素材限制，先确定一个最能承载点击机制的概念主体，再回到封面执行。",
-            "whyNow": "当前已经有基础素材，先优化现有画面通常是最快形成结果的路径。",
+            "whyNow": "当前晚霞素材已经有天空留白、云层和落日色彩，优先裁切出标题区和情绪主视觉。",
             "nextSteps": [
               "先决定这条内容的主点击点更适合被哪个主体承载。",
               "先想单一主体和单一冲突，不要一开始堆太多元素。",
@@ -4764,30 +4808,30 @@
                 "placeholder": "例如：太标题党、太油腻、太像拼贴营销图"
               }
             ],
-            "linkedCardDirection": "更清楚重点"
+            "linkedCardDirection": "更让人想点开"
           }
         ]
       },
       "secondRound": {
         "basedOnCardId": "B",
         "preservedElement": "保留晚霞、云层和落日带来的夏日氛围感。",
-        "preservedVariable": "信息",
+        "preservedVariable": "悬念",
         "changedVariable": "信息",
         "changedAction": "增强主题词和内容相关图像线索",
-        "nextRoundGoal": "保留「更清楚重点」的长处，但让结果更接近「更清楚重点」",
+        "nextRoundGoal": "保留「更让人想点开」的长处，但让结果更接近「更清楚重点」",
         "refinedCard": {
-          "cardTitle": "更清楚重点 · 第二轮优化",
+          "cardTitle": "更让人想点开 · 第二轮优化",
           "directionDescription": "保留清楚重点，同时让天空留白、晚霞情绪和封面教程任务一起成立。",
-          "coverCopyMain": "夏日晚霞、云层、落日封面先看这一步 / 重点更清楚，天空情绪别丢",
+          "coverCopyMain": "你以为是夏日晚霞、云层、落日封面的问题？ / 重点更清楚，天空情绪别丢",
           "titleOptions": [
             "最后一抹霞光，适合这样做封面",
             "一张天空图也能做出封面感",
             "夏日晚霞照别只发原图"
           ],
-          "imageDirection": "从截图里只保留最能说明主题的一块，再配清晰重点词。；裁切时保留天空留白、云层方向和落日色彩，把标题放在低干扰区域。",
-          "compositionDirection": "中心信息区明确，文字与主体形成稳定主次关系。；用天空留白承接短标题，地平线或暗部区域负责稳定画面。",
-          "clickReason": "更清楚重点，更贴合这条内容当前的点击机制。 这轮重点解决「离内容太远」。",
-          "riskNote": "容易太平"
+          "imageDirection": "保留异常点，不把答案说满；裁切时保留天空留白、云层方向和落日色彩，把标题放在低干扰区域。",
+          "compositionDirection": "单焦点 + 适度留白；用天空留白承接短标题，地平线或暗部区域负责稳定画面。",
+          "clickReason": "更让人想点开，更贴合这条内容当前的点击机制。 这轮重点解决「离内容太远」。",
+          "riskNote": "容易标题党"
         },
         "optionalTweaks": [
           "如果还想更抓眼，可以再提高异常点的集中度。",
@@ -4802,14 +4846,14 @@
       "highlights": [
         "你现在进入第二轮优化，不要重新发散成 3 个方向。",
         "只保留用户已经认可的主方向，只调整 1 个主变量。",
-        "用户当前选中：强信息感",
+        "用户当前选中：强悬念感",
         "用户原话反馈：标题需要同时表达美景吸引力和封面构思教程价值，避免只像普通风景分享。",
         "这轮必须保留：保留晚霞、云层和落日带来的夏日氛围感。",
         "用户修改请求：表达美景吸引力和封面构思教程价值，避免只像普通风景分享"
       ],
-      "refinedDirection": "更清楚重点 · 第二轮优化",
+      "refinedDirection": "更让人想点开 · 第二轮优化",
       "changeFocus": "信息",
-      "refinedCopy": "夏日晚霞、云层、落日封面先看这一步 / 重点更清楚，天空情绪别丢"
+      "refinedCopy": "你以为是夏日晚霞、云层、落日封面的问题？ / 重点更清楚，天空情绪别丢"
     }
   }
 }

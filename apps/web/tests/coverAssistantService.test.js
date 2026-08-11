@@ -500,6 +500,36 @@ test("createAnalysisSession keeps manual preferred title ahead of title style li
   assert.equal(food.cards[0].titleOptionDetails[1].styleLabel, "食欲冲击封面");
 });
 
+test("createAnalysisSession promotes material scenarios into first-round direction ranking", () => {
+  const food = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "抖音",
+    assetDescription: "素材包含螃蟹、辣炒鱿鱼、红油、辣椒和香菜。",
+    referencePreference: "小红书美食封面方向，突出食欲和冲击力。",
+  });
+  const sunset = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "抖音",
+    assetDescription: "素材包含夏日晚霞、天空、云层和落日。",
+    referencePreference: "小红书风景封面方向，突出高级专业、氛围感和标题辨识度。",
+  });
+
+  assert.equal(food.cards[0].directionLabelUserFacing, "更有冲击力");
+  assert.ok(food.cards[0].imageDirection.includes("食物近景"));
+  assert.ok(food.cards[0].imageDirection.includes("红油"));
+  assert.equal(food.cards[0].imageDirection.includes("左右对照"), false);
+  assert.ok(food.cards[0].recommendationReason.includes("强食欲信号"));
+
+  assert.equal(sunset.cards[0].directionLabelUserFacing, "更高级专业");
+  assert.ok(sunset.cards[0].imageDirection.includes("天空留白"));
+  assert.ok(sunset.cards[0].compositionDirection.includes("低干扰"));
+  assert.ok(sunset.cards[0].recommendationReason.includes("情绪画面"));
+});
+
 test("runCaseFlow preserves real case manual preferred title in first-round titles", async () => {
   const result = await runCaseFlow("real-003");
 
@@ -525,6 +555,10 @@ test("renderCards shows title style source labels", () => {
   assert.ok(container.innerHTML.includes("风格库"));
   assert.ok(container.innerHTML.includes("晚霞封面任务"));
   assert.ok(container.innerHTML.includes("最后一抹霞光，适合这样做封面"));
+  assert.ok(container.innerHTML.includes("为什么值得先试"));
+  assert.ok(container.innerHTML.includes("视觉重点"));
+  assert.ok(container.innerHTML.includes("标题策略"));
+  assert.ok(container.innerHTML.includes("构图动作"));
 });
 
 test("buildTitleSelectionDraft creates copyReview preferred title draft", () => {

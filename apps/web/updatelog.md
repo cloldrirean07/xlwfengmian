@@ -1,5 +1,35 @@
 # 更新日志
 
+## 2026-08-10 23:12
+
+- 清理工作区缓存：
+  - 还原 4 个 `apps/web/outputs/batch-*` 运行缓存漂移文件。
+  - 移除未跟踪的 `outputs/docx-qa/` 文档质检临时预览目录。
+- 更新文件：[src/domain/analysis/rankDirectionCandidates.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/analysis/rankDirectionCandidates.js)
+  - 新增美食强冲击、晚霞天空两类素材场景识别。
+  - 调整首轮方向排序：美食素材优先强化“更有冲击力”，晚霞天空素材优先强化“更高级专业”。
+  - 将命中场景时的视觉、文案和构图策略从通用规则切换为场景化表达。
+- 更新文件：[src/domain/cards/buildRankedImageStrategies.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildRankedImageStrategies.js)
+  - 为美食和晚霞素材补充专属配图优先理由，避免继续落回通用对照话术。
+- 更新文件：[src/domain/cards/buildFirstRoundCards.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildFirstRoundCards.js)
+  - 新增 `recommendationReason`、`visualStrategy`、`copyStrategy`、`compositionStrategy` 字段，用于主工作台结果卡解释“为什么值得先试”。
+  - 对美食和晚霞素材覆盖首轮配图与构图展示话术，使结果更贴真实素材。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 在首页方向卡中新增“为什么值得先试”与三项封面执行策略，让创作者不用展开后台依据也能判断下一步。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 增加创作者推荐理由和策略条样式，并补充移动端单列适配。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 补充第二轮规则修订测试，覆盖美食方向排序、晚霞方向排序、配图话术和结果卡推荐理由渲染。
+- 新增文件：[../../docs/validation/2026-08-10_第二轮规则修订与结果卡收束记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-10_第二轮规则修订与结果卡收束记录.md)
+  - 记录本轮规则修订、结果卡收束、真实案例复跑结果和下一步验证建议。
+- 验证结果：
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test`
+  - 结果：`297 pass / 0 fail`
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/build-static.mjs`
+  - 结果：构建通过，`public -> dist` 已同步
+  - 执行 `run-case` 复跑 `real-002` / `real-003`
+  - 结果：两条真实案例均成功生成 `result.json` 与 `summary.md`
+
 ## 2026-08-10 19:55
 
 - 新增文件：[../../docs/validation/2026-08-10_第一轮规则修订任务单.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-10_第一轮规则修订任务单.md)

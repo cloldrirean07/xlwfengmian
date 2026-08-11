@@ -9,6 +9,43 @@ const driverToDirection = {
   信任: "texture",
 };
 
+function buildScenarioPool(fields) {
+  return [
+    fields.contentTopic,
+    fields.contentGoal,
+    fields.assetDescription,
+    fields.assetNotes,
+    fields.desiredCoverFeel,
+    fields.userReferencePreference,
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
+
+function includesAny(text, keywords) {
+  return keywords.some((keyword) => text.includes(keyword));
+}
+
+function detectMaterialScenario(fields) {
+  const pool = buildScenarioPool(fields);
+
+  if (
+    includesAny(pool, ["晚霞", "霞光", "落日", "云层", "天空", "风景"]) &&
+    includesAny(pool, ["高级", "专业", "氛围", "治愈", "封面"])
+  ) {
+    return "sunset-sky";
+  }
+
+  if (
+    includesAny(pool, ["螃蟹", "鱿鱼", "海鲜", "红油", "辣椒", "美食", "夜宵", "下饭"]) &&
+    includesAny(pool, ["冲击", "食欲", "抓人眼球", "封面", "小红书"])
+  ) {
+    return "food-impact";
+  }
+
+  return "";
+}
+
 function scoreStrength(value) {
   if (value === "强" || value === "是" || value === "高") {
     return 2;
@@ -43,6 +80,7 @@ function buildAssetSupport(fields, directionId) {
 function scoreDirection(fields, directionId) {
   let content = 1;
   const primaryDirection = driverToDirection[fields.clickDriverPrimary] || "information";
+  const materialScenario = detectMaterialScenario(fields);
 
   if (directionId === primaryDirection) {
     content += 3;
@@ -64,8 +102,25 @@ function scoreDirection(fields, directionId) {
     content += scoreStrength(fields.requiresTrust);
   }
 
+  if (materialScenario === "sunset-sky" && directionId === "texture") {
+    content += 5;
+  }
+  if (materialScenario === "sunset-sky" && directionId === "suspense") {
+    content += 1;
+  }
+  if (materialScenario === "food-impact" && directionId === "conflict") {
+    content += 3;
+  }
+  if (materialScenario === "food-impact" && directionId === "result") {
+    content += 1;
+  }
+
   const asset = buildAssetSupport(fields, directionId);
-  const platform = fields.platform === "抖音" && ["suspense", "conflict", "result"].includes(directionId) ? 4 : 3;
+  let platform = fields.platform === "抖音" && ["suspense", "conflict", "result"].includes(directionId) ? 4 : 3;
+
+  if (materialScenario === "sunset-sky" && directionId === "texture") {
+    platform = 5;
+  }
 
   return {
     fitScoreContent: Math.min(content, 5),
@@ -76,8 +131,15 @@ function scoreDirection(fields, directionId) {
 
 function buildFitReason(fields, directionId) {
   const catalog = coverEffectCatalog[directionId];
+  const materialScenario = detectMaterialScenario(fields);
   const reasons = [`当前内容更靠「${catalog.clickDriver}」驱动点击`];
 
+  if (materialScenario === "sunset-sky" && directionId === "texture") {
+    reasons.push("晚霞和天空素材更依赖留白、色彩和完成度建立专业感");
+  }
+  if (materialScenario === "food-impact" && directionId === "conflict") {
+    reasons.push("美食素材已有红油、海鲜和辣椒这类强食欲冲击点");
+  }
   if (directionId === "information" && fields.requiresClarity !== "弱") {
     reasons.push("内容需要更快讲明白");
   }
@@ -98,6 +160,8 @@ function buildFitReason(fields, directionId) {
 }
 
 function buildSignalMatches(fields, directionId) {
+  const materialScenario = detectMaterialScenario(fields);
+
   if (directionId === "information") {
     return [
       fields.requiresClarity !== "弱" ? "主题需要更快被看懂" : "",
@@ -124,20 +188,26 @@ function buildSignalMatches(fields, directionId) {
 
   if (directionId === "conflict") {
     return [
+      materialScenario === "food-impact" ? "食物近景、红油和辣椒已经具备食欲冲击点" : "",
       fields.hasContrast !== "弱" ? "内容存在误区、反差或对立结构" : "",
       fields.contentTopic.includes("误区") ? "主题天然适合做对照冲突" : "",
-      fields.assetContext?.hasLocalPreview ? "当前已带本地图片，后续更适合做前后或左右对照" : "",
+      fields.assetContext?.hasLocalPreview && materialScenario !== "food-impact"
+        ? "当前已带本地图片，后续更适合做前后或左右对照"
+        : "",
     ].filter(Boolean);
   }
 
   return [
+    materialScenario === "sunset-sky" ? "晚霞、云层和天空留白适合建立更专业的封面质感" : "",
     fields.requiresTrust !== "弱" ? "内容需要可信度和专业感支撑" : "",
     fields.desiredCoverFeel ? `用户偏好更靠近「${fields.desiredCoverFeel}」的克制表达` : "",
     fields.assetContext?.hasLocalPreview ? "当前已带本地图片上下文，更适合先稳住主体和质感" : "",
   ].filter(Boolean);
 }
 
-function buildDirectionStrategies(directionId) {
+function buildDirectionStrategies(directionId, fields) {
+  const materialScenario = detectMaterialScenario(fields);
+
   if (directionId === "information") {
     return {
       visualStrategy: "突出信息块和清晰主体",
@@ -160,6 +230,14 @@ function buildDirectionStrategies(directionId) {
     };
   }
   if (directionId === "conflict") {
+    if (materialScenario === "food-impact") {
+      return {
+        visualStrategy: "放大食物近景、红油和辣椒冲击点",
+        copyStrategy: "具体食材 + 食欲感 + 封面任务",
+        compositionStrategy: "食物主体占画面中心，标题避开蟹壳、鱿鱼和红油高光",
+      };
+    }
+
     return {
       visualStrategy: "强化对立关系和前后差异",
       copyStrategy: "对立句式或反差表达",
@@ -167,9 +245,14 @@ function buildDirectionStrategies(directionId) {
     };
   }
   return {
-    visualStrategy: "统一配色和氛围，减少噪音",
-    copyStrategy: "克制表达，保留分量感",
-    compositionStrategy: "留白更稳，主体更有分量",
+    visualStrategy:
+      materialScenario === "sunset-sky" ? "保留天空留白、云层方向和落日色彩" : "统一配色和氛围，减少噪音",
+    copyStrategy:
+      materialScenario === "sunset-sky" ? "情绪记忆点 + 封面构思任务" : "克制表达，保留分量感",
+    compositionStrategy:
+      materialScenario === "sunset-sky"
+        ? "标题放在低干扰天空区，地平线和暗部稳定画面"
+        : "留白更稳，主体更有分量",
   };
 }
 
@@ -193,7 +276,7 @@ export function rankDirectionCandidates(fields) {
         directionBoundary: coverEffectCatalog[directionId].defaultRisks[1],
         signalMatches: buildSignalMatches(fields, directionId),
         directionSignalChecklist,
-        ...buildDirectionStrategies(directionId),
+        ...buildDirectionStrategies(directionId, fields),
       };
     })
     .sort((left, right) => right.fitScoreTotal - left.fitScoreTotal)

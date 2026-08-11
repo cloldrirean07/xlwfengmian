@@ -2656,6 +2656,24 @@ export function renderCards(
             <strong>${escapeHtml(card.coverCopyMain)}</strong>
             <p>${escapeHtml(card.titleOptions?.[0] || "待补充")}</p>
           </div>
+          <div class="creator-reason-panel">
+            <span>为什么值得先试</span>
+            <p>${escapeHtml(card.recommendationReason || card.primaryAssetActionReason || card.fitReason || "当前方向更贴合内容目标和素材状态。")}</p>
+          </div>
+          <div class="creator-strategy-strip" aria-label="封面执行策略">
+            <div>
+              <span>视觉重点</span>
+              <strong>${escapeHtml(card.visualStrategy || card.imageDirection || "待补充")}</strong>
+            </div>
+            <div>
+              <span>标题策略</span>
+              <strong>${escapeHtml(card.copyStrategy || "待补充")}</strong>
+            </div>
+            <div>
+              <span>构图动作</span>
+              <strong>${escapeHtml(card.compositionStrategy || card.compositionDirection || "待补充")}</strong>
+            </div>
+          </div>
           <div class="title-option-panel">
             <div class="title-option-heading">
               <span>标题风格来源</span>
