@@ -561,6 +561,28 @@ test("renderCards shows title style source labels", () => {
   assert.ok(container.innerHTML.includes("构图动作"));
 });
 
+test("renderCards exposes creator action pack for execution", () => {
+  const result = createAnalysisSession({
+    contentTopic: "用 AI 工具快速做一张小红书封面",
+    contentGoal: "让用户愿意点开学习封面制作",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription: "素材包含夏日晚霞、云层和落日。",
+    referencePreference: "小红书风景封面方向，突出氛围感。",
+  });
+  const container = { innerHTML: "" };
+
+  renderCards(container, result.cards, "");
+
+  assert.ok(container.innerHTML.includes("封面制作包"));
+  assert.ok(container.innerHTML.includes("按这 4 步落地"));
+  assert.ok(container.innerHTML.includes("主标题"));
+  assert.ok(container.innerHTML.includes("画面动作"));
+  assert.ok(container.innerHTML.includes("文字动作"));
+  assert.ok(container.innerHTML.includes("避坑提醒"));
+  assert.ok(container.innerHTML.includes("最后一抹霞光"));
+});
+
 test("buildTitleSelectionDraft creates copyReview preferred title draft", () => {
   const result = createAnalysisSession({
     contentTopic: "用 AI 工具快速做一张小红书封面",
@@ -1707,6 +1729,23 @@ test("creation view exposes real case quick start for the main workflow", async 
   assert.ok(createAppSource.includes("void refreshRealCaseQuickStart()"));
   assert.ok(createAppSource.includes("dom.realCaseQuickStartResult.addEventListener"));
   assert.ok(createAppSource.includes("await loadCaseIntoMainWorkbench(caseId);"));
+});
+
+test("creation quick start keeps real-002 and real-003 as stable validation entries", async () => {
+  const createAppSource = await readFile(new URL("../public/app/createApp.js", import.meta.url), "utf-8");
+  const renderersSource = await readFile(new URL("../public/app/renderers.js", import.meta.url), "utf-8");
+  const priorityStart = renderersSource.indexOf("const priorityIds");
+  const priorityEnd = renderersSource.indexOf("const priorityCases", priorityStart);
+  const priorityBlock = renderersSource.slice(priorityStart, priorityEnd);
+  const quickStartHandlerStart = createAppSource.indexOf("dom.realCaseQuickStartResult.addEventListener");
+  const quickStartHandlerEnd = createAppSource.indexOf("dom.realCaseLibraryResult.addEventListener", quickStartHandlerStart);
+  const quickStartHandler = createAppSource.slice(quickStartHandlerStart, quickStartHandlerEnd);
+
+  assert.ok(priorityBlock.includes('"real-002"'));
+  assert.ok(priorityBlock.includes('"real-003"'));
+  assert.ok(quickStartHandler.includes("const caseId = button.dataset.caseId"));
+  assert.ok(quickStartHandler.includes('validateExistingCaseSelection({ caseId, cases, sourceType: "real" })'));
+  assert.ok(quickStartHandler.includes("await loadCaseIntoMainWorkbench(caseId);"));
 });
 
 test("validateFormalWriteReadiness requires confirmed safe write preview", () => {

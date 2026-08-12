@@ -1501,6 +1501,64 @@ button:disabled:hover {
   margin: 10px 0 0;
 }
 
+.creator-action-pack {
+  padding: 14px;
+  border: 1px solid rgba(178, 78, 44, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.creator-action-pack-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.creator-action-pack-heading span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.creator-action-pack-heading strong {
+  color: var(--accent-deep);
+  font-size: 13px;
+}
+
+.creator-action-pack ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.creator-action-pack li {
+  min-height: 74px;
+  padding: 11px 12px;
+  border: 1px solid rgba(178, 78, 44, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 252, 246, 0.82);
+}
+
+.creator-action-pack li span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.creator-action-pack li strong {
+  display: block;
+  margin-top: 7px;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .creator-reason-panel {
   padding: 14px 16px;
   border: 1px solid rgba(37, 99, 235, 0.14);
@@ -4388,6 +4446,7 @@ pre {
   .workbench-intro-grid,
   .case-pipeline-strip,
   .card-summary-grid,
+  .creator-action-pack ol,
   .creator-strategy-strip,
   .refinement-kicker-grid,
   .writeback-overview-grid,

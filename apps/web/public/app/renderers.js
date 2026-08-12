@@ -27,6 +27,25 @@ function renderListItems(items, emptyText = "暂无") {
   return items.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
 }
 
+function buildCreatorActionPack(card, titleOptions) {
+  const firstTitle = titleOptions?.[0]?.title || card.titleOptions?.[0] || "待补充";
+  const visualAction = card.visualStrategy || card.imageDirection || "补充主体、色彩和画面重点";
+  const copyAction = card.copyStrategy || "标题需要同时说明内容价值和点击理由";
+  const compositionAction =
+    card.compositionStrategy || card.compositionDirection || "预留标题区，避免遮挡画面主体";
+
+  return {
+    title: firstTitle,
+    visualAction,
+    copyAction,
+    compositionAction,
+    riskGuard:
+      card.riskWarning ||
+      card.assetUsageNextAction ||
+      "避免只追求好看，标题、主体和内容目标需要对齐。",
+  };
+}
+
 function renderChecklistItems(items) {
   if (!items || items.length === 0) {
     return "<li>暂无</li>";
@@ -2534,6 +2553,7 @@ export function renderCards(
             sourceLabel: "标题建议",
             styleLabel: "基础模板",
           }));
+      const actionPack = buildCreatorActionPack(card, titleOptions);
       const titleOptionRows = titleOptions
         .map(
           (option, optionIndex) => {
@@ -2654,7 +2674,31 @@ export function renderCards(
           <div class="card-copy-preview">
             <span>建议先试的封面大字</span>
             <strong>${escapeHtml(card.coverCopyMain)}</strong>
-            <p>${escapeHtml(card.titleOptions?.[0] || "待补充")}</p>
+            <p>${escapeHtml(actionPack.title)}</p>
+          </div>
+          <div class="creator-action-pack" aria-label="封面制作包">
+            <div class="creator-action-pack-heading">
+              <span>封面制作包</span>
+              <strong>按这 4 步落地</strong>
+            </div>
+            <ol>
+              <li>
+                <span>主标题</span>
+                <strong>${escapeHtml(actionPack.title)}</strong>
+              </li>
+              <li>
+                <span>画面动作</span>
+                <strong>${escapeHtml(actionPack.visualAction)}</strong>
+              </li>
+              <li>
+                <span>文字动作</span>
+                <strong>${escapeHtml(actionPack.copyAction)}</strong>
+              </li>
+              <li>
+                <span>避坑提醒</span>
+                <strong>${escapeHtml(actionPack.riskGuard)}</strong>
+              </li>
+            </ol>
           </div>
           <div class="creator-reason-panel">
             <span>为什么值得先试</span>

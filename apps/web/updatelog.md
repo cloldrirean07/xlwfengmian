@@ -1,5 +1,19 @@
 # 更新日志
 
+## 2026-08-12 10:35
+
+- 清理工作区缓存：
+  - 还原 4 个 `apps/web/outputs/batch-*` 运行缓存漂移文件，保持本轮迭代从干净工作区开始。
+- 更新文件：[public/app/renderers.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/app/renderers.js)
+  - 在首轮方向卡中新增“封面制作包”，将主标题、画面动作、文字动作和避坑提醒前置，帮助创作者更快把方案落地。
+- 更新文件：[public/styles.css](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/public/styles.css)
+  - 增加“封面制作包”样式，并在移动端断点下改为单列展示，避免结果卡信息挤压。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 补充结果卡“封面制作包”渲染测试。
+  - 补充 real-002 / real-003 快速入口稳定性测试，约束真实案例快跑入口不会只覆盖单个样例。
+- 新增文件：[../../docs/product/samples/MVP素材样本标准答案表结构_v0.2.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/product/samples/MVP素材样本标准答案表结构_v0.2.md)
+  - 定义 20-40 条 MVP 素材样本的标准答案标注字段、推荐收集配比和效率验证表结构。
+
 ## 2026-08-10 23:12
 
 - 清理工作区缓存：
