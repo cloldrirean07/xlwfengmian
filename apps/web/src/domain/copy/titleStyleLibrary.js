@@ -1,5 +1,37 @@
 export const titleStyleLibrary = [
   {
+    styleId: "lifestyle-snapshot-cover-task",
+    styleLabel: "随手拍封面任务",
+    requiredAny: ["随手拍", "生活方式", "生活碎片", "日常", "四宫格", "拼图"],
+    templates: [
+      {
+        requiredAny: ["随手拍", "生活方式", "生活碎片"],
+        requiredTextAny: ["AI", "封面", "教程"],
+        title: "普通随手拍也能做成封面",
+      },
+      {
+        requiredAny: ["四宫格", "拼图", "生活碎片"],
+        requiredTextAny: ["AI", "封面", "教程"],
+        title: "生活拼图要先给一个主题",
+      },
+    ],
+  },
+  {
+    styleId: "lifestyle-light-hook",
+    styleLabel: "生活方式轻钩子",
+    requiredAny: ["松弛感", "城市散步", "咖啡", "窗景", "健身房", "街景", "自然光"],
+    templates: [
+      {
+        requiredAny: ["松弛感", "自然光", "低饱和", "胶片感"],
+        title: "松弛感照片别只写随手拍",
+      },
+      {
+        requiredAny: ["城市散步", "咖啡", "窗景", "健身房", "街景"],
+        title: "这类生活图适合这样配标题",
+      },
+    ],
+  },
+  {
     styleId: "talking-head-pain-result",
     styleLabel: "口播痛点结果",
     requiredAny: ["口播", "镜头表现力", "自媒体", "不露脸", "人物"],

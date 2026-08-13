@@ -30,10 +30,17 @@ function detectMaterialScenario(fields) {
   const pool = buildScenarioPool(fields);
 
   if (
-    includesAny(pool, ["口播", "人物", "正脸", "半身", "表情", "五官", "镜头表现力", "自媒体"]) &&
+    includesAny(pool, ["口播", "镜头表现力", "自媒体", "不露脸", "口播训练", "口播剪辑"]) &&
     includesAny(pool, ["训练", "剪辑", "流程", "不露脸", "新手", "建议", "标准流程", "封面", "教程"])
   ) {
     return "talking-head";
+  }
+
+  if (
+    includesAny(pool, ["随手拍", "生活方式", "生活碎片", "日常", "城市散步", "咖啡", "窗景", "健身房", "街景", "四宫格", "拼图", "松弛感"]) &&
+    includesAny(pool, ["生活感", "主题", "标题区", "留白", "多图", "封面", "小红书", "氛围"])
+  ) {
+    return "lifestyle-snapshot";
   }
 
   if (
@@ -130,6 +137,15 @@ function scoreDirection(fields, directionId) {
   if (materialScenario === "talking-head" && directionId === "suspense") {
     content += 1;
   }
+  if (materialScenario === "lifestyle-snapshot" && directionId === "information") {
+    content += 3;
+  }
+  if (materialScenario === "lifestyle-snapshot" && directionId === "suspense") {
+    content += 2;
+  }
+  if (materialScenario === "lifestyle-snapshot" && directionId === "texture") {
+    content += 1;
+  }
 
   const asset = buildAssetSupport(fields, directionId);
   let platform = fields.platform === "抖音" && ["suspense", "conflict", "result"].includes(directionId) ? 4 : 3;
@@ -138,6 +154,9 @@ function scoreDirection(fields, directionId) {
     platform = 5;
   }
   if (materialScenario === "talking-head" && ["information", "result"].includes(directionId)) {
+    platform = 5;
+  }
+  if (materialScenario === "lifestyle-snapshot" && ["information", "suspense", "texture"].includes(directionId)) {
     platform = 5;
   }
 
@@ -165,6 +184,12 @@ function buildFitReason(fields, directionId) {
   if (materialScenario === "talking-head" && directionId === "result") {
     reasons.push("口播教程更适合把训练结果和可执行方法前置");
   }
+  if (materialScenario === "lifestyle-snapshot" && directionId === "information") {
+    reasons.push("随手拍素材需要先补清楚状态、场景和具体主题");
+  }
+  if (materialScenario === "lifestyle-snapshot" && directionId === "suspense") {
+    reasons.push("生活碎片适合用轻钩子说明普通照片如何变成封面");
+  }
   if (directionId === "information" && fields.requiresClarity !== "弱") {
     reasons.push("内容需要更快讲明白");
   }
@@ -190,6 +215,7 @@ function buildSignalMatches(fields, directionId) {
   if (directionId === "information") {
     return [
       materialScenario === "talking-head" ? "口播截图需要先稳住人物主体和大字标题区" : "",
+      materialScenario === "lifestyle-snapshot" ? "随手拍素材需要先补生活主题和封面任务" : "",
       fields.requiresClarity !== "弱" ? "主题需要更快被看懂" : "",
       fields.userAssetType === "截图" ? "现有素材适合做清晰信息提炼" : "",
       fields.assetContext?.hasLocalPreview ? "当前已带本地图片上下文，可直接围绕现有画面做判断" : "",
@@ -208,6 +234,7 @@ function buildSignalMatches(fields, directionId) {
   if (directionId === "suspense") {
     return [
       materialScenario === "talking-head" ? "不露脸、口播不自然等痛点可以形成点击钩子" : "",
+      materialScenario === "lifestyle-snapshot" ? "普通随手拍如何变封面具备轻好奇钩子" : "",
       fields.hasCuriosityGap !== "弱" ? "内容里有异常点或可留白空间" : "",
       fields.desiredCoverFeel ? `偏好里带有「${fields.desiredCoverFeel}」这类抓眼诉求` : "",
       fields.assetContext?.hasLocalPreview ? "当前已带本地图片，适合先从现有画面里截异常点" : "",
@@ -227,6 +254,7 @@ function buildSignalMatches(fields, directionId) {
 
   return [
     materialScenario === "sunset-sky" ? "晚霞、云层和天空留白适合建立更专业的封面质感" : "",
+    materialScenario === "lifestyle-snapshot" ? "自然光、低饱和和松弛状态能支撑生活方式质感" : "",
     fields.requiresTrust !== "弱" ? "内容需要可信度和专业感支撑" : "",
     fields.desiredCoverFeel ? `用户偏好更靠近「${fields.desiredCoverFeel}」的克制表达` : "",
     fields.assetContext?.hasLocalPreview ? "当前已带本地图片上下文，更适合先稳住主体和质感" : "",
@@ -242,6 +270,13 @@ function buildDirectionStrategies(directionId, fields) {
         visualStrategy: "放大人物主体，保留正脸、表情和手势",
         copyStrategy: "对象痛点前置，标题直接说明口播问题",
         compositionStrategy: "标题放在胸口下方、侧边或背景留白区，避开五官",
+      };
+    }
+    if (materialScenario === "lifestyle-snapshot") {
+      return {
+        visualStrategy: "先选清楚主体，保留生活场景里的自然光和动作",
+        copyStrategy: "状态 / 场景 + 具体主题，避免只写好看氛围",
+        compositionStrategy: "单图用下方留白或人物旁边空区，拼图用中心小字或单格留白",
       };
     }
 
@@ -274,6 +309,13 @@ function buildDirectionStrategies(directionId, fields) {
         compositionStrategy: "人物与标题分区，避免把大字压在眼睛和嘴部",
       };
     }
+    if (materialScenario === "lifestyle-snapshot") {
+      return {
+        visualStrategy: "保留随手拍的真实生活感，用一处反差说明普通照片也能成封面",
+        copyStrategy: "轻钩子 + 具体场景，例如随手拍如何变高级",
+        compositionStrategy: "标题落在暗部、留白或拼图中心，不压住人物五官和主要动作",
+      };
+    }
 
     return {
       visualStrategy: "保留异常点，不把答案说满",
@@ -298,12 +340,22 @@ function buildDirectionStrategies(directionId, fields) {
   }
   return {
     visualStrategy:
-      materialScenario === "sunset-sky" ? "保留天空留白、云层方向和落日色彩" : "统一配色和氛围，减少噪音",
+      materialScenario === "sunset-sky"
+        ? "保留天空留白、云层方向和落日色彩"
+        : materialScenario === "lifestyle-snapshot"
+          ? "保留自然光、低饱和色和松弛状态"
+          : "统一配色和氛围，减少噪音",
     copyStrategy:
-      materialScenario === "sunset-sky" ? "情绪记忆点 + 封面构思任务" : "克制表达，保留分量感",
+      materialScenario === "sunset-sky"
+        ? "情绪记忆点 + 封面构思任务"
+        : materialScenario === "lifestyle-snapshot"
+          ? "生活状态 + 具体记录主题"
+          : "克制表达，保留分量感",
     compositionStrategy:
       materialScenario === "sunset-sky"
         ? "标题放在低干扰天空区，地平线和暗部稳定画面"
+        : materialScenario === "lifestyle-snapshot"
+          ? "用留白、暗部或单格空区承接轻标题，避免堆满照片"
         : "留白更稳，主体更有分量",
   };
 }
@@ -315,6 +367,13 @@ function buildDirectionRisk(fields, directionId) {
     return {
       directionRisk: "标题不能遮挡眼睛、嘴部和关键表情，结果承诺需要有内容支撑",
       directionBoundary: "避免只写抽象表现力，也避免使用无依据的暴涨、绝杀类承诺",
+    };
+  }
+
+  if (materialScenario === "lifestyle-snapshot" && ["information", "suspense", "texture"].includes(directionId)) {
+    return {
+      directionRisk: "不要只用好看和氛围作为封面理由，需要补清楚生活主题",
+      directionBoundary: "避免空泛生活文案，人物图标题不能遮挡五官，多图拼贴不能只堆照片",
     };
   }
 

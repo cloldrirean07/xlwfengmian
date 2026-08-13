@@ -1,5 +1,30 @@
 # 更新日志
 
+## 2026-08-13 15:25
+
+- 新增文件：[../../docs/validation/2026-08-13_mvp-ref-004_随手拍样本效率验证记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-13_mvp-ref-004_随手拍样本效率验证记录.md)
+  - 使用当前 MVP 对 `mvp-ref-004` 生活方式随手拍样本做效率验证。
+  - 记录当前系统会把含有人像和五官的随手拍误触发为口播规则，导致标题和构图偏离人工标准答案。
+- 更新文件：[src/domain/analysis/rankDirectionCandidates.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/analysis/rankDirectionCandidates.js)
+  - 收紧 `talking-head` 口播场景触发条件，避免仅因“人物、五官”误判。
+  - 新增 `lifestyle-snapshot` 随手拍场景识别，让生活方式、生活碎片、四宫格、拼图和松弛感素材走独立规则。
+  - 为随手拍补充“状态 / 场景 + 具体主题”、留白/暗部/拼图区构图和避免空泛生活文案的风险提醒。
+- 更新文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)
+  - 补充随手拍、生活方式、生活碎片、城市散步、咖啡、窗景、健身房、四宫格、拼图、松弛感等关键词。
+- 更新文件：[src/domain/copy/titleStyleLibrary.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/titleStyleLibrary.js)
+  - 新增“随手拍封面任务”和“生活方式轻钩子”标题风格。
+- 更新文件：[src/domain/cards/buildFirstRoundCards.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildFirstRoundCards.js)
+  - 收紧口播推荐理由触发条件，并补充生活方式素材专属推荐理由。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 新增随手拍场景回归测试，确保生活方式样本不再被口播规则吞掉。
+- 新增文件：[../../docs/validation/2026-08-13_mvp-ref-004_随手拍规则边界修复后复跑记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-13_mvp-ref-004_随手拍规则边界修复后复跑记录.md)
+  - 记录修复后随手拍样本复跑结果：方向排序、标题候选、构图动作和风险提醒已贴近人工标准答案。
+- 验证结果：
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test`
+  - 结果：`301 pass / 0 fail`
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/build-static.mjs`
+  - 结果：构建通过，`public -> dist` 已同步
+
 ## 2026-08-13 00:05
 
 - 新增文件：[../../docs/validation/2026-08-12_mvp-ref-003_口播规则修订任务单.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-12_mvp-ref-003_口播规则修订任务单.md)

@@ -558,6 +558,36 @@ test("createAnalysisSession promotes talking-head scenario into creator-ready co
   assert.ok(copyPool.includes("口播不自然") || copyPool.includes("新手口播"));
 });
 
+test("createAnalysisSession keeps lifestyle snapshots out of talking-head rules", () => {
+  const result = createAnalysisSession({
+    contentTopic:
+      "用 AI 工具快速做一张小红书封面，从生活方式随手拍到标题和构图的构思选择，是关于日常生活碎片、城市散步、人像和咖啡健身记录的分享。",
+    contentGoal:
+      "让用户一眼知道这是一篇 AI 封面制作教程，并愿意点开学习如何把普通随手拍和生活拼图做成更清楚、更有主题的小红书封面。",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription:
+      "素材参考为生活方式随手拍：有人像、猫、餐食、咖啡、窗景、健身房、街景和四宫格生活拼图。画面有自然光、树影、低饱和色、胶片感和松弛状态，但内容主题不一定清楚。",
+    referencePreference:
+      "生活方式随手拍封面方向，突出生活感、主题任务、标题区、轻内容钩子和多图叙事，避免只有氛围没有主题，也避免标题遮挡人物五官。",
+  });
+  const primary = result.cards[0];
+  const copyPool = result.cards
+    .flatMap((card) => [card.coverCopyMain, ...card.titleOptions])
+    .join(" ");
+
+  assert.equal(primary.directionLabelUserFacing, "更清楚重点");
+  assert.ok(primary.recommendationReason.includes("生活方式素材"));
+  assert.ok(primary.visualStrategy.includes("生活场景") || primary.visualStrategy.includes("自然光"));
+  assert.ok(primary.copyStrategy.includes("状态 / 场景"));
+  assert.ok(primary.compositionStrategy.includes("拼图"));
+  assert.ok(primary.riskNote.includes("生活主题"));
+  assert.equal(primary.copyStrategy.includes("口播"), false);
+  assert.equal(primary.recommendationReason.includes("口播人物信号"), false);
+  assert.ok(copyPool.includes("普通随手拍也能做成封面"));
+  assert.ok(copyPool.includes("生活拼图要先给一个主题"));
+});
+
 test("runCaseFlow preserves real case manual preferred title in first-round titles", async () => {
   const result = await runCaseFlow("real-003");
 

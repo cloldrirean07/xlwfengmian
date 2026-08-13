@@ -28,9 +28,16 @@ function buildCreatorRecommendationReason({ fields, config, direction, materialK
 
   if (
     config.id === "information" &&
-    materialKeywords.some((keyword) => ["口播", "人物", "镜头表现力", "自媒体", "不露脸"].includes(keyword))
+    materialKeywords.some((keyword) => ["口播", "镜头表现力", "自媒体", "不露脸"].includes(keyword))
   ) {
     return `${keywordText}这类口播人物信号，适合先把人物主体、对象痛点和大字标题区讲清楚。`;
+  }
+
+  if (
+    config.id === "information" &&
+    materialKeywords.some((keyword) => ["随手拍", "生活方式", "生活碎片", "日常", "四宫格", "拼图"].includes(keyword))
+  ) {
+    return `${keywordText}这类生活方式素材有氛围但主题容易变弱，适合先补清楚场景、状态和具体封面任务。`;
   }
 
   if (config.id === "information") {
