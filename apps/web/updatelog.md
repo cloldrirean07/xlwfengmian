@@ -1,5 +1,25 @@
 # 更新日志
 
+## 2026-08-13 22:26
+
+- 新增文件：[../../docs/validation/2026-08-13_mvp-ref-005_美食教程合集样本效率验证记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-13_mvp-ref-005_美食教程合集样本效率验证记录.md)
+  - 使用当前 MVP 对 `mvp-ref-005` 小红书美食教程合集样本做效率验证。
+  - 记录当前系统能识别美食素材，但会把“教程合集 / 收藏型封面”偏向“红油海鲜 / 单图强冲击”规则。
+  - 判定下一步应新增 `food-tutorial-collection` 场景，与已有 `food-impact` 强冲击规则分流。
+
+## 2026-08-13 21:04
+
+- 更新文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)
+  - 为随手拍场景增加素材关键词优先级，优先使用随手拍、生活方式、生活碎片、四宫格、拼图和松弛感等主题词。
+  - 避免生活方式封面主文案被“人物、五官”等辅助视觉词带偏。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 收紧随手拍回归测试，明确禁止输出“人物、五官、随手拍”这类生硬主文案组合。
+- 验证结果：
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test`
+  - 结果：`301 pass / 0 fail`
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/build-static.mjs`
+  - 结果：构建通过，`public -> dist` 已同步
+
 ## 2026-08-13 15:25
 
 - 新增文件：[../../docs/validation/2026-08-13_mvp-ref-004_随手拍样本效率验证记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-13_mvp-ref-004_随手拍样本效率验证记录.md)

@@ -109,6 +109,34 @@ function removeContainedKeywords(keywords) {
   );
 }
 
+function prioritizeScenarioKeywords(keywords, pool) {
+  if (
+    ["随手拍", "生活方式", "生活碎片", "四宫格", "拼图", "松弛感"].some((keyword) =>
+      pool.includes(keyword),
+    )
+  ) {
+    const lifestylePriority = [
+      "随手拍",
+      "生活方式",
+      "生活碎片",
+      "四宫格",
+      "拼图",
+      "松弛感",
+      "城市散步",
+      "咖啡",
+    ];
+    return [...keywords].sort((left, right) => {
+      const leftIndex = lifestylePriority.indexOf(left);
+      const rightIndex = lifestylePriority.indexOf(right);
+      const normalizedLeft = leftIndex === -1 ? Number.MAX_SAFE_INTEGER : leftIndex;
+      const normalizedRight = rightIndex === -1 ? Number.MAX_SAFE_INTEGER : rightIndex;
+      return normalizedLeft - normalizedRight;
+    });
+  }
+
+  return keywords;
+}
+
 export function extractMaterialKeywords(fields, limit = 3) {
   const pool = compactText(
     [
@@ -120,10 +148,9 @@ export function extractMaterialKeywords(fields, limit = 3) {
     ].join(" "),
   );
 
-  return removeContainedKeywords(unique(materialKeywordLexicon.filter((keyword) => pool.includes(keyword)))).slice(
-    0,
-    limit,
-  );
+  const keywords = removeContainedKeywords(unique(materialKeywordLexicon.filter((keyword) => pool.includes(keyword))));
+
+  return prioritizeScenarioKeywords(keywords, pool).slice(0, limit);
 }
 
 export function buildMaterialKeywordFocus(fields) {

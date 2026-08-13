@@ -584,6 +584,8 @@ test("createAnalysisSession keeps lifestyle snapshots out of talking-head rules"
   assert.ok(primary.riskNote.includes("生活主题"));
   assert.equal(primary.copyStrategy.includes("口播"), false);
   assert.equal(primary.recommendationReason.includes("口播人物信号"), false);
+  assert.equal(primary.coverCopyMain.includes("人物、五官、随手拍"), false);
+  assert.ok(primary.coverCopyMain.includes("随手拍") || primary.coverCopyMain.includes("生活"));
   assert.ok(copyPool.includes("普通随手拍也能做成封面"));
   assert.ok(copyPool.includes("生活拼图要先给一个主题"));
 });
