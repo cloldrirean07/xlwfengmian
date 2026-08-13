@@ -26,6 +26,13 @@ function buildCreatorRecommendationReason({ fields, config, direction, materialK
     return `${keywordText}这类情绪画面，适合用留白、色彩和标题区做得更专业，避免只像普通风景分享。`;
   }
 
+  if (
+    config.id === "information" &&
+    materialKeywords.some((keyword) => ["口播", "人物", "镜头表现力", "自媒体", "不露脸"].includes(keyword))
+  ) {
+    return `${keywordText}这类口播人物信号，适合先把人物主体、对象痛点和大字标题区讲清楚。`;
+  }
+
   if (config.id === "information") {
     return "这张卡优先解决看不清主题的问题，适合把教程任务、封面大字和素材主体先讲明白。";
   }

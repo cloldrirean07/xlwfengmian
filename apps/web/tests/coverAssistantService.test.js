@@ -530,6 +530,34 @@ test("createAnalysisSession promotes material scenarios into first-round directi
   assert.ok(sunset.cards[0].recommendationReason.includes("情绪画面"));
 });
 
+test("createAnalysisSession promotes talking-head scenario into creator-ready cover actions", () => {
+  const result = createAnalysisSession({
+    contentTopic:
+      "用 AI 工具快速做一张小红书封面，从口播截图到标题大字的构思选择，是关于自媒体口播训练和镜头表现力提升的教程。",
+    contentGoal:
+      "让用户一眼知道这是一篇 AI 封面制作教程，并愿意点开学习如何把普通口播截图改成更清楚、更有结果感的封面。",
+    userAssetType: "截图",
+    platform: "小红书",
+    assetDescription:
+      "素材参考为口播类封面截图：人物正脸或半身居中，画面带有高对比大字标题，常见黄黑、绿白或白字黑描边。部分样本包含前后对比、手机截图、小标签和点赞数字。",
+    referencePreference:
+      "口播类封面方向，突出人物主体、标题区、对象痛点、结果承诺和新手行动提示，避免标题遮挡五官或制造过度承诺。",
+  });
+  const primary = result.cards[0];
+  const copyPool = result.cards
+    .flatMap((card) => [card.coverCopyMain, ...card.titleOptions])
+    .join(" ");
+
+  assert.equal(primary.directionLabelUserFacing, "更清楚重点");
+  assert.ok(primary.recommendationReason.includes("口播人物信号"));
+  assert.ok(primary.visualStrategy.includes("人物主体"));
+  assert.ok(primary.compositionStrategy.includes("避开五官"));
+  assert.ok(primary.riskNote.includes("遮挡眼睛"));
+  assert.ok(primary.boundaryRule.includes("过度承诺") || primary.boundaryRule.includes("暴涨"));
+  assert.ok(copyPool.includes("口播"));
+  assert.ok(copyPool.includes("口播不自然") || copyPool.includes("新手口播"));
+});
+
 test("runCaseFlow preserves real case manual preferred title in first-round titles", async () => {
   const result = await runCaseFlow("real-003");
 

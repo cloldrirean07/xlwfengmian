@@ -30,6 +30,13 @@ function detectMaterialScenario(fields) {
   const pool = buildScenarioPool(fields);
 
   if (
+    includesAny(pool, ["口播", "人物", "正脸", "半身", "表情", "五官", "镜头表现力", "自媒体"]) &&
+    includesAny(pool, ["训练", "剪辑", "流程", "不露脸", "新手", "建议", "标准流程", "封面", "教程"])
+  ) {
+    return "talking-head";
+  }
+
+  if (
     includesAny(pool, ["晚霞", "霞光", "落日", "云层", "天空", "风景"]) &&
     includesAny(pool, ["高级", "专业", "氛围", "治愈", "封面"])
   ) {
@@ -114,11 +121,23 @@ function scoreDirection(fields, directionId) {
   if (materialScenario === "food-impact" && directionId === "result") {
     content += 1;
   }
+  if (materialScenario === "talking-head" && directionId === "information") {
+    content += 4;
+  }
+  if (materialScenario === "talking-head" && directionId === "result") {
+    content += 2;
+  }
+  if (materialScenario === "talking-head" && directionId === "suspense") {
+    content += 1;
+  }
 
   const asset = buildAssetSupport(fields, directionId);
   let platform = fields.platform === "抖音" && ["suspense", "conflict", "result"].includes(directionId) ? 4 : 3;
 
   if (materialScenario === "sunset-sky" && directionId === "texture") {
+    platform = 5;
+  }
+  if (materialScenario === "talking-head" && ["information", "result"].includes(directionId)) {
     platform = 5;
   }
 
@@ -139,6 +158,12 @@ function buildFitReason(fields, directionId) {
   }
   if (materialScenario === "food-impact" && directionId === "conflict") {
     reasons.push("美食素材已有红油、海鲜和辣椒这类强食欲冲击点");
+  }
+  if (materialScenario === "talking-head" && directionId === "information") {
+    reasons.push("口播截图需要先让人物、标题和对象痛点一眼看懂");
+  }
+  if (materialScenario === "talking-head" && directionId === "result") {
+    reasons.push("口播教程更适合把训练结果和可执行方法前置");
   }
   if (directionId === "information" && fields.requiresClarity !== "弱") {
     reasons.push("内容需要更快讲明白");
@@ -164,6 +189,7 @@ function buildSignalMatches(fields, directionId) {
 
   if (directionId === "information") {
     return [
+      materialScenario === "talking-head" ? "口播截图需要先稳住人物主体和大字标题区" : "",
       fields.requiresClarity !== "弱" ? "主题需要更快被看懂" : "",
       fields.userAssetType === "截图" ? "现有素材适合做清晰信息提炼" : "",
       fields.assetContext?.hasLocalPreview ? "当前已带本地图片上下文，可直接围绕现有画面做判断" : "",
@@ -172,6 +198,7 @@ function buildSignalMatches(fields, directionId) {
 
   if (directionId === "result") {
     return [
+      materialScenario === "talking-head" ? "口播教程适合把对象痛点和训练结果前置" : "",
       fields.hasClearResult !== "弱" ? "内容本身存在明确收益或变化" : "",
       fields.contentGoal ? "目标表达里已经带有结果导向" : "",
       fields.assetContext?.hasLocalPreview ? "当前已有本地图片可作为结果画面的提炼基础" : "",
@@ -180,6 +207,7 @@ function buildSignalMatches(fields, directionId) {
 
   if (directionId === "suspense") {
     return [
+      materialScenario === "talking-head" ? "不露脸、口播不自然等痛点可以形成点击钩子" : "",
       fields.hasCuriosityGap !== "弱" ? "内容里有异常点或可留白空间" : "",
       fields.desiredCoverFeel ? `偏好里带有「${fields.desiredCoverFeel}」这类抓眼诉求` : "",
       fields.assetContext?.hasLocalPreview ? "当前已带本地图片，适合先从现有画面里截异常点" : "",
@@ -209,6 +237,14 @@ function buildDirectionStrategies(directionId, fields) {
   const materialScenario = detectMaterialScenario(fields);
 
   if (directionId === "information") {
+    if (materialScenario === "talking-head") {
+      return {
+        visualStrategy: "放大人物主体，保留正脸、表情和手势",
+        copyStrategy: "对象痛点前置，标题直接说明口播问题",
+        compositionStrategy: "标题放在胸口下方、侧边或背景留白区，避开五官",
+      };
+    }
+
     return {
       visualStrategy: "突出信息块和清晰主体",
       copyStrategy: "主题词前置，直接点题",
@@ -216,6 +252,14 @@ function buildDirectionStrategies(directionId, fields) {
     };
   }
   if (directionId === "result") {
+    if (materialScenario === "talking-head") {
+      return {
+        visualStrategy: "用人物表情建立信任，再放大训练后的结果感",
+        copyStrategy: "对象 + 方法 + 结果，避免只写抽象表现力",
+        compositionStrategy: "人物居中，标题承接在下方大字区，保留眼睛和嘴部",
+      };
+    }
+
     return {
       visualStrategy: "放大结果状态或变化感",
       copyStrategy: "收益词前置",
@@ -223,6 +267,14 @@ function buildDirectionStrategies(directionId, fields) {
     };
   }
   if (directionId === "suspense") {
+    if (materialScenario === "talking-head") {
+      return {
+        visualStrategy: "保留人物表情和痛点钩子，不遮挡关键五官",
+        copyStrategy: "用口播痛点做半揭示标题",
+        compositionStrategy: "人物与标题分区，避免把大字压在眼睛和嘴部",
+      };
+    }
+
     return {
       visualStrategy: "保留异常点，不把答案说满",
       copyStrategy: "半揭示表达",
@@ -256,12 +308,29 @@ function buildDirectionStrategies(directionId, fields) {
   };
 }
 
+function buildDirectionRisk(fields, directionId) {
+  const materialScenario = detectMaterialScenario(fields);
+
+  if (materialScenario === "talking-head" && ["information", "result", "suspense"].includes(directionId)) {
+    return {
+      directionRisk: "标题不能遮挡眼睛、嘴部和关键表情，结果承诺需要有内容支撑",
+      directionBoundary: "避免只写抽象表现力，也避免使用无依据的暴涨、绝杀类承诺",
+    };
+  }
+
+  return {
+    directionRisk: coverEffectCatalog[directionId].defaultRisks[0],
+    directionBoundary: coverEffectCatalog[directionId].defaultRisks[1],
+  };
+}
+
 export function rankDirectionCandidates(fields) {
   return coverEffectOrder
     .map((directionId) => {
       const scores = scoreDirection(fields, directionId);
       const total = scores.fitScoreContent + scores.fitScoreAsset + scores.fitScorePlatform;
       const directionSignalChecklist = buildDirectionSignalChecklist(fields, directionId);
+      const risks = buildDirectionRisk(fields, directionId);
 
       return {
         directionId,
@@ -272,8 +341,8 @@ export function rankDirectionCandidates(fields) {
         fitScorePlatform: scores.fitScorePlatform,
         fitScoreTotal: total,
         directionFitReason: buildFitReason(fields, directionId),
-        directionRisk: coverEffectCatalog[directionId].defaultRisks[0],
-        directionBoundary: coverEffectCatalog[directionId].defaultRisks[1],
+        directionRisk: risks.directionRisk,
+        directionBoundary: risks.directionBoundary,
         signalMatches: buildSignalMatches(fields, directionId),
         directionSignalChecklist,
         ...buildDirectionStrategies(directionId, fields),

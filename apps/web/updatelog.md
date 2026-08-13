@@ -1,5 +1,33 @@
 # 更新日志
 
+## 2026-08-13 00:05
+
+- 新增文件：[../../docs/validation/2026-08-12_mvp-ref-003_口播规则修订任务单.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-12_mvp-ref-003_口播规则修订任务单.md)
+  - 根据口播样本效率验证和人工精标结论，定义 `talking-head` 场景识别、标题机制、画面动作、构图避让和风险提醒的 P0 修订项。
+- 更新文件：[src/domain/analysis/rankDirectionCandidates.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/analysis/rankDirectionCandidates.js)
+  - 新增口播人物素材场景识别，让口播截图优先进入“更清楚重点”，并保留“更有收获感”作为次级方向。
+  - 为口播场景补充人物主体、正脸表情、标题避开五官、避免过度承诺等策略和风险提醒。
+- 更新文件：[src/domain/copy/materialKeywordCopy.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/materialKeywordCopy.js)
+  - 补充口播、人物、正脸、五官、镜头表现力、自媒体、不露脸、新手、训练等素材关键词。
+- 更新文件：[src/domain/copy/titleStyleLibrary.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/copy/titleStyleLibrary.js)
+  - 新增“口播痛点结果”和“口播新手流程”标题风格，支持对象 / 痛点 + 方法 / 结果的标题候选。
+- 更新文件：[src/domain/cards/buildFirstRoundCards.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/src/domain/cards/buildFirstRoundCards.js)
+  - 为口播人物信号补充专属推荐理由，避免结果卡继续显示通用截图判断。
+- 更新文件：[tests/coverAssistantService.test.js](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/apps/web/tests/coverAssistantService.test.js)
+  - 新增 mvp-ref-003 口播场景测试，覆盖方向排序、标题候选、人物视觉动作、五官避让和风险提醒。
+- 新增文件：[../../docs/validation/2026-08-12_mvp-ref-003_口播规则修订后复跑记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-12_mvp-ref-003_口播规则修订后复跑记录.md)
+  - 记录修订后口播样本复跑结果：A 卡变为“更清楚重点”，标题候选变为口播专属表达，构图与风险提醒已命中人工标准答案。
+- 验证结果：
+  - 执行 `/Users/xlw/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node --test`
+  - 结果：`300 pass / 0 fail`
+
+## 2026-08-12 23:40
+
+- 新增文件：[../../docs/validation/2026-08-12_mvp-ref-003_口播样本效率验证记录.md](/Users/xlw/Documents/codex1/AI封面创意助手项目/ai-cover-creative-assistant/docs/validation/2026-08-12_mvp-ref-003_口播样本效率验证记录.md)
+  - 使用当前 MVP 对 `mvp-ref-003` 口播类样本做新样本效率验证。
+  - 记录当前系统能生成方向卡，但对人物主体、五官遮挡、对象痛点和结果承诺等口播封面机制识别不足。
+  - 判定下一步应进入口播场景规则修订，而不是继续盲目扩充样本。
+
 ## 2026-08-12 10:35
 
 - 清理工作区缓存：

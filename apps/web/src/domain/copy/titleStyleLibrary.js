@@ -1,5 +1,37 @@
 export const titleStyleLibrary = [
   {
+    styleId: "talking-head-pain-result",
+    styleLabel: "口播痛点结果",
+    requiredAny: ["口播", "镜头表现力", "自媒体", "不露脸", "人物"],
+    templates: [
+      {
+        requiredAny: ["口播", "镜头表现力", "自媒体"],
+        requiredTextAny: ["AI", "封面", "教程"],
+        title: "口播不自然，先改这张封面",
+      },
+      {
+        requiredAny: ["不露脸", "口播"],
+        requiredTextAny: ["AI", "封面", "教程"],
+        title: "不露脸口播，也能做清楚封面",
+      },
+    ],
+  },
+  {
+    styleId: "talking-head-newbie-flow",
+    styleLabel: "口播新手流程",
+    requiredAny: ["口播", "新手", "训练", "标准流程", "剪辑"],
+    templates: [
+      {
+        requiredAny: ["口播", "新手", "训练"],
+        title: "新手口播训练，先看这一版",
+      },
+      {
+        requiredAny: ["口播", "标准流程", "剪辑"],
+        title: "口播封面标准流程",
+      },
+    ],
+  },
+  {
     styleId: "food-impact-cover-task",
     styleLabel: "食欲冲击封面",
     requiredAny: ["辣炒鱿鱼", "鱿鱼", "香辣蟹", "螃蟹", "海鲜", "红油"],
